@@ -1,0 +1,49 @@
+[mat-dialog-title] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px #e0e0e0;
+  padding-top: 10px;
+  span {
+    width: 100%;
+    display: block;
+    text-align: left !important;
+  }
+}
+
+mat-dialog-content {
+  padding: 0 !important;
+  .title {
+    img {
+      height: 60px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+#report-space {
+  width: 100%;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  .cont {
+    .item {
+      padding-bottom: 15px;
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0;
+      }
+      p {
+        margin: 0 0;
+        font-size: 16px;
+        padding-top: 15px;
+        line-height: 22px;
+        text-align: justify;
+        text-justify: distribute;
+      }
+    }
+  }
+}
+

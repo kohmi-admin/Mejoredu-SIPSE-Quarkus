@@ -1,0 +1,43 @@
+<div class="btn-navigation report">
+  <button mat-flat-button color="view" (click)="descargar()">Descargar PDF</button>
+</div>
+<form class="form fade" [formGroup]="form">
+  <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+    <app-dynamic-field
+      class="form-field full blur"
+      [question]="question"
+      *ngIf="!question.filter"
+      [form]="form"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full blur"
+      [question]="question"
+      *ngIf="question.filter"
+      [form]="form"
+    ></app-select-filter>
+  </div>
+  <div class="action-buttons filter">
+    <button mat-flat-button color="primary" class="btn-left">
+      Aplicar Filtro
+    </button>
+  </div>
+</form>
+
+<section id="report-space">
+  <app-resume [items]="resumes"></app-resume>
+  
+  <section>
+    <div>
+      <div class="chart" [class]="item.class" *ngFor="let item of charts">
+        <div class="chart-item">
+          <div class="c-title">
+            {{ item.title }}
+          </div>
+          <div class="c-content">
+            <app-chart [chart]="item.chart"></app-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

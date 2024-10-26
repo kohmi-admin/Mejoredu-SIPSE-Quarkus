@@ -1,0 +1,35 @@
+:host ::ng-deep mat-form-field {
+    width: 100% !important;
+}
+
+.field {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid var(--border-middle) transparent;
+    border-bottom-width: 0;
+}
+
+.field:nth-child(1) {
+    width: calc(100% - 320px);
+}
+
+.field:nth-child(2) {
+    width: 320px;
+}
+
+form {
+    width: 100%;
+    text-align: left;
+}
+
+button {
+    width: 100px;
+}
+
+@media only screen and (max-width: 660px) {
+    .field  {
+        width: 100% !important;
+    }
+  }
+  

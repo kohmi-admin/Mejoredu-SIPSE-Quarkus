@@ -1,0 +1,17 @@
+<section id="wrapper">
+    <h1 class="title">Evaluación y Mejora Continua</h1>
+  
+    <app-module-btn
+      *ngFor="let opt of options"
+      [routerLink]="opt.route"
+      [title]="opt.title"
+      [icon]="opt.icon"
+      [imgIcon]="opt.imgIcon"
+      [enable]="opt.enable"
+      [finish]="opt.finish"
+      [description]="opt.description"
+    ></app-module-btn>
+  
+    <router-outlet></router-outlet>
+  </section>
+  

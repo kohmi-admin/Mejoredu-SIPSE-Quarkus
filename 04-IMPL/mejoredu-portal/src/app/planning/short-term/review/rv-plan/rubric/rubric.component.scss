@@ -1,0 +1,116 @@
+table {
+  width: 100%;
+  div[contenteditable] {
+    z-index: 2;
+    outline: none;
+    padding: 10px;
+    min-width: 52px;
+    max-width: 321px;
+    position: relative;
+    width: max-content;
+    word-break: keep-all;
+  }
+}
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left !important;
+  position: relative;
+  margin: 20px;
+  border: 2px solid white;
+  font-size: 14px;
+}
+
+thead {
+  z-index: 300;
+  position: relative;
+  // box-shadow: 0px 4px 8px rgba( 1, 1, 1, 0.08);
+  td {
+    color: white !important;
+    background: rgb(0, 102, 102) !important;
+  }
+  &::before {
+    left: 0;
+    bottom: 0;
+    height: 1;
+    width: 100%;
+    content: "";
+    z-index: 100;
+    position: absolute;
+    background: rgba(1, 1, 1, 0.08);
+  }
+}
+
+tbody {
+  .text-justify {
+    text-align: justify !important;
+  }
+  td {
+    text-align: center !important;
+    padding: 10px;
+    &.editable {
+      &:focus-within {
+        &::after {
+          top: 2px;
+          left: 2px;
+          content: "";
+          z-index: 1;
+          position: absolute;
+          outline-style: dotted;
+          width: calc(100% - 3px);
+          height: calc(100% - 3px);
+          outline: 2px dotted rgba(1, 1, 1, 0.4);
+        }
+        &::before {
+          background: rgba(1, 1, 1, 0.04) !important;
+        }
+      }
+      &:hover {
+        cursor: text;
+        &::before {
+          background: rgba(1, 1, 1, 0.04) !important;
+        }
+      }
+    }
+  }
+}
+
+tr {
+  text-align: center !important;
+  background: rgb(232, 234, 233);
+}
+
+thead {
+  * {
+    text-align: center !important;
+  }
+}
+
+.rubro {
+    color: white;
+    background-color: rgb( 49, 130, 113);
+}
+
+td.active {
+    background-color: rgb( 198, 224, 179);
+}
+
+.tbl-fotter {
+    background: transparent !important;
+    td.accent {
+        color: white;
+        background-color: rgb( 1, 113, 193);
+    }
+}
+
+.container {
+    margin-top: -15px;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: rgb(229, 240, 220);
+}

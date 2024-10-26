@@ -1,0 +1,85 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Inicio'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Estrategias y Acciones'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+<section class="alert-success no-top">Objetivos Prioritarios</section>
+<form id="form3" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="field blur" *ngFor="let question of questions; let i = index">
+    <app-dynamic-field
+      class="form-field full"
+      [question]="question"
+      [form]="form"
+    ></app-dynamic-field>
+  </div>
+
+  <div
+    class="actions"
+    style="text-align: center; margin-bottom: 10px"
+    *ngIf="canEdit"
+  >
+    <button
+      *ngIf="
+        isCleanForm && (viewType === 'registro' || viewType === 'actualizacion')
+      "
+      type="button"
+      mat-flat-button
+      color="add"
+      (click)="newGoal()"
+    >
+      Limpiar formulario
+    </button>
+    <button
+      *ngIf="viewType === 'registro' || viewType === 'actualizacion'"
+      type="submit"
+      mat-flat-button
+      color="primary"
+      [disabled]="disabledSubmiting && !editable"
+      style="margin-bottom: -15px"
+    >
+      <mat-spinner
+        *ngIf="isSubmiting"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmiting">Guardar</span>
+    </button>
+  </div>
+</form>
+<app-mat-custom-table
+  *ngIf="data.length"
+  [maxWidthActions]="'240px'"
+  [dataset]="data"
+  [columns]="columns"
+  [actions]="getActionsTable()"
+  (action)="onTableAction($event)"
+  (update)="getGoals()"
+>
+</app-mat-custom-table>
+
+<app-validate
+  apartado="OBJETIVOS"
+  [textIdSaveEmpty]="'Selecciona un Objetivo para Realizar Comentarios.'"
+  [idSave]="idSaveValidar"
+  [fromModule]="'mp'"
+  [disable]="!!selectedAjustesPI"
+  *ngIf="validation"
+  [questions]="questions"
+></app-validate>

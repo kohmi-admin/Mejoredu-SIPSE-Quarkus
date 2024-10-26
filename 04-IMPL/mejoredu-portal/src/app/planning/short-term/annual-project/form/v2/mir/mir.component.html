@@ -1,0 +1,117 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-flat-button
+      color="view"
+      class="btn-left"
+      (click)="openDialog()"
+      *ngIf="dataUser.perfilLaboral.cveUnidad != '1210'"
+    >
+      Ver Ficha MIR
+    </button>
+
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Presupuestos'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Metas Para el bienestar'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="!loading" class="container">
+    <table class="sjs-table" cellspacing="0" cellpadding="0" #tbl>
+      <thead style="position: sticky; top: 0">
+        <tr>
+          <td [width]="80" rowspan="2" class="green">Tipo</td>
+          <td [width]="30" rowspan="2" class="green">Nivel</td>
+          <td [width]="1100" rowspan="2" class="green">Nombre del Indicador</td>
+          <td [width]="150" rowspan="2" colspan="2" class="green">
+            Meta Programada 2024
+          </td>
+          <td [width]="400" colspan="8" class="green">MIR 2024</td>
+          <td [width]="80" rowspan="2" class="green">Acciones</td>
+        </tr>
+        <tr style="position: sticky; top: 19px">
+          <td colspan="2">Primer Trimestre</td>
+          <td colspan="2">Segundo Trimestre</td>
+          <td colspan="2">Tercer Trimestre</td>
+          <td colspan="2">Cuarto Trimestre</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataTableMir">
+          <td *ngIf="item.tipo == 'Fin'" colspan="2">
+            {{ item.tipo }}
+          </td>
+          <td *ngIf="item.tipo != 'Fin'">
+            {{ item.tipo }}
+          </td>
+          <td *ngIf="item.tipo != 'Fin'">
+            {{ item.nivel }}
+          </td>
+          <td class="text-justify">
+            {{ item.nombreIndicador }}
+          </td>
+
+          <td [width]="30">
+            {{ calcularPorcentajeMIR(item).totalProductos }}
+          </td>
+          <td [width]="70">
+            {{ calcularPorcentajeMIR(item).totalPorcentaje }}%
+          </td>
+
+          <td [width]="30">{{ item.primerTrimestre }}</td>
+          <td [width]="70">
+            {{ calcularPorcentajeMIR(item).primerPorcentaje }}%
+          </td>
+
+          <td [width]="30">{{ item.segundoTrimestre }}</td>
+          <td [width]="70">
+            {{ calcularPorcentajeMIR(item).segundoPorcentaje }}%
+          </td>
+
+          <td [width]="30">{{ item.tercerTrimestre }}</td>
+          <td [width]="70">
+            {{ calcularPorcentajeMIR(item).tercerPorcentaje }}%
+          </td>
+
+          <td [width]="30">{{ item.cuartoTrimestre }}</td>
+          <td [width]="70">
+            {{ calcularPorcentajeMIR(item).cuartoPorcentaje }}%
+          </td>
+
+          <td [width]="80" >
+            <button
+              mat-icon-button matTooltip="Ver Ficha"
+              [disabled]="dataUser.perfilLaboral.cveUnidad != '1210'"
+              (click)="openDialogFichaMir(item)"
+            >
+              <mat-icon> visibility </mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<app-mat-custom-table
+  *ngIf="!loading"
+  (action)="onTableAction($event)"
+  (update)="getAll()"
+  [actions]="actions"
+  [dataset]="dataProducts"
+  [maxWidthActions]="'150px'"
+  [columns]="columns"
+>
+</app-mat-custom-table>

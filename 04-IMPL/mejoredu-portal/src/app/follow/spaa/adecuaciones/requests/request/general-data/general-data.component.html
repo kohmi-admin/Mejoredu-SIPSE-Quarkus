@@ -1,0 +1,143 @@
+<section id="wrapper" style="border-bottom-width: 0">
+  <form
+    class="form fade"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    *ngIf="canEdit"
+  >
+    <div class="field" *ngFor="let question of questions | slice : 0 : 3">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <table class="tbl-switch">
+      <thead>
+        <tr>
+          <th [width]="120">Tipo de Modificación</th>
+          <th>Alta</th>
+          <th>Modificación</th>
+          <th>Cancelación</th>
+          <!-- COMMENT: Se comenta para que en un futuro se integre -->
+          <!-- <th>Ampliación</th>
+          <th>Reducción</th>
+          <th>Reintegro</th>
+          <th>Traspaso</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sw of switches">
+          <td>
+            {{ sw.type }}
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="sw.alta.value"
+              [disabled]="disabledComponent || !sw.alta.enable"
+              (ngModelChange)="switchChange(sw.type, 'alta', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="sw.modificacion.value"
+              [disabled]="disabledComponent || !sw.modificacion.enable"
+              (ngModelChange)="switchChange(sw.type, 'modificacion', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="sw.cancelacion.value"
+              [disabled]="disabledComponent || !sw.cancelacion.enable"
+              (ngModelChange)="switchChange(sw.type, 'cancelacion', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td>
+          <!-- COMMENT: Se comenta para que en un futuro se integre -->
+          <!-- <td>
+            <mat-checkbox
+              [(ngModel)]="sw.ampliacion.value"
+              [disabled]="disabledComponent || !sw.ampliacion.enable"
+              (ngModelChange)="switchChange(sw.type, 'ampliacion', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="sw.reduccion.value"
+              [disabled]="disabledComponent || !sw.reduccion.enable"
+              (ngModelChange)="switchChange(sw.type, 'reduccion', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="sw.reintegro.value"
+              [disabled]="disabledComponent || !sw.reintegro.enable"
+              (ngModelChange)="switchChange(sw.type, 'reintegro', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="sw.traspaso.value"
+              [disabled]="disabledComponent || !sw.traspaso.enable"
+              (ngModelChange)="switchChange(sw.type, 'traspaso', $event)"
+              [ngModelOptions]="{ standalone: true }"
+            >
+            </mat-checkbox>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="form2">
+      <div class="field" *ngFor="let question of questions | slice : 3 : 5">
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </section>
+
+    <div class="action-buttons" style="margin-bottom: -10px">
+      <button
+        mat-flat-button
+        class="btn-left"
+        color="primary"
+        *ngIf="!disabledComponent"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">Guardar</span>
+      </button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,80 @@
+<section id="wrapper" class="can-validate">
+  <h1 class="title no-bottom">
+    Planeación a Corto Plazo
+  </h1>
+  <span class="sub-title bottom">Registro de Proyectos</span>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="Proyectos" routerLinkActive="active-link">
+      Proyectos&nbsp;
+      <mat-icon *ngIf="completed.projects" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="!completed.projects" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Actividades'"
+      routerLinkActive="active-link"
+    >
+      Actividades&nbsp;
+      <mat-icon *ngIf="completed.activities" class="check"
+        >check_circle</mat-icon
+      >
+      <mat-icon *ngIf="!completed.activities" class="check low"
+        >pending</mat-icon
+      >
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Productos'"
+      routerLinkActive="active-link"
+    >
+      Productos&nbsp;
+      <mat-icon *ngIf="completed.products" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="!completed.products" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Presupuestos'"
+      routerLinkActive="active-link"
+    >
+      Presupuestos&nbsp;
+      <mat-icon *ngIf="completed.budgets" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="!completed.budgets" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      *ngIf="!validation"
+      [routerLink]="active.mir ? 'MIR' : null"
+      routerLinkActive="active-link"
+      [disabled]="!active.mir"
+    >
+      MIR&nbsp;
+      <mat-icon *ngIf="completed.mir" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="!completed.mir" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      *ngIf="!validation"
+      [routerLink]="active.goalsWellBeing ? 'Metas Para el bienestar' : null"
+      routerLinkActive="active-link"
+      [disabled]="!active.goalsWellBeing"
+    >
+      Metas Para el Bienestar&nbsp;
+      <mat-icon *ngIf="completed.goalsWellBeing" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="!completed.goalsWellBeing" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      *ngIf="!validation"
+      [routerLink]="active.generalView ? 'Vista general' : null"
+      routerLinkActive="active-link"
+      [disabled]="!active.generalView"
+    >
+      Vista General&nbsp;
+      <mat-icon *ngIf="completed.generalView" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="!completed.generalView" class="check low">pending</mat-icon>
+    </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+</section>

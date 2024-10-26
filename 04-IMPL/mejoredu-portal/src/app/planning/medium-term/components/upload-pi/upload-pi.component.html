@@ -1,0 +1,91 @@
+<section>
+  <section class="m">
+    <section class="alert-success no-top">
+      {{ consultation ? "Programa Institucional" : "Carga de PI" }}
+    </section>
+    <section class="fileSpace">
+      <file-upload
+        *ngIf="editable"
+        [files]="arrayFilesPi"
+        [id]="'inpFilePi'"
+        accept=".doc, .docx, .pdf"
+      ></file-upload>
+    </section>
+  </section>
+
+  <div class="actions static" *ngIf="editable">
+    <button
+      type="button"
+      mat-flat-button
+      color="add"
+      [disabled]="!arrayFilesPi.length"
+      style="margin-top: 0px"
+      (click)="addFileArchivosPi()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingArchivosPi"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingArchivosPi">Agregar Archivo</span>
+    </button>
+  </div>
+
+  <!-- (update)="getArchivosPi()" -->
+  <!-- [actions]="editable ? actionsPi : { view: true }" -->
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="handleTableActionArchivosPi($event)"
+    [actions]="actionsPi"
+    [dataset]="filesArchivosPi"
+    [columns]="columnsPi"
+    [actionString]="'Descargar'"
+    [customBtn]="'download'"
+    [maxWidthActions]="'200px'"
+  >
+  </app-mat-custom-table>
+
+  <section class="m no-top">
+    <section class="alert-success no-top">Actas de Sesión</section>
+    <section class="fileSpace">
+      <file-upload
+        *ngIf="editable"
+        [files]="arrayFilesActas"
+        [id]="'inpFileActas'"
+        accept=".pdf"
+      ></file-upload>
+    </section>
+  </section>
+
+  <div class="actions static" *ngIf="editable">
+    <button
+      type="button"
+      mat-flat-button
+      color="add"
+      [disabled]="!arrayFilesActas.length"
+      style="margin-top: 0px"
+      (click)="addFileActa()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingActas"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingActas">Agregar Archivo</span>
+    </button>
+  </div>
+
+  <!-- (update)="getActas()" -->
+  <!-- [actions]="editable ? actionsActas : { view: true }" -->
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="handleTableActionActas($event)"
+    [actions]="actionsActas"
+    [dataset]="filesActas"
+    [columns]="columnsActas"
+    [actionString]="'Descargar'"
+    [customBtn]="'download'"
+    [maxWidthActions]="'200px'"
+  >
+  </app-mat-custom-table>
+</section>

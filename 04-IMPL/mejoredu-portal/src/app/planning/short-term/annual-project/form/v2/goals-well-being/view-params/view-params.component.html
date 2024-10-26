@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Ficha Metas y Parámetros</h1>
+<div mat-dialog-content>
+  <form class="form fade" [formGroup]="form">
+    <app-meta-elements
+      [form]="metaElements"
+      [editable]="false"
+    ></app-meta-elements>
+    <app-calculation-method
+      [form]="calculationMethod"
+      [editable]="false"
+    ></app-calculation-method>
+    <app-value [form]="value" [editable]="false"></app-value>
+    <app-historical-series
+      [form]="historicalSeries"
+      [editable]="false"
+    ></app-historical-series>
+    <app-intermediate-goals
+      [form]="intermediateGoals"
+      [editable]="false"
+    ></app-intermediate-goals>
+  </form>
+
+  <app-mat-custom-table
+    [maxWidthActions]="'240px'"
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    (action)="onTableAction($event)"
+  >
+  </app-mat-custom-table>
+</div>

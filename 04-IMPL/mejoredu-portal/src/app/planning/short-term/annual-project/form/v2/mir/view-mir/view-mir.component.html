@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Ficha MIR</h1>
+<div mat-dialog-content>
+<div class="container">
+  <table
+    class="sjs-table"
+    cellspacing="0"
+    cellpadding="0"
+    #tbl
+  >
+    <thead style="position: sticky; top: 0">
+      <tr>
+        <td>Nivel</td>
+        <td>Clave</td>
+        <td>Resumen Narrativo</td>
+        <td>Nombre del Indicador</td>
+        <td>Medios de Verificación</td>
+        <td>Supuestos</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of table; let i = index">
+        <td>
+          {{ item.nivel }}
+        </td>
+        <td>
+          {{ item.clave }}
+        </td>
+        <td>
+          {{ item.resumenNarrativo }}
+        </td>
+        <td>
+          {{ item.nombreIndicador }}
+        </td>
+        <td>
+          {{ item.mediosVerificacion }}
+        </td>
+        <td>
+          {{ item.supuestos }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

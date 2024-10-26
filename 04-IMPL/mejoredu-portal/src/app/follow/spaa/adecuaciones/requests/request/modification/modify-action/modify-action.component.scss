@@ -1,0 +1,20 @@
+.action-buttons {
+  display: flex;
+  padding-right: 15px;
+  margin-top: -18px;
+  margin-bottom: -10px;
+  justify-content: flex-end;
+  .btn-left {
+    margin-left: 20px;
+    color: var(--white) !important;
+  }
+  .add {
+    color: var(--white) !important;
+    background-color: var(--golden-me);
+  }
+  button[mat-mini-fab] {
+    margin-left: 10px;
+    transform: translateY(-2px);
+    border: solid 1px var(--primary-color);
+  }
+}

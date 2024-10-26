@@ -1,0 +1,99 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Estrategias y Acciones'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Parámetros'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+<form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+  <app-meta-elements
+    [form]="metaElements"
+    [editable]="editable"
+  ></app-meta-elements>
+  <app-calculation-method
+    [form]="calculationMethod"
+    [editable]="editable"
+  ></app-calculation-method>
+  <app-value [form]="value" [editable]="editable"></app-value>
+  <app-historical-series
+    [form]="historicalSeries"
+    [editable]="editable"
+  ></app-historical-series>
+  <app-intermediate-goals
+    [form]="intermediateGoals"
+    [editable]="editable"
+  ></app-intermediate-goals>
+
+  <div
+    class="actions"
+    style="margin-bottom: -6px !important; margin-top: -25px !important"
+    *ngIf="canEdit"
+  >
+    <button
+      *ngIf="
+        isCleanForm && (viewType === 'registro' || viewType === 'actualizacion')
+      "
+      type="button"
+      mat-flat-button
+      color="add"
+      (click)="newGoalsWellBeing()"
+    >
+      Limpiar formulario
+    </button>
+    <button
+      *ngIf="
+        viewType === 'registro' ||
+        (viewType === 'actualizacion' && dataSelected)
+      "
+      type="submit"
+      mat-flat-button
+      color="primary"
+      [disabled]="disabledSubmiting"
+      style="margin-bottom: -15px"
+    >
+      <mat-spinner
+        *ngIf="isSubmiting"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmiting">Guardar</span>
+    </button>
+  </div>
+</form>
+<app-mat-custom-table
+  *ngIf="data.length"
+  [maxWidthActions]="'240px'"
+  [dataset]="data"
+  [columns]="columns"
+  [actions]="getActionsTable()"
+  (action)="onTableAction($event)"
+  (update)="getGoalsAllByStructure()"
+>
+</app-mat-custom-table>
+
+<app-validate
+  apartado="METAS-PARA-EL-BIENESTAR"
+  [textIdSaveEmpty]="
+    'Selecciona una Meta Para el Bienestar para realizar comentarios.'
+  "
+  [idSave]="idSaveValidar"
+  [fromModule]="'mp'"
+  [disable]="!!selectedAjustesPI"
+  *ngIf="validation"
+  [questions]="questionsToValidate()"
+></app-validate>

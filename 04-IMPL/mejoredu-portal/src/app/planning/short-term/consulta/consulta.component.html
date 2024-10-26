@@ -1,0 +1,14 @@
+<section id="wrapper">
+  <h1 class="title">Planeación a Corto Plazo</h1>
+  <app-module-btn
+    *ngFor="let opt of options"
+    [routerLink]="opt.route"
+    [finish]="opt.finish"
+    [title]="opt.title"
+    [icon]="opt.icon"
+    [imgIcon]="opt.imgIcon"
+    [enable]="opt.enable"
+    [canDownload]="opt.canDownload"
+    [description]="opt.description"
+  ></app-module-btn>
+</section>

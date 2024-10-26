@@ -1,0 +1,47 @@
+<section id="wrapper" class="can-validate">
+  <h1 class="title no-bottom">Programas Presupuestarios</h1>
+  <span class="sub-title bottom">Registro P016</span>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="Datos Generales" routerLinkActive="active-link">
+      Datos Generales&nbsp;
+      <mat-icon *ngIf="false" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="true" class="check low">pending</mat-icon>
+    </a>
+    <a mat-tab-link [routerLink]="'Diagnóstico'" routerLinkActive="active-link">
+      Diagnóstico&nbsp;
+      <mat-icon *ngIf="false" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="true" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Árbol del Problema'"
+      routerLinkActive="active-link"
+    >
+      Árbol del Problema&nbsp;
+      <mat-icon *ngIf="false" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="true" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Árbol de Objetivos'"
+      routerLinkActive="active-link"
+    >
+      Árbol de Objetivos&nbsp;
+      <mat-icon *ngIf="false" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="true" class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Matríz de Indicadores para Resultados'"
+      routerLinkActive="active-link"
+    >
+      Matríz de Indicadores para Resultados&nbsp;
+      <mat-icon *ngIf="false" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="true" class="check low">pending</mat-icon>
+    </a>
+  </nav>
+
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+</section>

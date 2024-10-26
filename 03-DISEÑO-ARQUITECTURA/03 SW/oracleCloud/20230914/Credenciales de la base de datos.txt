@@ -1,0 +1,9 @@
+Datos de la instancia:
+ip publica: 140.84.175.23
+
+
+Datos de la base de datos:
+Private IP address: 10.1.1.122
+user: admin
+contraseña: Mejoredu23#
+Hostname: mejoredu.sub09111642121.vcnmejoredu.oraclevcn.com

@@ -1,0 +1,100 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Proyectos'"
+      disabled
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Objetivos'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+<section class="alert-success no-top">Principal</section>
+<form id="form1" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="field blur" *ngFor="let question of questions">
+    <app-dynamic-field
+      class="form-field full"
+      [question]="question"
+      *ngIf="!question.filter"
+      [form]="form"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full"
+      [question]="question"
+      *ngIf="question.filter"
+      [form]="form"
+    ></app-select-filter>
+  </div>
+  <div class="actions" style="text-align: center; margin-bottom: 15px" *ngIf="!this.selectedValidatePI && canEdit">
+    <!-- <button
+      *ngIf="
+        isCleanForm && (viewType === 'registro' || viewType === 'actualizacion')
+      "
+      type="button"
+      mat-flat-button
+      color="add"
+      (click)="newGestor()"
+    >
+      Limpiar formulario
+    </button> -->
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      [disabled]="form.enabled"
+      style="margin-bottom: -15px"
+      (click)="onEdit()"
+    >
+      Editar
+    </button>
+    <button
+      *ngIf="
+        viewType === 'registro' ||
+        (viewType === 'actualizacion' && dataSelected)
+      "
+      type="submit"
+      mat-flat-button
+      color="primary"
+      [disabled]="disabledSubmiting"
+      style="margin-bottom: -15px"
+    >
+      <mat-spinner
+        *ngIf="isSubmiting"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmiting">Guardar</span>
+    </button>
+  </div>
+</form>
+<!-- <app-mat-custom-table
+  *ngIf="!loading"
+  [maxWidthActions]="'240px'"
+  [dataset]="data"
+  [columns]="columns"
+  [actions]="getActionsTable()"
+  (action)="onTableAction($event)"
+  (update)="getGestorPorAnhio()"
+>
+</app-mat-custom-table> -->
+
+<app-validate
+  apartado="INICIO"
+  [idSave]="idSaveValidar"
+  [disable]="!!selectedAjustesPI"
+  [fromModule]="'mp'"
+  *ngIf="validation"
+  [questions]="questions"
+></app-validate>

@@ -1,0 +1,134 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <!-- <button mat-flat-button color="view" class="btn-left">Descargar</button> -->
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="false"
+      [matTooltip]="'Anterior'"
+      (click)="navigate.emit(2)"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [disabled]="!false"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div class="alert-success" style="margin-top: 0">Datos Generales</div>
+
+  <form *ngIf="!loading" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 1">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <section class="dbl" id="from">
+      <div class="sub-title">Programado:</div>
+      <section
+        class="field"
+        *ngFor="let question of questions | slice : 1 : 10"
+      >
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </section>
+    </section>
+
+    <section class="dbl">
+      <div class="sub-title">Modificado:</div>
+      <section
+        class="field"
+        *ngFor="let question of questions | slice : 10 : 14"
+      >
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </section>
+    </section>
+
+    <div class="alert-success" style="margin-top: 0">
+      Calendarización del Producto
+    </div>
+
+    <div class="group-forms" *ngFor="let mounths of calendars">
+      <div class="group-form" *ngFor="let item of mounths">
+        <div class="title">
+          {{ item.name }}
+        </div>
+        <div class="container">
+          <div class="item" *ngFor="let month of item.items">
+            <div class="title">
+              {{ month.name }}
+            </div>
+            <div class="field">
+              <input type="text" [(ngModel)]="month.value" [disabled]="true" [ngModelOptions]="{standalone: true}" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-success" style="margin-top: 20px">
+      Calendarización del Gasto Programado
+    </div>
+    
+    <app-scheduled-expense *ngIf="!loading" [data]="data.presupuestos"></app-scheduled-expense>
+
+    <!-- <div class="alert-success" style="margin-top: 20px">
+      Calendarización del Presupuesto
+    </div> -->
+    
+    <!-- <app-budget-calendar></app-budget-calendar> -->
+
+    <div >
+      <app-mat-custom-table
+        *ngIf="!loading"
+        (update)="getAll()"
+        [hasScroll]="false"
+        [actions]="actions"
+        [dataset]="data"
+        [actionString]="'Ver'"
+        [maxWidthActions]="'60px'"
+        [columns]="columns"
+      >
+      </app-mat-custom-table>
+    </div>
+    
+  </form>
+</section>

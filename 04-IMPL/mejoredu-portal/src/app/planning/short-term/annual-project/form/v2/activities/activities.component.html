@@ -1,0 +1,99 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Proyectos'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Productos'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <div
+      class="action-buttons"
+      style="margin-bottom: -10px"
+      *ngIf="
+        !selectedValidateProyectoPAA &&
+        !selectedConsultaProyectoPAA &&
+        canEditProject
+      "
+    >
+      <button
+        *ngIf="isCleanForm"
+        type="button"
+        mat-flat-button
+        color="add"
+        (click)="newActivity('cleanForm')"
+      >
+        Limpiar formulario
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        [disabled]="!editable && disabledSubmiting"
+      >
+        <!-- <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner> -->
+        <span *ngIf="!isSubmiting">Guardar</span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<div class="wrap">
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="onTableAction($event)"
+    (update)="getAll()"
+    [actions]="actions"
+    [customBtn]="customBtn"
+    [dataset]="data"
+    [maxWidthActions]="'150px'"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+</div>
+
+<app-validate
+  apartado="REVISION-CP-ACTIVIDADES"
+  [textIdSaveEmpty]="
+    selectedValidateProyectoPAA
+      ? 'Selecciona una actividad para realizar comentarios.'
+      : 'Selecciona una actividad para ver los comentarios.'
+  "
+  [idSave]="idSaveValidar"
+  [disable]="disabledAppValidate"
+  [fromModule]="'cp'"
+  *ngIf="validation"
+  [questions]="getQuestions"
+></app-validate>

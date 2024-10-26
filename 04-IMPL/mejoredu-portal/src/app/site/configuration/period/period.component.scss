@@ -1,0 +1,45 @@
+::ng-deep {
+    .cdk-overlay-backdrop {
+        backdrop-filter: blur(0px) !important;
+    }
+}
+
+.field {
+  width: 33.33% !important;
+}
+
+.field:nth-of-type(1) {
+  border-right-width: var(--border-middle);
+}
+
+.field:nth-of-type(2) {
+  border-left-width: var(--border-slim);
+  border-right-width: var(--border-middle);
+}
+
+.field:nth-of-type(3) {
+    border-left-width: var(--border-slim);
+}
+
+.date-field {
+    margin: auto auto;
+    box-sizing: border-box;
+    width: 325px !important;
+    border: solid var(--border-middle) transparent !important;
+    border-top-width: 2px !important;
+}
+
+.wrapper {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    box-sizing: border-box;
+}
+
+::ng-deep {
+  .date-field {
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+      padding-top: 19px !important;
+      padding-bottom: 9px !important;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<nav>
+  <div class="header">
+    <img src="assets/img/logoCompact.svg" alt="logo">
+    <hr>
+  </div>
+
+  <div id="menu">
+    <div class="nav-btn-wp" *ngFor="let item of menu">
+      <button class="nav-btn"
+        routerLinkActive="active"
+        [routerLink]="item.link"
+        matRipple>
+        <fa-icon [icon]="item.icon" size="xl"></fa-icon>
+        <span>{{
+          item.name
+        }}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="fotter">
+    <div class="nav-btn-wp">
+      <button class="nav-btn" matRipple>
+        <fa-icon [icon]="faBell" size="xl"></fa-icon>
+        <span>
+          Notificaciones
+        </span>
+      </button>
+    </div>
+
+    <div class="nav-btn-wp">
+      <button class="nav-btn" matRipple>
+        <fa-icon [icon]="faSignOut" size="xl"></fa-icon>
+        <span>
+          Cerrar Sesión
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>

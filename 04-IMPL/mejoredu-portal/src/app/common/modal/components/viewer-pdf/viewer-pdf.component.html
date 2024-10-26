@@ -1,0 +1,64 @@
+<h1 *ngIf="data?.title" class="modal-header" mat-dialog-title>
+  <mat-icon
+    [mat-dialog-close]="'cancel'"
+    [matTooltip]="'Cerrar'"
+    class="icon-close-header"
+    fontIcon="close"
+  ></mat-icon>
+  {{ data.title }}
+</h1>
+<div mat-dialog-content class="modal-content color-primary">
+  <div *ngIf="data?.text" style="padding-bottom: 15px">
+    {{ data?.text }}
+  </div>
+  <div
+    style="display: flex; justify-content: center"
+    *ngIf="loadingAlfresco; else contentFileModal"
+  >
+    <mat-spinner *ngIf="true" style="width: 25px" color="warn"></mat-spinner>
+  </div>
+  <ng-template #contentFileModal>
+    <span *ngIf="!source" style="padding: 10px">
+      No se Encontró el Archivo, Intente más Tarde.
+    </span>
+    <embed
+      *ngIf="source"
+      [src]="
+        source + (data?.propertiesViewerPdf || '')
+          | safe : data?.sourceType || 'resourceUrl'
+      "
+      width="100%"
+      height="100%"
+    />
+  </ng-template>
+</div>
+<div *ngIf="source" class="footer-button-small">
+  <div class="icon-download" (click)="onSubmit('download')">
+    <mat-icon
+      *ngIf="data?.downloadFile"
+      [matTooltip]="'Descargar'"
+      fontIcon="download"
+    ></mat-icon>
+    Descargar
+  </div>
+</div>
+<!-- <div mat-dialog-actions class="footer-button">
+  <button
+    *ngIf="data?.labelBtnSecondary"
+    type="button"
+    mat-flat-button
+    color="secundary"
+    [mat-dialog-close]="'cancel'"
+  >
+    {{ data?.labelBtnSecondary }}
+  </button>
+  <button
+    *ngIf="data?.labelBtnPrimary"
+    type="button"
+    mat-flat-button
+    color="accent"
+    (click)="onSubmit()"
+  >
+    {{ data?.labelBtnPrimary }}
+  </button>
+</div> -->

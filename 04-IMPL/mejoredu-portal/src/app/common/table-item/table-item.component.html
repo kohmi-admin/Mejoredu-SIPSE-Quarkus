@@ -1,0 +1,53 @@
+<div class="ti-wrapper">
+  <div class="ti-item">
+    <div class="ti-item__title">
+      <span class="ti-item__title__text">{{ value[key] }}</span>
+    </div>
+    <div class="ti-item__actions">
+      <button
+        mat-icon-button
+        color="primary"
+        [matTooltip]="
+          (actionString || 'Visualizar') +
+          (complementText ? ' ' + complementText : '')
+        "
+        type="button"
+        *ngIf="actions?.view"
+        (click)="onViewClick()"
+      >
+        <mat-icon>{{ customBtn || "visibility" }}</mat-icon>
+      </button>
+      <button
+        *ngFor="let action of actions?.custom"
+        mat-icon-button
+        [matTooltip]="action.name"
+        type="button"
+        color="primary"
+        (click)="onCustomClick(action)"
+        [disabled]="action.toggleDisabled && value['ppAprovate'] === 'No'"
+      >
+        <mat-icon>{{ action.icon }}</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        [matTooltip]="'Editar' + (complementText ? ' ' + complementText : '')"
+        type="button"
+        *ngIf="actions?.edit"
+        (click)="onEditClick()"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        [matTooltip]="'Eliminar' + (complementText ? ' ' + complementText : '')"
+        color="warn"
+        type="button"
+        *ngIf="actions?.delete"
+        (click)="onDeleteClick()"
+      >
+        <mat-icon class="delete">delete</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

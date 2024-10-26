@@ -1,0 +1,26 @@
+<div class="dbl">
+  <div class="sub-title">Dice</div>
+  <app-actions-mod
+    [position]="'left'"
+    [catCategoriaR]="catCategoriaR"
+    [catNivelEducativoR]="catNivelEducativoR"
+    [catTipoProductoR]="catTipoProductoR"
+    [receivedRecord]="receivedRecord"
+    [receivedEvents]="receivedEvents"
+    (setRecord)="handleSetRecord($event)"
+    (setEvents)="handleSetEvents($event)"
+  ></app-actions-mod>
+</div>
+<div class="dbl">
+  <div class="sub-title">Debe Decir</div>
+  <app-actions-mod
+    [position]="'right'"
+    [catCategoriaR]="catCategoriaR"
+    [catNivelEducativoR]="catNivelEducativoR"
+    [catTipoProductoR]="catTipoProductoR"
+    [receivedRecord]="receivedRecord"
+    [receivedEvents]="receivedEvents"
+    (setRecord)="handleSetRecord($event)"
+    (setEvents)="handleSetEvents($event)"
+    ></app-actions-mod>
+</div>

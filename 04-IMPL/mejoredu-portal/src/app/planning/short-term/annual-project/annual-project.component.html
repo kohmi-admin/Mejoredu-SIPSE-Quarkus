@@ -1,0 +1,10 @@
+<section id="wrapper">
+    <app-module-btn
+      *ngFor="let opt of options"
+      [routerLink]="opt.route"
+      [title]="opt.title"
+      [icon]="opt.icon"
+      [enable]="opt.enable"
+      [description]="opt.description"
+    ></app-module-btn>
+  </section>

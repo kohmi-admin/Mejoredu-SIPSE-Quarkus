@@ -1,0 +1,228 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-flat-button
+      color="view"
+      class="btn-left"
+      type="button"
+      (click)="descargar()"
+    >
+      Descargar
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Árbol de Objetivos'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      disabled
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Vista general'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div class="container">
+    <table class="sjs-table" cellspacing="0" cellpadding="0">
+      <thead style="position: sticky; top: 0">
+        <tr>
+          <td>Nivel</td>
+          <td>Clave</td>
+          <td>Resumen Narrativo</td>
+          <td>Nombre del Indicador</td>
+          <td>Medios de Verificación</td>
+          <td>Supuestos</td>
+          <td>Acciones</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of table; let i = index">
+          <td>
+            {{ item.nivel }}
+          </td>
+          <td>
+            {{ item.clave }}
+          </td>
+          <td
+            class="text-justify"
+            [class.editable]="editing"
+            (click)="resumenNarrativo.focus()"
+          >
+            <textarea
+              (click)="$event.preventDefault(); $event.stopPropagation()"
+              [(ngModel)]="item.resumenNarrativo"
+              (ngModelChange)="autoGrowTextZone(resumenNarrativo)"
+              [disabled]="!editing"
+              #resumenNarrativo
+            ></textarea>
+          </td>
+          <td
+            class="text-justify"
+            [class.editable]="editing"
+            (click)="nombreIndicador.focus()"
+          >
+            <textarea
+              (click)="$event.preventDefault(); $event.stopPropagation()"
+              [(ngModel)]="item.nombreIndicador"
+              (ngModelChange)="autoGrowTextZone(nombreIndicador)"
+              [disabled]="!editing"
+              cdkTextareaAutosize
+              #nombreIndicador
+            ></textarea>
+          </td>
+          <td
+            class="text-justify"
+            [class.editable]="editing"
+            (click)="mediosVerificacion.focus()"
+          >
+            <textarea
+              (click)="$event.preventDefault(); $event.stopPropagation()"
+              [(ngModel)]="item.mediosVerificacion"
+              (ngModelChange)="autoGrowTextZone(mediosVerificacion)"
+              [disabled]="!editing"
+              #mediosVerificacion
+            ></textarea>
+          </td>
+          <td
+            class="text-justify"
+            [class.editable]="editing"
+            (click)="supuestos.focus()"
+          >
+            <textarea
+              (click)="$event.preventDefault(); $event.stopPropagation()"
+              [(ngModel)]="item.supuestos"
+              (ngModelChange)="autoGrowTextZone(supuestos)"
+              [disabled]="!editing"
+              #supuestos
+            ></textarea>
+          </td>
+          <td>
+            <button
+              mat-icon-button
+              [color]="item.idFichaIndicador ? 'primary' : 'warn'"
+              (click)="openDialog(item)"
+              matTooltip="Ficha de Indicadores"
+            >
+              <mat-icon>edit_note</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              color="primary"
+              matTooltip="Agregar Indicador"
+              (click)="addIndicator(i, item)"
+              [disabled]="!editing"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="sjs-table" style="display: none" #tbl>
+      <thead style="position: sticky; top: 0">
+        <tr>
+          <th scope="col">Nivel</th>
+          <td>Clave</td>
+          <td>Resumen Narrativo</td>
+          <td>Nombre del Indicador</td>
+          <td>Medios de Verificación</td>
+          <td>Supuestos</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of table; let i = index">
+          <td>
+            {{ item.nivel }}
+          </td>
+          <td>
+            {{ item.clave }}
+          </td>
+          <td>
+            {{ item.resumenNarrativo }}
+          </td>
+          <td>
+            {{ item.nombreIndicador }}
+          </td>
+          <td>
+            {{ item.mediosVerificacion }}
+          </td>
+          <td>
+            {{ item.supuestos }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="actions"
+    style="text-align: right; margin-bottom: -0px"
+    *ngIf="!consulting && editable && canEdit"
+  >
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      [disabled]="disabledBtnEdit"
+      (click)="toggleEdit()"
+    >
+      Editar
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      [disabled]="!editing"
+      (click)="registerMirPorAnhio()"
+    >
+      Guardar
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      class="btn-left"
+      [disabled]="disableFinish"
+      (click)="finalize()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingFinalize"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingFinalize">Finalizar Registro</span>
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="send"
+      [disabled]="disableSend"
+      (click)="send()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingSend"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingSend">Enviar a Validar</span>
+    </button>
+  </div>
+</section>
+
+<app-validate
+  *ngIf="validation"
+  apartado="VALIDACION-PRESUPUESTO-MATRIZ-INDICADORES"
+  [idSave]="idSaveValidar"
+  [fromModule]="'pp'"
+  whenFinishGoTo="/Planeación/Programas Presupuestarios/Validación"
+  [questions]="questions"
+  [canSign]="true"
+  [disable]="!!selectedAjustesPP"
+></app-validate>

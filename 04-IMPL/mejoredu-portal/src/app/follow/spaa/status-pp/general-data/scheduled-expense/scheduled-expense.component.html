@@ -1,0 +1,101 @@
+<div class="container-table-month">
+  <table class="sjs-table month-table" cellspacing="0" cellpadding="0" #tbl>
+    <thead style="position: sticky; top: 0">
+      <!-- <tr style="position: sticky; top: 19px;"> -->
+      <tr>
+        <td>Nombre de la Acción</td>
+        <td>Partida de Gastos</td>
+        <td class="anual">Anual</td>
+        <td class="month">Enero</td>
+        <td class="month">Febrero</td>
+        <td class="month">Marzo</td>
+        <td class="month">Abril</td>
+        <td class="month">Mayo</td>
+        <td class="month">Junio</td>
+        <td class="month">Julio</td>
+        <td class="month">Agosto</td>
+        <td class="month">Septiembre</td>
+        <td class="month">Octubre</td>
+        <td class="month">Noviembre</td>
+        <td class="month">Diciembre</td>
+        <td>Eliminar</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="total">
+        <td colspan="2">Presupuesto Total ($)</td>
+        <td>
+          <span>
+            {{ parseMoneyFormat(getTotalAmount()) }}
+          </span>
+        </td>
+        <td>{{ parseMoneyFormat(mountsAmounts.january) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.february) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.march) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.april) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.may) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.june) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.july) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.august) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.september) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.october) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.november) }}</td>
+        <td>{{ parseMoneyFormat(mountsAmounts.december) }}</td>
+        <td></td>
+      </tr>
+
+      <tr *ngFor="let item of table">
+        <td>
+          <span>
+            {{ item.name }}
+          </span>
+        </td>
+        <td>{{ item.partial }}</td>
+        <td class="lightblue" [class.red]="sumByRow(item).toFixed(2) > item.anualBudget.toFixed(2)">
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.anualBudget" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.january" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.february" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.march" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.april" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.may" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.june" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.july" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.august" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.september" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.october" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.november" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <input currencyMask placeholder="$0.00" [disabled]="true" [(ngModel)]="item.december" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', precision: 2 }"/>
+        </td>
+        <td>
+          <button mat-icon-button color="accent" [disabled]="true">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

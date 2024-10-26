@@ -1,0 +1,172 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Objetivos'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Metas Para el Bienestar'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+
+<section class="alert-success no-top">Estrategias</section>
+<form
+  id="form3"
+  class="form fade"
+  [formGroup]="formStrategies"
+  (ngSubmit)="submitStrategies()"
+>
+  <div
+    class="field blur"
+    *ngFor="let questionS of questionsStrategies; let i = index"
+  >
+    <app-dynamic-field
+      class="form-field full"
+      [question]="questionS"
+      *ngIf="!questionS.filter"
+      [form]="formStrategies"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full"
+      [question]="questionS"
+      *ngIf="questionS.filter"
+      [form]="formStrategies"
+    ></app-select-filter>
+  </div>
+
+  <div
+    class="actions"
+    style="text-align: center; margin-bottom: 10px"
+    *ngIf="canEdit"
+  >
+    <button
+      *ngIf="
+        isCleanFormStrategy &&
+        (viewType === 'registro' || viewType === 'actualizacion')
+      "
+      type="button"
+      mat-flat-button
+      color="add"
+      (click)="newStrategie()"
+    >
+      Limpiar formulario
+    </button>
+    <button
+      *ngIf="viewType === 'registro' || viewType === 'actualizacion'"
+      type="submit"
+      mat-flat-button
+      color="primary"
+      [disabled]="disabledSubmitingStrategies"
+      style="margin-bottom: -15px"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingStrategies"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingStrategies">Guardar</span>
+    </button>
+  </div>
+</form>
+<app-mat-custom-table
+  *ngIf="dataStrategies.length"
+  [maxWidthActions]="'240px'"
+  [dataset]="dataStrategies"
+  [columns]="columnsStrategies"
+  [actions]="getActionsTableStrategies()"
+  (action)="onTableActionStrategies($event)"
+  (update)="onUpdateTableEstrategies()"
+>
+</app-mat-custom-table>
+
+<section class="alert-success no-top">Acciones</section>
+<form
+  id="form4"
+  class="form fade"
+  [formGroup]="formActions"
+  (ngSubmit)="submitActions()"
+>
+  <div
+    class="field blur"
+    *ngFor="let questionA of questionsActions; let i = index"
+  >
+    <app-dynamic-field
+      class="form-field full"
+      [question]="questionA"
+      *ngIf="!questionA.filter"
+      [form]="formActions"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full"
+      [question]="questionA"
+      *ngIf="questionA.filter"
+      [form]="formActions"
+    ></app-select-filter>
+  </div>
+
+  <div
+    class="actions"
+    style="text-align: center; margin-bottom: 10px"
+    *ngIf="!selectedValidatePI && canEdit"
+  >
+    <button
+      *ngIf="
+        isCleanFormAccion &&
+        (viewType === 'registro' || viewType === 'actualizacion')
+      "
+      type="button"
+      mat-flat-button
+      color="add"
+      (click)="newAction()"
+    >
+      Limpiar formulario
+    </button>
+    <button
+      *ngIf="viewType === 'registro' || viewType === 'actualizacion'"
+      type="submit"
+      mat-flat-button
+      color="primary"
+      [disabled]="disabledSubmitingActions"
+      style="margin-bottom: -15px"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingActions"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingActions">Guardar</span>
+    </button>
+  </div>
+</form>
+<app-mat-custom-table
+  *ngIf="dataActions.length"
+  [maxWidthActions]="'240px'"
+  [dataset]="dataActions"
+  [columns]="columnsActions"
+  [actions]="getActionsTableActions()"
+  (action)="onTableActionActions($event)"
+  (update)="onUpdateTableActions()"
+>
+</app-mat-custom-table>
+
+<app-validate
+  apartado="ESTRATEGIAS-ACCIONES"
+  [textIdSaveEmpty]="'Selecciona una Estrategia para realizar comentarios.'"
+  [idSave]="idSaveValidar"
+  [fromModule]="'mp'"
+  [disable]="!!selectedAjustesPI"
+  *ngIf="validation"
+  [questions]="questionsToValidate()"
+></app-validate>

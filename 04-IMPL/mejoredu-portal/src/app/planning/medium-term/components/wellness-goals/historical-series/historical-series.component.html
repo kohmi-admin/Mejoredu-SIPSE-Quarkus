@@ -1,0 +1,16 @@
+<section id="wrapper" class="">
+
+  <form *ngIf="form" id="form1" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="alert-success no-top">
+      Serie Histórica
+    </section>
+    <div class="field blur" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        [form]="form"
+      ></app-dynamic-field>
+    </div>
+  </form>
+
+</section>

@@ -1,0 +1,18 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">
+    Planeación a Corto Plazo
+  </h1>
+  <span class="sub-title no-bottom">Revisión y Validación</span>
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    (update)="getProjects()"
+    [ariaLabel]="'Visualizar'"
+    [maxWidthActions]="'160px'"
+    [actionString]="actionsString"
+    (action)="onTableAction($event)"
+    [showActionIf]="showActionIf"
+  >
+  </app-mat-custom-table>
+</section>

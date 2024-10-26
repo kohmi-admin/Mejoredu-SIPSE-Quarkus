@@ -1,0 +1,28 @@
+.group-forms {
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8.33333333333%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.field {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 0 transparent;
+    &:nth-child(1) {
+        border-right-width: var(--border-middle);
+    }
+    &:nth-child(2) {
+        border-left-width: var(--border-middle);
+    }
+}
+
+@media  (min-width: 1500px){
+  .hide-br {
+    display: none;
+  }
+}

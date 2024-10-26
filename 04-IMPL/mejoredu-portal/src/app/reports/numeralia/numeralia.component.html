@@ -1,0 +1,42 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Reportes y Numeralia</h1>
+  <span class="sub-title bottom">Numeralia</span>
+
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="PAA" routerLinkActive="active-link">
+      PAA
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Alineación MIR|PI'"
+      routerLinkActive="active-link"
+    >
+      Alineación MIR
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Adecuaciones Programáticas'"
+      routerLinkActive="active-link"
+    >
+      Adecuaciones Programáticas
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Seguimiento'"
+      routerLinkActive="active-link"
+    >
+      Seguimiento
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Presupuesto'"
+      routerLinkActive="active-link"
+    >
+      Presupuesto
+    </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+
+</section>

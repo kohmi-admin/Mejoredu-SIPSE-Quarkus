@@ -1,0 +1,14 @@
+<section id="wrapper" class="no-bottom">
+  <file-upload></file-upload>
+</section>
+<div class="wrap">
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="onTableAction($event)"
+    (update)="getAll()"
+    [actions]="actions"
+    [dataset]="data"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+</div>

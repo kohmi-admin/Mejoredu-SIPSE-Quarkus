@@ -1,0 +1,80 @@
+.time-line {
+    height: auto;
+    padding-bottom: var(--border-middle);
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    .tl-space {
+        display: inline-flex;
+        margin: auto auto;
+        position: relative;
+        &::before {
+            top: 26px;
+            left: 50%;
+            height: 2px;
+            content: '';
+            opacity: 0.3;
+            display: block;
+            position: absolute;
+            width: calc(100% - 80px);
+            transform: translate(-50%, -50%);
+            background: var(--primary-color);
+        }
+    }
+    .tl-item {
+        width: 80px;
+        height: auto;
+        cursor: default;
+        padding-left: 10px;
+        vertical-align: top;
+        padding-right: 10px;
+        display: inline-block;
+        .tl-icon {
+            z-index: 1;
+            display: flex;
+            margin: 0 auto;
+            font-size: 12px;
+            min-width: 50px;
+            max-width: 50px;
+            min-height: 50px;
+            overflow: hidden;
+            max-height: 50px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            position: relative;
+            align-items: center;
+            color: var(--white);
+            box-sizing: border-box;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            background: rgb(157, 157, 157);
+            border: solid 2px rgba( 255, 255, 255, 0.2);
+        }
+        .tl-text {
+            padding-top: 5px;
+            h3 {
+                margin: 0 0;
+                font-size: 12px;
+                line-height: 12px;
+            }
+            p {
+                display: table;
+                font-size: 10px;
+                padding: 2px 4px;
+                margin: auto auto;
+                line-height: 12px;
+                font-weight: bold;
+                color: var(--grey);
+                background: white;
+                border-radius: 4px 4px;
+                box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+            }
+        }
+        &.active {
+            .tl-icon {
+                background: var(--primary-color);
+            }
+        }
+    }
+}

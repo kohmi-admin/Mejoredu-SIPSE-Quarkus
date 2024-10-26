@@ -1,0 +1,84 @@
+button[mat-flat-button] {
+  box-shadow: 0px 6px 10px rgba(117, 117, 117, 0.3) !important;
+}
+
+button[mat-flat-button][color="accent"] {
+  box-shadow: 0px 6px 10px rgba(170, 36, 74, 0.3) !important;
+}
+
+button[mat-flat-button]:disabled {
+  box-shadow: initial !important;
+}
+
+button[mat-stroked-button][color="primary"] {
+  background: #235b4e15 !important;
+}
+
+button[mat-flat-button][color="blue"],
+button[mat-stroked-button][color="blue"] {
+  background: #1e76da !important;
+  color: white;
+}
+
+[color="add"],
+button[mat-flat-button][color="add"],
+button[mat-stroked-button][color="add"] {
+  background: #d38235 !important;
+  color: white !important;
+}
+
+button[mat-flat-button][color="view"],
+button[mat-stroked-button][color="view"] {
+  background: #13322B !important;
+  color: white !important;
+}
+
+button[mat-flat-button][color="send"],
+button[mat-stroked-button][color="send"] {
+  background: #B9975B !important;
+  color: white !important;
+}
+
+button[mat-flat-button][color="report"],
+button[mat-stroked-button][color="report"] {
+  background: #006272 !important;
+  color: white !important;
+}
+
+button[mat-flat-button][color="general-report"],
+button[mat-stroked-button][color="general-report"] {
+  background: rgba(0, 98, 114, 0.7) !important;
+  color: white !important;
+}
+
+button[mat-flat-button][disabled],
+button[mat-stroked-button][disabled] {
+  color: var(--mdc-filled-button-disabled-label-text-color, rgba(0, 0, 0, 0.38)) !important;
+  background: var(--mdc-filled-button-disabled-container-color, rgba(0, 0, 0, 0.12)) !important;
+}
+
+button[mat-flat-button][color="warn"] {
+  background: var(--golden-me) !important;
+}
+
+button [mat-mini-fab] {
+  box-shadow: initial !important;
+}
+
+.mat-mdc-fab, .mat-mdc-mini-fab {
+  box-shadow: initial !important;
+}
+
+.mat-button-toggle-checked {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 34px !important;
+  font-size: 15px;
+}
+// .mat-unthemed {
+//   color: rgba( 1, 1, 1, 0.7) !important;
+//   border: solid 2px #9f2241 !important;
+// }

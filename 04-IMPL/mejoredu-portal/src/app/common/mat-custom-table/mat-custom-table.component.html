@@ -1,0 +1,162 @@
+<div class="tbl-wrapper" [class.noPadding]="noPadding">
+  <div class="tbl-space">
+    <div class="tbl-actions" *ngIf="!hideFilter">
+      <div class="filter">
+        <div class="icon">
+          <mat-icon>search</mat-icon>
+        </div>
+        <input
+          type="text"
+          placeholder="Buscar Registro"
+          [(ngModel)]="value"
+          (keyup)="applyFilter($event)"
+        />
+      </div>
+
+      <div class="full-actions">
+        <button class="add-btn" *ngIf="addAction" mat-flat-button>
+          <mat-icon>add</mat-icon>
+          {{ addAction }}
+        </button>
+
+        <mat-icon (click)="emmitUpdate()">refresh</mat-icon>
+        <mat-icon *ngIf="multiSelectDelete" (click)="emitDelete()">delete</mat-icon>
+      </div>
+    </div>
+    <section class="example-container" [class.scroll]="hasScroll">
+      <mat-table
+        #table
+        [dataSource]="dataSource"
+        matSort
+        [style]="setMinWidth()"
+      >
+        <!-- checkbox header -->
+        <ng-container matColumnDef="select" [sticky]="true">
+          <mat-header-cell *matHeaderCellDef>
+            <mat-checkbox
+              color="primary"
+              (change)="$event ? masterToggle() : null"
+              [checked]="selection.hasValue() && isAllSelected()"
+              [indeterminate]="selection.hasValue() && !isAllSelected()"
+            >
+            </mat-checkbox>
+          </mat-header-cell>
+          <mat-cell *cdkCellDef="let row">
+            <mat-checkbox
+              color="primary"
+              (click)="$event.stopPropagation()"
+              (change)="$event ? checkBoxSelected(row) : null"
+              [checked]="selection.isSelected(row)"
+            >
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <!-- table dynamic columns -->
+        <ng-container
+          *ngFor="let column of columns"
+          [matColumnDef]="column.columnDef"
+        >
+          <mat-header-cell
+            [style.max-width]="column.width"
+            [style.justify-content]="
+              column.alignLeft ? 'flex-start !important' : undefined
+            "
+            [style.text-align]="
+              column.alignLeft
+                ? 'left !important'
+                : column.alignRight
+                ? 'right !important'
+                : undefined"
+            [class.alignLeft]="column.alignLeft"
+            *cdkHeaderCellDef
+            mat-sort-header
+            [innerHTML]="column.header"
+          ></mat-header-cell>
+          <mat-cell
+            [style.max-width]="column.width"
+            [style.justify-content]="
+              column.alignLeft
+                ? 'flex-start !important'
+                : column.alignRight
+                ? 'flex-end !important'
+                : undefined
+            "
+            *cdkCellDef="let row"
+            [class.alignLeft]="column.alignLeft"
+            [class.accent]="toggleSelection(row)"
+          >
+            <span
+              [class.colorGreen]="isColorGreen(row[column.columnDef])"
+              [class.colorOrange]="isColorOrange(row[column.columnDef])"
+              [class.colorRed]="isColorRed(row[column.columnDef])"
+              [class.colorGolden]="isColorGolden(row[column.columnDef])"
+              [class.colorPurple]="isColorPurple(row[column.columnDef])"
+              [class.colorBlue]="isColorBlue(row[column.columnDef])"
+              [class.colorGrey]="isColorGrey(row[column.columnDef])"
+              [class.colorYellow]="isColorYellow(row[column.columnDef])"
+              [class.colorBrown]="isColorBrown(row[column.columnDef])"
+              [class.colorWhite]="isColorWhite(row[column.columnDef])"
+              [innerHTML]="injectValue(column, row[column.columnDef])"
+            >
+            </span>
+            <div
+              *ngIf="
+                isColorGreen(row[column.columnDef]) ||
+                isColorOrange(row[column.columnDef]) ||
+                isColorRed(row[column.columnDef]) ||
+                isColorGolden(row[column.columnDef]) ||
+                isColorPurple(row[column.columnDef]) ||
+                isColorBlue(row[column.columnDef]) ||
+                isColorGrey(row[column.columnDef]) ||
+                isColorYellow(row[column.columnDef]) ||
+                isColorBrown(row[column.columnDef]) ||
+                isColorWhite(row[column.columnDef])
+              "
+              class="circleIndicator"
+            ></div>
+          </mat-cell>
+        </ng-container>
+
+        <!-- table action column -->
+        <ng-container
+          class="actions-col"
+          [matColumnDef]="'action' + (i + 1)"
+          *ngFor="let action of finalActions; let i = index"
+        >
+          <mat-header-cell
+            [style.max-width]="maxWidthActions"
+            *matHeaderCellDef
+            >{{ actionsStrings[i] }}</mat-header-cell
+          >
+          <mat-cell
+            [style.max-width]="maxWidthActions"
+            *matCellDef="let element"
+            action-buttons
+            [value]="element"
+            [actions]="action"
+            [separatedActions]="separatedActions"
+            [customBtn]="customBtn"
+            [showActionIf]="showActionIf"
+            [actionString]="actionString"
+            [complementText]="complementText"
+            (action)="onTableAction($event)"
+          >
+            {{ element.weight }}
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row
+          *matRowDef="let row; columns: displayedColumns"
+          (dblclick)="emmitActivate(row)"
+        ></mat-row>
+      </mat-table>
+    </section>
+    <!-- table pagination -->
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 15, 20, 25, 30, 40, 50, 100]"
+      [pageSize]="hasScroll ? 5 : 10"
+      showFirstLastButtons
+    ></mat-paginator>
+  </div>
+</div>

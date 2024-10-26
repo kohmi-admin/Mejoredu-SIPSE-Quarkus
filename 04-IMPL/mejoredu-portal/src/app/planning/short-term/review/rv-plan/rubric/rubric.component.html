@@ -1,0 +1,174 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Planeación a Corto Plazo</h1>
+  <span class="sub-title no-bottom"> Rúbrica a verificación de proyecto </span>
+</section>
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button mat-stroked-button style="margin-top: -15.5px; margin-right: 15px;" (click)="redirecToRevision()">
+        Cerrar Rúbrica
+    </button>
+    <button mat-flat-button color="primary" class="btn-left" (click)="downloadFileAlf()">
+      Descargar Documento Analítico
+    </button>
+  </div>
+  <div class="container">
+    <table class="sjs-table" cellspacing="0" cellpadding="0" #tbl id="tblRubro">
+      <thead style="position: sticky; top: 0">
+        <!-- <tr style="position: sticky; top: 19px;"> -->
+        <tr>
+          <td>Rubro</td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Puntuación 0-3</td>
+          <td>Observaciones</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rubro">
+            <b> Contribución a los objetivos prioritarios </b>
+            <br />
+            (señalar la contribución a los objetivos prioritarios del Programa
+            Institucional)
+          </td>
+          <td [ngClass]="{'active': listRubrics[0].ixPuntuacion === 0, 'option': !selectedRubric.disable}" (click)="selectedRubro(0, 0)">No hace referencia alguna al PI</td>
+          <td [ngClass]="{'active': listRubrics[0].ixPuntuacion === 1, 'option': !selectedRubric.disable}" (click)="selectedRubro(0, 1)">
+            Solo señala el Objetivo prioritario 1 del Pl sin describir su
+            contribución
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[0].ixPuntuacion === 2, 'option': !selectedRubric.disable}" (click)="selectedRubro(0, 2)">
+            Describe la contribución al Objetivo prioritario 1 del PI con
+            algunas deficiencias
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[0].ixPuntuacion === 3, 'option': !selectedRubric.disable}" (click)="selectedRubro(0, 3)">
+            Describe completamente la contribución al Objetivo prioritario 1 del
+            PI
+          </td>
+
+          <td>{{listRubrics[0].ixPuntuacion}}</td>
+          <td [attr.contenteditable]="!selectedRubric.disable" id="comment-rubric-0" (keyup)="changeComment(0)"></td>
+        </tr>
+
+        <tr>
+          <td class="rubro">
+            <b> Contribución al PNCCIMGP </b>
+            <br />
+            (estrategias o compromisos)
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[1].ixPuntuacion === 0, 'option': !selectedRubric.disable}" (click)="selectedRubro(1, 0)">No hace referencia alguna al PNCCIMGP</td>
+          <td class="option" [ngClass]="{'active': listRubrics[1].ixPuntuacion === 1, 'option': !selectedRubric.disable}" (click)="selectedRubro(1, 1)">
+            Solo señala las estrategias o compromisos del PNCCIMGP sin describir
+            su contribución
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[1].ixPuntuacion === 2, 'option': !selectedRubric.disable}" (click)="selectedRubro(1, 2)">
+            Describe la contribución a las estrategias o compromisos del
+            PNCCIMGP con algunas deficiencias
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[1].ixPuntuacion === 3, 'option': !selectedRubric.disable}" (click)="selectedRubro(1, 3)">
+            Describe completamente la contribución a las estrategias o
+            compromisos del PNCCIMGP
+          </td>
+          <td>{{listRubrics[1].ixPuntuacion}}</td>
+          <td [attr.contenteditable]="!selectedRubric.disable" id="comment-rubric-1" (keyup)="changeComment(1)"></td>
+        </tr>
+
+        <tr>
+          <td class="rubro">
+            <b>Descripción de las tareas relevantes</b>
+            <br />
+            (Tareas relevantes a realizar)
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[2].ixPuntuacion === 0, 'option': !selectedRubric.disable}" (click)="selectedRubro(2, 0)">
+            No describe las tareas relevantes previstas en la realización de las
+            actividades
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[2].ixPuntuacion === 1, 'option': !selectedRubric.disable}" (click)="selectedRubro(2, 1)">
+            Describe las tareas relevantes previstas en la realización de solo
+            algunas actividades
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[2].ixPuntuacion === 2, 'option': !selectedRubric.disable}" (click)="selectedRubro(2, 2)">
+            Describe las tareas relevantes previstas en la realización de la
+            mayoria de las actividades
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[2].ixPuntuacion === 3, 'option': !selectedRubric.disable}" (click)="selectedRubro(2, 3)">
+            Describe las tareas relevantes previstas en la realización de todas
+            las actividades
+          </td>
+          <td>{{listRubrics[2].ixPuntuacion}}</td>
+          <td [attr.contenteditable]="!selectedRubric.disable" id="comment-rubric-2" (keyup)="changeComment(2)"></td>
+        </tr>
+
+        <tr>
+          <td class="rubro">
+            <b>Actividades de mejora de la gestión</b>
+            <br />
+            (señalar la relevancia y alcance)
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[3].ixPuntuacion === 0, 'option': !selectedRubric.disable}" (click)="selectedRubro(3, 0)">
+            No indica actividades con las que se busca impulsar la mejora de la
+            gestión institucional en 2024 y a pesar de que Planeación identifica
+            continuidad con actividades programadas en años previos, el area no
+            la señalar
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[3].ixPuntuacion === 1, 'option': !selectedRubric.disable}" (click)="selectedRubro(3, 1)">
+            Identifica la continuidad con actividades programadas en años
+            previos, pero no indica actividades con las que se busca impulsar la
+            mejora de la gestión institucional en 2024
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[3].ixPuntuacion === 2, 'option': !selectedRubric.disable}" (click)="selectedRubro(3, 2)">
+            Indica la(s) actividad(es) con las que busca impulsar la mejora de
+            la gestión institucional en 2024, pero a pesar de que Planeación
+            identifica continuidad con actividades programadas en años previos,
+            el area no la señala
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[3].ixPuntuacion === 3, 'option': !selectedRubric.disable}" (click)="selectedRubro(3, 3)">
+            Indica la(S) actividad(es) con las que busca impulsar la mejora de
+            la gestión institucional en 2024, y la continuidad que tiene con las
+            actividades programadas en años previos para este mismo fin.
+          </td>
+          <td>{{listRubrics[3].ixPuntuacion}}</td>
+          <td [attr.contenteditable]="!selectedRubric.disable" id="comment-rubric-3" (keyup)="changeComment(3)"></td>
+        </tr>
+
+        <tr>
+          <td class="rubro">
+            <b>Tablas resumen</b>
+            <br />
+            (Tabla contribución al objetivo prioritario del PI; Tabla
+            actividades y productos; Tabla presupuesto por actividad)
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[4].ixPuntuacion === 0, 'option': !selectedRubric.disable}" (click)="selectedRubro(4, 0)">
+            No integra la tabla resumen de presupuesto ni hace referencia al
+            mismo
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[4].ixPuntuacion === 1, 'option': !selectedRubric.disable}" (click)="selectedRubro(4, 1)">
+            No integra la tabla resumen de presupuesto, aunque hace referencia a
+            montos globales
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[4].ixPuntuacion === 2, 'option': !selectedRubric.disable}" (click)="selectedRubro(4, 2)">
+            Integra tabla resumen de presupuesto en una versión no actualizada
+            con respecto de su plantilla de programación y presupuesto
+          </td>
+          <td class="option" [ngClass]="{'active': listRubrics[4].ixPuntuacion === 3, 'option': !selectedRubric.disable}" (click)="selectedRubro(4, 3)">
+            Integra tabla resumen de presupuesto en su versión actualizada con
+            respecto de su plantilla de programación y presupuesto
+          </td>
+          <td>{{listRubrics[4].ixPuntuacion}}</td>
+          <td [attr.contenteditable]="!selectedRubric.disable" id="comment-rubric-4" (keyup)="changeComment(4)"></td>
+        </tr>
+
+        <tr class="tbl-fotter">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="accent">{{totalRubric}}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

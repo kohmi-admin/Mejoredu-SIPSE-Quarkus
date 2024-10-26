@@ -1,0 +1,66 @@
+<section class="work-space">
+  <div class="head">
+    <div class="type" [attr.color]="getInputIndicatorColor()"></div>
+    <mat-form-field class="pc" [appearance]="'outline'">
+      <mat-label>{{ inputName }}</mat-label>
+      <input
+        matInput
+        [(ngModel)]="inputText"
+        [readonly]="inputName === 'Problema Central' ? true : !editableInput || !canEdit"
+        />
+        <!-- [readonly]="!editableInput || !canEdit" -->
+    </mat-form-field>
+  </div>
+  <div class="body">
+    <as-split direction="horizontal">
+      <as-split-area [size]="50" class="dbl">
+        <div class="title">
+          <button
+            *ngIf="canAdd"
+            mat-flat-button
+            color="add"
+            class="add"
+            (click)="addCausa()"
+          >
+            <mat-icon>add</mat-icon>
+            Agregar Causa
+          </button>
+          {{ leftName }}
+        </div>
+        <div class="list-space">
+          <div *ngFor="let list of lists" class="list">
+            <app-card
+              [card]="card"
+              (delete)="onDeleteCausa($event)"
+              *ngFor="let card of list.cards; let i = index"
+            ></app-card>
+          </div>
+        </div>
+      </as-split-area>
+      <as-split-area [size]="50" class="dbl">
+        <div class="title">
+          <button
+            *ngIf="canAdd"
+            mat-flat-button
+            color="add"
+            class="add"
+            (click)="addEfecto()"
+          >
+            <mat-icon>add</mat-icon>
+            Agregar Efecto
+          </button>
+          {{ rightName }}
+        </div>
+        <div class="list-space">
+          <div *ngFor="let list of listsE" class="list">
+            <app-card
+              [card]="card"
+              (delete)="onDeleteCausaE($event)"
+              *ngFor="let card of list.cards; let i = index"
+            ></app-card>
+          </div>
+        </div>
+      </as-split-area>
+    </as-split>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">
+    Planeación de Mediano Plazo
+  </h1>
+  <span class="sub-title no-bottom">Validación</span>
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    [actionString]="'Validar'"
+    [ariaLabel]="'Visualizar'"
+    [maxWidthActions]="'140px'"
+    (action)="onTableAction($event)"
+    [showActionIf]="showActionIf"
+    (update)="getAllGestor()"
+  >
+  </app-mat-custom-table>
+</section>

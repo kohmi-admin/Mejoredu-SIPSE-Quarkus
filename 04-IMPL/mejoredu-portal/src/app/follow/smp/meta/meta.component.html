@@ -1,0 +1,59 @@
+<section id="wrapper" class="smp">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="true"
+      [matTooltip]="'Anterior'"
+      (click)="navigate.emit(0)"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      (click)="navigate.emit(1)"
+      [matTooltip]="'Siguiente'"
+      [disabled]="!activeMeta"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </section>
+  </form>
+
+  <div class="no-top">
+    <app-mat-custom-table
+      *ngIf="!loading"
+      (action)="onTableAction($event)"
+      (update)="getAll()"
+      [hasScroll]="false"
+      [propId]="'activityId'"
+      [activeId]="activeMeta"
+      [actionsInStart]="true"
+      [actions]="actions"
+      [dataset]="data"
+      [actionString]="'Ver'"
+      [maxWidthActions]="'60px'"
+      [columns]="columns"
+    >
+    </app-mat-custom-table>
+  </div>
+</section>

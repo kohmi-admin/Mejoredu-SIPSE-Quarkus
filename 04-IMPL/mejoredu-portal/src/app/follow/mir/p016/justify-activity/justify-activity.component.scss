@@ -1,0 +1,112 @@
+form {
+  border-top: solid 15px transparent;
+}
+
+.group-form {
+  .title {
+    text-align: center;
+  }
+}
+
+.tbl-space {
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-left-width: var(--border-middle);
+  border-right-width: var(--border-middle);
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-radius: var(--border-radius);
+  border: solid 1px var(--border-color);
+  thead,
+  tr.head,
+  td.head {
+    background-color: var(--primary-color) !important;
+    color: var(--white);
+    th {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 10px 15px;
+      text-align: center;
+      &:first-of-type {
+        border-top-left-radius: var(--border-radius);
+      }
+      &:last-of-type {
+        border-top-right-radius: var(--border-radius);
+      }
+    }
+  }
+  tr.sub-header {
+    background: rgb(234, 234, 234) !important;
+  }
+  tbody {
+    tr {
+      border: solid 1px black;
+      &:nth-of-type(odd) {
+        background-color: var(--background-color);
+      }
+      td {
+        font-size: 14px;
+        padding: 10px 15px;
+        border: solid 1px black;
+        &:first-of-type {
+          border-left: solid 1px var(--border-color);
+        }
+        &:last-of-type {
+          border-right: solid 1px var(--border-color);
+        }
+      }
+    }
+  }
+  tr.enfassis {
+    border-color: transparent !important;
+    td {
+      border-color: transparent !important;
+    }
+  }
+  td.enfasis {
+    background-color: var(--primary-color-alpha);
+  }
+  tr,
+  td {
+    border: solid 1px black !important;
+  }
+}
+
+.file-zone {
+  box-sizing: border-box;
+  border: solid 15px transparent;
+  border-top-width: 0;
+}
+
+.alert-success {
+  margin-top: 20px;
+}
+
+.field {
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-right-width: 15px;
+  border-left-width: 15px;
+}
+
+.action-buttons {
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  &.right {
+    text-align: right;
+    justify-items: flex-end;
+  }
+}

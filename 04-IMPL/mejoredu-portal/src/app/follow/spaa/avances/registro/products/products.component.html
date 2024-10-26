@@ -1,0 +1,83 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="false"
+      [matTooltip]="'Anterior'"
+      (click)="navigate.emit(1)"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      disabled
+      mat-mini-fab
+      color="primary"
+      (click)="navigate.emit(3)"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <form class="form fade" [formGroup]="form">
+    <section class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </section>
+  </form>
+
+  <div class="no-top">
+    <app-mat-custom-table
+      *ngIf="!loading"
+      (action)="onTableAction($event)"
+      (update)="getAll()"
+      [hasScroll]="false"
+      [propId]="'idProducto'"
+      [activeId]="activeProduct"
+      [actionsInStart]="true"
+      [actions]="actions"
+      [dataset]="data"
+      [maxWidthActions]="'110px'"
+      [columns]="columns"
+      [showActionIf]="showActionIf"
+    >
+    </app-mat-custom-table>
+  </div>
+
+  <!-- <section *ngIf="activeProduct">
+    <div class="alert-success" style="margin-top: 0">
+      Calendarización del Producto
+    </div>
+
+    <div class="group-forms" *ngFor="let mounths of calendars">
+      <div class="group-form" *ngFor="let item of mounths">
+        <div class="title">
+          {{ item.name }}
+        </div>
+        <div class="container">
+          <div class="item" *ngFor="let month of item.items">
+            <div class="title">
+              {{ month.name }}
+            </div>
+            <div class="field">
+              <input type="text" [(ngModel)]="month.value" [ngModelOptions]="{standalone: true}" disabled="true" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+</section>

@@ -1,0 +1,11 @@
+.field {
+  width: 50% !important;
+}
+
+.field:nth-of-type(2n - 1) {
+    border-right-width: var(--border-middle);
+}
+
+.field:nth-of-type(2n) {
+    border-left-width: var(--border-slim);
+}

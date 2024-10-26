@@ -1,0 +1,99 @@
+<section id="wrapper" class="no-bottom" style="margin-bottom: -8px">
+  <div class="btn-navigation">
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      class="btn-left"
+      [disabled]="disabledBtnEdit"
+      *ngIf="editable && canEdit"
+      (click)="handleEditform()"
+    >
+      Editar
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      [disabled]="!editForm"
+      color="primary"
+      class="btn-left"
+      *ngIf="editable && canEdit"
+      (click)="submit()"
+    >
+      <mat-spinner
+        *ngIf="isSubmiting"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmiting">Guardar</span>
+    </button>
+    <!-- <button
+      mat-flat-button
+      color="view"
+      class="btn-left"
+      *ngIf="validation || !editable"
+    >
+      Ver Esquema
+    </button> -->
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Diagnóstico'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Árbol de Objetivos'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div>
+    <section class="alert-success no-top" style="margin-bottom: 15px">
+      Carga de Esquema
+    </section>
+    <file-upload
+      *ngIf="editForm && editable"
+      [multiple]="false"
+      [files]="arrayFilesEsquema"
+      [id]="'file-problem-tree-esquema'"
+      accept=".png, .jpg"
+    ></file-upload>
+    <section class="actions-file">
+      <button
+        type="button"
+        mat-flat-button
+        color="view"
+        class="btn-left"
+        *ngIf="esquema"
+        (click)="downloadEsquema()"
+      >
+        Ver Esquema
+      </button>
+    </section>
+  </div>
+
+  <!-- <img width="100%" src="../../../../../../assets/img/pro.png" alt=""> -->
+  <app-board
+    [lists]="lists"
+    [listsE]="listsE"
+    [inputText]="inputText"
+  ></app-board>
+</section>
+
+<app-validate
+  *ngIf="validation"
+  apartado="VALIDACION-PRESUPUESTO-ARBOL-PROBLEMA"
+  [idSave]="idSaveValidar"
+  [fromModule]="'pp'"
+  whenFinishGoTo="/Planeación/Programas Presupuestarios/Validación"
+  [questions]="questions"
+  [disable]="!!selectedAjustesPP"
+></app-validate>

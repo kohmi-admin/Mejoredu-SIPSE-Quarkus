@@ -1,0 +1,113 @@
+table.editable {
+  width: 100%;
+  min-width: 1000px;
+  text-align: left;
+  td {
+    border: solid 0;
+  }
+  .description {
+    line-height: 50px !important;
+    &.multiline {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-sizing: border-box;
+      line-height: 20px !important;
+    }
+    &.title {
+      font-size: 20px;
+      text-align: center;
+      color: rgb(81, 81, 81);
+      background: var(--golden) !important;
+    }
+  }
+  tr {
+    td {
+      padding-left: 10px;
+      padding-right: 10px;
+      box-sizing: border-box;
+      background: rgba(240, 240, 240);
+      // overflow: auto;
+      overflow-wrap: break-word;
+    }
+    .description {
+      background: rgba(228, 242, 238);
+    }
+    // &:nth-child(2n) {
+    //   .description {
+    //     background: rgba(230, 230, 230);
+    //   }
+    // }
+  }
+  thead {
+    th {
+      height: 50px;
+      color: white;
+      font-weight: 400;
+      background: var(--primary-color);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+  }
+
+  tbody {
+    tr:nth-last-child(1) {
+      td:nth-last-child(1) {
+        border-radius: 0 0 var(--radius) 0 !important;
+      }
+      td:nth-child(1) {
+        border-radius: 0 0 0 var(--radius) !important;
+      }
+    }
+  }
+
+  [contenteditable]:empty:not(:focus):before {
+    content: "Escriba Aquí...";
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+    color: grey;
+  }
+}
+
+td {
+  select {
+    width: 100%;
+    height: 100%;
+  }
+  mat-form-field {
+    margin-bottom: -24px;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+  }
+  .mat-mdc-form-field .mdc-line-ripple::after,
+  .mat-mdc-form-field .mdc-line-ripple::before {
+    opacity: 0 !important;
+  }
+  .mdc-text-field--filled {
+    padding-left: 0 !important;
+  }
+  .mat-mdc-form-field-focus-overlay {
+    background: transparent;
+  }
+  .mat-focused .mat-mdc-text-field-wrapper {
+    box-shadow: initial !important;
+  }
+  .mat-form-field-invalid.mat-focused .mat-mdc-text-field-wrapper {
+    box-shadow: initial !important;
+  }
+}
+
+.tbl-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: var(--white) !important;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  td {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,39 @@
+.form {
+  text-align: left;
+  margin-left: -15px;
+  width: calc(100% + 30px);
+  .field,
+  .file-zone {
+    width: 25%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 0 transparent;
+    border-left-width: var(--border-middle);
+    border-right-width: var(--border-middle);
+    &:nth-of-type(11) {
+        width: 50%;
+    }
+  }
+}
+
+.file-zone {
+  width: 100% !important;
+  text-align: center;
+  span {
+    font-size: 13px;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--border-middle);
+  margin-right: var(--border-middle);
+  margin-bottom: -15px;
+  button {
+    margin-left: var(--border-middle);
+  }
+}

@@ -1,0 +1,19 @@
+<div ngxMasonryItem class="card-wrapper">
+    <div class="card">
+        <div class="title">
+            <span>
+                {{ item.chart.title ?? item.title }}
+            </span>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Editar</button>
+                <button mat-menu-item class="color-red" (click)="delete()">Eliminar</button>
+            </mat-menu>
+        </div>
+        <div class="chart">
+            <app-chart [chart]="item.chart"></app-chart>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+package mx.sep.dgtic.mejoredu.cortoplazo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class FormularioAnaliticoVO {
+  private Integer idFormulario;
+  private String nombreUnidad;
+  private String clave;
+  private String nombreProyecto;
+  private String objetivo;
+  private String fundamentacion;
+  private String alcance;
+  private String contribucionPI;
+  private String contribucionPND;
+  private Integer anhio;
+  private String cveUsuario;
+
+  private Integer cicloValidacion;
+  private Integer ixAccion;
+}

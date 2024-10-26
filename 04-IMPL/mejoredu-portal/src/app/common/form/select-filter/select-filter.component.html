@@ -1,0 +1,27 @@
+<div [formGroup]="form" class="i-space">
+
+    <div>
+
+        <mat-form-field [class]="class" appearance="outline">
+            <mat-label>{{ question.label }}</mat-label>
+
+            <mat-select [formControlName]="question.nane" [multiple]="question.multiple" autofocus #singleSelect>
+                <mat-option>
+                    <ngx-mat-select-search [formControl]="optionFilterCtrl"
+                        placeholderLabel="Buscar..."
+                        noEntriesFoundLabel="No se encontraron coincidencias"></ngx-mat-select-search>
+                </mat-option>
+
+                <mat-option *ngFor="let opt of optionsFilter | async" [value]="opt.id" [matTooltip]="opt.description || ''"
+                    matTooltipPosition="after">
+                    {{opt.value}}
+                </mat-option>
+            </mat-select>
+
+            <mat-icon *ngIf="question.icon" matSuffix>{{ question.icon }}</mat-icon>
+            <mat-error *ngIf="!isValid">{{ errorMessage }}</mat-error>
+        </mat-form-field>
+
+    </div>
+
+</div>

@@ -1,0 +1,60 @@
+:host ::ng-deep mat-form-field {
+  width: 100% !important;
+}
+
+:host ::ng-deep {
+  .mdc-tab__content {
+    padding-left: 10px;
+    padding-right: 6px;
+  }
+  .actions {
+      button[color="add"],
+      button[color="send"] {
+        margin-bottom: -15px;
+      }
+  }
+}
+
+.field {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid var(--border-slim) transparent;
+  border-bottom-width: 0;
+}
+
+form {
+  width: 100%;
+  text-align: left;
+  margin-top: -8px;
+}
+
+@media only screen and (max-width: 660px) {
+  .field {
+    width: 100% !important;
+  }
+}
+
+[mat-icon-button] {
+  // position: absolute;
+  // transform: translateY(-6px);
+  margin-bottom: -40px;
+}
+
+.actions {
+  left: 0;
+  bottom: 0;
+  vertical-align: top;
+  text-align: right !important;
+  padding: var(--border-middle);
+  padding-right: 0px;
+  margin-top: -10px;
+  margin-bottom: -5px !important;
+  [mat-flat-button] {
+    transform: translateY(-8px);
+  }
+  button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

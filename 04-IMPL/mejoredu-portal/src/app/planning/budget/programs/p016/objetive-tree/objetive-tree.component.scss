@@ -1,0 +1,12 @@
+.btn-left {
+    margin-left: 12px !important;
+}
+
+.actions-file {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    padding-top: var(--border-middle);
+    padding-bottom: var(--border-middle);
+}

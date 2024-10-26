@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="faq-wrapper" *ngFor="let item of faq; let i = index">
+    <div class="faq">
+      <div class="item">
+        <div class="header" (click)="toggleFaq(i)" matRipple>
+          <mat-icon *ngIf="!item.open"> add </mat-icon>
+          <mat-icon *ngIf="item.open"> remove </mat-icon>
+          <span>
+            {{ item.question }}
+          </span>
+        </div>
+        <div class="content" *ngIf="item.open">
+          <span>
+            {{ item.answer }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR' && documents.length"
+  >
+    <hr />
+    <div
+      class="document-wrapper"
+      *ngFor="let item of documents"
+      [class.word]="item.type === 'docx'"
+      [class.pdf]="item.type === 'pdf'"
+      [class.excel]="item.type === 'xlsx'"
+      [class.powerpoint]="item.type === 'pptx'"
+    >
+      <div class="document-item" (click)="click(item)" matRipple>
+        <div class="icon">
+          <img
+            [src]="'../../../assets/img/icons/' + getIcon(item.type) + '.png'"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="name">
+          <span>
+            {{ item.name }}
+          </span>
+          <mat-icon
+            *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+            class="delete"
+            (click)="deleteFile($event, item)"
+            >delete</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="file-zone"
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR' && documents.length < 2"
+  >
+    <file-upload
+      [multiple]="true"
+      [files]="arrayFiles"
+      [id]="'inpNormatividad'"
+      accept=".xlsx, .pdf, .doc, .docx, .pptx"
+    ></file-upload>
+  </section>
+  <section
+    class="action-buttons right"
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR' && documents.length < 2"
+  >
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      (click)="btnHelp()"
+      style="margin-right: 5px"
+    >
+      Ayuda
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="add"
+      [disabled]="!arrayFiles.length"
+      (click)="handleAddFile()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingFiles"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingFiles"> Cargar Archivos </span>
+    </button>
+  </section>
+</div>
+
+<div class="container no-padding fotter">
+  <div class="user-manual">
+    <div
+      *ngIf="documentUserManual"
+      class="item"
+      [class.word]="documentUserManual?.type === 'docx'"
+      [class.pdf]="documentUserManual?.type === 'pdf'"
+      [class.excel]="documentUserManual?.type === 'xlsx'"
+      [class.powerpoint]="documentUserManual?.type === 'pptx'"
+      matRipple
+      (click)="downloadUserManual()"
+    >
+      <div class="icon">
+        <img
+          [src]="
+            '../../../assets/img/icons/' +
+            getIcon(documentUserManual.type) +
+            '.png'
+          "
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="title">Manual de Usuario</div>
+    </div>
+  </div>
+  <div class="contact">
+    <div class="title">Contacto</div>
+    <div class="description">
+      Para ayuda personalizada, por favor, comúnicate a la línea
+      <div class="tel">Tel: (55) 5482 0900</div>
+    </div>
+  </div>
+</div>

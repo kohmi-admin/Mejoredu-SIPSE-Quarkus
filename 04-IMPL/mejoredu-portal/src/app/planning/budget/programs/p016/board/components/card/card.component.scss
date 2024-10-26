@@ -1,0 +1,152 @@
+.card-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    &.no-padding {
+        padding: 0;
+        padding-top: 8px;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        user-select: none;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0px 8px 12px rgba(1, 1, 1, 0.04);
+        .header {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            padding-left: 10px;
+            align-items: center;
+            box-sizing: border-box;
+            justify-content: space-between;
+            .title {
+                color: var(--grey);
+                white-space: initial !important;
+            }
+            .options {
+                right: 28px;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                position: absolute;
+                border-radius: 3px;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.03);
+                transition: background linear 0.2s;
+                mat-icon {
+                    width: 18px;
+                    height: 18px;
+                    font-size: 18px;
+                }
+                &:hover {
+                    background: rgba(0, 0, 0, 0.08);
+                }
+            }
+            .actions {
+                .type-space {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .type {
+                    width: 15px;
+                    height: 15px;
+                    position: relative;
+                    border-radius: 100%;
+                    transition: background linear 0.3s;
+                    &::after,
+                    &::before {
+                        top: 50%;
+                        left: 50%;
+                        width: 60%;
+                        height: 60%;
+                        content: "";
+                        position: absolute;
+                        border-radius: 100%;
+                        transform: translate(-45%, -45%);
+                        background: rgba(255, 255, 255, 0.2);
+                    }
+                    &::after{
+                        width: 30%;
+                        height: 30%;
+                    }
+                }
+            }
+        }
+        .description,
+        .descriptionLow {
+            width: 100%;
+            padding: 8px;
+            padding-top: 0;
+            font-size: 10px;
+            box-sizing: border-box;
+            white-space: initial !important;
+        }
+        .descriptionLow {
+            opacity: 0.4;
+            &::before {
+                content: "Clic para Agregar Descripción";
+            }
+        }
+        .description {
+            font-weight: 100;
+        }
+        .add-button {
+            width: 100%;
+            display: flex;
+            border: solid 0;
+            cursor: pointer;
+            font-size: 12px;
+            align-items: center;
+            border-radius: 0 0 8px 8px;
+            color: rgb(105, 105, 105);
+            background: rgba( 1, 1, 1, 0.04);
+            padding-bottom: 5px;
+            padding-top: 5px;
+            mat-icon {
+                width: 16px;
+                height: 16px;
+                font-size: 16px;
+                padding-right: 1px;
+            }
+            &:disabled {
+                background: rgba( 1, 1, 1, 0.08);
+            }
+        }
+    }
+}
+.chils {
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 8px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    background: rgba( 1, 1, 1, 0.2);
+}
+.type {
+    &[color="green"] {
+        background-color: var(--primary-color);
+    }
+    &[color="blue"] {
+        background-color: #1c80d1;
+    }
+    &[color="grey"] {
+        background-color: #9a9a9a;
+    }
+    &[color="purple"] {
+        background-color: #8d19f3;
+    }
+    &[color="pink"] {
+        background-color: #d11cb3;
+    }
+}

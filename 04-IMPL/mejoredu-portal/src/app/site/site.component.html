@@ -1,0 +1,25 @@
+<app-header
+  (onAction)="toggleMenu()"
+  [actionLabel]="'Cambiar Año'"
+  (openSection)="openSection($event)"
+></app-header>
+
+<app-floating-window
+  *ngIf="open"
+  [title]="sectionTitle"
+></app-floating-window>
+
+<section id="space" (click)="closeSection()">
+  <router-outlet></router-outlet>
+
+  <footer>
+    Av. Barranca del Muerto No. 341, Col. San José Insurgentes, C.P. 03900,
+    Alcaldía Benito Juárez, Ciudad de México. Tel: (55) 5482 0900
+    www.gob.mx/mejoredu
+  </footer>
+</section>
+<app-nav
+  class="navbar"
+  (toggleOpen)="toggleMenu()"
+  (click)="closeSection()"
+></app-nav>

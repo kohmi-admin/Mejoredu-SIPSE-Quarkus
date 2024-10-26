@@ -1,0 +1,21 @@
+<div class="time-line">
+    <div class="tl-space">
+
+        <div class="tl-item" *ngFor="let item of items" [class.active]="item.active || (item.id && status >= item.id)">
+            <div class="tl-icon" matRipple>
+                <mat-icon>
+                    {{item.icon}}
+                </mat-icon>
+            </div>
+            <div class="tl-text">
+                <h3>
+                    {{ item.title }}
+                </h3>
+                <p>
+                    {{ item.date }}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

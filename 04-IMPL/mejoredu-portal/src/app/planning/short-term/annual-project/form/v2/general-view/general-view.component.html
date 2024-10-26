@@ -1,0 +1,234 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Metas Para el bienestar'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../MIR'"
+      disabled
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div class="title-table">
+    <div>
+      <h1>Proyecto Anual {{yearNav}}</h1>
+      <h3>{{getUnidadForTitle()}}</h3>
+    </div>
+  </div>
+  <div class="container" *ngIf="showTable">
+    <table class="sjs-table" cellspacing="0" cellpadding="0" #tbl id="tableProyectoAnual">
+      <thead style="position: sticky; top: 0">
+        <tr style="visibility: collapse;">
+          <td colspan="4" rowspan="2">
+            <img src="../../../assets/img/logoOficial.svg" alt="" srcset="">
+          </td>
+          <td colspan="35">Proyecto Anual {{yearNav}}</td>
+        </tr>
+        <!-- <tr style="visibility: collapse;">
+          <td colspan="35" rowspan="1">Proyecto Anual {{yearNav}}</td>
+        </tr> -->
+        <tr style="visibility: collapse;">
+          <td colspan="35" rowspan="1">{{dataUser.perfilLaboral.cdNombreUnidad}}</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="green">Programa Institucional</td>
+          <td colspan="3" class="green">Actividades</td>
+          <td colspan="19" class="green">Producto</td>
+          <td colspan="16" class="green">Acciones</td>
+        </tr>
+        <tr style="position: sticky; top: 19px">
+          <td>Clave</td>
+          <td>Nombre Act</td>
+          <td>Agenda de Autoridades</td>
+          <td>No.</td>
+          <td>Clave Completa</td>
+          <td>Nombre</td>
+          <td>Categoria</td>
+          <td>Tipo</td>
+          <td>Indicador MIR</td>
+          <td>E</td>
+          <td>F</td>
+          <td>M</td>
+          <td>A</td>
+          <td>M</td>
+          <td>J</td>
+          <td>J</td>
+          <td>A</td>
+          <td>S</td>
+          <td>O</td>
+          <td>N</td>
+          <td>D</td>
+          <td>POTIC</td>
+          <td>Clave</td>
+          <td>Nombre Acc</td>
+          <td>Partida de Gasto</td>
+          <td>Anual</td>
+          <td>ENE</td>
+          <td>FEB</td>
+          <td>MAR</td>
+          <td>ABR</td>
+          <td>MAY</td>
+          <td>JUN</td>
+          <td>JUL</td>
+          <td>AGO</td>
+          <td>SEP</td>
+          <td>OCT</td>
+          <td>NOV</td>
+          <td>DIC</td>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td></td>
+          <td>PROYECTO</td>
+          <td colspan="7">
+            {{getClaveProyecto()}}. {{dataVistaGeneral.nombreProyecto}}
+          </td>
+          <td colspan="2">OBJETIVO</td>
+          <td colspan="15">{{dataVistaGeneral.objetivo}}</td>
+          <td>{{getTotalByKey('anual')}}</td>
+          <td>{{getTotalByKey('ene')}}</td>
+          <td>{{getTotalByKey('feb')}}</td>
+          <td>{{getTotalByKey('mar')}}</td>
+          <td>{{getTotalByKey('abr')}}</td>
+          <td>{{getTotalByKey('may')}}</td>
+          <td>{{getTotalByKey('jun')}}</td>
+          <td>{{getTotalByKey('jul')}}</td>
+          <td>{{getTotalByKey('ago')}}</td>
+          <td>{{getTotalByKey('sep')}}</td>
+          <td>{{getTotalByKey('oct')}}</td>
+          <td>{{getTotalByKey('nov')}}</td>
+          <td>{{getTotalByKey('dic')}}</td>
+        </tr>
+
+        <ng-container *ngFor="let itemPrograma of dataVistaGeneral.programas">
+          <tr>
+            <td [attr.rowspan]="getRowSpanProyecto(itemPrograma)">{{itemPrograma.programaInstitucional}}</td>
+          </tr>
+          <ng-container *ngFor="let itemActividad of itemPrograma.actividades">
+            <tr>
+              <td [attr.rowspan]="getRowSpanActividad(itemActividad)">{{itemActividad.clave}}</td>
+              <td [attr.rowspan]="getRowSpanActividad(itemActividad)">{{itemActividad.nombreActividad}}</td>
+              <td [attr.rowspan]="getRowSpanActividad(itemActividad)">{{itemActividad.agendaAutoridades}}</td>
+            </tr>
+            <ng-container *ngFor="let itemProducto of itemActividad.productos">
+              <tr>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.numeroProducto}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.claveCompleta}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.nombre}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.categoria}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.tipo}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.cveIndicadorMIR}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.ene}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.feb}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.mar}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)" class="greenLight">{{itemProducto.abr}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)" class="greenLight">{{itemProducto.may}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)" class="greenLight">{{itemProducto.jun}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.jul}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.ago}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.sep}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)" class="greenLight">{{itemProducto.oct}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)" class="greenLight">{{itemProducto.nov}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)" class="greenLight">{{itemProducto.dic}}</td>
+                <td [attr.rowspan]="getRowSpanProducto(itemProducto)">{{itemProducto.potic}}</td>
+              </tr>
+
+              <ng-container *ngFor="let itemBudge of itemProducto.acciones">
+                <tr>
+                  <td [attr.rowspan]="getRowSpanAccion(itemBudge)">{{itemBudge.clave}}</td>
+                  <td [attr.rowspan]="getRowSpanAccion(itemBudge)">{{itemBudge.nombre}}</td>
+                </tr>
+
+                  <ng-container *ngFor="let itemPartida of itemBudge.partidasGasto">
+                    <tr>
+                      <td rowspan="1">{{itemPartida.nombrePartidaGasto}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.anual)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.ene)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.feb)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.mar)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.abr)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.may)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.jun)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.jul)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.ago)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.sep)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.oct)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.nov)}}</td>
+                      <td rowspan="1">{{getFormatMoneda(itemPartida.dic)}}</td>
+                    </tr>
+                  </ng-container>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</section>
+<app-mat-custom-table
+  *ngIf="!loading"
+  (action)="onTableAction($event)"
+  (update)="getAll()"
+  [actions]="actions"
+  [dataset]="data"
+  [columns]="columns"
+  [maxWidthActions]="'150px'"
+  [propId]="'idProyecto'"
+  [activeId]="selectedProject?.idProyecto ?? 0"
+>
+</app-mat-custom-table>
+
+<div class="action-buttons" style="margin-top: -10px">
+  <button [disabled]="disabledReport" mat-flat-button class="btn-left" color="report" (click)="exportToExcel()">
+  <!-- <button mat-flat-button class="btn-left" color="report" (click)="exportToExcel()"> -->
+    <mat-spinner
+      *ngIf="isSubmitingReport"
+      style="width: 25px"
+      color="warn"
+    ></mat-spinner>
+    <span *ngIf="!isSubmitingReport">Generar Reporte</span>
+
+  </button>
+  <button
+    *ngIf="!selectedConsultaProyectoPAA"
+    [disabled]="disabledFinish"
+    mat-flat-button
+    class="btn-left"
+    color="primary"
+    (click)="finish()"
+  >
+    <mat-spinner
+      *ngIf="isSubmitingFinish"
+      style="width: 25px"
+      color="warn"
+    ></mat-spinner>
+    <span *ngIf="!isSubmitingFinish">Finalizar Registro</span>
+  </button>
+  <button
+    *ngIf="!selectedConsultaProyectoPAA"
+    [disabled]="disabledSend"
+    mat-flat-button
+    color="send"
+    (click)="send()"
+  >
+    <mat-spinner
+      *ngIf="isSubmitingSend"
+      style="width: 25px"
+      color="warn"
+    ></mat-spinner>
+    <span *ngIf="!isSubmitingSend">Enviar a Revisión</span>
+  </button>
+</div>

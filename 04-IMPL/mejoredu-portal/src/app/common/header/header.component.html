@@ -1,0 +1,153 @@
+<header [class.sticky]="sticky">
+  <div class="header-space">
+    <div class="left-space">
+      <div class="menu-btn" (click)="triggerAction(); $event.stopPropagation()">
+        <mat-icon class="open">menu</mat-icon>
+        <mat-icon class="close">navigate_before</mat-icon>
+      </div>
+      <div class="logo">
+        <app-logo></app-logo>
+      </div>
+      <div class="info title noselect" style="font-size: 25px">
+        <!-- Sistema de Planeación, Seguimiento y Evaluación (SIPSE) -->
+      </div>
+    </div>
+
+    <div class="right-space">
+      <div class="user">
+        <div class="user-space">
+          <div
+            class="user-info"
+            [title]="
+              user.persona.cxNombre + ' ' + user.persona.cxPrimerApellido
+            "
+          >
+            <span class="name"
+              >{{ user.persona.cxNombre }}
+              {{ user.persona.cxPrimerApellido }}</span
+            >
+            <span
+              class="role"
+              *ngIf="!showUnidad"
+              (dblclick)="handleShowUnidad()"
+              >{{ user.idTipoUsuario }}</span
+            >
+
+            <span class="role" *ngIf="showUnidad">
+              {{ showUnidad ? getUnidadUser() : "" }}</span
+            >
+
+            <span
+              class="date"
+              *ngIf="!showVersion"
+              (dblclick)="handleShowVersion()"
+              >{{ getDate() }}</span
+            >
+            <span class="date" *ngIf="showVersion">{{ getVersion() }}</span>
+          </div>
+        </div>
+        <div class="logout" matTooltip="Cerrar Sesión" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div id="actions">
+      <!-- <div class="action" onclick="history.back()" matTooltip="Ir Anterior" [matTooltipPosition]="'above'">
+        <mat-icon>navigate_before</mat-icon>
+      </div>
+      <div class="action" onclick="history.go(1)" matTooltip="Ir Adelante" [matTooltipPosition]="'above'">
+        <mat-icon>navigate_next</mat-icon>
+      </div> -->
+      <div
+        class="action date"
+        matBadgeColor="warn"
+        matTooltip="Cambiar Año"
+        [matTooltipPosition]="'above'"
+        [matMenuTriggerFor]="menu"
+      >
+        {{ yearNav }}
+      </div>
+      <mat-menu #menu="matMenu" class="providers-menu">
+        <ng-container *ngFor="let anhio of yearNavList">
+          <button mat-menu-item (click)="selectedYear(anhio)">
+            {{ anhio }}
+          </button>
+        </ng-container>
+      </mat-menu>
+      <div
+        class="action"
+        [matBadge]="getNoSeenNotifications()"
+        matBadgeColor="warn"
+        matTooltip="Notificaciones"
+        (click)="openSection.emit('Notificaciones')"
+      >
+        <mat-icon matRipple>notifications</mat-icon>
+      </div>
+
+      <div
+        matRipple
+        class="action"
+        matTooltip="Normatividad"
+        (click)="openSection.emit('Normatividad')"
+      >
+        <mat-icon>gavel</mat-icon>
+      </div>
+      <div
+        matRipple
+        class="action"
+        matTooltip="Documentos de Apoyo"
+        (click)="openSection.emit('Documentos de Apoyo')"
+      >
+        <mat-icon>auto_stories</mat-icon>
+      </div>
+      <div
+        matRipple
+        class="action"
+        matTooltip="Ayuda"
+        (click)="openSection.emit('Ayuda')"
+      >
+        <mat-icon>help</mat-icon>
+      </div>
+      <div
+        *ngIf="user.idTipoUsuario !== 'ADMINISTRADOR'"
+        class="action-empty"
+      ></div>
+      <div
+        *ngIf="user.idTipoUsuario === 'ADMINISTRADOR'"
+        matRipple
+        class="action"
+        matTooltip="Configuración"
+        (click)="openSection.emit('Configuración')"
+      >
+        <mat-icon>settings</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="navigation" *ngIf="navigation.length">
+    <div
+      class="navigation-opt"
+      *ngFor="let item of navigation"
+      routerLinkActive="active"
+      [routerLink]="item.route"
+    >
+      <span>
+        {{ item.title }}
+      </span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <span class="router">
+      <span
+        (click)="navigate(i)"
+        [class.underline]="i < routes.length - 1"
+        [class.current]="i === routes.length - 1"
+        *ngFor="let route of routes; let i = index"
+      >
+        / <label [attr.data-route]="route"></label>&nbsp;
+      </span>
+    </span>
+  </div>
+</header>

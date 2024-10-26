@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "1f1c02f1-7c9b-4fe8-93f9-76f413ce1f49",
+		"name": "Seguimiento_Firma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7791541"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"superusuario\",\r\n    \"idSolicitud\": 8,\r\n    \"idArchivo\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud/firma/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud",
+								"firma",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAnhio\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSif\": \"001-SIF\",\r\n    \"dfSolicitud\": \"2023-12-14\",\r\n    \"idUnidad\": 1,\r\n    \"idDireccion\": 1,\r\n    \"idAdecuacion\": 1,\r\n    \"idModificacion\": 1,\r\n    \"idEstatus\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"dfAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 20.20,\r\n    \"cveUsuario\": \"superusuario\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud/firma/consultaPorId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud",
+								"firma",
+								"consultaPorId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizById",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"superusuario\",\r\n    \"idSolicitud\": 8,\r\n    \"idArchivo\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud/firma/actualizaPorId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud",
+								"firma",
+								"actualizaPorId",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud/firma/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud",
+								"firma",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

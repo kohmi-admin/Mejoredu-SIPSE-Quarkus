@@ -1,0 +1,13 @@
+id_contra,cve_usuario,cx_palabra_secreta,cs_estatus,cx_nombre,cx_primer_apellido,cx_segundo_apellido,cx_correo,cd_tipo_usuario,cs_estatus
+9,alejandro.lopez,alejandro.lopez,A,ALEJANDRO,LOPEZ,LEON,alejandro.lopez@mejoredu.gob.mx,Administrador,A
+4,silvia.valle,silvia.valle,A,SILVIA,VALLE,TEPATL,silvia.valle@mejoredu.gob.mx,Consultor,A
+2,alberto.serrano,alberto.serrano,A,ALBERTO,SERRANO,RADILLA,alberto.serrano@mejorredu.gob.mx,Enlace,A
+7,gloria.guillen,gloria.guillen,A,GLORIA NATALI,GUILLÉN,VALENCIA,gloria.guillen@mejoredu.gob.mx,Enlace,A
+5,diego.lopez,diego.lopez,A,DIEGO AXEL,LÓPEZ,PERÉZ,diego.lopez@mejoredu.gob.mx,Planeacion,A
+6,tania.aguilar,tania.aguilar,A,TANIA,AGUILAR,CÁLIZ,tania.aguilar@mejoredu.gob.mx,Presupuesto,A
+3,superusuario,superusuario,A,superusuario,superusuario,superusuario,superuser@mejorredu.org.mx,Super usuario,A
+10,adrian.castelan,adrian.castelan,A,ADRIAN,CASTELÁN,CEDILLO,adrian.castelan@mejoredu.gob.mx,Supervisor,A
+13,enrique.verduzco,enrique.verduzco,A,ENRIQUE,VERDUZCO,MARTINEZ,enrique.verduzco@mejoredu.gob.mx,Supervisor,A
+11,jose.noel,jose.noel,A,JOSE NOEL,PEREZ,SALAIS,noel.salais@mejoredu.gob.mx,Supervisor,A
+12,luis.gil,luis.gil,A,LUIS GIL,CORTÉZ,GÓMEZ,luis.cortes@mejoredu.gob.mx,Supervisor,A
+1,miguelangel.lopez,miguelangel.lopez,A,MIGUEL ANGEL DE JESÚS,LÓPEZ, REYES,miguelangel.lopez@mejorredu.gob.mx,Supervisor,A

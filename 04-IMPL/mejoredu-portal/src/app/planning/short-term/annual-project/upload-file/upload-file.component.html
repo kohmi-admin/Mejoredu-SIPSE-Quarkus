@@ -1,0 +1,39 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Planeación a Corto Plazo</h1>
+  <span class="sub-title left-full">Carga de Proyectos</span>
+  <section id="wrapper" class="m">
+    <file-upload
+      [files]="arrayFilesExcel"
+      [id]="'inpFileExcel'"
+      [accept]="
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      "
+    ></file-upload>
+  </section>
+
+  <div class="actions">
+    <button
+      mat-flat-button
+      color="warn"
+      [disabled]="!arrayFilesExcel.length"
+      (click)="addProject()"
+    >
+      <mat-spinner
+        *ngIf="isUploadFile"
+        style="width: 25px"
+        color="primary"
+      ></mat-spinner>
+      <span *ngIf="!isUploadFile"> Agregar Proyecto </span>
+    </button>
+  </div>
+
+  <app-mat-custom-table
+    (action)="onTableAction($event)"
+    (update)="getProjects()"
+    [actions]="actions"
+    [dataset]="data"
+    [columns]="columns"
+    [maxWidthActions]="'150px'"
+  >
+  </app-mat-custom-table>
+</section>

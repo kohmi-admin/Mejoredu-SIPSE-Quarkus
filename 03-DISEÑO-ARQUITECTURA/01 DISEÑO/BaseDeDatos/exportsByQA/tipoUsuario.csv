@@ -1,0 +1,8 @@
+"id_tipo_usuario";"cd_tipo_usuario";"cs_estatus";"id_bitacora";"LOCK_FLAG"
+1;"Super usuario";"A";-1;0
+2;"Administrador";"A";-1;0
+3;"Consultor";"A";-1;0
+4;"Enlace";"A";-1;0
+5;"Supervisor";"A";-1;0
+6;"Planeacion";"A";-1;0
+7;"Presupuesto";"A";-1;0

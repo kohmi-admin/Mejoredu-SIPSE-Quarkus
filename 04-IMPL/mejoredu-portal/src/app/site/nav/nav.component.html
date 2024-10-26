@@ -1,0 +1,92 @@
+<nav id="nav" class="active">
+  <div class="header">
+    <!-- <app-logo class="white"></app-logo> -->
+    <img src="../../../assets/img/logoOficial.svg" alt="" srcset="">
+    <hr />
+  </div>
+  <div id="menu">
+    <div class="hide-btn" (click)="toggleMenu()">
+      <div class="icon">
+        <mat-icon>arrow_back</mat-icon>
+      </div>
+      <span>
+        Ocultar Menú
+      </span>
+    </div>
+    <div class="opt-wrapper" *ngFor="let section of getMenu()">
+      <div
+        [class.active]="section.active"
+        class="opt-header"
+        (click)="section.active = !section.active"
+      >
+        <div class="icon">
+          <mat-icon>{{ section.icon }}</mat-icon>
+        </div>
+        <div class="description wrap">
+          <p>{{ section.name }}</p>
+        </div>
+      </div>
+
+      <div class="opt-children" *ngIf="section.active">
+        <div
+          class="opt-child"
+          *ngFor="let option of section.children; let i = index"
+        >
+          <div
+            class="opt-item reactive"
+            [id]="option.path"
+            [class.hasMore]="option.children && option.children.length"
+            routerLinkActive="active"
+            (mouseover)="deactiveNavOverflow(option)"
+            (mouseleave)="activeNavOverflow(option)"
+          >
+            <div class="icon">
+              <mat-icon>{{ option.icon }}</mat-icon>
+            </div>
+            <div class="description" [routerLink]="option.path">
+              {{ option.name }}
+            </div>
+
+            <div
+              class="float-menu"
+              *ngIf="option.children && option.children.length"
+            >
+              <div class="wrapper">
+                <div
+                  class="item"
+                  *ngFor="let sm1 of option.children"
+                  [class.hasMore]="sm1.children && sm1.children.length"
+                  [style]="'width: ' + sm1.width + 'px;'"
+                  routerLinkActive="active"
+                >
+                  <span [routerLink]="option.path + sm1.path">
+                    {{ sm1.name }}
+                  </span>
+
+                  <div
+                    class="float-menu"
+                    *ngIf="sm1.children && sm1.children.length"
+                  >
+                    <div class="wrapper">
+                      <div
+                        class="item"
+                        *ngFor="let sm2 of sm1.children"
+                        [class.hasMore]="sm2.children && sm2.children.length"
+                        [style]="'width: ' + sm2.width + 'px;'"
+                        routerLinkActive="active"
+                      >
+                        <span [routerLink]="option.path + sm1.path + sm2.path">
+                          {{ sm2.name }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

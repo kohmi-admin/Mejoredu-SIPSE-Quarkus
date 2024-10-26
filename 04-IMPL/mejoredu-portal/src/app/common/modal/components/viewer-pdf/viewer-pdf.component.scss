@@ -1,0 +1,39 @@
+.modal-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  position: relative;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.modal-content {
+  // height: calc(100% - 66px - 66px);
+  height: calc(100% - 66px - 30px);
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.icon-close-header {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.footer-button {
+  margin: 0 !important;
+}
+
+.footer-button-small {
+  background-color: rgba(0, 0, 0, 0.678);
+  height: 30px !important;
+  padding-left: 10px;
+}
+
+.icon-download {
+  height: 100%;
+  cursor: pointer;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}

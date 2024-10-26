@@ -1,0 +1,46 @@
+<div class="card-wrapper" [class.noo-padding]="card.isChild">
+  <div class="card" matRipple [matRippleDisabled]="activeRipple">
+    <section (click)="openAddModal()">
+      <div class="header">
+        <div class="title">
+          {{ getTitleStr() }} {{ getPrefix() + card.title }}
+        </div>
+        <div class="options" matRipple *ngIf="canEdit">
+          <mat-icon (mouseenter)="activeRipple=true" (mouseleave)="activeRipple=false" (click)="$event.preventDefault();$event.stopPropagation();" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+          <mat-menu class="card-menu" #menu="matMenu">
+            <button *ngIf="canCategorize()" mat-menu-item [matMenuTriggerFor]="vertebrates">Categorizar</button>
+            <button *ngIf="canMarkNoFin()" (click)="changeCategory(4)" mat-menu-item>Fin para la MIR</button>
+            <button *ngIf="canMarkFin()" (click)="changeCategory(7)" mat-menu-item>Retirar Fin para la MIR</button>
+            <button *ngIf="canDelete()" mat-menu-item (click)="deleteThis()" class="color-red">Eliminar</button>
+          </mat-menu>
+          <mat-menu class="card-menu" #vertebrates="matMenu">
+            <button mat-menu-item *ngIf="!isMedio" (click)="changeCategory(3)">Medio</button>
+            <button mat-menu-item *ngIf="!isChild || (canViewComponentBtn())" [disabled]="!canViewComponentBtn()" (click)="changeCategory(5)">Componente</button>
+            <button mat-menu-item *ngIf="isChild && !isActivity" (click)="changeCategory(6)">Actividad</button>
+          </mat-menu>
+        </div>
+        <div class="actions">
+          <div class="type-space">
+            <div class="type" [attr.color]="getColor()"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="description" *ngIf="card.description !== ''">
+        {{ card.description }}
+      </div>
+      <div class="descriptionLow" *ngIf="card.description === ''">
+      </div>
+    </section>
+
+    <button (mouseenter)="activeRipple=true" (mouseleave)="activeRipple=false" *ngIf="canAdd" class="add-button" (click)="addChild()" [disabled]="card.description == ''" matRipple>
+        <mat-icon>add</mat-icon>
+        Agregar {{ getAddStr() }}
+    </button>
+
+  </div>
+  <div class="chils" *ngIf="card.cards?.length">
+      <app-card (delete)="onDelete($event)" [isChild]="true" [parentIsComponent]="isComponent || parentIsComponent" [card]="item" *ngFor="let item of card.cards"></app-card>
+  </div>
+</div>
+

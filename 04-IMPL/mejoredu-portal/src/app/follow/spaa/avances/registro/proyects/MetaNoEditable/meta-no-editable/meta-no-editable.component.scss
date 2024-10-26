@@ -1,0 +1,81 @@
+form {
+    box-sizing: border-box;
+    border: solid 15px transparent;
+}
+
+.group-form {
+    .title {
+        text-align: center;
+    }
+}
+
+.alert-success {
+    margin-top: 20px;
+} 
+
+.field {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 0 transparent;
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4),
+    &:nth-of-type(11),
+    &:nth-of-type(12),
+    &:nth-of-type(13),
+    &:nth-of-type(14),
+    &:nth-of-type(15),
+    &:nth-of-type(16),
+    &:nth-of-type(18),
+    &:nth-of-type(19) {
+        width: 50%;
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(3),
+    &:nth-of-type(11),
+    &:nth-of-type(13),
+    &:nth-of-type(15),
+    &:nth-of-type(18) {
+        border-right-width: 15px;
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(12),
+    &:nth-of-type(14),
+    &:nth-of-type(16),
+    &:nth-of-type(19) {
+        border-left-width: 15px;
+    }
+}
+
+.action-buttons {
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    &.right {
+        text-align: right;
+        justify-items: flex-end;
+    }
+}
+
+.group-forms {
+    .item {
+        width: 100%;
+        select {
+            width: 100%;
+            height: 40px;
+            display: block;
+            border: solid 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
+            background: transparent;
+            color: white;
+            outline: none;
+        }
+    }
+}

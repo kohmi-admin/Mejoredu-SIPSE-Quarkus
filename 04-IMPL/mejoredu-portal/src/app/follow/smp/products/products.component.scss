@@ -1,0 +1,25 @@
+.tbl-space {
+    margin-top: -15px;
+}
+
+form {
+    .field {
+        width: 100%;
+        vertical-align: top;
+        display: inline-block;
+        box-sizing: border-box;
+        border: solid 0 transparent;
+        &:nth-of-type(2) {
+            width: 50%;
+            border-right-width: 15px;
+        }
+        &:nth-of-type(3) {
+            width: 50%;
+            border-left-width: 15px;
+        }
+    }
+}
+
+.actions {
+    text-align: right;
+}

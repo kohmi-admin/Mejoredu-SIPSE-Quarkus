@@ -1,0 +1,32 @@
+<section id="wrapper">
+  <div class="box">
+    <div class="center">
+      <div 
+      *ngFor="let opt of options | slice:0:2">
+        <app-modules
+          [routerLink]="opt.route"
+          [title]="opt.title"
+          [icon]="opt.icon"
+          [imgIcon]="opt.imgIcon"
+          [enable]="opt.enable"
+          [finish]="opt.finish"
+          [description]="opt.description"
+        ></app-modules>
+      </div>
+    </div>
+    <div class="center">
+      <div 
+      *ngFor="let opt of options | slice:2:4">
+        <app-modules
+          [routerLink]="opt.route"
+          [title]="opt.title"
+          [icon]="opt.icon"
+          [imgIcon]="opt.imgIcon"
+          [enable]="opt.enable"
+          [finish]="opt.finish"
+          [description]="opt.description"
+        ></app-modules>
+      </div>
+    </div>
+  </div>
+</section>

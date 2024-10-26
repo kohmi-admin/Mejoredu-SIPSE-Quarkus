@@ -1,0 +1,65 @@
+<section id="wrapper" class="can-validate">
+  <h1 class="title no-bottom">Evaluación y Mejora Continua</h1>
+  <span class="sub-title bottom">Encuestas y Consultas</span>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <section *ngIf="canEdit">
+      <div class="file-zone">
+        <span>Documentos ZIP (Evidencias)</span>
+        <file-upload
+          [files]="arrayFilesZip"
+          [id]="'inpFileZip'"
+          accept=".zip, .rar, .tar"
+        ></file-upload>
+      </div>
+    </section>
+    <div class="action-buttons" *ngIf="canEdit">
+      <button
+        type="button"
+        mat-flat-button
+        color="warn"
+        class="btn-left"
+        (click)="newRegister()"
+      >
+        Nuevo Registro
+      </button>
+      <button mat-flat-button color="primary" class="btn-left">
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">
+          {{ dataAction ? "Actualizar" : "Cargar" }} Registro
+        </span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<div class="wrap">
+  <app-mat-custom-table
+    (action)="onTableAction($event)"
+    (update)="getEncuestas()"
+    [actions]="actions"
+    [dataset]="data"
+    [maxWidthActions]="'240px'"
+    [columns]="columns"
+    [minWidth]="1900"
+    [showActionIf]="showActionIf"
+  >
+  </app-mat-custom-table>
+</div>

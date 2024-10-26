@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Justificación</h1>
+<div mat-dialog-content>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 2">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <section class="file-zone" *ngIf="dataUser.idTipoUsuario != 'CONSULTOR'">
+      <file-upload
+        [multiple]="true"
+        [files]="arrayFiles"
+        [id]="'inpFileJustificacion'"
+        accept=".xlsx, .pdf, .doc, .docx"
+      ></file-upload>
+    </section>
+
+    <section class="action-buttons right" *ngIf="dataUser.idTipoUsuario != 'CONSULTOR'">
+      <button
+        type="button"
+        mat-flat-button
+        color="add"
+        (click)="handleAddFile()"
+      >
+        Agregar Archivos
+      </button>
+    </section>
+
+    <section style="margin-top: -15px; margin-bottom: -15px">
+      <app-mat-custom-table
+        (action)="onTableAction($event)"
+        (update)="getAll()"
+        [hasScroll]="false"
+        [actions]="actions"
+        [dataset]="filesArchivos"
+        [maxWidthActions]="'110px'"
+        [columns]="columns"
+      >
+      </app-mat-custom-table>
+    </section>
+
+    <section class="alert-success">Justificación</section>
+
+    <div class="field" *ngFor="let question of questions | slice : 2 : 20">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <div class="action-buttons right" *ngIf="dataUser.idTipoUsuario != 'CONSULTOR'">
+      <button mat-flat-button color="primary">
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting"> Guardar Justificación </span>
+      </button>
+    </div>
+  </form>
+</div>

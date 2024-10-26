@@ -1,0 +1,89 @@
+::ng-deep .disabled {
+  pointer-events: none !important;
+  cursor: not-allowed;
+}
+
+.form {
+  right: 20px;
+  z-index: 100;
+  text-align: right;
+  position: absolute;
+  width: fit-content;
+  transform: translate(-25px, -7px);
+  overflow-x: hidden;
+  padding-top: 6px;
+}
+
+.field {
+  width: 150px;
+  display: inline-block;
+  border: solid 0 transparent;
+
+  &:nth-child(1) {
+    width: 200px;
+  }
+  &:nth-child(1) {
+    border-right-width: var(--border-middle);
+  }
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-left-width: var(--border-slim);
+  }
+}
+
+::ng-deep {
+  .dbl {
+    width: 50%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .sub-title {
+    padding-top: var(--border-middle);
+    padding-left: var(--border-middle);
+  }
+}
+
+.action-buttons {
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: 25px;
+  justify-content: flex-end;
+  padding-right: 17px;
+  transform: translateY(-13px);
+  .btn-left {
+    margin-left: 15px;
+    color: var(--white) !important;
+  }
+  .add {
+    color: var(--white) !important;
+    background-color: var(--golden-me);
+  }
+  button[mat-mini-fab] {
+    margin-left: 10px;
+    transform: translateY(-2px);
+    border: solid 1px var(--primary-color);
+  }
+}
+
+.inp-custom {
+  width: 150px;
+  ::ng-deep {
+    .mat-mdc-form-field-icon-prefix {
+      display: inline-block;
+      margin-right: 0;
+      padding-right: 0;
+      width: 100px !important;
+      transform: translate(2px, 1px);
+      .span-prefix {
+        display: block;
+        margin-left: 10px;
+        width: 500px !important;
+        font-size: 15.5px !important;
+      }
+    }
+    input {
+      transform: translate(12px, 1px);
+    }
+  }
+}

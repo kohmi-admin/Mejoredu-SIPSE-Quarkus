@@ -1,0 +1,90 @@
+
+Ampliación
+Ej.1
+{
+  "ajustes": [
+    {
+      "idCatalogoPartidaGasto": 523,
+      "mes": 2,
+      "monto": 230000,
+      "tipo": 1,
+      "cvePresupuestal": "230003-DFGSDFFGSDSD",
+      "csEstatus": "A",
+      "idPresupuesto": 430
+    }
+  ]
+}
+
+Ej.2
+{
+  "ajustes": [
+    {
+      "idCatalogoPartidaGasto": 524,
+      "mes": 2,
+      "monto": 230000,
+      "tipo": 1,
+      "cvePresupuestal": "230003-DFGSDFFGSDSD",
+      "csEstatus": "A",
+      "idPresupuesto": 428
+    }
+  ]
+}
+
+
+Reducción
+Ej.1
+
+{
+  "ajustes": [
+    {
+      "idCatalogoPartidaGasto": 516,
+      "mes": 1,
+      "monto": 100000,
+      "tipo": 1,
+      "cvePresupuestal": "100003-DFGSDFFGSDSD",
+      "csEstatus": "A",
+      "idPresupuesto": 426
+    }
+  ]
+}
+
+Ej.2
+
+
+{
+  "ajustes": [
+    {
+      "idCatalogoPartidaGasto": 516,
+      "mes": 9,
+      "monto": 100000.55,
+      "tipo": 1,
+      "cvePresupuestal": "100003-DFGSDFFGSDSD",
+      "csEstatus": "A",
+      "idPresupuesto": 426
+    },
+{
+      "idCatalogoPartidaGasto": 516,
+      "mes": 8,
+      "monto": 100000.55,
+      "tipo": 1,
+      "cvePresupuestal": "100003-DFGSDFFGSDSD",
+      "csEstatus": "A",
+      "idPresupuesto": 426
+    },
+{
+      "idCatalogoPartidaGasto": 516,
+      "mes": 10,
+      "monto": 100000.55,
+      "tipo": 1,
+      "cvePresupuestal": "100003-DFGSDFFGSDSD",
+      "csEstatus": "A",
+      "idPresupuesto": 426
+    }
+  ]
+}
+
+
+
+
+
+

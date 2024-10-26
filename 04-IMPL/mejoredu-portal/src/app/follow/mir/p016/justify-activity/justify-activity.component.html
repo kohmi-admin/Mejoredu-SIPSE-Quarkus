@@ -1,0 +1,130 @@
+<h1 mat-dialog-title>Justificación</h1>
+<div mat-dialog-content>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="tbl-space">
+      <table style="margin-bottom: 22px">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th>Ver</th>
+            <th style="min-width: 400px;">Clave y Nombre del Producto</th>
+            <th>Enero</th>
+            <th>Febrero</th>
+            <th>Marzo</th>
+            <th>Abril</th>
+            <th>Mayo</th>
+            <th>Junio</th>
+            <th>Julio</th>
+            <th>Agosto</th>
+            <th>Septiembre</th>
+            <th>Octubre</th>
+            <th>Noviembre</th>
+            <th>Diciembre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of budgetCalendar">
+            <td (click)="onTableAction(item)" style="align-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#235b4e" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+              </svg>
+            </td>
+            <td>
+              {{ item.product }}
+            </td>
+            <td class="center">
+              {{ item.january }}
+            </td>
+            <td class="center">
+              {{ item.february }}
+            </td>
+            <td class="center">
+              {{ item.march }}
+            </td>
+            <td class="center">
+              {{ item.april }}
+            </td>
+            <td class="center">
+              {{ item.may }}
+            </td>
+            <td class="center">
+              {{ item.june }}
+            </td>
+            <td class="center">
+              {{ item.july }}
+            </td>
+            <td class="center">
+              {{ item.august }}
+            </td>
+            <td class="center">
+              {{ item.september }}
+            </td>
+            <td class="center">
+              {{ item.october }}
+            </td>
+            <td class="center">
+              {{ item.november }}
+            </td>
+            <td class="center">
+              {{ item.december }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <app-mat-custom-table
+      (action)="onTableAction($event)"
+      (update)="getAll()"
+      [hasScroll]="false"
+      [actions]="actions"
+      [dataset]="budgetCalendar"
+      [maxWidthActions]="'160px'"
+      [columns]="columns"
+      >
+      </app-mat-custom-table> -->
+    </div>
+
+    <div class="field" *ngFor="let question of questions | slice : 0 : 1">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <section class="alert-success" style="margin-top: -5px;">Justificación</section>
+
+    <div class="field" *ngFor="let question of questions | slice : 1 : 20">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <div class="action-buttons right" *ngIf="dataUser.idTipoUsuario != 'CONSULTOR'">
+      <button mat-flat-button color="primary">
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting"> Guardar Justificación </span>
+      </button>
+    </div>
+  </form>
+</div>

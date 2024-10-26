@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>
+    {{ getTitleStr() }}
+    {{ data.title }}
+</h1>
+<div mat-dialog-content>
+    <form
+      id="form1"
+      class="form fade"
+      [formGroup]="form"
+      (submit)="save()"
+    >
+      <div
+        class="field blur"
+        *ngFor="let question of questions; let i = index"
+      >
+        <app-dynamic-field
+          class="form-field full"
+          [question]="question"
+          [form]="form"
+        ></app-dynamic-field>
+      </div>
+      <div class="actions">
+        <button mat-flat-button type="submit" color="primary">
+            Guardar
+        </button>
+      </div>
+    </form>
+</div>

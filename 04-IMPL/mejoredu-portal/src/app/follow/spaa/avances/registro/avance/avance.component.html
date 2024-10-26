@@ -1,0 +1,143 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      (click)="navigate.emit(2)"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="true"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="s1">
+      <div class="field" *ngFor="let question of questions | slice : 0 : 3">
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </section>
+
+    <section>
+      <section class="group-forms">
+        <div class="group-form" *ngFor="let item of mounths">
+          <div class="title">
+            {{ item.name }}
+          </div>
+          <div class="container">
+            <div class="item" *ngFor="let month of item.items">
+              <div class="title">
+                {{ month.name }}
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  [disabled]="!month.editable || !canEdit"
+                  [(ngModel)]="month.value"
+                  [ngModelOptions]="{ standalone: true }"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="alert-success">Evidencia Mensual</section>
+
+    <section class="em">
+      <div class="field" *ngFor="let question of questions | slice : 3 : 7">
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </section>
+
+    <section style="margin-top: 0px">
+      <file-upload
+        *ngIf="(form.enabled && filesArchivos.length < 2) && canEdit"
+        [files]="arrayFiles"
+        [id]="'inpFilePi'"
+        accept=".pdf"
+      ></file-upload>
+    </section>
+    <!--  || -->
+    <div class="action-buttons right">
+      <button
+        *ngIf="form.enabled && filesArchivos.length < 2"
+        [disabled]="!arrayFiles.length || !canEdit"
+        (click)="handleAddFile()"
+        type="button"
+        mat-flat-button
+        color="add"
+        style="margin-top: 0px; margin-left: 20px"
+      >
+        <span>Agregar Archivo</span>
+      </button>
+    </div>
+
+    <section style="margin-top: 5px">
+      <app-mat-custom-table
+        (action)="onTableAction($event)"
+        [dataset]="filesArchivos"
+        [columns]="columns"
+        [actions]="actions"
+        [noPadding]="true"
+        [customBtn]="'download'"
+        [actionString]="'Descargar'"
+      >
+      </app-mat-custom-table>
+    </section>
+
+    <section class="alert-success">Evidencia Trimestral</section>
+
+    <section class="et">
+      <div class="field" *ngFor="let question of questions | slice : 7 : 20">
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </section>
+
+    <div class="action-buttons right">
+      <button mat-flat-button color="primary" type="submit" [disabled]="!canEdit">Guardar</button>
+    </div>
+  </form>
+</section>

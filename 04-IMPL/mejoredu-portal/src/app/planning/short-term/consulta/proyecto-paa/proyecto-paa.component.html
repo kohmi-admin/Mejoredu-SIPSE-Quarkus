@@ -1,0 +1,110 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Planeación a Corto Plazo</h1>
+  <span class="sub-title bottom">Consulta</span>
+  <section class="alert-success no-top">Proyectos PAA</section>
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    [actionsString]="'Consulta'"
+    [maxWidthActions]="'160px'"
+    (action)="onTableAction($event)"
+    (update)="getProjects()"
+  >
+  </app-mat-custom-table>
+  <section class="alert-success no-top">Proyectos PAA Aprobados</section>
+  <app-mat-custom-table
+    [dataset]="dataAprobados"
+    [columns]="columns"
+    [actions]="actions"
+    [actionsString]="'Consulta'"
+    [maxWidthActions]="'160px'"
+    (action)="onTableAction($event)"
+    (update)="getProjectsValidar()"
+  >
+  </app-mat-custom-table>
+
+  <section class="alert-success no-top">PAA Oficial</section>
+
+  <section
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+    class="file-space"
+  >
+    <file-upload
+      *ngIf="filesArchivosPaa.length < 2"
+      [multiple]="true"
+      [files]="arrayFilesPaa"
+      [id]="'inpFilePaa'"
+      accept=".pdf"
+    ></file-upload>
+    <div class="action-buttons">
+      <button
+        *ngIf="filesArchivosPaa.length < 2"
+        [disabled]="!arrayFilesPaa.length"
+        (click)="handleAddFile(subseccionPaa)"
+        type="button"
+        mat-flat-button
+        color="add"
+        style="margin-top: 0px; margin-left: 20px"
+      >
+        <mat-spinner
+          *ngIf="isSubmitingFilePaa"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmitingFilePaa"> Cargar Archivo </span>
+      </button>
+    </div>
+  </section>
+
+  <app-mat-custom-table
+    [dataset]="dataPAA"
+    [columns]="columnsFileSection"
+    [actions]="actionsFileSection"
+    [maxWidthActions]="'100px'"
+    (action)="onTableActionFileSection($event, subseccionPaa)"
+    (update)="getFileSections()"
+  >
+  </app-mat-custom-table>
+  <section class="alert-success no-top">Actas de Sesión</section>
+  <section
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+    class="file-space"
+  >
+    <file-upload
+      *ngIf="filesArchivosActas.length < 2"
+      [multiple]="true"
+      [files]="arrayFilesActas"
+      [id]="'inpFileActas'"
+      accept=".pdf"
+    ></file-upload>
+    <div class="action-buttons">
+      <button
+        *ngIf="filesArchivosActas.length < 2"
+        [disabled]="!arrayFilesActas.length"
+        (click)="handleAddFile(subseccionActas)"
+        type="button"
+        mat-flat-button
+        color="add"
+        style="margin-top: 0px; margin-left: 20px"
+      >
+        <mat-spinner
+          *ngIf="isSubmitingFileActas"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmitingFileActas"> Cargar Archivo </span>
+      </button>
+    </div>
+  </section>
+
+  <app-mat-custom-table
+    [dataset]="dataActas"
+    [columns]="columnsFileSection"
+    [actions]="actionsFileSection"
+    [maxWidthActions]="'100px'"
+    (action)="onTableActionFileSection($event, subseccionActas)"
+    (update)="getFileSections()"
+  >
+  </app-mat-custom-table>
+</section>

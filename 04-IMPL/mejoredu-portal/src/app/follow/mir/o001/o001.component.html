@@ -1,0 +1,184 @@
+<section id="wrapper">
+    <h1 class="title">Seguimiento</h1>
+    <span class="sub-title bottom">{{ ppName }}</span>
+  
+    <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+      <section class="alert-success" style="margin-top: -5px">
+        Datos de Identificación del Programa Presupuestario
+      </section>
+  
+      <section class="form1">
+        <div class="field" *ngFor="let question of questions | slice : 0 : 3">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form"
+          ></app-select-filter>
+        </div>
+      </section>
+  
+      <section class="alert-success" style="margin-top: -5px">
+        Datos de Identificación del Indicador
+      </section>
+  
+      <section class="form2">
+        <div class="field" *ngFor="let question of questions | slice : 3 : 9">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form"
+          ></app-select-filter>
+        </div>
+      </section>
+  
+      <section class="alert-success" style="margin-top: -5px">
+        Metas Ciclo Presupuestario en Curso
+      </section>
+  
+      <section class="form3">
+        <div class="field" *ngFor="let question of questions | slice : 9 : 14">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form"
+          ></app-select-filter>
+        </div>
+      </section>
+  
+      <section class="alert-success" style="margin-top: -5px">
+        Metas Ciclo Presupuestario en Curso Ajustada
+      </section>
+  
+      <section class="form3">
+        <div class="field" *ngFor="let question of questions | slice : 14 : 20">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form"
+          ></app-select-filter>
+        </div>
+        <section class="sub-title">Justificación</section>
+        <div class="field" *ngFor="let question of questions | slice : 20 : 23">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form"
+          ></app-select-filter>
+        </div>
+      </section>
+  
+    </form>
+    <div class="action-buttons right" *ngIf="dataUser.idTipoUsuario != 'CONSULTOR'">
+      <button mat-flat-button color="primary" type="button" (click)="submit()">Guardar Justificación</button>
+    </div>
+    <form class="form fade" [formGroup]="form2" (ngSubmit)="submit()">
+      <section class="alert-success" style="margin-top: 20px">
+        Otras Metas
+      </section>
+  
+      <section class="form4">
+        <div class="field" *ngFor="let question of questions2 | slice : 0 : 4">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form2"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form2"
+          ></app-select-filter>
+        </div>
+      </section>
+  
+      <section class="form5">
+        <section class="alert-success" style="margin-top: -5px">
+          Metas Ciclo Presupuestario en Curso Ajustada
+        </section>
+        <div class="field" *ngFor="let question of questions2 | slice : 4 : 9">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form2"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form2"
+          ></app-select-filter>
+        </div>
+        <section class="sub-title">Justificación</section>
+        <div class="field" *ngFor="let question of questions2 | slice : 9 : 13">
+          <app-dynamic-field
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="!question.filter"
+            [form]="form2"
+          ></app-dynamic-field>
+          <app-select-filter
+            class="form-field full blur"
+            [question]="question"
+            *ngIf="question.filter"
+            [form]="form2"
+          ></app-select-filter>
+        </div>
+      </section>
+  
+    </form>
+    <div class="action-buttons right" *ngIf="dataUser.idTipoUsuario != 'CONSULTOR'">
+      <button mat-flat-button color="primary" (click)="submit2()">Guardar Justificación</button>
+    </div>
+    
+    <section style="margin-top: 5px; margin-bottom: -15px;">
+      <app-mat-custom-table
+        (action)="onTableAction($event)"
+        (update)="getAll()"
+        [hasScroll]="false"
+        [actions]="actions"
+        [dataset]="data"
+        [maxWidthActions]="'110px'"
+        [columns]="columns"
+      >
+      </app-mat-custom-table>
+    </section>
+  </section>
+  

@@ -1,0 +1,121 @@
+<section id="wrapper">
+  <section class="dbl">
+    <div class="sub-title">De:</div>
+    <form class="form fade" [formGroup]="form">
+      <div class="field" *ngFor="let question of questions | slice : 0 : 4">
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </form>
+  </section>
+  <section class="dbl">
+    <div class="sub-title">A:</div>
+    <form class="form fade" [formGroup]="form">
+      <div class="field" *ngFor="let question of questions | slice : 4 : 8">
+        <app-dynamic-field
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full blur"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </form>
+  </section>
+
+  <div class="action-buttons">
+    <button
+      mat-flat-button
+      class="btn-left"
+      color="add"
+      (click)="addExpenseItem()"
+    >
+      Agregar Partida de Gasto
+    </button>
+    <button mat-flat-button color="primary" [disabled]="validation">
+      Guardar Avance
+    </button>
+  </div>
+
+  <div class="tbl-space">
+    <table>
+      <caption></caption>
+      <tbody>
+        <tr class="head">
+          <th class="center" rowspan="2">Partida</th>
+          <th class="center" colspan="3">Reducción</th>
+          <th class="center" colspan="3">Ampliación</th>
+          <th class="center">Importe Neto</th>
+        </tr>
+        <tr class="sub-header">
+          <td [width]="120">Clave</td>
+          <td>Importe</td>
+          <td>Mes</td>
+          <td [width]="120">Clave</td>
+          <td>Importe</td>
+          <td>Mes</td>
+          <td></td>
+        </tr>
+
+        <tr *ngFor="let item of expensiveResumes">
+          <td>
+            {{ item.partida }}
+          </td>
+          <td>
+            {{ item.claveReduccion }}
+          </td>
+          <td>
+            <!-- show as less -->
+            {{ item.importeReduccion | currency }}
+          </td>
+          <td>
+            {{ item.mesReduccion }}
+          </td>
+          <td>
+            {{ item.claveAmpleacion }}
+          </td>
+          <td>
+            {{ item.importeAmpleacion | currency }}
+          </td>
+          <td>
+            {{ item.mesAmpleacion }}
+          </td>
+          <td>
+            {{ item.importeNeto | currency }}
+          </td>
+        </tr>
+        <tr class="enfassis">
+          <td class="enfasis"></td>
+          <td></td>
+          <td class="enfasis">
+            {{ getSumImporteReduccion() | currency }}
+          </td>
+          <td></td>
+          <td></td>
+          <td class="enfasis">
+            {{ getSumImporteAmpleacion() | currency }}
+          </td>
+          <td></td>
+          <td class="enfasis">
+            {{ getSumImporteNeto() | currency }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

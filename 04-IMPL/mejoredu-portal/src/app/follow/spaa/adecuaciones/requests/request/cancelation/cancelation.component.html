@@ -1,0 +1,59 @@
+<section id="wrapper">
+  <form
+    class="form fade"
+    [class.activity]="modificationType == 'activity'"
+    [class.product]="modificationType == 'product'"
+    [class.actions]="modificationType == 'actions'"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+  >
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons"></div>
+  </form>
+  <div class="action-buttons" style="margin-bottom: -10px">
+    <button
+      mat-flat-button
+      class="btn-left"
+      color="accent"
+      [disabled]="isButtonDisabled"
+      (click)="submit()"
+    >
+      Aplicar Cancelación
+    </button>
+     <button
+      *ngIf="isButtonDisabled"
+      mat-flat-button
+      class="btn-left"
+      color="add"
+      (click)="clear()"
+    >
+      Limpiar Formulario
+    </button>
+  </div>
+  <div *ngIf="viewTableCancelation">
+    <section class="alert-success top">{{titleSection}}</section>
+    <app-mat-custom-table
+      (action)="onTableAction($event)"
+      [actions]="actions"
+      [customBtn]="customBtn"
+      [dataset]="data"
+      [maxWidthActions]="'150px'"
+      [columns]="columns"
+    >
+    </app-mat-custom-table>
+  </div>
+
+</section>

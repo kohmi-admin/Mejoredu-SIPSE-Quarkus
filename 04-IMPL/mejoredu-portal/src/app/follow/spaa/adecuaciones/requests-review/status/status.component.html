@@ -1,0 +1,187 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Seguimiento del Programa Anual de Actividades</h1>
+  <span class="sub-title no-bottom">Revisión de Solicitudes</span>
+
+  <h4>Estado del Proceso de adecuación</h4>
+  <app-time-line [items]="items" [status]="currentStep"></app-time-line>
+
+  <section class="dbl">
+    <div class="tbl-tittle">Comentarios</div>
+    <div class="wrap">
+      <button mat-flat-button *ngIf="showAddComments" (click)="manageComment()">
+        <mat-icon> add </mat-icon>
+        Agregar Comentario
+      </button>
+      <app-mat-custom-table
+        *ngIf="!loading"
+        (action)="onTableAction($event)"
+        (update)="getCommentsPorIdSolicitud()"
+        [actions]="actions"
+        [dataset]="data"
+        [maxWidthActions]="'150px'"
+        [columns]="columns"
+        [showActionIf]="showActionIf"
+      >
+      </app-mat-custom-table>
+    </div>
+    <div style="display: flex; justify-content: flex-end">
+      <div class="file-zone" *ngIf="showInputFile">
+        <span> Firma </span>
+        <file-upload
+          [multiple]="false"
+          [id]="'file-documento-analitico-seguimiento'"
+          [files]="filesToUploadComponents"
+          accept=".jpg, .png"
+        ></file-upload>
+        <!-- (onOutputFile)="responseFileUpload($event)" -->
+      </div>
+    </div>
+    <div class="actions">
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="showAllBtn || showBtnEditar"
+        (click)="clickAction('editaSolicitud')"
+      >
+        Editar Solicitud
+      </button>
+      <button
+        mat-flat-button
+        color="accent"
+        *ngIf="showAllBtn || showBtnCancelar"
+        (clicl)="clickAction('cancelar')"
+      >
+        Cancelar
+      </button>
+
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="showAllBtn || showBtnFormalizar"
+        [disabled]="disabledBtnFormalizar"
+        (click)="clickAction('formalizar')"
+      >
+        <mat-spinner
+          *ngIf="submitingBtnFormalizar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnFormalizar">Formalizar</span>
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="showAllBtn || showBtnRubricar"
+        [disabled]="disabledBtnRubricar"
+        (click)="clickAction('rubricar')"
+      >
+        <mat-spinner
+          *ngIf="submitingBtnRubricar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnRubricar">Rubricar</span>
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="showAllBtn || showBtnAprobar"
+        [disabled]="disabledBtnAprobar"
+        (click)="clickAction('aprobar')"
+      >
+        <mat-spinner
+          *ngIf="submitingBtnAprobar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnAprobar">Aprobar</span>
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="showAllBtn || showBtnAutorizar"
+        [disabled]="disabledBtnAutorizar"
+        (click)="clickAction('autorizarCambio')"
+      >
+        <mat-spinner
+          *ngIf="submitingBtnAutorizar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnAutorizar">Autorizar Cambio</span>
+      </button>
+      <button
+        mat-flat-button
+        color="blue"
+        *ngIf="showAllBtn || showBtnAgregarFirma"
+        [disabled]="
+          disabledBtnAgregarFirma && filesToUploadComponents.length === 0
+        "
+        (click)="clickAction('agregarFirma')"
+      >
+        <mat-spinner
+          *ngIf="submitingBtnAgregarFirma"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnAgregarFirma">Agregar Firma</span>
+      </button>
+
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="showAllBtn || showBtnRevisado"
+        (click)="clickAction('revisado')"
+        >
+        <!-- [disabled]="disabledBtnRevisado" -->
+        <mat-spinner
+          *ngIf="submitingBtnRevisado"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnRevisado">Revisado</span>
+      </button>
+      <button
+        mat-flat-button
+        color="accent"
+        *ngIf="showAllBtn || showBtnRechazar"
+        [disabled]="disabledBtnRechazar"
+        (click)="clickAction('rechazar')"
+      >
+        <mat-spinner
+          *ngIf="submitingBtnRechazar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingBtnRechazar">Rechazar</span>
+      </button>
+    </div>
+  </section>
+  <section class="dbl doc-content">
+    <div
+      style="display: flex; justify-content: center"
+      *ngIf="loadingAlfresco; else contentFile"
+    >
+      <mat-spinner *ngIf="true" style="width: 25px" color="warn"></mat-spinner>
+    </div>
+    <ng-template #contentFile>
+      <span *ngIf="!source">
+        No se Encontró el Archivo, Intente más Tarde.
+      </span>
+      <embed
+        *ngIf="source"
+        [src]="
+          source + '#toolbar=0&navpanes=0&scrollbar=0' | safe : 'resourceUrl'
+        "
+        width="100%"
+        height="100%"
+      />
+      <div *ngIf="source" class="footer-button-small">
+        <div class="icon-download" (click)="this.downloadFile()">
+          <mat-icon [matTooltip]="'Descargar'" fontIcon="download"></mat-icon>
+          Descargar
+        </div>
+      </div>
+    </ng-template>
+  </section>
+</section>

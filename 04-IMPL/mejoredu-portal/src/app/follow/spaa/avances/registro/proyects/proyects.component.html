@@ -1,0 +1,67 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="true"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      (click)="navigate.emit(1)"
+      [disabled]="!activeProject"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div class="tbl-section">
+    <app-mat-custom-table
+      *ngIf="!loading"
+      (action)="onTableAction($event)"
+      (update)="getAll()"
+      [hasScroll]="false"
+      [propId]="'idProyecto'"
+      [activeId]="activeProject"
+      [actionsInStart]="true"
+      [actions]="actions"
+      [dataset]="data"
+      [actionString]="'Ver'"
+      [maxWidthActions]="'60px'"
+      [columns]="columns"
+    >
+    </app-mat-custom-table>
+  </div>
+
+  <div class="actions" style="margin-top: -15px;">
+    <button mat-flat-button color="send" type="button" (click)="openMeta()" [disabled]="!canEdit || isPlaneacion || !isEnlace" >Meta Vencida o Adelantada</button>
+    <button mat-flat-button color="primary" type="submit" (click)="openProducts()" [disabled]="!canEdit || isPlaneacion || !isEnlace">Productos no Programados</button>
+  </div>
+
+  <div class="actions" style="margin-top: 15px;">
+    <button mat-flat-button color="blue" type="button" routerLink="../../../Seguimiento MIR|FID/P016">Avances en la MIR</button>
+    <button mat-flat-button color="primary" type="submit" (click)="generateReport()">Generar Reporte General</button>
+    <button mat-flat-button color="primary" type="submit" [disabled]="!activeProject || isEnviadoRevision || !isEnlace" (click)="enviarRevision()">{{isEnviadoRevision ? 'Enviado a Revisión' : 'Enviar a Revisión'}}</button>
+  </div>
+
+  <div>
+    <app-mat-custom-table
+      *ngIf="!loading"
+      (action)="onTableAction2($event)"
+      (update)="consultarAvancesPorAnhio()"
+      [hasScroll]="false"
+      [actions]="actions2"
+      [dataset]="data2"
+      [maxWidthActions]="'160px'"
+      [columns]="columns2"
+      [showActionIf]="showActionIf"
+    >
+    </app-mat-custom-table>
+  </div>
+</section>

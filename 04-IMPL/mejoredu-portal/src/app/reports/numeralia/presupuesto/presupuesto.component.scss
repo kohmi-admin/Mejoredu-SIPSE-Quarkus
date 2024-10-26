@@ -1,0 +1,20 @@
+.img-mejoredu {
+  width: 100%;
+  display: flex;
+  margin-bottom: 100px;
+  .left {
+    width: 30%;
+    img {
+        width: 300px;
+    }
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    span {
+      font-weight: bold;
+    }
+  }
+}

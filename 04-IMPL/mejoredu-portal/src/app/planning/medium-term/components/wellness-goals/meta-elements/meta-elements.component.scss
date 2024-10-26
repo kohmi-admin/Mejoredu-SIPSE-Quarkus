@@ -1,0 +1,97 @@
+:host ::ng-deep mat-form-field {
+    width: 100% !important;
+}
+
+.no-top {
+    margin-top: -7.5px !important;
+}
+
+.alert-success {
+    margin-bottom: 17.5px;
+}
+
+#wrapper {
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.actions {
+    text-align: center;
+    button {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.field {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid var(--border-slim) transparent;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+}
+
+form {
+    width: 100%;
+    text-align: left;
+    .field:nth-child(4),
+    .field:nth-child(5),
+    .field:nth-child(6),
+    .field:nth-child(7),
+    .field:nth-child(8),
+    .field:nth-child(9),
+    .field:nth-child(10),
+    .field:nth-child(11),
+    .field:nth-child(12),
+    .field:nth-child(13),
+    .field:nth-child(14),
+    .field:nth-child(15) {
+        width: 33.3% !important;
+    }
+    .field:nth-child(4),
+    .field:nth-child(7),
+    .field:nth-child(10),
+    .field:nth-child(13) {
+        border-right-width: var(--border-slim);
+    }
+    .field:nth-child(5),
+    .field:nth-child(8),
+    .field:nth-child(11),
+    .field:nth-child(14) {
+        border-left-width: var(--border-middle);
+        border-right-width: var(--border-slim);
+    }
+    .field:nth-child(6),
+    .field:nth-child(9),
+    .field:nth-child(12),
+    .field:nth-child(15) {
+        border-left-width: var(--border-middle);
+    }
+}
+
+button {
+    width: 100px;
+}
+
+@media only screen and (max-width: 660px) {
+    .field  {
+        width: 100% !important;
+        border-left-width: 0 !important;
+        border-right-width: 0px !important;
+    }
+    form {
+        .field:nth-child(4),
+        .field:nth-child(5),
+        .field:nth-child(6),
+        .field:nth-child(7),
+        .field:nth-child(8),
+        .field:nth-child(9),
+        .field:nth-child(10),
+        .field:nth-child(11) {
+            width: 100% !important;
+        }
+    }
+
+  }

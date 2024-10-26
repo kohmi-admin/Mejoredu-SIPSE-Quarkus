@@ -1,0 +1,111 @@
+.add-btn {
+  top: 22px;
+  right: 70px;
+  position: absolute;
+}
+
+.wrap {
+  margin-bottom: -30px;
+}
+
+:host ::ng-deep mat-form-field {
+  width: 100% !important;
+}
+
+.third {
+  &.field {
+    width: 33.33%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 0 transparent;
+    border-bottom-width: 0;
+    border-top-width: 0;
+  }
+
+  &.field:nth-of-type(1),
+  &.field:nth-of-type(2),
+  &.field:nth-of-type(4),
+  &.field:nth-of-type(5),
+  &.field:nth-of-type(7) {
+    border-right-width: var(--border-middle);
+  }
+
+  &.field:nth-of-type(2),
+  &.field:nth-of-type(3),
+  &.field:nth-of-type(5),
+  &.field:nth-of-type(6) {
+    border-left-width: var(--border-slim);
+  }
+}
+
+.double {
+  &.field {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 0 transparent;
+    border-bottom-width: 0;
+    border-top-width: 0;
+  }
+  &.field:nth-of-type(2n - 1) {
+    border-right-width: var(--border-middle);
+  }
+  &.field:nth-of-type(2n) {
+    border-left-width: var(--border-slim);
+  }
+}
+
+form {
+  width: 100%;
+  text-align: left;
+}
+
+button[mat-stroked-button][color="blue"] {
+  width: 200px;
+}
+
+.file-zone {
+  width: 400px;
+  span {
+    display: block;
+    padding-bottom: 10px;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  justify-content: flex-end;
+  .btn-left {
+    margin-left: 20px;
+    color: var(--white) !important;
+  }
+  .add {
+    color: var(--white) !important;
+    background-color: var(--golden-me);
+  }
+  button[mat-mini-fab] {
+    margin-left: 10px;
+    transform: translateY(-2px);
+    border: solid 1px var(--primary-color);
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .field {
+    width: 100% !important;
+  }
+}
+
+.actions {
+  left: 0;
+  bottom: 0;
+  position: sticky !important;
+  padding: var(--border-middle);
+  text-align: center;
+  button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

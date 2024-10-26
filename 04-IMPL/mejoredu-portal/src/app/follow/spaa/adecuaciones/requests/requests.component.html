@@ -1,0 +1,113 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Seguimiento del Programa Anual de Actividades</h1>
+  <span class="sub-title">.</span>
+
+  <div class="btn-navigation">
+    <button
+      mat-flat-button
+      class="btn-left"
+      color="add"
+      [routerLink]="'Nueva'"
+      *ngIf="canEdit && dataUser.idTipoUsuario === 'ENLACE'"
+      (click)="newSolicitud()"
+    >
+      Nueva Solicitud
+    </button>
+    <button
+      mat-flat-button
+      class="btn-left"
+      color="primary"
+      [matMenuTriggerFor]="menu"
+    >
+      <mat-icon>file_download</mat-icon>
+      Generar Reporte General
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="descargar()">Descargar PDF</button>
+      <button mat-menu-item (click)="downloadExcel()" [disabled]="!data">Descargar EXCEL</button>
+    </mat-menu>
+  </div>
+
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons" style="margin-bottom: -10px">
+      <button
+        type="button"
+        mat-flat-button
+        class="btn-left"
+        color="send"
+        (click)="form.reset()"
+      >
+        Limpiar Filtros
+      </button>
+      <button mat-flat-button class="btn-left" color="primary">
+        <mat-spinner
+          *ngIf="submitingFilters"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingFilters">Buscar</span>
+      </button>
+    </div>
+  </form>
+
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    [ariaLabel]="'Visualizar'"
+    [maxWidthActions]="'280px'"
+    [minWidth]="1200"
+    (action)="onTableAction($event)"
+    (update)="submit()"
+    [showActionIf]="showActionIf"
+  >
+  </app-mat-custom-table>
+  <div id="report-space" *ngIf="makingReport">
+    <div class="img-mejoredu">
+      <div class="left">
+        <img src="assets/full-icon.png" alt="" />
+      </div>
+      <div class="right">
+        <span>SISTEMA DE PLANEACIÓN, SEGUIMIENTO Y EVALUACIÓN (SIPSE)</span>
+      </div>
+    </div>
+    <table class="custom-table" style="width: 100%;">
+      <tr>
+        <td>Folio de Solicitud</td>
+        <td>Fecha de Solicitud</td>
+        <td>Fecha de Autorización</td>
+        <td>Unidad</td>
+        <td>Año</td>
+        <td>Tipo de Adecuación</td>
+        <td>Tipo de Modificación</td>
+        <td>Monto de Aplicación</td>
+        <td>Estatus</td>
+      </tr>
+      <tr *ngFor="let req of data">
+        <td>{{ req.folioSolicitud }}</td>
+        <td>{{ req.fSolicitud }}</td>
+        <td>{{ req.fAutorizacion }}</td>
+        <td>{{ req.unidad }}</td>
+        <td>{{ req.anhioId }}</td>
+        <td>{{ req.tipoAdecuacion }}</td>
+        <td>{{ req.tipoModificacion }}</td>
+        <td>{{ req.montoAplicacion }}</td>
+        <td>{{ req.status }}</td>
+      </tr>
+    </table>
+  </div>
+</section>

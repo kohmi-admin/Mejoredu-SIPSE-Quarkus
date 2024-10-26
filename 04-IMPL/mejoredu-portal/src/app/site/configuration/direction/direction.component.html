@@ -1,0 +1,79 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Unidades'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Roles'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+<form id="form1" class="form fade" [formGroup]="form">
+  <div class="field blur" *ngFor="let question of questions">
+    <app-dynamic-field
+      class="form-field full"
+      [question]="question"
+      *ngIf="!question.filter"
+      [form]="form"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full"
+      [question]="question"
+      *ngIf="question.filter"
+      [form]="form"
+    ></app-select-filter>
+  </div>
+</form>
+<div class="actions" style="text-align: center; margin-bottom: 15px">
+  <button
+    *ngIf="!updateForm"
+    type="submit"
+    mat-flat-button
+    color="primary"
+    style="margin-bottom: -15px"
+    [disabled]="isView"
+    (click)="submit()"
+  >
+    Guardar
+  </button>
+  <button
+    *ngIf="updateForm"
+    type="submit"
+    mat-flat-button
+    color="primary"
+    style="margin-bottom: -15px"
+    (click)="update()"
+  >
+    Actualizar
+  </button>
+  <button
+    type="submit"
+    mat-flat-button
+    color="add"
+    style="margin-bottom: -15px"
+    (click)="clean()"
+  >
+    Limpiar campos
+  </button>
+</div>
+
+<app-mat-custom-table
+  (action)="onTableAction($event)"
+  [maxWidthActions]="'240px'"
+  [dataset]="data"
+  [columns]="columns"
+  [actions]="actions"
+>
+</app-mat-custom-table>

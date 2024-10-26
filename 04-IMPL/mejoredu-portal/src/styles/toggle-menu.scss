@@ -1,0 +1,34 @@
+.menu-close {
+  #space {
+    width: calc(100% - 0px) !important;
+  }
+  header {
+    width: calc(100% - 0px) !important;
+    .menu-btn {
+      display: flex !important;
+      left: initial !important;
+      position: relative !important;
+      &::after {
+        content: "Menú" !important;
+      }
+    }
+    .open {
+      display: block !important;
+    }
+    .close {
+      display: none !important;
+    }
+    .logo {
+      display: block !important;
+    }
+    .info.title {
+      width: calc(100% - 220px) !important;
+    }
+  }
+  #nav {
+    transform: translateX(-100%);
+  }
+  svg.logo {
+    transform: translateX(0px) !important;
+  }
+}

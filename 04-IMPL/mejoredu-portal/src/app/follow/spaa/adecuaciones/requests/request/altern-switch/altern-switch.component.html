@@ -1,0 +1,17 @@
+<div class="altern">
+  <select name="adecuacion" [(ngModel)]="tipoAdecuacion" disabled>
+    <option>Seleccionar</option>
+    <option [value]="tipoAdecuacionEnum.programatica">Programática</option>
+    <option [value]="tipoAdecuacionEnum.programaticaPresupuestal">Programática Presupuestal</option>
+    <option [value]="tipoAdecuacionEnum.presupuestal">Presupuestal</option>
+  </select>
+  <select name="type" [(ngModel)]="value" (ngModelChange)="emmit()">
+    <option [value]="modificationTypeEnum.alta" *ngIf="switch.alta.value">Alta</option>
+    <option [value]="modificationTypeEnum.modificacion" *ngIf="switch.modificacion.value">Modificación</option>
+    <option [value]="modificationTypeEnum.cancelacion" *ngIf="switch.cancelacion.value">Cancelación</option>
+    <option [value]="modificationTypeEnum.ampliacion" *ngIf="switch.ampliacion.value">Ampliación</option>
+    <option [value]="modificationTypeEnum.reduccion" *ngIf="switch.reduccion.value">Reducción</option>
+    <option [value]="modificationTypeEnum.reintegro" *ngIf="switch.reintegro.value">Reintegro</option>
+    <option [value]="modificationTypeEnum.traspaso" *ngIf="switch.traspaso.value">Traspaso</option>
+  </select>
+</div>

@@ -1,0 +1,76 @@
+<section id="wrapper">
+  <form
+    [id]="'form-projects' + position"
+    class="form fade"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+  >
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="file-zone" *ngIf="showFileUpload">
+      <span> Documento Analítico </span>
+      <file-upload
+        [multiple]="false"
+        [id]="'file-documento-analitico-seguimiento'"
+        (onOutputFile)="responseFileUpload($event)"
+        [files]="filesToUploadComponents"
+        [disableInput]="!canEdit || disabledSubmiting || position === 'left'"
+        (onDownloadFile)="onDownloadFile($event)"
+      ></file-upload>
+    </div>
+    <div
+      class="action-buttons"
+      [ngClass]="{ 'action-buttons-pt': position === 'right' }"
+      [style]="'height: ' + (!canEdit ? '50px' : 'auto') + ';'"
+    >
+      <button
+        *ngIf="false"
+        type="button"
+        mat-flat-button
+        color="add"
+        (click)="newProyect()"
+      >
+        Agregar Proyecto
+      </button>
+      <button
+        *ngIf="showBtnSave && canEdit"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        [disabled]="disabledSubmiting"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">Guardar Avance</span>
+      </button>
+    </div>
+  </form>
+
+</section>
+<div class="wrap" *ngIf="position === 'left'">
+  <div class="alert-success">Proyectos con Modificación</div>
+  <!-- (update)="getAll()" -->
+  <app-mat-custom-table
+    (action)="onTableModificacionesAction($event)"
+    [actions]="actions"
+    [dataset]="dataModificationTable"
+    [maxWidthActions]="'220px'"
+    [columns]="columnsModificationTable"
+  >
+  </app-mat-custom-table>
+</div>

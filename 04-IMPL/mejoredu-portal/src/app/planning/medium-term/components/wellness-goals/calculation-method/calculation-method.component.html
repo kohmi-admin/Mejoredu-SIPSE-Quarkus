@@ -1,0 +1,28 @@
+<section id="wrapper" class="no-bottom top-slim">
+
+    <form *ngIf="form" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+
+      <section class="alert-success no-top">
+        Aplicación del Método de Cálculo del Indicador
+        para la Obtención del Valor de la Línea Base
+      </section>
+
+      <div class="field blur" *ngFor="let question of questions">
+        <app-dynamic-field
+          class="form-field full"
+          [question]="question"
+          [form]="form"
+        ></app-dynamic-field>
+      </div>
+  
+      <!-- <div class="actions">
+        <button type="button" mat-stroked-button color="primary" (click)="changeStep(-1)">Anterior</button>
+        <button type="submit" mat-flat-button color="accent">Guardar</button>
+        <button type="button" mat-stroked-button color="primary" (click)="changeStep(1)">Siguiente</button>
+        <br />
+        <br />
+      </div> -->
+
+    </form>
+  </section>
+  

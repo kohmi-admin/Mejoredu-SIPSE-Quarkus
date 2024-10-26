@@ -1,0 +1,12 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Planeación a Corto Plazo</h1>
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    [actionsString]="'Consulta'"
+    [maxWidthActions]="'100px'"
+    (action)="onTableAction($event)"
+  >
+  </app-mat-custom-table>
+</section>

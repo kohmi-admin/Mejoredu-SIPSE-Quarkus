@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Agregar Indicador</h1>
+<div mat-dialog-content>
+  <form id="form1" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="alert-success">Datos Generales del Indicador</div>
+    <section
+      class="field blur"
+      *ngFor="let question of questions | slice : 0 : 12; let i = index"
+    >
+      <app-dynamic-field class="form-field full" [question]="question" *ngIf="!question.filter"
+        [form]="form"></app-dynamic-field>
+      <app-select-filter class="form-field full" [question]="question" *ngIf="question.filter"
+        [form]="form"></app-select-filter>
+    </section>
+    <div class="action-buttons" *ngIf="!validation">
+      <button mat-flat-button color="primary" class="btn-left">
+        Agregar
+      </button>
+    </div>
+  </form>
+</div>

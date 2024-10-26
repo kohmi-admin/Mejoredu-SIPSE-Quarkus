@@ -1,0 +1,40 @@
+<section class="alert-success no-top">
+  {{ titleLabel }}
+</section>
+<file-upload
+  *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+  [multiple]="true"
+  [files]="arrayFiles"
+  [id]="'inpFileFiles'"
+  accept=".pdf"
+></file-upload>
+<div class="action-buttons">
+  <button
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+    [disabled]="!arrayFiles.length"
+    (click)="handleAddFile()"
+    type="button"
+    mat-flat-button
+    color="add"
+    style="margin-top: 0px; margin-left: 20px"
+  >
+    <mat-spinner
+      *ngIf="isSubmiting"
+      style="width: 25px"
+      color="warn"
+    ></mat-spinner>
+    <span *ngIf="!isSubmiting"> Agregar Archivo </span>
+  </button>
+</div>
+<app-mat-custom-table
+  (action)="onTableActionArchivos($event)"
+  (update)="getArchivos()"
+  [dataset]="filesArchivos"
+  [columns]="columns"
+  [actions]="actions"
+  [noPadding]="true"
+  [customBtn]="'download'"
+  [actionString]="'Descargar'"
+  [maxWidthActions]="'150px'"
+>
+</app-mat-custom-table>

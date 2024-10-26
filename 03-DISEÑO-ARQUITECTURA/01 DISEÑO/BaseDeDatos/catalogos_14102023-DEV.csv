@@ -1,0 +1,355 @@
+id_catalogo,cd_opcion,cc_externa,df_baja,cve_usuario,id_catalogo_padre,cd_descripcionDos,cc_externaDos,LOCK_FLAG,ix_dependencia,id_validar,id_validacion_planeacion,id_validacion_supervisor
+233,Haberes,11201,NULL,Superusuario,232,"11201 Haberes",384,0,0,NULL,NULL,NULL
+234,"Sueldos base",11301,NULL,Superusuario,232,"11301 Sueldos base",355,0,0,NULL,NULL,NULL
+235,"Retribuciones por adscripción en el extranjero",11401,NULL,Superusuario,232,"11401 Retribuciones por adscripción en el extranjero",356,0,0,NULL,NULL,NULL
+236,Honorarios,12101,NULL,Superusuario,232,"12101 Honorarios",357,0,0,NULL,NULL,NULL
+237,"Sueldos base al personal eventual",12201,NULL,Superusuario,232,"12201 Sueldos base al personal eventual",358,0,0,NULL,NULL,NULL
+238,"Compensaciones a sustitutos de profesores",12202,NULL,Superusuario,232,"12202 Compensaciones a sustitutos de profesores",359,0,0,NULL,NULL,NULL
+239,"Retribuciones por servicios de carácter social",12301,NULL,Superusuario,232,"12301 Retribuciones por servicios de carácter social",360,0,0,NULL,NULL,NULL
+240,"Retribución a los representantes de los trabajadores y de los patrones en la Junta Federal de Conciliación y Arbitraje",12401,NULL,Superusuario,232,"12401 Retribución a los representantes de los trabajadores y de los patrones en la Junta Federal de Conciliación y Arbitraje",361,0,0,NULL,NULL,NULL
+241,"Prima quinquenal por años de servicios efectivos prestados",13101,NULL,Superusuario,232,"13101 Prima quinquenal por años de servicios efectivos prestados",362,0,0,NULL,NULL,NULL
+242,"Acreditación por años de servicio en la docencia y al personal administrativo de las instituciones de educación superior",13102,NULL,Superusuario,232,"13102 Acreditación por años de servicio en la docencia y al personal administrativo de las instituciones de educación superior",363,0,0,NULL,NULL,NULL
+243,"Prima de perseverancia por años de servicio activo en el Ejército, Fuerza Aérea y Armada Mexicanos",13103,NULL,Superusuario,232,"13103 Prima de perseverancia por años de servicio activo en el Ejército, Fuerza Aérea y Armada Mexicanos",364,0,0,NULL,NULL,NULL
+244,Antigüedad,13104,NULL,Superusuario,232,"13104 Antigüedad",365,0,0,NULL,NULL,NULL
+245,"Primas de vacaciones y dominical",13201,NULL,Superusuario,232,"13201 Primas de vacaciones y dominical",366,0,0,NULL,NULL,NULL
+246,"Aguinaldo o gratificación de fin de año",13202,NULL,Superusuario,232,"13202 Aguinaldo o gratificación de fin de año",367,0,0,NULL,NULL,NULL
+247,"Remuneraciones por horas extraordinarias",13301,NULL,Superusuario,232,"13301 Remuneraciones por horas extraordinarias",368,0,0,NULL,NULL,NULL
+248,"Acreditación por titulación en la docencia",13401,NULL,Superusuario,232,"13401 Acreditación por titulación en la docencia",369,0,0,NULL,NULL,NULL
+249,"Acreditación al personal docente por años de estudio de licenciatura",13402,NULL,Superusuario,232,"13402 Acreditación al personal docente por años de estudio de licenciatura",370,0,0,NULL,NULL,NULL
+250,"Compensaciones por servicios especiales",13403,NULL,Superusuario,232,"13403 Compensaciones por servicios especiales",371,0,0,NULL,NULL,NULL
+251,"Compensaciones por servicios eventuales",13404,NULL,Superusuario,232,"13404 Compensaciones por servicios eventuales",372,0,0,NULL,NULL,NULL
+252,"Compensaciones de retiro",13405,NULL,Superusuario,232,"13405 Compensaciones de retiro",373,0,0,NULL,NULL,NULL
+253,"Compensaciones de servicios",13406,NULL,Superusuario,232,"13406 Compensaciones de servicios",374,0,0,NULL,NULL,NULL
+254,"Compensaciones adicionales por servicios especiales",13407,NULL,Superusuario,232,"13407 Compensaciones adicionales por servicios especiales",375,0,0,NULL,NULL,NULL
+255,"Asignaciones docentes, pedagógicas genéricas y específicas",13408,NULL,Superusuario,232,"13408 Asignaciones docentes, pedagógicas genéricas y específicas",376,0,0,NULL,NULL,NULL
+256,"Compensación por adquisición de material didáctico",13409,NULL,Superusuario,232,"13409 Compensación por adquisición de material didáctico",377,0,0,NULL,NULL,NULL
+257,"Compensación por actualización y formación académica",13410,NULL,Superusuario,232,"13410 Compensación por actualización y formación académica",378,0,0,NULL,NULL,NULL
+258,"Compensaciones a médicos residentes",13411,NULL,Superusuario,232,"13411 Compensaciones a médicos residentes",379,0,0,NULL,NULL,NULL
+259,"Gastos contingentes para el personal radicado en el extranjero",13412,NULL,Superusuario,232,"13412 Gastos contingentes para el personal radicado en el extranjero",380,0,0,NULL,NULL,NULL
+260,"Asignaciones inherentes a la conclusión de servicios en la Administración Pública Federal",13413,NULL,Superusuario,232,"13413 Asignaciones inherentes a la conclusión de servicios en la Administración Pública Federal",381,0,0,NULL,NULL,NULL
+261,"Asignaciones conforme al régimen laboral",13414,NULL,Superusuario,232,"13414 Asignaciones conforme al régimen laboral",382,0,0,NULL,NULL,NULL
+262,Sobrehaberes,13501,NULL,Superusuario,232,"13501 Sobrehaberes",383,0,0,NULL,NULL,NULL
+263,"Asignaciones de técnico",13601,NULL,Superusuario,232,"13601 Asignaciones de técnico",385,0,0,NULL,NULL,NULL
+264,"Asignaciones de mando",13602,NULL,Superusuario,232,"13602 Asignaciones de mando",386,0,0,NULL,NULL,NULL
+265,"Asignaciones por comisión",13603,NULL,Superusuario,232,"13603 Asignaciones por comisión",387,0,0,NULL,NULL,NULL
+266,"Asignaciones de vuelo",13604,NULL,Superusuario,232,"13604 Asignaciones de vuelo",388,0,0,NULL,NULL,NULL
+267,"Asignaciones de técnico especial",13605,NULL,Superusuario,232,"13605 Asignaciones de técnico especial",389,0,0,NULL,NULL,NULL
+268,"Honorarios especiales",13701,NULL,Superusuario,232,"13701 Honorarios especiales",390,0,0,NULL,NULL,NULL
+269,"Participaciones por vigilancia en el cumplimiento de las leyes y custodia de valores",13801,NULL,Superusuario,232,"13801 Participaciones por vigilancia en el cumplimiento de las leyes y custodia de valores",391,0,0,NULL,NULL,NULL
+270,"Aportaciones al ISSSTE",14101,NULL,Superusuario,232,"14101 Aportaciones al ISSSTE",392,0,0,NULL,NULL,NULL
+271,"Aportaciones al ISSFAM",14102,NULL,Superusuario,232,"14102 Aportaciones al ISSFAM",393,0,0,NULL,NULL,NULL
+272,"Aportaciones al IMSS",14103,NULL,Superusuario,232,"14103 Aportaciones al IMSS",394,0,0,NULL,NULL,NULL
+273,"Aportaciones de seguridad social contractuales",14104,NULL,Superusuario,232,"14104 Aportaciones de seguridad social contractuales",395,0,0,NULL,NULL,NULL
+274,"Aportaciones al seguro de cesantía en edad avanzada y vejez",14105,NULL,Superusuario,232,"14105 Aportaciones al seguro de cesantía en edad avanzada y vejez",396,0,0,NULL,NULL,NULL
+275,"Aportaciones al FOVISSSTE",14201,NULL,Superusuario,232,"14201 Aportaciones al FOVISSSTE",397,0,0,NULL,NULL,NULL
+276,"Aportaciones al INFONAVIT",14202,NULL,Superusuario,232,"14202 Aportaciones al INFONAVIT",398,0,0,NULL,NULL,NULL
+277,"Aportaciones al Sistema de Ahorro para el Retiro",14301,NULL,Superusuario,232,"14301 Aportaciones al Sistema de Ahorro para el Retiro",399,0,0,NULL,NULL,NULL
+278,"Depósitos para el ahorro solidario",14302,NULL,Superusuario,232,"14302 Depósitos para el ahorro solidario",400,0,0,NULL,NULL,NULL
+279,"Cuotas para el seguro de vida del personal civil",14401,NULL,Superusuario,232,"14401 Cuotas para el seguro de vida del personal civil",401,0,0,NULL,NULL,NULL
+280,"Cuotas para el seguro de vida del personal militar",14402,NULL,Superusuario,232,"14402 Cuotas para el seguro de vida del personal militar",402,0,0,NULL,NULL,NULL
+281,"Cuotas para el seguro de gastos médicos del personal civil",14403,NULL,Superusuario,232,"14403 Cuotas para el seguro de gastos médicos del personal civil",403,0,0,NULL,NULL,NULL
+282,"Cuotas para el seguro de separación individualizado",14404,NULL,Superusuario,232,"14404 Cuotas para el seguro de separación individualizado",404,0,0,NULL,NULL,NULL
+283,"Cuotas para el seguro colectivo de retiro",14405,NULL,Superusuario,232,"14405 Cuotas para el seguro colectivo de retiro",405,0,0,NULL,NULL,NULL
+284,"Seguro de responsabilidad civil, asistencia legal y otros seguros",14406,NULL,Superusuario,232,"14406 Seguro de responsabilidad civil, asistencia legal y otros seguros",406,0,0,NULL,NULL,NULL
+285,"Cuotas para el fondo de ahorro del personal civil",15101,NULL,Superusuario,232,"15101 Cuotas para el fondo de ahorro del personal civil",407,0,0,NULL,NULL,NULL
+286,"Cuotas para el fondo de ahorro de generales, almirantes, jefes y oficiales",15102,NULL,Superusuario,232,"15102 Cuotas para el fondo de ahorro de generales, almirantes, jefes y oficiales",408,0,0,NULL,NULL,NULL
+287,"Cuotas para el fondo de trabajo del personal del Ejército, Fuerza Aérea y Armada Mexicanos",15103,NULL,Superusuario,232,"15103 Cuotas para el fondo de trabajo del personal del Ejército, Fuerza Aérea y Armada Mexicanos",409,0,0,NULL,NULL,NULL
+288,"Indemnizaciones por accidentes en el trabajo",15201,NULL,Superusuario,232,"15201 Indemnizaciones por accidentes en el trabajo",410,0,0,NULL,NULL,NULL
+289,"Pago de liquidaciones",15202,NULL,Superusuario,232,"15202 Pago de liquidaciones",411,0,0,NULL,NULL,NULL
+290,"Prestaciones de retiro",15301,NULL,Superusuario,232,"15301 Prestaciones de retiro",412,0,0,NULL,NULL,NULL
+291,"Prestaciones establecidas por condiciones generales de trabajo o contratos colectivos de trabajo",15401,NULL,Superusuario,232,"15401 Prestaciones establecidas por condiciones generales de trabajo o contratos colectivos de trabajo",413,0,0,NULL,NULL,NULL
+292,"Compensación garantizada",15402,NULL,Superusuario,232,"15402 Compensación garantizada",414,0,0,NULL,NULL,NULL
+293,"Asignaciones adicionales al sueldo",15403,NULL,Superusuario,232,"15403 Asignaciones adicionales al sueldo",415,0,0,NULL,NULL,NULL
+294,"Apoyos a la capacitación de los servidores públicos",15501,NULL,Superusuario,232,"15501 Apoyos a la capacitación de los servidores públicos",416,0,0,NULL,NULL,NULL
+295,"Otras prestaciones",15901,NULL,Superusuario,232,"15901 Otras prestaciones",417,0,0,NULL,NULL,NULL
+296,"Pago extraordinario por riesgo",15902,NULL,Superusuario,232,"15902 Pago extraordinario por riesgo",418,0,0,NULL,NULL,NULL
+297,"Incrementos a las percepciones",16101,NULL,Superusuario,232,"16101 Incrementos a las percepciones",419,0,0,NULL,NULL,NULL
+298,"Creación de plazas",16102,NULL,Superusuario,232,"16102 Creación de plazas",420,0,0,NULL,NULL,NULL
+299,"Otras medidas de carácter laboral y económico",16103,NULL,Superusuario,232,"16103 Otras medidas de carácter laboral y económico",421,0,0,NULL,NULL,NULL
+300,"Previsiones para aportaciones al ISSSTE",16104,NULL,Superusuario,232,"16104 Previsiones para aportaciones al ISSSTE",422,0,0,NULL,NULL,NULL
+301,"Previsiones para aportaciones al FOVISSSTE",16105,NULL,Superusuario,232,"16105 Previsiones para aportaciones al FOVISSSTE",423,0,0,NULL,NULL,NULL
+302,"Previsiones para aportaciones al Sistema de Ahorro para el Retiro",16106,NULL,Superusuario,232,"16106 Previsiones para aportaciones al Sistema de Ahorro para el Retiro",424,0,0,NULL,NULL,NULL
+303,"Previsiones para aportaciones al seguro de cesantía en edad avanzada y vejez",16107,NULL,Superusuario,232,"16107 Previsiones para aportaciones al seguro de cesantía en edad avanzada y vejez",425,0,0,NULL,NULL,NULL
+304,"Previsiones para los depósitos al ahorro solidario",16108,NULL,Superusuario,232,"16108 Previsiones para los depósitos al ahorro solidario",426,0,0,NULL,NULL,NULL
+305,"Estímulos por productividad y eficiencia",17101,NULL,Superusuario,232,"17101 Estímulos por productividad y eficiencia",427,0,0,NULL,NULL,NULL
+306,"Estímulos al personal operativo",17102,NULL,Superusuario,232,"17102 Estímulos al personal operativo",428,0,0,NULL,NULL,NULL
+307,"Materiales y útiles de oficina",21101,NULL,Superusuario,232,"21101 Materiales y útiles de oficina",429,0,0,NULL,NULL,NULL
+308,"Materiales y útiles de impresión y reproducción",21201,NULL,Superusuario,232,"21201 Materiales y útiles de impresión y reproducción",430,0,0,NULL,NULL,NULL
+309,"Material estadístico y geográfico",21301,NULL,Superusuario,232,"21301 Material estadístico y geográfico",431,0,0,NULL,NULL,NULL
+310,"Materiales y útiles consumibles para el procesamiento en equipos y bienes informáticos.",21401,NULL,Superusuario,232,"21401 Materiales y útiles consumibles para el procesamiento en equipos y bienes informáticos.",432,0,0,NULL,NULL,NULL
+311,"Material de apoyo informativo",21501,NULL,Superusuario,232,"21501 Material de apoyo informativo",433,0,0,NULL,NULL,NULL
+312,"Material para información en actividades de investigación científica y tecnológica",21502,NULL,Superusuario,232,"21502 Material para información en actividades de investigación científica y tecnológica",434,0,0,NULL,NULL,NULL
+313,"Material de limpieza",21601,NULL,Superusuario,232,"21601 Material de limpieza",435,0,0,NULL,NULL,NULL
+314,"Materiales y suministros para planteles educativos",21701,NULL,Superusuario,232,"21701 Materiales y suministros para planteles educativos",436,0,0,NULL,NULL,NULL
+315,"Productos alimenticios para el Ejército, Fuerza Aérea y Armada Mexicanos, y para los efectivos que participen en programas de seguridad pública",22101,NULL,Superusuario,232,"22101 Productos alimenticios para el Ejército, Fuerza Aérea y Armada Mexicanos, y para los efectivos que participen en programas de seguridad pública",437,0,0,NULL,NULL,NULL
+316,"Productos alimenticios para personas derivado de la prestación de servicios públicos en unidades de salud, educativas, de readaptación social y otras",22102,NULL,Superusuario,232,"22102 Productos alimenticios para personas derivado de la prestación de servicios públicos en unidades de salud, educativas, de readaptación social y otras",438,0,0,NULL,NULL,NULL
+317,"Productos alimenticios para el personal que realiza labores en campo o de supervisión",22103,NULL,Superusuario,232,"22103 Productos alimenticios para el personal que realiza labores en campo o de supervisión",439,0,0,NULL,NULL,NULL
+318,"Productos alimenticios para el personal en las instalaciones de las dependencias y entidades",22104,NULL,Superusuario,232,"22104 Productos alimenticios para el personal en las instalaciones de las dependencias y entidades",440,0,0,NULL,NULL,NULL
+319,"Productos alimenticios para la población en caso de desastres naturales",22105,NULL,Superusuario,232,"22105 Productos alimenticios para la población en caso de desastres naturales",441,0,0,NULL,NULL,NULL
+320,"Productos alimenticios para el personal derivado de actividades extraordinarias (Se modifica)",22106,NULL,Superusuario,232,"22106 Productos alimenticios para el personal derivado de actividades extraordinarias (Se modifica)",442,0,0,NULL,NULL,NULL
+321,"Productos alimenticios para animales",22201,NULL,Superusuario,232,"22201 Productos alimenticios para animales",443,0,0,NULL,NULL,NULL
+322,"Utensilios para el servicio de alimentación",22301,NULL,Superusuario,232,"22301 Utensilios para el servicio de alimentación",444,0,0,NULL,NULL,NULL
+323,"Productos alimenticios, agropecuarios y forestales adquiridos como materia prima",23101,NULL,Superusuario,232,"23101 Productos alimenticios, agropecuarios y forestales adquiridos como materia prima",445,0,0,NULL,NULL,NULL
+324,"Insumos textiles adquiridos como materia prima",23201,NULL,Superusuario,232,"23201 Insumos textiles adquiridos como materia prima",446,0,0,NULL,NULL,NULL
+325,"Productos de papel, cartón e impresos adquiridos como materia prima",23301,NULL,Superusuario,232,"23301 Productos de papel, cartón e impresos adquiridos como materia prima",447,0,0,NULL,NULL,NULL
+326,"Combustibles, lubricantes, aditivos, carbón y sus derivados adquiridos como materia prima",23401,NULL,Superusuario,232,"23401 Combustibles, lubricantes, aditivos, carbón y sus derivados adquiridos como materia prima",448,0,0,NULL,NULL,NULL
+327,"Productos químicos, farmacéuticos y de laboratorio adquiridos como materia prima",23501,NULL,Superusuario,232,"23501 Productos químicos, farmacéuticos y de laboratorio adquiridos como materia prima",449,0,0,NULL,NULL,NULL
+328,"Productos metálicos y a base de minerales no metálicos adquiridos como materia prima",23601,NULL,Superusuario,232,"23601 Productos metálicos y a base de minerales no metálicos adquiridos como materia prima",450,0,0,NULL,NULL,NULL
+329,"Productos de cuero, piel, plástico y hule adquiridos como materia prima",23701,NULL,Superusuario,232,"23701 Productos de cuero, piel, plástico y hule adquiridos como materia prima",451,0,0,NULL,NULL,NULL
+330,"Mercancías para su comercialización en tiendas del sector público",23801,NULL,Superusuario,232,"23801 Mercancías para su comercialización en tiendas del sector público",452,0,0,NULL,NULL,NULL
+331,"Otros productos adquiridos como materia prima",23901,NULL,Superusuario,232,"23901 Otros productos adquiridos como materia prima",453,0,0,NULL,NULL,NULL
+332,"Petróleo, gas y sus derivados adquiridos como materia prima",23902,NULL,Superusuario,232,"23902 Petróleo, gas y sus derivados adquiridos como materia prima",454,0,0,NULL,NULL,NULL
+333,"Productos minerales no metálicos",24101,NULL,Superusuario,232,"24101 Productos minerales no metálicos",455,0,0,NULL,NULL,NULL
+334,"Cemento y productos de concreto",24201,NULL,Superusuario,232,"24201 Cemento y productos de concreto",456,0,0,NULL,NULL,NULL
+335,"Cal, yeso y productos de yeso",24301,NULL,Superusuario,232,"24301 Cal, yeso y productos de yeso",457,0,0,NULL,NULL,NULL
+336,"Madera y productos de madera",24401,NULL,Superusuario,232,"24401 Madera y productos de madera",458,0,0,NULL,NULL,NULL
+337,"Vidrio y productos de vidrio",24501,NULL,Superusuario,232,"24501 Vidrio y productos de vidrio",459,0,0,NULL,NULL,NULL
+338,"Material eléctrico y electrónico",24601,NULL,Superusuario,232,"24601 Material eléctrico y electrónico",460,0,0,NULL,NULL,NULL
+339,"Artículos metálicos para la construcción",24701,NULL,Superusuario,232,"24701 Artículos metálicos para la construcción",461,0,0,NULL,NULL,NULL
+340,"Materiales complementarios",24801,NULL,Superusuario,232,"24801 Materiales complementarios",462,0,0,NULL,NULL,NULL
+341,"Otros materiales y artículos de construcción y reparación",24901,NULL,Superusuario,232,"24901 Otros materiales y artículos de construcción y reparación",463,0,0,NULL,NULL,NULL
+342,"Productos químicos básicos",25101,NULL,Superusuario,232,"25101 Productos químicos básicos",464,0,0,NULL,NULL,NULL
+343,"Plaguicidas, abonos y fertilizantes",25201,NULL,Superusuario,232,"25201 Plaguicidas, abonos y fertilizantes",465,0,0,NULL,NULL,NULL
+344,"Medicinas y productos farmacéuticos",25301,NULL,Superusuario,232,"25301 Medicinas y productos farmacéuticos",466,0,0,NULL,NULL,NULL
+345,"Materiales, accesorios y suministros médicos",25401,NULL,Superusuario,232,"25401 Materiales, accesorios y suministros médicos",467,0,0,NULL,NULL,NULL
+346,"Materiales, accesorios y suministros de laboratorio",25501,NULL,Superusuario,232,"25501 Materiales, accesorios y suministros de laboratorio",468,0,0,NULL,NULL,NULL
+347,"Fibras sintéticas, hules, plásticos y derivados",25601,NULL,Superusuario,232,"25601 Fibras sintéticas, hules, plásticos y derivados",469,0,0,NULL,NULL,NULL
+348,"Otros productos químicos",25901,NULL,Superusuario,232,"25901 Otros productos químicos",470,0,0,NULL,NULL,NULL
+349,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a la ejecución de programas de seguridad pública y nacional",26101,NULL,Superusuario,232,"26101 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a la ejecución de programas de seguridad pública y nacional",471,0,0,NULL,NULL,NULL
+350,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios públicos y la operación de programas públicos",26102,NULL,Superusuario,232,"26102 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios públicos y la operación de programas públicos",472,0,0,NULL,NULL,NULL
+351,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios administrativos",26103,NULL,Superusuario,232,"26103 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios administrativos",473,0,0,NULL,NULL,NULL
+352,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales asignados a servidores públicos",26104,NULL,Superusuario,232,"26104 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales asignados a servidores públicos",474,0,0,NULL,NULL,NULL
+353,"Combustibles, lubricantes y aditivos para maquinaria, equipo de producción y servicios administrativos",26105,NULL,Superusuario,232,"26105 Combustibles, lubricantes y aditivos para maquinaria, equipo de producción y servicios administrativos",475,0,0,NULL,NULL,NULL
+354,"PIDIREGAS cargos variables",26106,NULL,Superusuario,232,"26106 PIDIREGAS cargos variables",476,0,0,NULL,NULL,NULL
+355,"Combustibles nacionales para plantas productivas",26107,NULL,Superusuario,232,"26107 Combustibles nacionales para plantas productivas",477,0,0,NULL,NULL,NULL
+356,"Combustibles de importación para plantas productivas",26108,NULL,Superusuario,232,"26108 Combustibles de importación para plantas productivas",478,0,0,NULL,NULL,NULL
+357,"Vestuario y uniformes",27101,NULL,Superusuario,232,"27101 Vestuario y uniformes",479,0,0,NULL,NULL,NULL
+358,"Prendas de protección personal",27201,NULL,Superusuario,232,"27201 Prendas de protección personal",480,0,0,NULL,NULL,NULL
+359,"Artículos deportivos",27301,NULL,Superusuario,232,"27301 Artículos deportivos",481,0,0,NULL,NULL,NULL
+360,"Productos textiles",27401,NULL,Superusuario,232,"27401 Productos textiles",482,0,0,NULL,NULL,NULL
+361,"Blancos y otros productos textiles, excepto prendas de vestir",27501,NULL,Superusuario,232,"27501 Blancos y otros productos textiles, excepto prendas de vestir",483,0,0,NULL,NULL,NULL
+362,"Sustancias y materiales explosivos",28101,NULL,Superusuario,232,"28101 Sustancias y materiales explosivos",484,0,0,NULL,NULL,NULL
+363,"Materiales de seguridad pública",28201,NULL,Superusuario,232,"28201 Materiales de seguridad pública",485,0,0,NULL,NULL,NULL
+364,"Prendas de protección para seguridad pública y nacional",28301,NULL,Superusuario,232,"28301 Prendas de protección para seguridad pública y nacional",486,0,0,NULL,NULL,NULL
+365,"Herramientas menores",29101,NULL,Superusuario,232,"29101 Herramientas menores",487,0,0,NULL,NULL,NULL
+366,"Refacciones y accesorios menores de edificios",29201,NULL,Superusuario,232,"29201 Refacciones y accesorios menores de edificios",488,0,0,NULL,NULL,NULL
+367,"Refacciones y accesorios menores de mobiliario y equipo de administración, educacional y recreativo",29301,NULL,Superusuario,232,"29301 Refacciones y accesorios menores de mobiliario y equipo de administración, educacional y recreativo",489,0,0,NULL,NULL,NULL
+368,"Refacciones y accesorios para equipo de cómputo y telecomunicaciones (Se modifica)",29401,NULL,Superusuario,232,"29401 Refacciones y accesorios para equipo de cómputo y telecomunicaciones (Se modifica)",490,0,0,NULL,NULL,NULL
+369,"Refacciones y accesorios menores de equipo e instrumental médico y de laboratorio",29501,NULL,Superusuario,232,"29501 Refacciones y accesorios menores de equipo e instrumental médico y de laboratorio",491,0,0,NULL,NULL,NULL
+370,"Refacciones y accesorios menores de equipo de transporte",29601,NULL,Superusuario,232,"29601 Refacciones y accesorios menores de equipo de transporte",492,0,0,NULL,NULL,NULL
+371,"Refacciones y accesorios menores de equipo de defensa y seguridad",29701,NULL,Superusuario,232,"29701 Refacciones y accesorios menores de equipo de defensa y seguridad",493,0,0,NULL,NULL,NULL
+372,"Refacciones y accesorios menores de maquinaria y otros equipos",29801,NULL,Superusuario,232,"29801 Refacciones y accesorios menores de maquinaria y otros equipos",494,0,0,NULL,NULL,NULL
+373,"Refacciones y accesorios menores otros bienes muebles",29901,NULL,Superusuario,232,"29901 Refacciones y accesorios menores otros bienes muebles",495,0,0,NULL,NULL,NULL
+374,"Servicio de energía eléctrica",31101,NULL,Superusuario,232,"31101 Servicio de energía eléctrica",496,0,0,NULL,NULL,NULL
+375,"Servicio de gas",31201,NULL,Superusuario,232,"31201 Servicio de gas",497,0,0,NULL,NULL,NULL
+376,"Servicio de agua",31301,NULL,Superusuario,232,"31301 Servicio de agua",498,0,0,NULL,NULL,NULL
+377,"Servicio telefónico convencional",31401,NULL,Superusuario,232,"31401 Servicio telefónico convencional",499,0,0,NULL,NULL,NULL
+378,"Servicio de telefonía celular",31501,NULL,Superusuario,232,"31501 Servicio de telefonía celular",500,0,0,NULL,NULL,NULL
+379,"Servicio de radiolocalización",31601,NULL,Superusuario,232,"31601 Servicio de radiolocalización",501,0,0,NULL,NULL,NULL
+380,"Servicios de telecomunicaciones",31602,NULL,Superusuario,232,"31602 Servicios de telecomunicaciones",502,0,0,NULL,NULL,NULL
+381,"Servicios de internet",31603,NULL,Superusuario,232,"31603 Servicios de internet",503,0,0,NULL,NULL,NULL
+382,"Servicios de conducción de señales analógicas y digitales",31701,NULL,Superusuario,232,"31701 Servicios de conducción de señales analógicas y digitales",504,0,0,NULL,NULL,NULL
+383,"Servicio postal",31801,NULL,Superusuario,232,"31801 Servicio postal",505,0,0,NULL,NULL,NULL
+384,"Servicio telegráfico",31802,NULL,Superusuario,232,"31802 Servicio telegráfico",506,0,0,NULL,NULL,NULL
+385,"Servicios integrales de telecomunicación",31901,NULL,Superusuario,232,"31901 Servicios integrales de telecomunicación",507,0,0,NULL,NULL,NULL
+386,"Contratación de otros servicios",31902,NULL,Superusuario,232,"31902 Contratación de otros servicios",508,0,0,NULL,NULL,NULL
+387,"Servicios generales para planteles educativos",31903,NULL,Superusuario,232,"31903 Servicios generales para planteles educativos",509,0,0,NULL,NULL,NULL
+388,"Servicios integrales de infraestructura de cómputo.",31904,NULL,Superusuario,232,"31904 Servicios integrales de infraestructura de cómputo.",510,0,0,NULL,NULL,NULL
+389,"Arrendamiento de terrenos",32101,NULL,Superusuario,232,"32101 Arrendamiento de terrenos",511,0,0,NULL,NULL,NULL
+390,"Arrendamiento de edificios y locales",32201,NULL,Superusuario,232,"32201 Arrendamiento de edificios y locales",512,0,0,NULL,NULL,NULL
+391,"Arrendamiento de equipo y bienes informáticos",32301,NULL,Superusuario,232,"32301 Arrendamiento de equipo y bienes informáticos",513,0,0,NULL,NULL,NULL
+392,"Arrendamiento de mobiliario",32302,NULL,Superusuario,232,"32302 Arrendamiento de mobiliario",514,0,0,NULL,NULL,NULL
+393,"Arrendamiento de equipo de telecomunicaciones",32303,NULL,Superusuario,232,"32303 Arrendamiento de equipo de telecomunicaciones",515,0,0,NULL,NULL,NULL
+394,"Arrendamiento de equipo y bienes informáticos",32306,NULL,Superusuario,232,"32306 Arrendamiento de equipo y bienes informáticos",516,0,0,NULL,NULL,NULL
+395,"Arrendamiento de equipo e instrumental médico y de laboratorio",32401,NULL,Superusuario,232,"32401 Arrendamiento de equipo e instrumental médico y de laboratorio",517,0,0,NULL,NULL,NULL
+396,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para la ejecución de programas de seguridad pública y nacional",32501,NULL,Superusuario,232,"32501 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para la ejecución de programas de seguridad pública y nacional",518,0,0,NULL,NULL,NULL
+397,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios públicos y la operación de programas públicos",32502,NULL,Superusuario,232,"32502 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios públicos y la operación de programas públicos",519,0,0,NULL,NULL,NULL
+398,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios administrativos",32503,NULL,Superusuario,232,"32503 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios administrativos",520,0,0,NULL,NULL,NULL
+399,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para desastres naturales",32504,NULL,Superusuario,232,"32504 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para desastres naturales",521,0,0,NULL,NULL,NULL
+400,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servidores públicos",32505,NULL,Superusuario,232,"32505 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servidores públicos",522,0,0,NULL,NULL,NULL
+401,"Arrendamiento de maquinaria y equipo",32601,NULL,Superusuario,232,"32601 Arrendamiento de maquinaria y equipo",523,0,0,NULL,NULL,NULL
+402,"Patentes, derechos de autor, regalías y otros",32701,NULL,Superusuario,232,"32701 Patentes, derechos de autor, regalías y otros",524,0,0,NULL,NULL,NULL
+403,"Arrendamiento de sustancias y productos químicos",32901,NULL,Superusuario,232,"32901 Arrendamiento de sustancias y productos químicos",525,0,0,NULL,NULL,NULL
+404,"PIDIREGAS cargos fijos",32902,NULL,Superusuario,232,"32902 PIDIREGAS cargos fijos",526,0,0,NULL,NULL,NULL
+405,"Otros Arrendamientos",32903,NULL,Superusuario,232,"32903 Otros Arrendamientos",527,0,0,NULL,NULL,NULL
+406,"Asesorías asociadas a convenios, tratados o acuerdos",33101,NULL,Superusuario,232,"33101 Asesorías asociadas a convenios, tratados o acuerdos",528,0,0,NULL,NULL,NULL
+407,"Asesorías por controversias en el marco de los tratados internacionales",33102,NULL,Superusuario,232,"33102 Asesorías por controversias en el marco de los tratados internacionales",529,0,0,NULL,NULL,NULL
+408,"Consultorías para programas o proyectos financiados por organismos internacionales",33103,NULL,Superusuario,232,"33103 Consultorías para programas o proyectos financiados por organismos internacionales",530,0,0,NULL,NULL,NULL
+409,"Otras asesorías para la operación de programas",33104,NULL,Superusuario,232,"33104 Otras asesorías para la operación de programas",531,0,0,NULL,NULL,NULL
+410,"Servicios relacionados con procedimientos jurisdiccionales",33105,NULL,Superusuario,232,"33105 Servicios relacionados con procedimientos jurisdiccionales",532,0,0,NULL,NULL,NULL
+411,"Servicios de diseño, arquitectura, ingeniería y actividades relacionadas",33201,NULL,Superusuario,232,"33201 Servicios de diseño, arquitectura, ingeniería y actividades relacionadas",533,0,0,NULL,NULL,NULL
+412,"Servicios de desarrollo de aplicaciones informáticas",33301,NULL,Superusuario,232,"33301 Servicios de desarrollo de aplicaciones informáticas",534,0,0,NULL,NULL,NULL
+413,"Servicios estadísticos y geográficos",33302,NULL,Superusuario,232,"33302 Servicios estadísticos y geográficos",535,0,0,NULL,NULL,NULL
+414,"Servicios relacionados con certificación de procesos",33303,NULL,Superusuario,232,"33303 Servicios relacionados con certificación de procesos",536,0,0,NULL,NULL,NULL
+415,"Servicios de mantenimiento de aplicaciones informática",33304,NULL,Superusuario,232,"33304 Servicios de mantenimiento de aplicaciones informática",537,0,0,NULL,NULL,NULL
+416,"Servicios para capacitación a servidores públicos",33401,NULL,Superusuario,232,"33401 Servicios para capacitación a servidores públicos",538,0,0,NULL,NULL,NULL
+417,"Estudios e investigaciones",33501,NULL,Superusuario,232,"33501 Estudios e investigaciones",539,0,0,NULL,NULL,NULL
+418,"Servicios relacionados con traducciones",33601,NULL,Superusuario,232,"33601 Servicios relacionados con traducciones",540,0,0,NULL,NULL,NULL
+419,"Otros servicios comerciales",33602,NULL,Superusuario,232,"33602 Otros servicios comerciales",541,0,0,NULL,NULL,NULL
+420,"Impresiones de documentos oficiales para la prestación de servicios públicos, identificación, formatos administrativos y fiscales, formas valoradas, certificados y títulos",33603,NULL,Superusuario,232,"33603 Impresiones de documentos oficiales para la prestación de servicios públicos, identificación, formatos administrativos y fiscales, formas valoradas, certificados y títulos",542,0,0,NULL,NULL,NULL
+421,"Impresión y elaboración de material informativo derivado de la operación y administración de las dependencias y entidades",33604,NULL,Superusuario,232,"33604 Impresión y elaboración de material informativo derivado de la operación y administración de las dependencias y entidades",543,0,0,NULL,NULL,NULL
+422,"Información en medios masivos derivada de la operación y administración de las dependencias y entidades",33605,NULL,Superusuario,232,"33605 Información en medios masivos derivada de la operación y administración de las dependencias y entidades",544,0,0,NULL,NULL,NULL
+423,"Servicios de digitalización",33606,NULL,Superusuario,232,"33606 Servicios de digitalización",545,0,0,NULL,NULL,NULL
+424,"Gastos de seguridad pública y nacional",33701,NULL,Superusuario,232,"33701 Gastos de seguridad pública y nacional",546,0,0,NULL,NULL,NULL
+425,"Gastos en actividades de seguridad y logística del Estado Mayor Presidencial",33702,NULL,Superusuario,232,"33702 Gastos en actividades de seguridad y logística del Estado Mayor Presidencial",547,0,0,NULL,NULL,NULL
+426,"Servicios de vigilancia",33801,NULL,Superusuario,232,"33801 Servicios de vigilancia",548,0,0,NULL,NULL,NULL
+427,"Subcontratación de servicios con terceros",33901,NULL,Superusuario,232,"33901 Subcontratación de servicios con terceros",549,0,0,NULL,NULL,NULL
+428,"Proyectos para prestación de servicios",33902,NULL,Superusuario,232,"33902 Proyectos para prestación de servicios",550,0,0,NULL,NULL,NULL
+429,"Servicios integrales",33903,NULL,Superusuario,232,"33903 Servicios integrales",551,0,0,NULL,NULL,NULL
+430,"Servicios bancarios y financieros",34101,NULL,Superusuario,232,"34101 Servicios bancarios y financieros",552,0,0,NULL,NULL,NULL
+431,"Gastos inherentes a la recaudación",34301,NULL,Superusuario,232,"34301 Gastos inherentes a la recaudación",553,0,0,NULL,NULL,NULL
+432,"Seguro de responsabilidad patrimonial del Estado",34401,NULL,Superusuario,232,"34401 Seguro de responsabilidad patrimonial del Estado",554,0,0,NULL,NULL,NULL
+433,"Seguros de bienes patrimoniales",34501,NULL,Superusuario,232,"34501 Seguros de bienes patrimoniales",555,0,0,NULL,NULL,NULL
+434,"Almacenaje, embalaje y envase",34601,NULL,Superusuario,232,"34601 Almacenaje, embalaje y envase",556,0,0,NULL,NULL,NULL
+435,"Fletes y maniobras",34701,NULL,Superusuario,232,"34701 Fletes y maniobras",557,0,0,NULL,NULL,NULL
+436,"Comisiones por ventas",34801,NULL,Superusuario,232,"34801 Comisiones por ventas",558,0,0,NULL,NULL,NULL
+437,"Mantenimiento y conservación de inmuebles para la prestación de servicios administrativos",35101,NULL,Superusuario,232,"35101 Mantenimiento y conservación de inmuebles para la prestación de servicios administrativos",559,0,0,NULL,NULL,NULL
+438,"Mantenimiento y conservación de inmuebles para la prestación de servicios públicos",35102,NULL,Superusuario,232,"35102 Mantenimiento y conservación de inmuebles para la prestación de servicios públicos",560,0,0,NULL,NULL,NULL
+439,"Mantenimiento y conservación de mobiliario y equipo de administración",35201,NULL,Superusuario,232,"35201 Mantenimiento y conservación de mobiliario y equipo de administración",561,0,0,NULL,NULL,NULL
+440,"Mantenimiento y conservación de bienes informáticos",35301,NULL,Superusuario,232,"35301 Mantenimiento y conservación de bienes informáticos",562,0,0,NULL,NULL,NULL
+441,"Instalación, reparación y mantenimiento de equipo e instrumental médico y de laboratorio",35401,NULL,Superusuario,232,"35401 Instalación, reparación y mantenimiento de equipo e instrumental médico y de laboratorio",563,0,0,NULL,NULL,NULL
+442,"Mantenimiento y conservación de vehículos terrestres, aéreos, marítimos, lacustres y fluviales",35501,NULL,Superusuario,232,"35501 Mantenimiento y conservación de vehículos terrestres, aéreos, marítimos, lacustres y fluviales",564,0,0,NULL,NULL,NULL
+443,"Reparación y mantenimiento de equipo de defensa y seguridad",35601,NULL,Superusuario,232,"35601 Reparación y mantenimiento de equipo de defensa y seguridad",565,0,0,NULL,NULL,NULL
+444,"Mantenimiento y conservación de maquinaria y equipo",35701,NULL,Superusuario,232,"35701 Mantenimiento y conservación de maquinaria y equipo",566,0,0,NULL,NULL,NULL
+445,"Mantenimiento y conservación de plantas e instalaciones productivas",35702,NULL,Superusuario,232,"35702 Mantenimiento y conservación de plantas e instalaciones productivas",567,0,0,NULL,NULL,NULL
+446,"Servicios de lavandería, limpieza e higiene",35801,NULL,Superusuario,232,"35801 Servicios de lavandería, limpieza e higiene",568,0,0,NULL,NULL,NULL
+447,"Servicios de jardinería y fumigación",35901,NULL,Superusuario,232,"35901 Servicios de jardinería y fumigación",569,0,0,NULL,NULL,NULL
+448,"Difusión de mensajes sobre programas y actividades gubernamentales",36101,NULL,Superusuario,232,"36101 Difusión de mensajes sobre programas y actividades gubernamentales",570,0,0,NULL,NULL,NULL
+449,"Difusión de mensajes comerciales para promover la venta de productos o servicios",36201,NULL,Superusuario,232,"36201 Difusión de mensajes comerciales para promover la venta de productos o servicios",571,0,0,NULL,NULL,NULL
+450,"Servicios relacionados con monitoreo de información en medios masivos",36901,NULL,Superusuario,232,"36901 Servicios relacionados con monitoreo de información en medios masivos",572,0,0,NULL,NULL,NULL
+451,"Pasajes aéreos nacionales para labores en campo y de supervisión",37101,NULL,Superusuario,232,"37101 Pasajes aéreos nacionales para labores en campo y de supervisión",573,0,0,NULL,NULL,NULL
+452,"Pasajes aéreos nacionales asociados a los programas de seguridad pública y nacional",37102,NULL,Superusuario,232,"37102 Pasajes aéreos nacionales asociados a los programas de seguridad pública y nacional",574,0,0,NULL,NULL,NULL
+453,"Pasajes aéreos nacionales asociados a desastres naturales",37103,NULL,Superusuario,232,"37103 Pasajes aéreos nacionales asociados a desastres naturales",575,0,0,NULL,NULL,NULL
+454,"Pasajes aéreos nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",37104,NULL,Superusuario,232,"37104 Pasajes aéreos nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",576,0,0,NULL,NULL,NULL
+455,"Pasajes aéreos internacionales asociados a los programas de seguridad pública y nacional",37105,NULL,Superusuario,232,"37105 Pasajes aéreos internacionales asociados a los programas de seguridad pública y nacional",577,0,0,NULL,NULL,NULL
+456,"Pasajes aéreos internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",37106,NULL,Superusuario,232,"37106 Pasajes aéreos internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",578,0,0,NULL,NULL,NULL
+457,"Pasajes terrestres nacionales para labores en campo y de supervisión",37201,NULL,Superusuario,232,"37201 Pasajes terrestres nacionales para labores en campo y de supervisión",579,0,0,NULL,NULL,NULL
+458,"Pasajes terrestres nacionales asociados a los programas de seguridad pública y nacional",37202,NULL,Superusuario,232,"37202 Pasajes terrestres nacionales asociados a los programas de seguridad pública y nacional",580,0,0,NULL,NULL,NULL
+459,"Pasajes terrestres nacionales asociados a desastres naturales",37203,NULL,Superusuario,232,"37203 Pasajes terrestres nacionales asociados a desastres naturales",581,0,0,NULL,NULL,NULL
+460,"Pasajes terrestres nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",37204,NULL,Superusuario,232,"37204 Pasajes terrestres nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",582,0,0,NULL,NULL,NULL
+461,"Pasajes terrestres internacionales asociados a los programas de seguridad pública y nacional",37205,NULL,Superusuario,232,"37205 Pasajes terrestres internacionales asociados a los programas de seguridad pública y nacional",583,0,0,NULL,NULL,NULL
+462,"Pasajes terrestres internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",37206,NULL,Superusuario,232,"37206 Pasajes terrestres internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",584,0,0,NULL,NULL,NULL
+463,"Pasajes terrestres nacionales por medio electrónico",37207,NULL,Superusuario,232,"37207 Pasajes terrestres nacionales por medio electrónico",585,0,0,NULL,NULL,NULL
+464,"Pasajes marítimos, lacustres y fluviales para labores en campo y de supervisión",37301,NULL,Superusuario,232,"37301 Pasajes marítimos, lacustres y fluviales para labores en campo y de supervisión",586,0,0,NULL,NULL,NULL
+465,"Pasajes marítimos, lacustres y fluviales asociados a los programas de seguridad pública y nacional 37303 Pasajes marítimos, lacustres y fluviales asociados a desastres naturales",37302,NULL,Superusuario,232,"37302 Pasajes marítimos, lacustres y fluviales asociados a los programas de seguridad pública y nacional 37303 Pasajes marítimos, lacustres y fluviales asociados a desastres naturales",587,0,0,NULL,NULL,NULL
+466,"Pasajes marítimos, lacustres y fluviales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",37304,NULL,Superusuario,232,"37304 Pasajes marítimos, lacustres y fluviales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",588,0,0,NULL,NULL,NULL
+467,"Viáticos nacionales para labores en campo y de supervisión",37501,NULL,Superusuario,232,"37501 Viáticos nacionales para labores en campo y de supervisión",589,0,0,NULL,NULL,NULL
+468,"Viáticos nacionales asociados a los programas de seguridad pública y nacional",37502,NULL,Superusuario,232,"37502 Viáticos nacionales asociados a los programas de seguridad pública y nacional",590,0,0,NULL,NULL,NULL
+469,"Viáticos nacionales asociados a desastres naturales",37503,NULL,Superusuario,232,"37503 Viáticos nacionales asociados a desastres naturales",591,0,0,NULL,NULL,NULL
+470,"Viáticos nacionales para servidores públicos en el desempeño de funciones oficiales",37504,NULL,Superusuario,232,"37504 Viáticos nacionales para servidores públicos en el desempeño de funciones oficiales",592,0,0,NULL,NULL,NULL
+471,"Viáticos en el extranjero asociados a los programas de seguridad pública y nacional",37601,NULL,Superusuario,232,"37601 Viáticos en el extranjero asociados a los programas de seguridad pública y nacional",593,0,0,NULL,NULL,NULL
+472,"Viáticos en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",37602,NULL,Superusuario,232,"37602 Viáticos en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",594,0,0,NULL,NULL,NULL
+473,"Instalación del personal federal",37701,NULL,Superusuario,232,"37701 Instalación del personal federal",595,0,0,NULL,NULL,NULL
+474,"Servicios integrales nacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",37801,NULL,Superusuario,232,"37801 Servicios integrales nacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",596,0,0,NULL,NULL,NULL
+475,"Servicios integrales en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",37802,NULL,Superusuario,232,"37802 Servicios integrales en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",597,0,0,NULL,NULL,NULL
+476,"Gastos para operativos y trabajos de campo en áreas rurales",37901,NULL,Superusuario,232,"37901 Gastos para operativos y trabajos de campo en áreas rurales",598,0,0,NULL,NULL,NULL
+477,"Gastos de ceremonial del titular del Ejecutivo Federal",38101,NULL,Superusuario,232,"38101 Gastos de ceremonial del titular del Ejecutivo Federal",599,0,0,NULL,NULL,NULL
+478,"Gastos de ceremonial de los titulares de las dependencias y entidades",38102,NULL,Superusuario,232,"38102 Gastos de ceremonial de los titulares de las dependencias y entidades",600,0,0,NULL,NULL,NULL
+479,"Gastos inherentes a la investidura presidencial",38103,NULL,Superusuario,232,"38103 Gastos inherentes a la investidura presidencial",601,0,0,NULL,NULL,NULL
+480,"Gastos de orden social",38201,NULL,Superusuario,232,"38201 Gastos de orden social",602,0,0,NULL,NULL,NULL
+481,"Congresos y convenciones",38301,NULL,Superusuario,232,"38301 Congresos y convenciones",603,0,0,NULL,NULL,NULL
+482,Exposiciones,38401,NULL,Superusuario,232,"38401 Exposiciones",604,0,0,NULL,NULL,NULL
+483,"Gastos para alimentación de servidores públicos de mando",38501,NULL,Superusuario,232,"38501 Gastos para alimentación de servidores públicos de mando",605,0,0,NULL,NULL,NULL
+484,"Funerales y pagas de defunción",39101,NULL,Superusuario,232,"39101 Funerales y pagas de defunción",606,0,0,NULL,NULL,NULL
+485,"Impuestos y derechos de exportación",39201,NULL,Superusuario,232,"39201 Impuestos y derechos de exportación",607,0,0,NULL,NULL,NULL
+486,"Otros impuestos y derechos",39202,NULL,Superusuario,232,"39202 Otros impuestos y derechos",608,0,0,NULL,NULL,NULL
+487,"Impuestos y derechos de importación",39301,NULL,Superusuario,232,"39301 Impuestos y derechos de importación",609,0,0,NULL,NULL,NULL
+488,"Erogaciones por resoluciones por autoridad competente",39401,NULL,Superusuario,232,"39401 Erogaciones por resoluciones por autoridad competente",610,0,0,NULL,NULL,NULL
+489,"Indemnizaciones por expropiación de predios",39402,NULL,Superusuario,232,"39402 Indemnizaciones por expropiación de predios",611,0,0,NULL,NULL,NULL
+490,"Otras asignaciones derivadas de resoluciones de ley",39403,NULL,Superusuario,232,"39403 Otras asignaciones derivadas de resoluciones de ley",612,0,0,NULL,NULL,NULL
+491,"Penas, multas, accesorios y actualizaciones",39501,NULL,Superusuario,232,"39501 Penas, multas, accesorios y actualizaciones",613,0,0,NULL,NULL,NULL
+492,"Pérdidas del erario federal",39601,NULL,Superusuario,232,"39601 Pérdidas del erario federal",614,0,0,NULL,NULL,NULL
+493,"Otros gastos por responsabilidades",39602,NULL,Superusuario,232,"39602 Otros gastos por responsabilidades",615,0,0,NULL,NULL,NULL
+494,"Erogaciones por pago de utilidades",39701,NULL,Superusuario,232,"39701 Erogaciones por pago de utilidades",616,0,0,NULL,NULL,NULL
+495,"Impuesto sobre nóminas",39801,NULL,Superusuario,232,"39801 Impuesto sobre nóminas",617,0,0,NULL,NULL,NULL
+496,"Gastos de las Comisiones Internacionales de Límites y Aguas",39901,NULL,Superusuario,232,"39901 Gastos de las Comisiones Internacionales de Límites y Aguas",618,0,0,NULL,NULL,NULL
+497,"Gastos de las oficinas del Servicio Exterior Mexicano",39902,NULL,Superusuario,232,"39902 Gastos de las oficinas del Servicio Exterior Mexicano",619,0,0,NULL,NULL,NULL
+498,"Participaciones en Órganos de Gobierno",39904,NULL,Superusuario,232,"39904 Participaciones en Órganos de Gobierno",620,0,0,NULL,NULL,NULL
+499,"Actividades de Coordinación con el Presidente Electo",39905,NULL,Superusuario,232,"39905 Actividades de Coordinación con el Presidente Electo",621,0,0,NULL,NULL,NULL
+500,"Servicios Corporativos prestados por las Entidades Paraestatales a sus Organismos",39906,NULL,Superusuario,232,"39906 Servicios Corporativos prestados por las Entidades Paraestatales a sus Organismos",622,0,0,NULL,NULL,NULL
+501,"Servicios prestados entre Organismos de una Entidad Paraestatal",39907,NULL,Superusuario,232,"39907 Servicios prestados entre Organismos de una Entidad Paraestatal",623,0,0,NULL,NULL,NULL
+502,"Erogaciones por cuenta de terceros",39908,NULL,Superusuario,232,"39908 Erogaciones por cuenta de terceros",624,0,0,NULL,NULL,NULL
+503,"Erogaciones recuperables",39909,NULL,Superusuario,232,"39909 Erogaciones recuperables",625,0,0,NULL,NULL,NULL
+504,"Apertura de Fondo Rotatorio",39910,NULL,Superusuario,232,"39910 Apertura de Fondo Rotatorio",626,0,0,NULL,NULL,NULL
+505,"Transferencias para cubrir el déficit de operación y los gastos de administración asociados al otorgamiento de subsidios",41501,NULL,Superusuario,232,"41501 Transferencias para cubrir el déficit de operación y los gastos de administración asociados al otorgamiento de subsidios",627,0,0,NULL,NULL,NULL
+506,"Transferencias a entidades empresariales no financieras derivadas de la obtención de derechos",41601,NULL,Superusuario,232,"41601 Transferencias a entidades empresariales no financieras derivadas de la obtención de derechos",628,0,0,NULL,NULL,NULL
+507,"Subsidios a la producción",43101,NULL,Superusuario,232,"43101 Subsidios a la producción",629,0,0,NULL,NULL,NULL
+508,"Subsidios a la distribución",43201,NULL,Superusuario,232,"43201 Subsidios a la distribución",630,0,0,NULL,NULL,NULL
+509,"Subsidios para inversión",43301,NULL,Superusuario,232,"43301 Subsidios para inversión",631,0,0,NULL,NULL,NULL
+510,"Subsidios a la prestación de servicios públicos",43401,NULL,Superusuario,232,"43401 Subsidios a la prestación de servicios públicos",632,0,0,NULL,NULL,NULL
+511,"Subsidios para cubrir diferenciales de tasas de interés",43501,NULL,Superusuario,232,"43501 Subsidios para cubrir diferenciales de tasas de interés",633,0,0,NULL,NULL,NULL
+512,"Subsidios para la adquisición de vivienda de interés social",43601,NULL,Superusuario,232,"43601 Subsidios para la adquisición de vivienda de interés social",634,0,0,NULL,NULL,NULL
+513,"Subsidios al consumo",43701,NULL,Superusuario,232,"43701 Subsidios al consumo",635,0,0,NULL,NULL,NULL
+514,"Subsidios a Entidades Federativas y Municipios (Se modifica)",43801,NULL,Superusuario,232,"43801 Subsidios a Entidades Federativas y Municipios (Se modifica)",636,0,0,NULL,NULL,NULL
+515,"Subsidios para capacitación y becas",43901,NULL,Superusuario,232,"43901 Subsidios para capacitación y becas",637,0,0,NULL,NULL,NULL
+516,"Subsidios a fideicomisos privados y estatales",43902,NULL,Superusuario,232,"43902 Subsidios a fideicomisos privados y estatales",638,0,0,NULL,NULL,NULL
+517,"Gastos relacionados con actividades culturales, deportivas y de ayuda extraordinaria",44101,NULL,Superusuario,232,"44101 Gastos relacionados con actividades culturales, deportivas y de ayuda extraordinaria",639,0,0,NULL,NULL,NULL
+518,"Gastos por servicios de traslado de personas",44102,NULL,Superusuario,232,"44102 Gastos por servicios de traslado de personas",640,0,0,NULL,NULL,NULL
+519,"Premios, recompensas, pensiones de gracia y pensión recreativa estudiantil",44103,NULL,Superusuario,232,"44103 Premios, recompensas, pensiones de gracia y pensión recreativa estudiantil",641,0,0,NULL,NULL,NULL
+520,"Premios, estímulos, recompensas, becas y seguros a deportistas",44104,NULL,Superusuario,232,"44104 Premios, estímulos, recompensas, becas y seguros a deportistas",642,0,0,NULL,NULL,NULL
+521,"Apoyo a voluntarios que participan en diversos programas federales",44105,NULL,Superusuario,232,"44105 Apoyo a voluntarios que participan en diversos programas federales",643,0,0,NULL,NULL,NULL
+522,"Compensaciones por servicios de carácter social",44106,NULL,Superusuario,232,"44106 Compensaciones por servicios de carácter social",644,0,0,NULL,NULL,NULL
+523,"Apoyos a la investigación científica y tecnológica de instituciones académicas y sector público",44401,NULL,Superusuario,232,"44401 Apoyos a la investigación científica y tecnológica de instituciones académicas y sector público",645,0,0,NULL,NULL,NULL
+524,"Apoyos a la investigación científica y tecnológica en instituciones sin fines de lucro",44402,NULL,Superusuario,232,"44402 Apoyos a la investigación científica y tecnológica en instituciones sin fines de lucro",646,0,0,NULL,NULL,NULL
+525,"Mercancías para su distribución a la población",44801,NULL,Superusuario,232,"44801 Mercancías para su distribución a la población",647,0,0,NULL,NULL,NULL
+526,"Pago de pensiones y jubilaciones",45201,NULL,Superusuario,232,"45201 Pago de pensiones y jubilaciones",648,0,0,NULL,NULL,NULL
+527,"Pago de pensiones y jubilaciones contractuales",45202,NULL,Superusuario,232,"45202 Pago de pensiones y jubilaciones contractuales",649,0,0,NULL,NULL,NULL
+528,"Transferencias para el pago de pensiones y jubilaciones",45203,NULL,Superusuario,232,"45203 Transferencias para el pago de pensiones y jubilaciones",650,0,0,NULL,NULL,NULL
+529,"Pago de sumas aseguradas",45901,NULL,Superusuario,232,"45901 Pago de sumas aseguradas",651,0,0,NULL,NULL,NULL
+530,"Prestaciones económicas distintas de pensiones y jubilaciones",45902,NULL,Superusuario,232,"45902 Prestaciones económicas distintas de pensiones y jubilaciones",652,0,0,NULL,NULL,NULL
+531,"Aportaciones a fideicomisos públicos",46101,NULL,Superusuario,232,"46101 Aportaciones a fideicomisos públicos",653,0,0,NULL,NULL,NULL
+532,"Aportaciones a mandatos públicos",46102,NULL,Superusuario,232,"46102 Aportaciones a mandatos públicos",654,0,0,NULL,NULL,NULL
+533,"Trasferencias para cuotas y aportaciones de seguridad social para el IMSS, ISSSTE e ISSFAM por obligación del Estado",47101,NULL,Superusuario,232,"47101 Trasferencias para cuotas y aportaciones de seguridad social para el IMSS, ISSSTE e ISSFAM por obligación del Estado",655,0,0,NULL,NULL,NULL
+534,"Transferencias para cuotas y aportaciones a los seguros de retiro, cesantía en edad avanzada y vejez",47102,NULL,Superusuario,232,"47102 Transferencias para cuotas y aportaciones a los seguros de retiro, cesantía en edad avanzada y vejez",656,0,0,NULL,NULL,NULL
+535,"Donativos a instituciones sin fines de lucro",48101,NULL,Superusuario,232,"48101 Donativos a instituciones sin fines de lucro",657,0,0,NULL,NULL,NULL
+536,"Donativos a entidades federativas o municípios",48201,NULL,Superusuario,232,"48201 Donativos a entidades federativas o municípios",658,0,0,NULL,NULL,NULL
+537,"Donativos a fideicomisos privados",48301,NULL,Superusuario,232,"48301 Donativos a fideicomisos privados",659,0,0,NULL,NULL,NULL
+538,"Donativos a fideicomisos estatales",48401,NULL,Superusuario,232,"48401 Donativos a fideicomisos estatales",660,0,0,NULL,NULL,NULL
+539,"Donativos internacionales",48501,NULL,Superusuario,232,"48501 Donativos internacionales",661,0,0,NULL,NULL,NULL
+540,"Cuotas y aportaciones a organismos internacionales",49201,NULL,Superusuario,232,"49201 Cuotas y aportaciones a organismos internacionales",662,0,0,NULL,NULL,NULL
+541,"Otras aportaciones internacionales",49202,NULL,Superusuario,232,"49202 Otras aportaciones internacionales",663,0,0,NULL,NULL,NULL
+542,Mobiliario,51101,NULL,Superusuario,232,"51101 Mobiliario",664,0,0,NULL,NULL,NULL
+543,"Bienes artísticos y culturales",51301,NULL,Superusuario,232,"51301 Bienes artísticos y culturales",665,0,0,NULL,NULL,NULL
+544,"Bienes informáticos",51501,NULL,Superusuario,232,"51501 Bienes informáticos",666,0,0,NULL,NULL,NULL
+545,"Equipo de administración",51901,NULL,Superusuario,232,"51901 Equipo de administración",667,0,0,NULL,NULL,NULL
+546,"Adjudicaciones, expropiaciones e indemnizaciones de bienes muebles",51902,NULL,Superusuario,232,"51902 Adjudicaciones, expropiaciones e indemnizaciones de bienes muebles",668,0,0,NULL,NULL,NULL
+547,"Equipos y aparatos audiovisuales",52101,NULL,Superusuario,232,"52101 Equipos y aparatos audiovisuales",669,0,0,NULL,NULL,NULL
+548,"Aparatos deportivos",52201,NULL,Superusuario,232,"52201 Aparatos deportivos",670,0,0,NULL,NULL,NULL
+549,"Cámaras fotográficas y de video",52301,NULL,Superusuario,232,"52301 Cámaras fotográficas y de video",671,0,0,NULL,NULL,NULL
+550,"Otro mobiliario y equipo educacional y recreativo",52901,NULL,Superusuario,232,"52901 Otro mobiliario y equipo educacional y recreativo",672,0,0,NULL,NULL,NULL
+551,"Equipo médico y de laboratorio",53101,NULL,Superusuario,232,"53101 Equipo médico y de laboratorio",673,0,0,NULL,NULL,NULL
+552,"Instrumental médico y de laboratorio",53201,NULL,Superusuario,232,"53201 Instrumental médico y de laboratorio",674,0,0,NULL,NULL,NULL
+553,"Vehículos y equipo terrestres, para la ejecución de programas de seguridad pública y nacional",54101,NULL,Superusuario,232,"54101 Vehículos y equipo terrestres, para la ejecución de programas de seguridad pública y nacional",675,0,0,NULL,NULL,NULL
+554,"Vehículos y equipo terrestres, destinados exclusivamente para desastres naturales",54102,NULL,Superusuario,232,"54102 Vehículos y equipo terrestres, destinados exclusivamente para desastres naturales",676,0,0,NULL,NULL,NULL
+555,"Vehículos y equipo terrestres, destinados a servicios públicos y la operación de programas públicos",54103,NULL,Superusuario,232,"54103 Vehículos y equipo terrestres, destinados a servicios públicos y la operación de programas públicos",677,0,0,NULL,NULL,NULL
+556,"Vehículos y equipo terrestres, destinados a servicios administrativos",54104,NULL,Superusuario,232,"54104 Vehículos y equipo terrestres, destinados a servicios administrativos",678,0,0,NULL,NULL,NULL
+557,"Vehículos y equipo terrestres, destinados a servidores públicos",54105,NULL,Superusuario,232,"54105 Vehículos y equipo terrestres, destinados a servidores públicos",679,0,0,NULL,NULL,NULL
+558,"Carrocerías y remolques",54201,NULL,Superusuario,232,"54201 Carrocerías y remolques",680,0,0,NULL,NULL,NULL
+559,"Vehículos y equipo aéreos, para la ejecución de programas de seguridad pública y nacional",54301,NULL,Superusuario,232,"54301 Vehículos y equipo aéreos, para la ejecución de programas de seguridad pública y nacional",681,0,0,NULL,NULL,NULL
+560,"Vehículos y equipo aéreos, destinados exclusivamente para desastres naturales",54302,NULL,Superusuario,232,"54302 Vehículos y equipo aéreos, destinados exclusivamente para desastres naturales",682,0,0,NULL,NULL,NULL
+561,"Vehículos y equipo aéreos, destinados a servicios públicos y la operación de programas públicos",54303,NULL,Superusuario,232,"54303 Vehículos y equipo aéreos, destinados a servicios públicos y la operación de programas públicos",683,0,0,NULL,NULL,NULL
+562,"Equipo ferroviario",54401,NULL,Superusuario,232,"54401 Equipo ferroviario",684,0,0,NULL,NULL,NULL
+563,"Vehículos y equipo marítimo, para la ejecución de programas de seguridad pública y nacional",54501,NULL,Superusuario,232,"54501 Vehículos y equipo marítimo, para la ejecución de programas de seguridad pública y nacional",685,0,0,NULL,NULL,NULL
+564,"Vehículos y equipo marítimo, destinados a servicios públicos y la operación de programas públicos",54502,NULL,Superusuario,232,"54502 Vehículos y equipo marítimo, destinados a servicios públicos y la operación de programas públicos",686,0,0,NULL,NULL,NULL
+565,"Construcción de embarcaciones",54503,NULL,Superusuario,232,"54503 Construcción de embarcaciones",687,0,0,NULL,NULL,NULL
+566,"Otros equipos de transporte",54901,NULL,Superusuario,232,"54901 Otros equipos de transporte",688,0,0,NULL,NULL,NULL
+567,"Maquinaria y equipo de defensa y seguridad pública",55101,NULL,Superusuario,232,"55101 Maquinaria y equipo de defensa y seguridad pública",689,0,0,NULL,NULL,NULL
+568,"Equipo de seguridad pública y nacional",55102,NULL,Superusuario,232,"55102 Equipo de seguridad pública y nacional",690,0,0,NULL,NULL,NULL
+569,"Maquinaria y equipo agropecuario",56101,NULL,Superusuario,232,"56101 Maquinaria y equipo agropecuario",691,0,0,NULL,NULL,NULL
+570,"Maquinaria y equipo industrial",56201,NULL,Superusuario,232,"56201 Maquinaria y equipo industrial",692,0,0,NULL,NULL,NULL
+571,"Maquinaria y equipo de construcción",56301,NULL,Superusuario,232,"56301 Maquinaria y equipo de construcción",693,0,0,NULL,NULL,NULL
+572,"Equipos y aparatos de comunicaciones y telecomunicaciones",56501,NULL,Superusuario,232,"56501 Equipos y aparatos de comunicaciones y telecomunicaciones",694,0,0,NULL,NULL,NULL
+573,"Maquinaria y equipo eléctrico y electrónico",56601,NULL,Superusuario,232,"56601 Maquinaria y equipo eléctrico y electrónico",695,0,0,NULL,NULL,NULL
+574,"Herramientas y máquinas herramienta",56701,NULL,Superusuario,232,"56701 Herramientas y máquinas herramienta",696,0,0,NULL,NULL,NULL
+575,"Bienes muebles por arrendamiento financiero",56901,NULL,Superusuario,232,"56901 Bienes muebles por arrendamiento financiero",697,0,0,NULL,NULL,NULL
+576,"Otros bienes muebles",56902,NULL,Superusuario,232,"56902 Otros bienes muebles",698,0,0,NULL,NULL,NULL
+577,"Animales de reproducción",57101,NULL,Superusuario,232,"57101 Animales de reproducción",699,0,0,NULL,NULL,NULL
+578,"Animales de trabajo",57601,NULL,Superusuario,232,"57601 Animales de trabajo",700,0,0,NULL,NULL,NULL
+579,"Animales de custodia y vigilancia",57701,NULL,Superusuario,232,"57701 Animales de custodia y vigilancia",701,0,0,NULL,NULL,NULL
+580,Terrenos,58101,NULL,Superusuario,232,"58101 Terrenos",702,0,0,NULL,NULL,NULL
+581,"Edificios y locales",58301,NULL,Superusuario,232,"58301 Edificios y locales",703,0,0,NULL,NULL,NULL
+582,"Adjudicaciones, expropiaciones e indemnizaciones de inmuebles",58901,NULL,Superusuario,232,"58901 Adjudicaciones, expropiaciones e indemnizaciones de inmuebles",704,0,0,NULL,NULL,NULL
+583,"Bienes inmuebles en la modalidad de proyectos de infraestructura productiva de largo plazo",58902,NULL,Superusuario,232,"58902 Bienes inmuebles en la modalidad de proyectos de infraestructura productiva de largo plazo",705,0,0,NULL,NULL,NULL
+584,"Bienes inmuebles por arrendamiento financiero",58903,NULL,Superusuario,232,"58903 Bienes inmuebles por arrendamiento financiero",706,0,0,NULL,NULL,NULL
+585,"Otros bienes inmuebles",58904,NULL,Superusuario,232,"58904 Otros bienes inmuebles",707,0,0,NULL,NULL,NULL
+586,Software,59101,NULL,Superusuario,232,"59101 Software",708,0,0,NULL,NULL,NULL

@@ -1,0 +1,70 @@
+.providers-menu {
+  &.mdc-menu-surface {
+    box-shadow: var(--primary-shadow) !important;
+  }
+
+  &.mat-mdc-menu-panel.mat-mdc-menu-panel {
+    min-width: initial !important;
+  }
+
+  &.mdc-menu-surface {
+    border-radius: 0 0 2px 2px !important;
+    transform: translateY(-4px) !important;
+  }
+
+  .mat-mdc-menu-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+    right: -4px !important;
+    font-size: 15px !important;
+  }
+
+  .mat-badge-medium.mat-badge-above .mat-badge-content {
+    top: -9px !important;
+  }
+
+  .mat-mdc-menu-item {
+    font-size: 14px !important;
+    min-height: 24px !important;
+    padding-left: 5.5px !important;
+    padding-right: 21px !important;
+    font-family: "Montserrat", sans-serif !important;
+    * {
+      font-size: 14px !important;
+      color: var(--primary-color) !important;
+    }
+  }
+}
+
+.card-menu {
+  background: rgba( 255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(5px) saturate(300%) !important;
+  .mat-mdc-menu-panel {
+    background: transparent !important;
+  }
+  .mat-mdc-menu-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    background: transparent !important;
+  }
+
+  .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+    font-size: 15px !important;
+  }
+
+  .mat-mdc-menu-item {
+    border-radius: 3px;
+    font-size: 14px !important;
+    min-height: 35px !important;
+    font-family: "Montserrat", sans-serif !important;
+    * {
+      color: rgb(85, 85, 85);
+      font-size: 14px !important;
+    }
+  }
+}

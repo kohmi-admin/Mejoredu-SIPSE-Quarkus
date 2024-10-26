@@ -1,0 +1,37 @@
+.actions {
+  left: 0;
+  bottom: 0;
+  vertical-align: top;
+  padding: var(--border-slim);
+  text-align: right;
+  [mat-flat-button] {
+    transform: translateY(-8px);
+  }
+  button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &.static {
+    text-align: right;
+    padding-bottom: 0;
+    padding-top: var(--border-slim);
+    padding-right: var(--border-slim);
+    padding-bottom: 5px;
+    [mat-flat-button] {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.fileSpace {
+  border: solid var(--border-slim) transparent;
+  border-right-width: var(--border-slim);
+  border-left-width: var(--border-slim);
+}
+
+h2 {
+  margin-top: -15px;
+  &.no-bottom {
+    margin-bottom: 0;
+  }
+}

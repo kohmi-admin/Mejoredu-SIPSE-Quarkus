@@ -1,0 +1,141 @@
+<div class="validate-wrapper">
+  <div class="header">
+    <span>{{ title }}</span>
+  </div>
+  <section class="action" *ngIf="showActions">
+    <button mat-stroked-button color="primary" (click)="onAction.emit()">
+      Ingresar a Rúbrica
+    </button>
+    <div class="preview">{{ totalRubric }}</div>
+  </section>
+
+  <section *ngIf="loading" class="separator">
+    <mat-spinner style="width: 25px"></mat-spinner>
+  </section>
+  <section *ngIf="noComments" class="separator">
+    <span> No se encontraron comentarios </span>
+  </section>
+  <section *ngIf="idSave === 0" class="separator">
+    <span>{{ textIdSaveEmpty }}</span>
+  </section>
+
+  <form
+    *ngIf="form && !noComments && !loading && idSave !== 0"
+    id="form1"
+    class="form fade"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+  >
+    <div
+      class="field blur"
+      [class.checkbox]="question.controlType === 'checkbox'"
+      *ngFor="let question of questions"
+    >
+      <section
+        class="action action-question"
+        *ngIf="question.isRubric && showRubric"
+      >
+        <!-- <button type="button" mat-stroked-button color="primary" (click)="onAction.emit()"> -->
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="openRubric()"
+        >
+          Ingresar a Rúbrica
+        </button>
+        <div class="preview">{{ totalRubric }}</div>
+      </section>
+      <section
+        class="separator"
+        *ngIf="question.onlyLabel"
+        [class.hasValue]="question.value && question.value !== ''"
+      >
+        {{ question.label }}
+        <div class="text" *ngIf="question.onlyLabel && question.value">
+          {{ question.value }}
+        </div>
+      </section>
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter && !question.onlyLabel && !question.isRubric"
+        [form]="form"
+        [ngClass]="{'disable-form': (!canSave && fromModule == 'ap')}"
+      ></app-dynamic-field>
+      <!-- <div *ngIf="!canSave">
+        <h1>{{question.value}}</h1>
+      </div> -->
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter && !question.onlyLabel && !question.isRubric"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="actions" *ngIf="!disable">
+      <button type="submit" mat-flat-button color="primary" *ngIf="canSave">
+        {{ canSign ? customSaveStr : "Guardar Avance" }}
+      </button>
+    </div>
+    <div class="sigIn" *ngIf="canSign && showFirma">
+      <div class="header two">
+        <span> Agregar Firma </span>
+      </div>
+      <div class="field file-upload">
+        <file-upload
+          [accept]="'.png, .jpg'"
+          [files]="filesToSign"
+          (onOutputFile)="responseFileUpload($event)"
+        ></file-upload>
+      </div>
+    </div>
+    <div class="actions" *ngIf="!disable">
+      <button
+        [disabled]="showFirma && filesToSign.length === 0"
+        type="button"
+        mat-flat-button
+        color="add"
+        *ngIf="(canSign || canFinish) && canSave"
+        (click)="aprobar()"
+      >
+        <mat-spinner
+          *ngIf="submitingAprobar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingAprobar">Aprobar</span>
+      </button>
+      <button
+        [disabled]="showFirma && filesToSign.length === 0"
+        type="button"
+        mat-flat-button
+        color="add"
+        *ngIf="canSave && fromModule == 'ap'"
+        (click)="aprobar()"
+        style="position: relative; left: 50px;"
+      >
+        <mat-spinner
+          *ngIf="submitingAprobar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingAprobar">Finalizar</span>
+      </button>
+      <button
+        type="button"
+        mat-flat-button
+        color="accent"
+        *ngIf="(canSign || canFinish) && fromModule != 'ap'"
+        (click)="rechazar()"
+      >
+        <mat-spinner
+          *ngIf="submitingRechazar"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!submitingRechazar">Rechazar</span>
+      </button>
+    </div>
+  </form>
+</div>

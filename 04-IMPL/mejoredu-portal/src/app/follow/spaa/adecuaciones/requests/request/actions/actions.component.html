@@ -1,0 +1,66 @@
+<section id="wrapper">
+  <form class="form fade" [formGroup]="form">
+    <div
+      class="field"
+      [class.third]="true"
+      *ngFor="let question of questions | slice : 0 : 9"
+    >
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons">
+      <button
+        *ngIf="!isCleanForm"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        [disabled]="!editable"
+        (click)="submit()"
+      >
+        Guardar Avance
+      </button>
+      <button
+        *ngIf="updateForm"
+        mat-flat-button
+        class="btn-left"
+        color="primary"
+        [disabled]="validation"
+        (click)="updateAction()"
+      >
+        Actualizar
+      </button>
+      <button
+        *ngIf="isCleanForm"
+        mat-flat-button
+        color="add"
+        class="btn-left"
+        type="button"
+        [disabled]="validation"
+        (click)="newAccion()"
+      >
+        Limpiar campos
+      </button>
+    </div>
+  </form>
+</section>
+
+<div class="wrap">
+  <app-mat-custom-table
+    (action)="onTableAction($event)"
+    [actions]="actions"
+    [dataset]="data"
+    [maxWidthActions]="'150px'"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+</div>

@@ -1,0 +1,284 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Solicitudes</h1>
+  <span class="sub-title bottom">Registro de Solicitudes</span>
+
+  <form class="form fade" [formGroup]="form">
+    <mat-form-field class="inp-custom" appearance="outline">
+      <mat-label>Folio de Solicitud</mat-label>
+      <span class="span-prefix" matPrefix>{{ folioSolicitudFirst }}</span>
+      <input
+        type="text"
+        matInput
+        formControlName="folioSolicitudSecond"
+        maxlength="3"
+      />
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      style="width: 150px; margin-left: 20px"
+    >
+      <mat-label>Fecha</mat-label>
+      <input readonly type="text" matInput formControlName="fecha" />
+    </mat-form-field>
+  </form>
+  <mat-vertical-stepper
+    [linear]="false"
+    #stepper
+    *ngIf="showSteps"
+    (selectionChange)="changeStep($event)"
+  >
+    <mat-step id="general">
+      <form>
+        <ng-template matStepLabel>Datos Generales</ng-template>
+        <app-general-data
+          *ngIf="steps.general"
+          [switches]="switches"
+          [tipoAdecuacion]="tipoAdecuacion"
+          [secuencialSeguimiento]="secuencialSeguimiento"
+          [data]="{
+            folioSolicitud: getCompleteFolio(),
+            fechaSolicitud: form.get('fecha')?.value ?? ''
+          }"
+          [catDireccionGeneralR]="catDireccionGeneralR"
+          [catTipoAdecuacionR]="catTipoAdecuacionR"
+          (onResponseSolicitud)="onResponseSolicitud($event)"
+          (onSaveSolicitud)="onSaveSolicitud()"
+        ></app-general-data>
+      </form>
+    </mat-step>
+
+    <mat-step id="projects" *ngIf="checkIfSwitchIsEnabled('Proyecto')">
+      <form (click)="changeStep('projects')">
+        <ng-template matStepLabel>Proyectos</ng-template>
+        <app-altern-switch
+          [switch]="getSwitchFromType('Proyecto')"
+          [tipoAdecuacion]="tipoAdecuacion"
+          (changeModification)="actived.project = $event"
+        ></app-altern-switch>
+        <app-projects
+          *ngIf="steps.projects && actived.project == modificationType.alta"
+          [catClaveNombreUnidadResponsableR]="catClaveNombreUnidadResponsableR"
+          [catObjetivosPrioritarioR]="catObjetivosPrioritarioR"
+          [catContribucionProgramasEspecialesR]="
+            catContribucionProgramasEspecialesR
+          "
+          [catContribucionPNCCIMGPR]="catContribucionPNCCIMGPR"
+        ></app-projects>
+        <app-modify-project
+          *ngIf="
+            steps.projects && actived.project == modificationType.modificacion
+          "
+          [catClaveNombreUnidadResponsableR]="catClaveNombreUnidadResponsableR"
+          [catObjetivosPrioritarioR]="catObjetivosPrioritarioR"
+          [catContribucionProgramasEspecialesR]="
+            catContribucionProgramasEspecialesR
+          "
+          [catContribucionPNCCIMGPR]="catContribucionPNCCIMGPR"
+        ></app-modify-project>
+        <app-cancelation
+          *ngIf="
+            steps.projects && actived.project == modificationType.cancelacion
+          "
+          [questions]="cancelationQuestions.projects"
+        ></app-cancelation>
+      </form>
+    </mat-step>
+
+    <mat-step id="activities" *ngIf="checkIfSwitchIsEnabled('Actividades')">
+      <form>
+        <ng-template matStepLabel>Actividades</ng-template>
+        <app-altern-switch
+          [switch]="getSwitchFromType('Actividades')"
+          [tipoAdecuacion]="tipoAdecuacion"
+          (changeModification)="actived.activities = $event"
+        ></app-altern-switch>
+        <app-activities
+          *ngIf="
+            steps.activities && actived.activities == modificationType.alta
+          "
+          [catObjetivosPrioritarioR]="catObjetivosPrioritarioR"
+          [catEstrategiaPrioritariaR]="catEstrategiaPrioritariaR"
+          [catAccionPuntualPIR]="catAccionPuntualPIR"
+          [catAlcanceR]="catAlcanceR"
+        ></app-activities>
+        <app-modify-activity
+          *ngIf="
+            steps.activities &&
+            actived.activities == modificationType.modificacion
+          "
+          [catObjetivosPrioritarioR]="catObjetivosPrioritarioR"
+          [catEstrategiaPrioritariaR]="catEstrategiaPrioritariaR"
+          [catAccionPuntualPIR]="catAccionPuntualPIR"
+          [catAlcanceR]="catAlcanceR"
+        ></app-modify-activity>
+        <app-cancelation
+          *ngIf="
+            steps.activities &&
+            actived.activities == modificationType.cancelacion
+          "
+          [modificationType]="'activity'"
+          [questions]="cancelationQuestions.activities"
+        ></app-cancelation>
+      </form>
+    </mat-step>
+
+    <mat-step id="products" *ngIf="checkIfSwitchIsEnabled('Productos')">
+      <form>
+        <ng-template matStepLabel>Productos</ng-template>
+        <app-altern-switch
+          [switch]="getSwitchFromType('Productos')"
+          [tipoAdecuacion]="tipoAdecuacion"
+          (changeModification)="actived.products = $event"
+        ></app-altern-switch>
+        <app-products
+          *ngIf="steps.products && actived.products == modificationType.alta"
+          [catCategoriaR]="catCategoriaR"
+          [catTipoProductoR]="catTipoProductoR"
+          [catNombreIndicadorMIRR]="catNombreIndicadorMIRR"
+          [catIndicadorPIR]="catIndicadorPIR"
+          [catObjetivosPrioritarioR]="catObjetivosPrioritarioR"
+          [catContinuidadOtrosProductosAnhosAnterioresR]="
+            catContinuidadOtrosProductosAnhosAnterioresR
+          "
+          [catAnhoPublicarR]="catAnhoPublicarR"
+          [catNivelEducativoR]="catNivelEducativoR"
+        ></app-products>
+        <app-modify-product
+          *ngIf="
+            steps.products && actived.products == modificationType.modificacion
+          "
+          [catCategoriaR]="catCategoriaR"
+          [catTipoProductoR]="catTipoProductoR"
+          [catNombreIndicadorMIRR]="catNombreIndicadorMIRR"
+          [catIndicadorPIR]="catIndicadorPIR"
+          [catObjetivosPrioritarioR]="catObjetivosPrioritarioR"
+          [catContinuidadOtrosProductosAnhosAnterioresR]="
+            catContinuidadOtrosProductosAnhosAnterioresR
+          "
+          [catAnhoPublicarR]="catAnhoPublicarR"
+          [catNivelEducativoR]="catNivelEducativoR"
+        ></app-modify-product>
+        <app-cancelation
+          *ngIf="
+            steps.products && actived.products == modificationType.cancelacion
+          "
+          [modificationType]="'product'"
+          [questions]="cancelationQuestions.products"
+        ></app-cancelation>
+      </form>
+    </mat-step>
+
+    <mat-step id="actions" *ngIf="checkIfSwitchIsEnabled('Acciones')">
+      <form>
+        <ng-template matStepLabel>Acciones</ng-template>
+        <app-altern-switch
+          [switch]="getSwitchFromType('Acciones')"
+          [tipoAdecuacion]="tipoAdecuacion"
+          (changeModification)="actived.actions = $event"
+        ></app-altern-switch>
+        <app-actions
+          *ngIf="steps.actions && actived.actions == modificationType.alta"
+          [catCategoriaR]="catCategoriaR"
+          [catNivelEducativoR]="catNivelEducativoR"
+          [catTipoProductoR]="catTipoProductoR"
+        ></app-actions>
+        <app-modify-action
+          *ngIf="
+            steps.actions && actived.actions == modificationType.modificacion
+          "
+          [catCategoriaR]="catCategoriaR"
+          [catNivelEducativoR]="catNivelEducativoR"
+          [catTipoProductoR]="catTipoProductoR"
+        ></app-modify-action>
+        <app-cancelation
+          *ngIf="
+            steps.actions && actived.actions == modificationType.cancelacion
+          "
+          [modificationType]="'actions'"
+          [questions]="cancelationQuestions.actions"
+        ></app-cancelation>
+      </form>
+    </mat-step>
+
+    <mat-step id="budges" *ngIf="checkIfSwitchIsEnabled('Presupuesto')">
+      <ng-template matStepLabel>Presupuesto</ng-template>
+      <app-altern-switch
+        [switch]="getSwitchFromType('Presupuesto')"
+        [tipoAdecuacion]="tipoAdecuacion"
+        (changeModification)="actived.budgets = $event"
+      ></app-altern-switch>
+      <app-budgets
+        *ngIf="steps.budges && actived.budgets == modificationType.alta"
+      ></app-budgets>
+      <app-modify-budgets
+        *ngIf="steps.budges && actived.budgets == modificationType.modificacion"
+      ></app-modify-budgets>
+
+      <app-cancelation-budgets
+        *ngIf="steps.budges && actived.budgets == modificationType.cancelacion"
+      ></app-cancelation-budgets>
+
+      <!-- COMMENT: queda en espera para una futura integración, por ahora esta funcionalidad se agrupa en el componente de MODIFICACION -->
+      <app-budgets-arr
+        *ngIf="steps.budges && actived.budgets == modificationType.ampliacion"
+      ></app-budgets-arr>
+      <app-budgets-arr
+        *ngIf="steps.budges && actived.budgets == modificationType.reduccion"
+      ></app-budgets-arr>
+      <app-budgets-arr
+        *ngIf="steps.budges && actived.budgets == modificationType.reintegro"
+      ></app-budgets-arr>
+      <app-budgets-traspaso
+        *ngIf="steps.budges && actived.budgets == modificationType.traspaso"
+      ></app-budgets-traspaso>
+    </mat-step>
+  </mat-vertical-stepper>
+
+  <div
+    class="action-buttons"
+    style="margin-bottom: -10px; margin-top: 20px"
+    *ngIf="checkIfSomeSwitchIsEnabled()"
+  >
+    <button
+      type="button"
+      [disabled]="!showBtnFinalizar()"
+      mat-flat-button
+      color="add"
+      (click)="changeStatusAdecuacion('finalizar')"
+    >
+      <mat-spinner
+        *ngIf="submitingFinalize"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!submitingFinalize">Finalizar Solicitud</span>
+    </button>
+    <button
+      type="button"
+      [disabled]="!showBtnRevision()"
+      mat-flat-button
+      class="btn-left"
+      color="primary"
+      (click)="changeStatusAdecuacion('revision')"
+    >
+      <mat-spinner
+        *ngIf="submitingRevision"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!submitingRevision">Enviar a Revisión</span>
+    </button>
+  </div>
+
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    [ariaLabel]="'Visualizar'"
+    [maxWidthActions]="'280px'"
+    [minWidth]="1200"
+    (action)="onTableAction($event)"
+    (update)="consultaPorFiltros()"
+  >
+  </app-mat-custom-table>
+</section>

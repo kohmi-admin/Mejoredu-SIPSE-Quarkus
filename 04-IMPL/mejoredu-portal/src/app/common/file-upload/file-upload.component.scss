@@ -1,0 +1,107 @@
+.file-drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all linear 0.2s;
+  background: rgba(1, 1, 1, 0);
+  &.blur {
+    backdrop-filter: blur(10px);
+  }
+}
+
+.file-drop-area-small {
+  width: 200px !important;
+  padding: 1px !important;
+}
+
+.text-drop-area-small {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 12px;
+}
+
+.hide {
+  display: none;
+}
+
+.file-drop-area.drag-over {
+  background: rgba(1, 1, 1, 0.04);
+  border-color: var(--primary-color);
+}
+
+.files {
+  text-align: center;
+}
+
+.w-file {
+  width: 100%;
+  height: 40px;
+  padding: 10px 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-bottom: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.file {
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(
+    to bottom,
+    rgb(235, 235, 235),
+    rgb(246, 246, 246)
+  );
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px 8px;
+  text-overflow: ellipsis;
+  justify-content: center;
+  box-shadow: 0px 5px 12px 2px rgba(0, 0, 0, 0.08);
+  .text,
+  .delete {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .text {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    padding-left: 13px;
+    padding-right: 5px;
+    text-overflow: ellipsis;
+    border-radius: 8px 0 0 8px;
+    justify-content: flex-start;
+    border: solid 1px rgba(1, 1, 1, 0.122);
+    border-right-width: 0;
+    span {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+  }
+  .delete {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    cursor: pointer;
+    min-height: 40px;
+    background: #eb6c744c;
+    color: rgb(124, 7, 7);
+    border-radius: 0 8px 8px 0;
+    transition: background linear 0.2s;
+    border: solid 1px rgba(124, 7, 7, 0.3);
+    &:hover {
+      background: #eb6c7567;
+    }
+  }
+}

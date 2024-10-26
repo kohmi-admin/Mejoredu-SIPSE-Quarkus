@@ -1,0 +1,71 @@
+<section class="tbl-expensive">
+  <table style="margin-bottom: var(--border-middle)">
+    <thead>
+      <tr>
+        <th colspan="14">Clave y Nombre de la Actividad</th>
+      </tr>
+      <tr>
+        <th>Estatus</th>
+        <th>Total</th>
+        <th>Enero</th>
+        <th>Febrero</th>
+        <th>Marzo</th>
+        <th>Abril</th>
+        <th>Mayo</th>
+        <th>Junio</th>
+        <th>Julio</th>
+        <th>Agosto</th>
+        <th>Septiembre</th>
+        <th>Octubre</th>
+        <th>Noviembre</th>
+        <th>Diciembre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of budgetCalendar">
+        <td>
+          {{ item.status }}
+        </td>
+        <td>
+          {{ item.total | currency }}
+        </td>
+        <td>
+          {{ item.january | currency }}
+        </td>
+        <td>
+          {{ item.february | currency }}
+        </td>
+        <td>
+          {{ item.march | currency }}
+        </td>
+        <td>
+          {{ item.april | currency }}
+        </td>
+        <td>
+          {{ item.may | currency }}
+        </td>
+        <td>
+          {{ item.june | currency }}
+        </td>
+        <td>
+          {{ item.july | currency }}
+        </td>
+        <td>
+          {{ item.august | currency }}
+        </td>
+        <td>
+          {{ item.september | currency }}
+        </td>
+        <td>
+          {{ item.october | currency }}
+        </td>
+        <td>
+          {{ item.november | currency }}
+        </td>
+        <td>
+          {{ item.december | currency }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

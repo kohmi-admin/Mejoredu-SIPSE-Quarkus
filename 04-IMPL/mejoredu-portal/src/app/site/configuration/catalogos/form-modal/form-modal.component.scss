@@ -1,0 +1,11 @@
+.form {
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  margin-bottom: -45px !important;
+  border: solid var(--border-middle) transparent;
+}
+
+[mat-dialog-actions] {
+    margin-bottom: 12px;
+}

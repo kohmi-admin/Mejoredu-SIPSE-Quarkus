@@ -1,0 +1,1023 @@
+id_catalogo,cd_opcion,cc_externa,df_baja,cve_usuario,id_catalogo_padre,cd_descripcionDos,cc_externaDos,LOCK_FLAG
+1,"Catalogo Articulacion Actividad",1,NULL,superusuario,NULL,NULL,NULL,NULL
+2,"Elaborar sugerencias de elementos que contribuyan a la mejora de la educación inicial, para fortalecer el enfoque de educación inclusiva",110,NULL,superusuario,1,NULL,NULL,NULL
+3,"Elaborar sugerencias de elementos que contribuyan a la mejora de los planes y programas de estudio de EMS, para fortalecer el enfoque de educación inclusiva",120,NULL,superusuario,1,NULL,NULL,NULL
+4,"Elaborar sugerencias de elementos que contribuyan a la mejora de los planes y programas de estudio de educación básica para favorecer la atención de las personas, pueblos y comunidades indígenas desde un enfoque de educación inclusiva",130,NULL,superusuario,1,NULL,NULL,NULL
+5,"Elaborar lineamientos para la mejora de las escuelas de educación básica",140,NULL,superusuario,1,NULL,NULL,NULL
+6,"Elaborar lineamientos para la mejora de los planteles escolares de educación media superior",150,NULL,superusuario,1,NULL,NULL,NULL
+7,"Elaborar sugerencias de elementos que contribuyan a la mejora de los planes y programas de estudio de EB, para fortalecer el enfoque de educación inclusiva",160,NULL,superusuario,1,NULL,NULL,NULL
+8,"Gestionar la difusión en medios institucionales",170,NULL,superusuario,1,NULL,NULL,NULL
+9,"Diseñar materiales para la difusión de productos institucionales",180,NULL,superusuario,1,NULL,NULL,NULL
+10,"Coordinar el funcionamiento del Comité Editorial de la Comisión",190,NULL,superusuario,1,NULL,NULL,NULL
+11,"Gestionar el programa editorial anual ",200,NULL,superusuario,1,NULL,NULL,NULL
+12,"Gestionar el Centro de Documentación",210,NULL,superusuario,1,NULL,NULL,NULL
+13,"Elaborar un repositorio digital de materiales educativos en educación básica y media superior",220,NULL,superusuario,1,NULL,NULL,NULL
+14,"Elaborar estrategias de apoyo pedagógico para Educación Media Superior",230,NULL,superusuario,1,NULL,NULL,NULL
+15,"Implementar la estrategia para la definición de indicadores educativos clave",240,NULL,superusuario,1,NULL,NULL,NULL
+16,"Determinar indicadores para el seguimiento de los avances del Sistema Educativo Nacional",250,NULL,superusuario,1,NULL,NULL,NULL
+17,"Realizar análisis estadísticos por temas prioritarios ",260,NULL,superusuario,1,NULL,NULL,NULL
+18,"Desarrollar el proyecto gobierno y administración de datos en apoyo a los procesos de segumiento a la mejora continua de la educación",270,NULL,superusuario,1,NULL,NULL,NULL
+19,"Coordinar la gestión interna",280,NULL,superusuario,1,NULL,NULL,NULL
+20,"Desarrollar herramientas de apoyo para el seguimiento de la mejora continua de la educación",290,NULL,superusuario,1,NULL,NULL,NULL
+21,"No aplica",300,NULL,superusuario,1,NULL,NULL,NULL
+22,"Catálogo de Tipo de Producto",2,NULL,superusuario,NULL,NULL,NULL,NULL
+23,Intermedio,110,NULL,superusuario,22,NULL,NULL,NULL
+24,Final,120,NULL,superusuario,22,NULL,NULL,NULL
+25,Periódico,130,NULL,superusuario,22,NULL,NULL,NULL
+26,"Catalogo Tipo de Producto Intermedio",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+27,"Acta de sesión",110,NULL,Superusuario,26,NULL,NULL,NULL
+28,"Agenda de visitas a los estados",120,NULL,Superusuario,26,NULL,NULL,NULL
+29,"Base de datos",130,NULL,Superusuario,26,NULL,NULL,NULL
+30,"Bases de datos",140,NULL,Superusuario,26,NULL,NULL,NULL
+31,Boletín,150,NULL,Superusuario,26,NULL,NULL,NULL
+32,Catálogo,160,NULL,Superusuario,26,NULL,NULL,NULL
+33,"Categorías de análisis",170,NULL,Superusuario,26,NULL,NULL,NULL
+34,Contrato,180,NULL,Superusuario,26,NULL,NULL,NULL
+35,Convenio,190,NULL,Superusuario,26,NULL,NULL,NULL
+36,"Criterios operativos",200,NULL,Superusuario,26,NULL,NULL,NULL
+37,Diagnóstico,210,NULL,Superusuario,26,NULL,NULL,NULL
+38,"Estrategias de apoyo pedagógico",220,NULL,Superusuario,26,NULL,NULL,NULL
+39,"Experiencias de las comunidades educativas",230,NULL,Superusuario,26,NULL,NULL,NULL
+40,Folleto,240,NULL,Superusuario,26,NULL,NULL,NULL
+41,"Informe de diseño de materiales o instrumentos",250,NULL,Superusuario,26,NULL,NULL,NULL
+42,"Informe de evento",260,NULL,Superusuario,26,NULL,NULL,NULL
+43,"Informe de pilotaje de instrumentos",270,NULL,Superusuario,26,NULL,NULL,NULL
+44,"Informe de visitas estatales",280,NULL,Superusuario,26,NULL,NULL,NULL
+45,"Informe de resultados de servicios brindados",290,NULL,Superusuario,26,NULL,NULL,NULL
+46,"Informe para entidades externas",300,NULL,Superusuario,26,NULL,NULL,NULL
+47,"Marco conceptual y/o metodológico",310,NULL,Superusuario,26,NULL,NULL,NULL
+48,Memoria,320,NULL,Superusuario,26,NULL,NULL,NULL
+49,"Memoria de evento",330,NULL,Superusuario,26,NULL,NULL,NULL
+50,Metodología,340,NULL,Superusuario,26,NULL,NULL,NULL
+51,"Propuesta de material o instrumento",350,NULL,Superusuario,26,NULL,NULL,NULL
+52,Talleres,360,NULL,Superusuario,26,NULL,NULL,NULL
+53,"Terminos de referencia",370,NULL,Superusuario,26,NULL,NULL,NULL
+54,Otro,380,NULL,Superusuario,26,NULL,NULL,NULL
+55,"Catalogo Tipo de Producto Final",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+56,Criterios,110,NULL,Superusuario,55,NULL,NULL,NULL
+57,"Criterios de operación",120,NULL,Superusuario,55,NULL,NULL,NULL
+58,"Criterios de regulación institucional",130,NULL,Superusuario,55,NULL,NULL,NULL
+59,"Cuaderno Estadístico",140,NULL,Superusuario,55,NULL,NULL,NULL
+60,"Documento de fortalecimiento institucional",150,NULL,Superusuario,55,NULL,NULL,NULL
+61,Estatuto,160,NULL,Superusuario,55,NULL,NULL,NULL
+62,Estrategia,170,NULL,Superusuario,55,NULL,NULL,NULL
+63,"Estrategia institucional",180,NULL,Superusuario,55,NULL,NULL,NULL
+64,Estudio,190,NULL,Superusuario,55,NULL,NULL,NULL
+65,Evaluación,200,NULL,Superusuario,55,NULL,NULL,NULL
+66,Indicadores,210,NULL,Superusuario,55,NULL,NULL,NULL
+67,"Informe de publicaciones",220,NULL,Superusuario,55,NULL,NULL,NULL
+68,"Informe de resultados",230,NULL,Superusuario,55,NULL,NULL,NULL
+69,"Informe de seguimiento de convenios",240,NULL,Superusuario,55,NULL,NULL,NULL
+70,"Informe de seguimiento y mejora",250,NULL,Superusuario,55,NULL,NULL,NULL
+71,"Intervención formativa",260,NULL,Superusuario,55,NULL,NULL,NULL
+72,Investigación,270,NULL,Superusuario,55,NULL,NULL,NULL
+73,Lineamientos,280,NULL,Superusuario,55,NULL,NULL,NULL
+74,"Marco rector",290,NULL,Superusuario,55,NULL,NULL,NULL
+75,"Material prototipo",300,NULL,Superusuario,55,NULL,NULL,NULL
+76,"Modelo Interno",310,NULL,Superusuario,55,NULL,NULL,NULL
+77,"Orientaciones finales",320,NULL,Superusuario,55,NULL,NULL,NULL
+78,"Padrón nacional",330,NULL,Superusuario,55,NULL,NULL,NULL
+79,Plan,340,NULL,Superusuario,55,NULL,NULL,NULL
+80,"Plan o programa institucional",350,NULL,Superusuario,55,NULL,NULL,NULL
+81,"Política institucional",360,NULL,Superusuario,55,NULL,NULL,NULL
+82,"Procedimiento Institucional",370,NULL,Superusuario,55,NULL,NULL,NULL
+83,Programa,380,NULL,Superusuario,55,NULL,NULL,NULL
+84,"Programa de trabajo",390,NULL,Superusuario,55,NULL,NULL,NULL
+85,"Programa Editorial Anual",400,NULL,Superusuario,55,NULL,NULL,NULL
+86,Protocolo,410,NULL,Superusuario,55,NULL,NULL,NULL
+87,"Sistema Tecnológico",420,NULL,Superusuario,55,NULL,NULL,NULL
+88,Sugerencias,430,NULL,Superusuario,55,NULL,NULL,NULL
+89,Otro,440,NULL,Superusuario,55,NULL,NULL,NULL
+90,"Catalogo Tipo de Producto Periódico",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+91,"Informe de gestión",110,NULL,Superusuario,90,NULL,NULL,NULL
+92,"Informe de seguimiento",120,NULL,Superusuario,90,NULL,NULL,NULL
+93,"Reporte de avances",130,NULL,Superusuario,90,NULL,NULL,NULL
+94,"Reporte del avance de documentos",140,NULL,Superusuario,90,NULL,NULL,NULL
+95,Otro,150,NULL,Superusuario,90,NULL,NULL,NULL
+96,"Catalogo Estatus de Producto",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+97,Elaborado,110,NULL,Superusuario,96,NULL,NULL,NULL
+98,"Aprobado por Junta Directiva",120,NULL,Superusuario,96,NULL,NULL,NULL
+99,"Difundido (internamente)",130,NULL,Superusuario,96,NULL,NULL,NULL
+100,"Publicado (en internet, DOF, con ISBN)",140,NULL,Superusuario,96,NULL,NULL,NULL
+101,"Catalogo Tipo/Nivel Educativo",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+102,Inicial,13,NULL,Superusuario,101,NULL,NULL,NULL
+103,Preescolar,14,NULL,Superusuario,101,NULL,NULL,NULL
+104,Primaria,15,NULL,Superusuario,101,NULL,NULL,NULL
+105,Secundaria,16,NULL,Superusuario,101,NULL,NULL,NULL
+106,Básica,17,NULL,Superusuario,101,NULL,NULL,NULL
+107,"Media Superior",18,NULL,Superusuario,101,NULL,NULL,NULL
+108,"Básica y Medio Superior",19,NULL,Superusuario,101,NULL,NULL,NULL
+109,Otro,20,NULL,Superusuario,101,NULL,NULL,NULL
+110,"No Aplica",36,NULL,Superusuario,101,NULL,NULL,NULL
+111,"Otros Servicios Educativos y Actividades Inherentes",37,NULL,Superusuario,101,NULL,NULL,NULL
+112,"Catalogo Campo de acción preponderante al que va dirigido",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+113,"Trabajo docente",10,NULL,Superusuario,112,NULL,NULL,NULL
+114,"Formación continua y desarrollo profesional docente",20,NULL,Superusuario,112,NULL,NULL,NULL
+115,"Participación estudiantil",30,NULL,Superusuario,112,NULL,NULL,NULL
+116,"Participación social",40,NULL,Superusuario,112,NULL,NULL,NULL
+117,"Diseño curricular",50,NULL,Superusuario,112,NULL,NULL,NULL
+118,"Desarrollo de materiales educativos",60,NULL,Superusuario,112,NULL,NULL,NULL
+119,"Gestión educativa y escolar",70,NULL,Superusuario,112,NULL,NULL,NULL
+120,Otros,80,NULL,Superusuario,112,NULL,NULL,NULL
+121,"Catalogo Actor educativo preponderante",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+122,Estudiantes,10,NULL,Superusuario,121,NULL,NULL,NULL
+123,"Maestras y maestros",20,NULL,Superusuario,121,NULL,NULL,NULL
+124,"Autoridades escolares",30,NULL,Superusuario,121,NULL,NULL,NULL
+125,"Madres, padres de familia y tutores",40,NULL,Superusuario,121,NULL,NULL,NULL
+126,"Personal de acompañamiento y apoyo pedagógico",50,NULL,Superusuario,121,NULL,NULL,NULL
+127,"Profesoras y profesores formadores de docentes. Maestros y maestras de educación superior",60,NULL,Superusuario,121,NULL,NULL,NULL
+128,"Autoridades educativas estatales",70,NULL,Superusuario,121,NULL,NULL,NULL
+129,"Autoridades educativas federales",80,NULL,Superusuario,121,NULL,NULL,NULL
+130,"Catalogo Ámbito de participación y responsabilidad",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+131,Escuela,10,NULL,Superusuario,130,NULL,NULL,NULL
+132,"Zona escolar",20,NULL,Superusuario,130,NULL,NULL,NULL
+133,"Sector escolar",30,NULL,Superusuario,130,NULL,NULL,NULL
+134,"Sistema educativo estatal",40,NULL,Superusuario,130,NULL,NULL,NULL
+135,"Sistema Educativo Nacional",50,NULL,Superusuario,130,NULL,NULL,NULL
+136,"Catalogo Continuidad con otros productos de años anteriores",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+137,"¡Hagamos comunidad! Estrategias de apoyo pedagógico EB",10,NULL,Superusuario,136,NULL,NULL,NULL
+138,"¡Hagamos comunidad! Estrategias de apoyo pedagógico EMS",20,NULL,Superusuario,136,NULL,NULL,NULL
+139,"Apartados introductorios y normatividad de los procesos de selección para la admisión, promoción y reconocimiento en educación básica y media superior ",30,NULL,Superusuario,136,NULL,NULL,NULL
+140,"Avanzar en la implementación del Sistema de monitoreo de políticas y programas educativos en las escuelas",40,NULL,Superusuario,136,NULL,NULL,NULL
+141,"Comunidades escolares al inicio del confinamiento por SARS-CoV-2.
+Cuaderno de Investigación Educativa
+Voces y perspectivas de los actores
+Informe ejecutivo",50,NULL,Superusuario,136,NULL,NULL,NULL
+142,"Convenio de colaboración Mejoredu-SE Gobierno de Veracruz",60,NULL,Superusuario,136,NULL,NULL,NULL
+143,"Convenio general de colaboración Conalep-Mejoredu",70,NULL,Superusuario,136,NULL,NULL,NULL
+144,"Convenio general de colaboración SEPEN Nayarit-Mejoredu",80,NULL,Superusuario,136,NULL,NULL,NULL
+145,"Convenio Mejoredu-Conafe",90,NULL,Superusuario,136,NULL,NULL,NULL
+146,"Convenio Mejoredu-IFOPIM Estado de México",100,NULL,Superusuario,136,NULL,NULL,NULL
+147,"CRITERIOS Generales de los programas de formación continua y desarrollo profesional docente, y para la valoración de su diseño, operación y resultados en educación básica y media superior. CGPFCDPD-2021.",110,NULL,Superusuario,136,NULL,NULL,NULL
+148,"Definiciones fundamentales para la evaluación diagnóstica",120,NULL,Superusuario,136,NULL,NULL,NULL
+149,"Desarrollar investigación sobre la participación estudiantil en educación media superior. Informe final",130,NULL,Superusuario,136,NULL,NULL,NULL
+150,"Desarrollar investigación sobre la violencia escolar en educación secundaria. Informe final",140,NULL,Superusuario,136,NULL,NULL,NULL
+151,"Desarrollar la estrategia de evaluación integral de la educación básica y media superior Informe Final",150,NULL,Superusuario,136,NULL,NULL,NULL
+152,"Desarrollar la estrategia interinstitucional para el desarrollo estudios, investigaciones especializadas y evaluaciones educativas",160,NULL,Superusuario,136,NULL,NULL,NULL
+153,"Desarrollar la Red de apoyo a la evaluación y la investigación educativa con autoridades educativas estatales",170,NULL,Superusuario,136,NULL,NULL,NULL
+154,"Docentes que leen y escriben.
+La lectura y la escritura en 1° y 2° grados de educación primaria",180,NULL,Superusuario,136,NULL,NULL,NULL
+155,"El sentido de la tarea docente en tiempos de contingencia. Educación básica.
+Talleres emergentes de formación docente. Itinerarios para el reencuentro",190,NULL,Superusuario,136,NULL,NULL,NULL
+156,"Enseñanza y aprendizaje en tiempos de contingencia. Educación media superior.
+Talleres emergentes de formación docente. Itinerarios para el reencuentro",200,NULL,Superusuario,136,NULL,NULL,NULL
+157,"Estrategias, prototipos y recursos para la formación y desarrollo profesional de los actores educativos. Orientaciones de política educativa.",210,NULL,Superusuario,136,NULL,NULL,NULL
+158,"Estudio exploratorio sobre la evaluación de aprendizajes básicos de los estudiantes de educación indígena y multigrado, considerando sus contextos socioculturales. Informe final (Documento interno)",220,NULL,Superusuario,136,NULL,NULL,NULL
+159,"Estudio sobre la implementación de modelos híbridos de enseñanza y aprendizaje en la educación primaria. Informe final",230,NULL,Superusuario,136,NULL,NULL,NULL
+160,"Evaluación diagnóstica de escuelas. Modelo de evaluación diagnóstica para la mejora de las escuelas, sus recursos y procesos escolares (MERPE)",240,NULL,Superusuario,136,NULL,NULL,NULL
+161,"Experiencias de las comunidades educativas durante la contingencia sanitaria por covid-19.
+Educación Básica. (Documento Informe Ejecutivo)",250,NULL,Superusuario,136,NULL,NULL,NULL
+162,"Experiencias de las comunidades educativas durante la contingencia sanitaria por covid-19.
+Educación Media Superior. Cuaderno de Investigación Educativa",260,NULL,Superusuario,136,NULL,NULL,NULL
+163,"Indicadores Estatales de la mejora continua de la educación
+32 cuadernos (Quintana Roo, Sonora, Sinaloa, Tabasco, Tamaulipas, San Luis Potosí, Querétaro, Yucatán, Puebla, Oaxaca, Morelos, Zacatecas, Nuevo León, Nayarit, Michoacán, México, Jalisco, Hidalgo, Guerrero, Guanajuato, Durango, Colima, Coahuila, Chihuahua, Veracruz, Tlaxcala, Ciudad de México, Chiapas, Campeche, Baja California Sur, Baja California y Aguascalientes)",270,NULL,Superusuario,136,NULL,NULL,NULL
+164,"Indicadores nacionales de la mejora continua de la educación en México 2021. Cifras del ciclo escolar 2019-2020",280,NULL,Superusuario,136,NULL,NULL,NULL
+165,"Índice de capacidades institucionales en materia de formación continua de docentes de educación básica Informe de la consulta sobre las características, funcionamiento y retos de las áreas estatales de formación continua",290,NULL,Superusuario,136,NULL,NULL,NULL
+166,"Informe de los programas y opciones de formación continuapara docentes de educación básica 2021",300,NULL,Superusuario,136,NULL,NULL,NULL
+167,"Informe del Foro Temático “La educación al alcance de todas y todos los niños, niñas y adolescentes (NNA) migrantes: desafíos y alternativas""",310,NULL,Superusuario,136,NULL,NULL,NULL
+168,"Informe final de la evaluación diagnóstica de aprendizaje de los estudiantes",320,NULL,Superusuario,136,NULL,NULL,NULL
+169,"Informe final para la evaluación diagnóstica del trabajo docente",330,NULL,Superusuario,136,NULL,NULL,NULL
+170,"INFORME FINAL USAER Evaluación diagnóstica del proceso de atención de la USAER en escuelas primarias",340,NULL,Superusuario,136,NULL,NULL,NULL
+171,"Informe preliminar del desarrollo del modelo de evaluación diagnóstica del trabajo docente",350,NULL,Superusuario,136,NULL,NULL,NULL
+172,"Intervención formativa Fase I. Del tránsito de docente en formación a docente en servicio
+La inserción como proceso formativo para la mejora de la práctica docente. EB",360,NULL,Superusuario,136,NULL,NULL,NULL
+173,"Intervención formativa Fase I. Inserción de directivos en su primer año de servicio EMS",370,NULL,Superusuario,136,NULL,NULL,NULL
+174,"Intervención formativa Fase I. Inserción de docentes en su primer año de servicio EMS",380,NULL,Superusuario,136,NULL,NULL,NULL
+175,"Intervención formativa. Fase I
+Del tránsito de docente a director escolar
+La inserción como proceso formativo para la mejora de la práctica directiva",390,NULL,Superusuario,136,NULL,NULL,NULL
+176,"Investigación sobre características y trayectorias profesionales de directores y figuras académicas de apoyo en la Educación Media Superior. Informe final",400,NULL,Superusuario,136,NULL,NULL,NULL
+177,"Investigación sobre las características, trayectorias y condiciones de los agentes educativos de los servicios de educación inicial. Informe final",410,NULL,Superusuario,136,NULL,NULL,NULL
+178,"La Formación Continua y el Desarrollo Profesional Docente en el Contexto de Nuevas Normalidades.
+Ciclo Iberoamericano de Encuentros con Especialistas",420,NULL,Superusuario,136,NULL,NULL,NULL
+179,"La violencia entre estudiantes de educación básica y media superior en México. (Cuaderno de Investigación Educativa) (Informe Ejecutivo)",430,NULL,Superusuario,136,NULL,NULL,NULL
+180,"Liderazgo directivo en tiempos de contingencia. Educación básica.
+Talleres emergentes de formación docente. Itinerarios para el reencuentro",440,NULL,Superusuario,136,NULL,NULL,NULL
+181,"Lineamientos para fortalecer el desarrollo profesional de directores escolares durante su proceso de inserción a las escuelas de educación básica. (Versión para revisión)",450,NULL,Superusuario,136,NULL,NULL,NULL
+182,"Lineamientos para Fortalecer el Desarrollo Profesional de Docentes durante su Proceso de Inserción a las Escuelas de Educación Básica. (Versión para revisión)",460,NULL,Superusuario,136,NULL,NULL,NULL
+183,"Lineamientos para la mejora de las competencias para la gestión y el liderazgo en los procesos de inserción a la dirección escolar en la EMS. Versión preliminar",470,NULL,Superusuario,136,NULL,NULL,NULL
+184,"Lineamientos para la mejora del proceso de inserción a la docencia y a la función directiva. Educación básica",480,NULL,Superusuario,136,NULL,NULL,NULL
+185,"Lineamientos para la mejora del proceso de inserción a la docencia y a la función directiva. Educación media superior",490,NULL,Superusuario,136,NULL,NULL,NULL
+186,"LINEAMIENTOS para la Mejora e Innovación en Materiales educativos: Libros de Texto Gratuitos de preescolar, primaria y telesecundaria. Versión preliminar",500,NULL,Superusuario,136,NULL,NULL,NULL
+187,"Los equipos directivos en tiempos de contingencia. Educación media superior.
+Talleres emergentes de formación docente. Itinerarios para el reencuentro",510,NULL,Superusuario,136,NULL,NULL,NULL
+188,"Mi inicio en la docencia. Educación básica",520,NULL,Superusuario,136,NULL,NULL,NULL
+189,"Mi inicio en la docencia. Educación media superior",530,NULL,Superusuario,136,NULL,NULL,NULL
+190,"Modelo de evaluación de centros escolares de Educación Media Superior (Documento en desarrollo)",540,NULL,Superusuario,136,NULL,NULL,NULL
+191,"Modelo de Evaluación Diagnóstica de Docentes (Marco de referencia. Documento en desarrollo)",550,NULL,Superusuario,136,NULL,NULL,NULL
+192,"Modelo interno para el monitoreo de los Criterios, lineamientos y programas de Formación continua y Desarrollo profesional docente que emita la MEJOREDU",560,NULL,Superusuario,136,NULL,NULL,NULL
+193,"Modelo interno para la elaboración de programas de formación continua y desarrollo profesional docente. Educación básica y media superior",570,NULL,Superusuario,136,NULL,NULL,NULL
+194,"Modelo interno para la formulación de sugerencias para la mejora de la educación inicial, básica, media superior, inclusiva y de adultos. (borrador)",580,NULL,Superusuario,136,NULL,NULL,NULL
+195,"Modelo para el desarrollo de materiales prototipo para la mejora de continua de la educación (preeliminar)",590,NULL,Superusuario,136,NULL,NULL,NULL
+196,"Modelo para el desarrollo de procesos de monitoreo de la implementación de criterios, lineamientos y programas de formación continua y desarrollo profesional docente. (Documento de trabajo).",600,NULL,Superusuario,136,NULL,NULL,NULL
+197,"Modelo para el diseño y emisión de programas de formación continua y desarrollo profesional de docentes",610,NULL,Superusuario,136,NULL,NULL,NULL
+198,"Modelo para el diseño y emisión de programas de formación continua y desarrollo profesional de docentes Versión para revisar ",620,NULL,Superusuario,136,NULL,NULL,NULL
+199,"Padrón nacional de la oferta de formación continua de docentes marco conceptual y metodológico",630,NULL,Superusuario,136,NULL,NULL,NULL
+200,"Percepciones, prácticas y determinantes sociales. Informe final.",640,NULL,Superusuario,136,NULL,NULL,NULL
+201,"PLAN DE MEJORA DE LA FORMACIÓN CONTINUA Y DESARROLLO PROFESIONAL DOCENTE 2021 – 2026",650,NULL,Superusuario,136,NULL,NULL,NULL
+202,"Programa de formación para la inserción de directivos 2021-2026 EMS",660,NULL,Superusuario,136,NULL,NULL,NULL
+203,"Programa de formación para la inserción de directores 2021-2026 EB",670,NULL,Superusuario,136,NULL,NULL,NULL
+204,"Programa de formación para la inserción de docentes 2021-2026 EB",680,NULL,Superusuario,136,NULL,NULL,NULL
+205,"Programa de formación para la inserción de docentes 2021-2026 EMS",690,NULL,Superusuario,136,NULL,NULL,NULL
+206,"PROGRAMA DE FORMACIÓN SITUADA DE DIRECTIVOS EN SERVICIO EDUCACIÓN BÁSICA",700,NULL,Superusuario,136,NULL,NULL,NULL
+207,"PROGRAMA DE FORMACIÓN SITUADA DE DIRECTIVOS EN SERVICIO EDUCACIÓN MEDIA SUPERIOR",710,NULL,Superusuario,136,NULL,NULL,NULL
+208,"PROGRAMA DE FORMACIÓN SITUADA DE DOCENTES EN SERVICIO 2021-2026 EDUCACIÓN MEDIA SUPERIOR",720,NULL,Superusuario,136,NULL,NULL,NULL
+209,"PROGRAMA DE FORMACIÓN SITUADA DE DOCENTES EN SERVICIO
+EDUCACIÓN BÁSICA",730,NULL,Superusuario,136,NULL,NULL,NULL
+210,"Realizar estudio sobre condiciones institucionales para el trabajo colaborativo y la formación situada de docentes en educación básica y media superior",740,NULL,Superusuario,136,NULL,NULL,NULL
+211,"Realizar investigación sobre los docentes en educación media superior: características, diversidad y condiciones de trabajo",750,NULL,Superusuario,136,NULL,NULL,NULL
+212,"Redes para el desarrollo profesional docente. Documento de trabajo.",760,NULL,Superusuario,136,NULL,NULL,NULL
+213,"Repensar la evaluación para la mejora educativa.
+Resultados de México en PISA 2018
+Resultados de evaluaciones, diagnósticas, formativas e integrales",770,NULL,Superusuario,136,NULL,NULL,NULL
+214,"Repositorio de materiales educativos",780,NULL,Superusuario,136,NULL,NULL,NULL
+215,"segundo Ciclo Iberoamericano de Encuentros con Especialistas denominado, “Un paso delante de la educación remota de emergencia: repensar el sentido de las tecnologías, la escuela y la formación docente”",790,NULL,Superusuario,136,NULL,NULL,NULL
+216,"Sugerencias de elementos para la mejora de plan y programas de estudio de educación básica: análisis y propuestas en torno a los contenidos curriculares",800,NULL,Superusuario,136,NULL,NULL,NULL
+217,"Sugerencias de elementos para la mejora del Marco Curricular Común de Educación Media Superior",810,NULL,Superusuario,136,NULL,NULL,NULL
+218,"Sugerencias para la educación inicial: hacia la concreción de un derecho",820,NULL,Superusuario,136,NULL,NULL,NULL
+219,"Sugerencias para la mejora de los planes y programas de estudio de educación básica para favorecer la atención educativa de pueblos y comunidades indígenas",830,NULL,Superusuario,136,NULL,NULL,NULL
+220,"Talleres emergentes de formación docente. Itinerarios para el reencuentro. Arte, educación y emociones
+ EB y EMS",840,NULL,Superusuario,136,NULL,NULL,NULL
+221,"Talleres emergentes de formación docente. Itinerarios para el reencuentro.
+Sistematización de la experiencia educativa. Educación básica y educación media superior. ",850,NULL,Superusuario,136,NULL,NULL,NULL
+222,"Tercer Convenio Específico al Convenio Marco de Colaboración MEJOREDU/DGAJ/CV/2020/03 celebrado entre Mejoredu y la Organización de Estados Iberoamericanos para la Educación, la Ciencia y la Cultura.",860,NULL,Superusuario,136,NULL,NULL,NULL
+223,"No aplica",870,NULL,Superusuario,136,NULL,NULL,NULL
+224,"Catalogo Centros de costo",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+225,"Junta Directiva",1100P16,NULL,Superusuario,224,"1100P16 Junta Directiva",12,NULL
+226,"Secretaría Ejecutiva",1200P16,NULL,Superusuario,224,"1200P16 Secretaría Ejecutiva",13,NULL
+227,"Administración y Finanzas",1210M01,NULL,Superusuario,224,"1210M01 Administración y Finanzas",14,NULL
+228,"Evaluación Diagnóstica",2100P16,NULL,Superusuario,224,"2100P16 Evaluación Diagnóstica",15,NULL
+229,"Apoyo y Seguimiento a la Mejora Continua e Innovación Educativa",3100P16,NULL,Superusuario,224,"3100P16 Apoyo y Seguimiento a la Mejora Continua e Innovación Educativa",16,NULL
+230,"Vinculación e Integralidad del Aprendizaje",4100P16,NULL,Superusuario,224,"4100P16 Vinculación e Integralidad del Aprendizaje",17,NULL
+231,"Órgano Interno de Control",5100O01,NULL,Superusuario,224,"5100O01 Órgano Interno de Control",18,NULL
+232,"Catalogo de Partidas Presupuestales",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+233,Haberes,11201,NULL,Superusuario,232,"11201 Haberes",384,NULL
+234,"Sueldos base",11301,NULL,Superusuario,232,"11301 Sueldos base",355,NULL
+235,"Retribuciones por adscripción en el extranjero",11401,NULL,Superusuario,232,"11401 Retribuciones por adscripción en el extranjero",356,NULL
+236,Honorarios,12101,NULL,Superusuario,232,"12101 Honorarios",357,NULL
+237,"Sueldos base al personal eventual",12201,NULL,Superusuario,232,"12201 Sueldos base al personal eventual",358,NULL
+238,"Compensaciones a sustitutos de profesores",12202,NULL,Superusuario,232,"12202 Compensaciones a sustitutos de profesores",359,NULL
+239,"Retribuciones por servicios de carácter social",12301,NULL,Superusuario,232,"12301 Retribuciones por servicios de carácter social",360,NULL
+240,"Retribución a los representantes de los trabajadores y de los patrones en la Junta Federal de Conciliación y Arbitraje",12401,NULL,Superusuario,232,"12401 Retribución a los representantes de los trabajadores y de los patrones en la Junta Federal de Conciliación y Arbitraje",361,NULL
+241,"Prima quinquenal por años de servicios efectivos prestados",13101,NULL,Superusuario,232,"13101 Prima quinquenal por años de servicios efectivos prestados",362,NULL
+242,"Acreditación por años de servicio en la docencia y al personal administrativo de las instituciones de educación superior",13102,NULL,Superusuario,232,"13102 Acreditación por años de servicio en la docencia y al personal administrativo de las instituciones de educación superior",363,NULL
+243,"Prima de perseverancia por años de servicio activo en el Ejército, Fuerza Aérea y Armada Mexicanos",13103,NULL,Superusuario,232,"13103 Prima de perseverancia por años de servicio activo en el Ejército, Fuerza Aérea y Armada Mexicanos",364,NULL
+244,Antigüedad,13104,NULL,Superusuario,232,"13104 Antigüedad",365,NULL
+245,"Primas de vacaciones y dominical",13201,NULL,Superusuario,232,"13201 Primas de vacaciones y dominical",366,NULL
+246,"Aguinaldo o gratificación de fin de año",13202,NULL,Superusuario,232,"13202 Aguinaldo o gratificación de fin de año",367,NULL
+247,"Remuneraciones por horas extraordinarias",13301,NULL,Superusuario,232,"13301 Remuneraciones por horas extraordinarias",368,NULL
+248,"Acreditación por titulación en la docencia",13401,NULL,Superusuario,232,"13401 Acreditación por titulación en la docencia",369,NULL
+249,"Acreditación al personal docente por años de estudio de licenciatura",13402,NULL,Superusuario,232,"13402 Acreditación al personal docente por años de estudio de licenciatura",370,NULL
+250,"Compensaciones por servicios especiales",13403,NULL,Superusuario,232,"13403 Compensaciones por servicios especiales",371,NULL
+251,"Compensaciones por servicios eventuales",13404,NULL,Superusuario,232,"13404 Compensaciones por servicios eventuales",372,NULL
+252,"Compensaciones de retiro",13405,NULL,Superusuario,232,"13405 Compensaciones de retiro",373,NULL
+253,"Compensaciones de servicios",13406,NULL,Superusuario,232,"13406 Compensaciones de servicios",374,NULL
+254,"Compensaciones adicionales por servicios especiales",13407,NULL,Superusuario,232,"13407 Compensaciones adicionales por servicios especiales",375,NULL
+255,"Asignaciones docentes, pedagógicas genéricas y específicas",13408,NULL,Superusuario,232,"13408 Asignaciones docentes, pedagógicas genéricas y específicas",376,NULL
+256,"Compensación por adquisición de material didáctico",13409,NULL,Superusuario,232,"13409 Compensación por adquisición de material didáctico",377,NULL
+257,"Compensación por actualización y formación académica",13410,NULL,Superusuario,232,"13410 Compensación por actualización y formación académica",378,NULL
+258,"Compensaciones a médicos residentes",13411,NULL,Superusuario,232,"13411 Compensaciones a médicos residentes",379,NULL
+259,"Gastos contingentes para el personal radicado en el extranjero",13412,NULL,Superusuario,232,"13412 Gastos contingentes para el personal radicado en el extranjero",380,NULL
+260,"Asignaciones inherentes a la conclusión de servicios en la Administración Pública Federal",13413,NULL,Superusuario,232,"13413 Asignaciones inherentes a la conclusión de servicios en la Administración Pública Federal",381,NULL
+261,"Asignaciones conforme al régimen laboral",13414,NULL,Superusuario,232,"13414 Asignaciones conforme al régimen laboral",382,NULL
+262,Sobrehaberes,13501,NULL,Superusuario,232,"13501 Sobrehaberes",383,NULL
+263,"Asignaciones de técnico",13601,NULL,Superusuario,232,"13601 Asignaciones de técnico",385,NULL
+264,"Asignaciones de mando",13602,NULL,Superusuario,232,"13602 Asignaciones de mando",386,NULL
+265,"Asignaciones por comisión",13603,NULL,Superusuario,232,"13603 Asignaciones por comisión",387,NULL
+266,"Asignaciones de vuelo",13604,NULL,Superusuario,232,"13604 Asignaciones de vuelo",388,NULL
+267,"Asignaciones de técnico especial",13605,NULL,Superusuario,232,"13605 Asignaciones de técnico especial",389,NULL
+268,"Honorarios especiales",13701,NULL,Superusuario,232,"13701 Honorarios especiales",390,NULL
+269,"Participaciones por vigilancia en el cumplimiento de las leyes y custodia de valores",13801,NULL,Superusuario,232,"13801 Participaciones por vigilancia en el cumplimiento de las leyes y custodia de valores",391,NULL
+270,"Aportaciones al ISSSTE",14101,NULL,Superusuario,232,"14101 Aportaciones al ISSSTE",392,NULL
+271,"Aportaciones al ISSFAM",14102,NULL,Superusuario,232,"14102 Aportaciones al ISSFAM",393,NULL
+272,"Aportaciones al IMSS",14103,NULL,Superusuario,232,"14103 Aportaciones al IMSS",394,NULL
+273,"Aportaciones de seguridad social contractuales",14104,NULL,Superusuario,232,"14104 Aportaciones de seguridad social contractuales",395,NULL
+274,"Aportaciones al seguro de cesantía en edad avanzada y vejez",14105,NULL,Superusuario,232,"14105 Aportaciones al seguro de cesantía en edad avanzada y vejez",396,NULL
+275,"Aportaciones al FOVISSSTE",14201,NULL,Superusuario,232,"14201 Aportaciones al FOVISSSTE",397,NULL
+276,"Aportaciones al INFONAVIT",14202,NULL,Superusuario,232,"14202 Aportaciones al INFONAVIT",398,NULL
+277,"Aportaciones al Sistema de Ahorro para el Retiro",14301,NULL,Superusuario,232,"14301 Aportaciones al Sistema de Ahorro para el Retiro",399,NULL
+278,"Depósitos para el ahorro solidario",14302,NULL,Superusuario,232,"14302 Depósitos para el ahorro solidario",400,NULL
+279,"Cuotas para el seguro de vida del personal civil",14401,NULL,Superusuario,232,"14401 Cuotas para el seguro de vida del personal civil",401,NULL
+280,"Cuotas para el seguro de vida del personal militar",14402,NULL,Superusuario,232,"14402 Cuotas para el seguro de vida del personal militar",402,NULL
+281,"Cuotas para el seguro de gastos médicos del personal civil",14403,NULL,Superusuario,232,"14403 Cuotas para el seguro de gastos médicos del personal civil",403,NULL
+282,"Cuotas para el seguro de separación individualizado",14404,NULL,Superusuario,232,"14404 Cuotas para el seguro de separación individualizado",404,NULL
+283,"Cuotas para el seguro colectivo de retiro",14405,NULL,Superusuario,232,"14405 Cuotas para el seguro colectivo de retiro",405,NULL
+284,"Seguro de responsabilidad civil, asistencia legal y otros seguros",14406,NULL,Superusuario,232,"14406 Seguro de responsabilidad civil, asistencia legal y otros seguros",406,NULL
+285,"Cuotas para el fondo de ahorro del personal civil",15101,NULL,Superusuario,232,"15101 Cuotas para el fondo de ahorro del personal civil",407,NULL
+286,"Cuotas para el fondo de ahorro de generales, almirantes, jefes y oficiales",15102,NULL,Superusuario,232,"15102 Cuotas para el fondo de ahorro de generales, almirantes, jefes y oficiales",408,NULL
+287,"Cuotas para el fondo de trabajo del personal del Ejército, Fuerza Aérea y Armada Mexicanos",15103,NULL,Superusuario,232,"15103 Cuotas para el fondo de trabajo del personal del Ejército, Fuerza Aérea y Armada Mexicanos",409,NULL
+288,"Indemnizaciones por accidentes en el trabajo",15201,NULL,Superusuario,232,"15201 Indemnizaciones por accidentes en el trabajo",410,NULL
+289,"Pago de liquidaciones",15202,NULL,Superusuario,232,"15202 Pago de liquidaciones",411,NULL
+290,"Prestaciones de retiro",15301,NULL,Superusuario,232,"15301 Prestaciones de retiro",412,NULL
+291,"Prestaciones establecidas por condiciones generales de trabajo o contratos colectivos de trabajo",15401,NULL,Superusuario,232,"15401 Prestaciones establecidas por condiciones generales de trabajo o contratos colectivos de trabajo",413,NULL
+292,"Compensación garantizada",15402,NULL,Superusuario,232,"15402 Compensación garantizada",414,NULL
+293,"Asignaciones adicionales al sueldo",15403,NULL,Superusuario,232,"15403 Asignaciones adicionales al sueldo",415,NULL
+294,"Apoyos a la capacitación de los servidores públicos",15501,NULL,Superusuario,232,"15501 Apoyos a la capacitación de los servidores públicos",416,NULL
+295,"Otras prestaciones",15901,NULL,Superusuario,232,"15901 Otras prestaciones",417,NULL
+296,"Pago extraordinario por riesgo",15902,NULL,Superusuario,232,"15902 Pago extraordinario por riesgo",418,NULL
+297,"Incrementos a las percepciones",16101,NULL,Superusuario,232,"16101 Incrementos a las percepciones",419,NULL
+298,"Creación de plazas",16102,NULL,Superusuario,232,"16102 Creación de plazas",420,NULL
+299,"Otras medidas de carácter laboral y económico",16103,NULL,Superusuario,232,"16103 Otras medidas de carácter laboral y económico",421,NULL
+300,"Previsiones para aportaciones al ISSSTE",16104,NULL,Superusuario,232,"16104 Previsiones para aportaciones al ISSSTE",422,NULL
+301,"Previsiones para aportaciones al FOVISSSTE",16105,NULL,Superusuario,232,"16105 Previsiones para aportaciones al FOVISSSTE",423,NULL
+302,"Previsiones para aportaciones al Sistema de Ahorro para el Retiro",16106,NULL,Superusuario,232,"16106 Previsiones para aportaciones al Sistema de Ahorro para el Retiro",424,NULL
+303,"Previsiones para aportaciones al seguro de cesantía en edad avanzada y vejez",16107,NULL,Superusuario,232,"16107 Previsiones para aportaciones al seguro de cesantía en edad avanzada y vejez",425,NULL
+304,"Previsiones para los depósitos al ahorro solidario",16108,NULL,Superusuario,232,"16108 Previsiones para los depósitos al ahorro solidario",426,NULL
+305,"Estímulos por productividad y eficiencia",17101,NULL,Superusuario,232,"17101 Estímulos por productividad y eficiencia",427,NULL
+306,"Estímulos al personal operativo",17102,NULL,Superusuario,232,"17102 Estímulos al personal operativo",428,NULL
+307,"Materiales y útiles de oficina",21101,NULL,Superusuario,232,"21101 Materiales y útiles de oficina",429,NULL
+308,"Materiales y útiles de impresión y reproducción",21201,NULL,Superusuario,232,"21201 Materiales y útiles de impresión y reproducción",430,NULL
+309,"Material estadístico y geográfico",21301,NULL,Superusuario,232,"21301 Material estadístico y geográfico",431,NULL
+310,"Materiales y útiles consumibles para el procesamiento en equipos y bienes informáticos.",21401,NULL,Superusuario,232,"21401 Materiales y útiles consumibles para el procesamiento en equipos y bienes informáticos.",432,NULL
+311,"Material de apoyo informativo",21501,NULL,Superusuario,232,"21501 Material de apoyo informativo",433,NULL
+312,"Material para información en actividades de investigación científica y tecnológica",21502,NULL,Superusuario,232,"21502 Material para información en actividades de investigación científica y tecnológica",434,NULL
+313,"Material de limpieza",21601,NULL,Superusuario,232,"21601 Material de limpieza",435,NULL
+314,"Materiales y suministros para planteles educativos",21701,NULL,Superusuario,232,"21701 Materiales y suministros para planteles educativos",436,NULL
+315,"Productos alimenticios para el Ejército, Fuerza Aérea y Armada Mexicanos, y para los efectivos que participen en programas de seguridad pública",22101,NULL,Superusuario,232,"22101 Productos alimenticios para el Ejército, Fuerza Aérea y Armada Mexicanos, y para los efectivos que participen en programas de seguridad pública",437,NULL
+316,"Productos alimenticios para personas derivado de la prestación de servicios públicos en unidades de salud, educativas, de readaptación social y otras",22102,NULL,Superusuario,232,"22102 Productos alimenticios para personas derivado de la prestación de servicios públicos en unidades de salud, educativas, de readaptación social y otras",438,NULL
+317,"Productos alimenticios para el personal que realiza labores en campo o de supervisión",22103,NULL,Superusuario,232,"22103 Productos alimenticios para el personal que realiza labores en campo o de supervisión",439,NULL
+318,"Productos alimenticios para el personal en las instalaciones de las dependencias y entidades",22104,NULL,Superusuario,232,"22104 Productos alimenticios para el personal en las instalaciones de las dependencias y entidades",440,NULL
+319,"Productos alimenticios para la población en caso de desastres naturales",22105,NULL,Superusuario,232,"22105 Productos alimenticios para la población en caso de desastres naturales",441,NULL
+320,"Productos alimenticios para el personal derivado de actividades extraordinarias (Se modifica)",22106,NULL,Superusuario,232,"22106 Productos alimenticios para el personal derivado de actividades extraordinarias (Se modifica)",442,NULL
+321,"Productos alimenticios para animales",22201,NULL,Superusuario,232,"22201 Productos alimenticios para animales",443,NULL
+322,"Utensilios para el servicio de alimentación",22301,NULL,Superusuario,232,"22301 Utensilios para el servicio de alimentación",444,NULL
+323,"Productos alimenticios, agropecuarios y forestales adquiridos como materia prima",23101,NULL,Superusuario,232,"23101 Productos alimenticios, agropecuarios y forestales adquiridos como materia prima",445,NULL
+324,"Insumos textiles adquiridos como materia prima",23201,NULL,Superusuario,232,"23201 Insumos textiles adquiridos como materia prima",446,NULL
+325,"Productos de papel, cartón e impresos adquiridos como materia prima",23301,NULL,Superusuario,232,"23301 Productos de papel, cartón e impresos adquiridos como materia prima",447,NULL
+326,"Combustibles, lubricantes, aditivos, carbón y sus derivados adquiridos como materia prima",23401,NULL,Superusuario,232,"23401 Combustibles, lubricantes, aditivos, carbón y sus derivados adquiridos como materia prima",448,NULL
+327,"Productos químicos, farmacéuticos y de laboratorio adquiridos como materia prima",23501,NULL,Superusuario,232,"23501 Productos químicos, farmacéuticos y de laboratorio adquiridos como materia prima",449,NULL
+328,"Productos metálicos y a base de minerales no metálicos adquiridos como materia prima",23601,NULL,Superusuario,232,"23601 Productos metálicos y a base de minerales no metálicos adquiridos como materia prima",450,NULL
+329,"Productos de cuero, piel, plástico y hule adquiridos como materia prima",23701,NULL,Superusuario,232,"23701 Productos de cuero, piel, plástico y hule adquiridos como materia prima",451,NULL
+330,"Mercancías para su comercialización en tiendas del sector público",23801,NULL,Superusuario,232,"23801 Mercancías para su comercialización en tiendas del sector público",452,NULL
+331,"Otros productos adquiridos como materia prima",23901,NULL,Superusuario,232,"23901 Otros productos adquiridos como materia prima",453,NULL
+332,"Petróleo, gas y sus derivados adquiridos como materia prima",23902,NULL,Superusuario,232,"23902 Petróleo, gas y sus derivados adquiridos como materia prima",454,NULL
+333,"Productos minerales no metálicos",24101,NULL,Superusuario,232,"24101 Productos minerales no metálicos",455,NULL
+334,"Cemento y productos de concreto",24201,NULL,Superusuario,232,"24201 Cemento y productos de concreto",456,NULL
+335,"Cal, yeso y productos de yeso",24301,NULL,Superusuario,232,"24301 Cal, yeso y productos de yeso",457,NULL
+336,"Madera y productos de madera",24401,NULL,Superusuario,232,"24401 Madera y productos de madera",458,NULL
+337,"Vidrio y productos de vidrio",24501,NULL,Superusuario,232,"24501 Vidrio y productos de vidrio",459,NULL
+338,"Material eléctrico y electrónico",24601,NULL,Superusuario,232,"24601 Material eléctrico y electrónico",460,NULL
+339,"Artículos metálicos para la construcción",24701,NULL,Superusuario,232,"24701 Artículos metálicos para la construcción",461,NULL
+340,"Materiales complementarios",24801,NULL,Superusuario,232,"24801 Materiales complementarios",462,NULL
+341,"Otros materiales y artículos de construcción y reparación",24901,NULL,Superusuario,232,"24901 Otros materiales y artículos de construcción y reparación",463,NULL
+342,"Productos químicos básicos",25101,NULL,Superusuario,232,"25101 Productos químicos básicos",464,NULL
+343,"Plaguicidas, abonos y fertilizantes",25201,NULL,Superusuario,232,"25201 Plaguicidas, abonos y fertilizantes",465,NULL
+344,"Medicinas y productos farmacéuticos",25301,NULL,Superusuario,232,"25301 Medicinas y productos farmacéuticos",466,NULL
+345,"Materiales, accesorios y suministros médicos",25401,NULL,Superusuario,232,"25401 Materiales, accesorios y suministros médicos",467,NULL
+346,"Materiales, accesorios y suministros de laboratorio",25501,NULL,Superusuario,232,"25501 Materiales, accesorios y suministros de laboratorio",468,NULL
+347,"Fibras sintéticas, hules, plásticos y derivados",25601,NULL,Superusuario,232,"25601 Fibras sintéticas, hules, plásticos y derivados",469,NULL
+348,"Otros productos químicos",25901,NULL,Superusuario,232,"25901 Otros productos químicos",470,NULL
+349,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a la ejecución de programas de seguridad pública y nacional",26101,NULL,Superusuario,232,"26101 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a la ejecución de programas de seguridad pública y nacional",471,NULL
+350,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios públicos y la operación de programas públicos",26102,NULL,Superusuario,232,"26102 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios públicos y la operación de programas públicos",472,NULL
+351,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios administrativos",26103,NULL,Superusuario,232,"26103 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales destinados a servicios administrativos",473,NULL
+352,"Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales asignados a servidores públicos",26104,NULL,Superusuario,232,"26104 Combustibles, lubricantes y aditivos para vehículos terrestres, aéreos, marítimos, lacustres y fluviales asignados a servidores públicos",474,NULL
+353,"Combustibles, lubricantes y aditivos para maquinaria, equipo de producción y servicios administrativos",26105,NULL,Superusuario,232,"26105 Combustibles, lubricantes y aditivos para maquinaria, equipo de producción y servicios administrativos",475,NULL
+354,"PIDIREGAS cargos variables",26106,NULL,Superusuario,232,"26106 PIDIREGAS cargos variables",476,NULL
+355,"Combustibles nacionales para plantas productivas",26107,NULL,Superusuario,232,"26107 Combustibles nacionales para plantas productivas",477,NULL
+356,"Combustibles de importación para plantas productivas",26108,NULL,Superusuario,232,"26108 Combustibles de importación para plantas productivas",478,NULL
+357,"Vestuario y uniformes",27101,NULL,Superusuario,232,"27101 Vestuario y uniformes",479,NULL
+358,"Prendas de protección personal",27201,NULL,Superusuario,232,"27201 Prendas de protección personal",480,NULL
+359,"Artículos deportivos",27301,NULL,Superusuario,232,"27301 Artículos deportivos",481,NULL
+360,"Productos textiles",27401,NULL,Superusuario,232,"27401 Productos textiles",482,NULL
+361,"Blancos y otros productos textiles, excepto prendas de vestir",27501,NULL,Superusuario,232,"27501 Blancos y otros productos textiles, excepto prendas de vestir",483,NULL
+362,"Sustancias y materiales explosivos",28101,NULL,Superusuario,232,"28101 Sustancias y materiales explosivos",484,NULL
+363,"Materiales de seguridad pública",28201,NULL,Superusuario,232,"28201 Materiales de seguridad pública",485,NULL
+364,"Prendas de protección para seguridad pública y nacional",28301,NULL,Superusuario,232,"28301 Prendas de protección para seguridad pública y nacional",486,NULL
+365,"Herramientas menores",29101,NULL,Superusuario,232,"29101 Herramientas menores",487,NULL
+366,"Refacciones y accesorios menores de edificios",29201,NULL,Superusuario,232,"29201 Refacciones y accesorios menores de edificios",488,NULL
+367,"Refacciones y accesorios menores de mobiliario y equipo de administración, educacional y recreativo",29301,NULL,Superusuario,232,"29301 Refacciones y accesorios menores de mobiliario y equipo de administración, educacional y recreativo",489,NULL
+368,"Refacciones y accesorios para equipo de cómputo y telecomunicaciones (Se modifica)",29401,NULL,Superusuario,232,"29401 Refacciones y accesorios para equipo de cómputo y telecomunicaciones (Se modifica)",490,NULL
+369,"Refacciones y accesorios menores de equipo e instrumental médico y de laboratorio",29501,NULL,Superusuario,232,"29501 Refacciones y accesorios menores de equipo e instrumental médico y de laboratorio",491,NULL
+370,"Refacciones y accesorios menores de equipo de transporte",29601,NULL,Superusuario,232,"29601 Refacciones y accesorios menores de equipo de transporte",492,NULL
+371,"Refacciones y accesorios menores de equipo de defensa y seguridad",29701,NULL,Superusuario,232,"29701 Refacciones y accesorios menores de equipo de defensa y seguridad",493,NULL
+372,"Refacciones y accesorios menores de maquinaria y otros equipos",29801,NULL,Superusuario,232,"29801 Refacciones y accesorios menores de maquinaria y otros equipos",494,NULL
+373,"Refacciones y accesorios menores otros bienes muebles",29901,NULL,Superusuario,232,"29901 Refacciones y accesorios menores otros bienes muebles",495,NULL
+374,"Servicio de energía eléctrica",31101,NULL,Superusuario,232,"31101 Servicio de energía eléctrica",496,NULL
+375,"Servicio de gas",31201,NULL,Superusuario,232,"31201 Servicio de gas",497,NULL
+376,"Servicio de agua",31301,NULL,Superusuario,232,"31301 Servicio de agua",498,NULL
+377,"Servicio telefónico convencional",31401,NULL,Superusuario,232,"31401 Servicio telefónico convencional",499,NULL
+378,"Servicio de telefonía celular",31501,NULL,Superusuario,232,"31501 Servicio de telefonía celular",500,NULL
+379,"Servicio de radiolocalización",31601,NULL,Superusuario,232,"31601 Servicio de radiolocalización",501,NULL
+380,"Servicios de telecomunicaciones",31602,NULL,Superusuario,232,"31602 Servicios de telecomunicaciones",502,NULL
+381,"Servicios de internet",31603,NULL,Superusuario,232,"31603 Servicios de internet",503,NULL
+382,"Servicios de conducción de señales analógicas y digitales",31701,NULL,Superusuario,232,"31701 Servicios de conducción de señales analógicas y digitales",504,NULL
+383,"Servicio postal",31801,NULL,Superusuario,232,"31801 Servicio postal",505,NULL
+384,"Servicio telegráfico",31802,NULL,Superusuario,232,"31802 Servicio telegráfico",506,NULL
+385,"Servicios integrales de telecomunicación",31901,NULL,Superusuario,232,"31901 Servicios integrales de telecomunicación",507,NULL
+386,"Contratación de otros servicios",31902,NULL,Superusuario,232,"31902 Contratación de otros servicios",508,NULL
+387,"Servicios generales para planteles educativos",31903,NULL,Superusuario,232,"31903 Servicios generales para planteles educativos",509,NULL
+388,"Servicios integrales de infraestructura de cómputo.",31904,NULL,Superusuario,232,"31904 Servicios integrales de infraestructura de cómputo.",510,NULL
+389,"Arrendamiento de terrenos",32101,NULL,Superusuario,232,"32101 Arrendamiento de terrenos",511,NULL
+390,"Arrendamiento de edificios y locales",32201,NULL,Superusuario,232,"32201 Arrendamiento de edificios y locales",512,NULL
+391,"Arrendamiento de equipo y bienes informáticos",32301,NULL,Superusuario,232,"32301 Arrendamiento de equipo y bienes informáticos",513,NULL
+392,"Arrendamiento de mobiliario",32302,NULL,Superusuario,232,"32302 Arrendamiento de mobiliario",514,NULL
+393,"Arrendamiento de equipo de telecomunicaciones",32303,NULL,Superusuario,232,"32303 Arrendamiento de equipo de telecomunicaciones",515,NULL
+394,"Arrendamiento de equipo y bienes informáticos",32306,NULL,Superusuario,232,"32306 Arrendamiento de equipo y bienes informáticos",516,NULL
+395,"Arrendamiento de equipo e instrumental médico y de laboratorio",32401,NULL,Superusuario,232,"32401 Arrendamiento de equipo e instrumental médico y de laboratorio",517,NULL
+396,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para la ejecución de programas de seguridad pública y nacional",32501,NULL,Superusuario,232,"32501 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para la ejecución de programas de seguridad pública y nacional",518,NULL
+397,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios públicos y la operación de programas públicos",32502,NULL,Superusuario,232,"32502 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios públicos y la operación de programas públicos",519,NULL
+398,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios administrativos",32503,NULL,Superusuario,232,"32503 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servicios administrativos",520,NULL
+399,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para desastres naturales",32504,NULL,Superusuario,232,"32504 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para desastres naturales",521,NULL
+400,"Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servidores públicos",32505,NULL,Superusuario,232,"32505 Arrendamiento de vehículos terrestres, aéreos, marítimos, lacustres y fluviales para servidores públicos",522,NULL
+401,"Arrendamiento de maquinaria y equipo",32601,NULL,Superusuario,232,"32601 Arrendamiento de maquinaria y equipo",523,NULL
+402,"Patentes, derechos de autor, regalías y otros",32701,NULL,Superusuario,232,"32701 Patentes, derechos de autor, regalías y otros",524,NULL
+403,"Arrendamiento de sustancias y productos químicos",32901,NULL,Superusuario,232,"32901 Arrendamiento de sustancias y productos químicos",525,NULL
+404,"PIDIREGAS cargos fijos",32902,NULL,Superusuario,232,"32902 PIDIREGAS cargos fijos",526,NULL
+405,"Otros Arrendamientos",32903,NULL,Superusuario,232,"32903 Otros Arrendamientos",527,NULL
+406,"Asesorías asociadas a convenios, tratados o acuerdos",33101,NULL,Superusuario,232,"33101 Asesorías asociadas a convenios, tratados o acuerdos",528,NULL
+407,"Asesorías por controversias en el marco de los tratados internacionales",33102,NULL,Superusuario,232,"33102 Asesorías por controversias en el marco de los tratados internacionales",529,NULL
+408,"Consultorías para programas o proyectos financiados por organismos internacionales",33103,NULL,Superusuario,232,"33103 Consultorías para programas o proyectos financiados por organismos internacionales",530,NULL
+409,"Otras asesorías para la operación de programas",33104,NULL,Superusuario,232,"33104 Otras asesorías para la operación de programas",531,NULL
+410,"Servicios relacionados con procedimientos jurisdiccionales",33105,NULL,Superusuario,232,"33105 Servicios relacionados con procedimientos jurisdiccionales",532,NULL
+411,"Servicios de diseño, arquitectura, ingeniería y actividades relacionadas",33201,NULL,Superusuario,232,"33201 Servicios de diseño, arquitectura, ingeniería y actividades relacionadas",533,NULL
+412,"Servicios de desarrollo de aplicaciones informáticas",33301,NULL,Superusuario,232,"33301 Servicios de desarrollo de aplicaciones informáticas",534,NULL
+413,"Servicios estadísticos y geográficos",33302,NULL,Superusuario,232,"33302 Servicios estadísticos y geográficos",535,NULL
+414,"Servicios relacionados con certificación de procesos",33303,NULL,Superusuario,232,"33303 Servicios relacionados con certificación de procesos",536,NULL
+415,"Servicios de mantenimiento de aplicaciones informática",33304,NULL,Superusuario,232,"33304 Servicios de mantenimiento de aplicaciones informática",537,NULL
+416,"Servicios para capacitación a servidores públicos",33401,NULL,Superusuario,232,"33401 Servicios para capacitación a servidores públicos",538,NULL
+417,"Estudios e investigaciones",33501,NULL,Superusuario,232,"33501 Estudios e investigaciones",539,NULL
+418,"Servicios relacionados con traducciones",33601,NULL,Superusuario,232,"33601 Servicios relacionados con traducciones",540,NULL
+419,"Otros servicios comerciales",33602,NULL,Superusuario,232,"33602 Otros servicios comerciales",541,NULL
+420,"Impresiones de documentos oficiales para la prestación de servicios públicos, identificación, formatos administrativos y fiscales, formas valoradas, certificados y títulos",33603,NULL,Superusuario,232,"33603 Impresiones de documentos oficiales para la prestación de servicios públicos, identificación, formatos administrativos y fiscales, formas valoradas, certificados y títulos",542,NULL
+421,"Impresión y elaboración de material informativo derivado de la operación y administración de las dependencias y entidades",33604,NULL,Superusuario,232,"33604 Impresión y elaboración de material informativo derivado de la operación y administración de las dependencias y entidades",543,NULL
+422,"Información en medios masivos derivada de la operación y administración de las dependencias y entidades",33605,NULL,Superusuario,232,"33605 Información en medios masivos derivada de la operación y administración de las dependencias y entidades",544,NULL
+423,"Servicios de digitalización",33606,NULL,Superusuario,232,"33606 Servicios de digitalización",545,NULL
+424,"Gastos de seguridad pública y nacional",33701,NULL,Superusuario,232,"33701 Gastos de seguridad pública y nacional",546,NULL
+425,"Gastos en actividades de seguridad y logística del Estado Mayor Presidencial",33702,NULL,Superusuario,232,"33702 Gastos en actividades de seguridad y logística del Estado Mayor Presidencial",547,NULL
+426,"Servicios de vigilancia",33801,NULL,Superusuario,232,"33801 Servicios de vigilancia",548,NULL
+427,"Subcontratación de servicios con terceros",33901,NULL,Superusuario,232,"33901 Subcontratación de servicios con terceros",549,NULL
+428,"Proyectos para prestación de servicios",33902,NULL,Superusuario,232,"33902 Proyectos para prestación de servicios",550,NULL
+429,"Servicios integrales",33903,NULL,Superusuario,232,"33903 Servicios integrales",551,NULL
+430,"Servicios bancarios y financieros",34101,NULL,Superusuario,232,"34101 Servicios bancarios y financieros",552,NULL
+431,"Gastos inherentes a la recaudación",34301,NULL,Superusuario,232,"34301 Gastos inherentes a la recaudación",553,NULL
+432,"Seguro de responsabilidad patrimonial del Estado",34401,NULL,Superusuario,232,"34401 Seguro de responsabilidad patrimonial del Estado",554,NULL
+433,"Seguros de bienes patrimoniales",34501,NULL,Superusuario,232,"34501 Seguros de bienes patrimoniales",555,NULL
+434,"Almacenaje, embalaje y envase",34601,NULL,Superusuario,232,"34601 Almacenaje, embalaje y envase",556,NULL
+435,"Fletes y maniobras",34701,NULL,Superusuario,232,"34701 Fletes y maniobras",557,NULL
+436,"Comisiones por ventas",34801,NULL,Superusuario,232,"34801 Comisiones por ventas",558,NULL
+437,"Mantenimiento y conservación de inmuebles para la prestación de servicios administrativos",35101,NULL,Superusuario,232,"35101 Mantenimiento y conservación de inmuebles para la prestación de servicios administrativos",559,NULL
+438,"Mantenimiento y conservación de inmuebles para la prestación de servicios públicos",35102,NULL,Superusuario,232,"35102 Mantenimiento y conservación de inmuebles para la prestación de servicios públicos",560,NULL
+439,"Mantenimiento y conservación de mobiliario y equipo de administración",35201,NULL,Superusuario,232,"35201 Mantenimiento y conservación de mobiliario y equipo de administración",561,NULL
+440,"Mantenimiento y conservación de bienes informáticos",35301,NULL,Superusuario,232,"35301 Mantenimiento y conservación de bienes informáticos",562,NULL
+441,"Instalación, reparación y mantenimiento de equipo e instrumental médico y de laboratorio",35401,NULL,Superusuario,232,"35401 Instalación, reparación y mantenimiento de equipo e instrumental médico y de laboratorio",563,NULL
+442,"Mantenimiento y conservación de vehículos terrestres, aéreos, marítimos, lacustres y fluviales",35501,NULL,Superusuario,232,"35501 Mantenimiento y conservación de vehículos terrestres, aéreos, marítimos, lacustres y fluviales",564,NULL
+443,"Reparación y mantenimiento de equipo de defensa y seguridad",35601,NULL,Superusuario,232,"35601 Reparación y mantenimiento de equipo de defensa y seguridad",565,NULL
+444,"Mantenimiento y conservación de maquinaria y equipo",35701,NULL,Superusuario,232,"35701 Mantenimiento y conservación de maquinaria y equipo",566,NULL
+445,"Mantenimiento y conservación de plantas e instalaciones productivas",35702,NULL,Superusuario,232,"35702 Mantenimiento y conservación de plantas e instalaciones productivas",567,NULL
+446,"Servicios de lavandería, limpieza e higiene",35801,NULL,Superusuario,232,"35801 Servicios de lavandería, limpieza e higiene",568,NULL
+447,"Servicios de jardinería y fumigación",35901,NULL,Superusuario,232,"35901 Servicios de jardinería y fumigación",569,NULL
+448,"Difusión de mensajes sobre programas y actividades gubernamentales",36101,NULL,Superusuario,232,"36101 Difusión de mensajes sobre programas y actividades gubernamentales",570,NULL
+449,"Difusión de mensajes comerciales para promover la venta de productos o servicios",36201,NULL,Superusuario,232,"36201 Difusión de mensajes comerciales para promover la venta de productos o servicios",571,NULL
+450,"Servicios relacionados con monitoreo de información en medios masivos",36901,NULL,Superusuario,232,"36901 Servicios relacionados con monitoreo de información en medios masivos",572,NULL
+451,"Pasajes aéreos nacionales para labores en campo y de supervisión",37101,NULL,Superusuario,232,"37101 Pasajes aéreos nacionales para labores en campo y de supervisión",573,NULL
+452,"Pasajes aéreos nacionales asociados a los programas de seguridad pública y nacional",37102,NULL,Superusuario,232,"37102 Pasajes aéreos nacionales asociados a los programas de seguridad pública y nacional",574,NULL
+453,"Pasajes aéreos nacionales asociados a desastres naturales",37103,NULL,Superusuario,232,"37103 Pasajes aéreos nacionales asociados a desastres naturales",575,NULL
+454,"Pasajes aéreos nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",37104,NULL,Superusuario,232,"37104 Pasajes aéreos nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",576,NULL
+455,"Pasajes aéreos internacionales asociados a los programas de seguridad pública y nacional",37105,NULL,Superusuario,232,"37105 Pasajes aéreos internacionales asociados a los programas de seguridad pública y nacional",577,NULL
+456,"Pasajes aéreos internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",37106,NULL,Superusuario,232,"37106 Pasajes aéreos internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",578,NULL
+457,"Pasajes terrestres nacionales para labores en campo y de supervisión",37201,NULL,Superusuario,232,"37201 Pasajes terrestres nacionales para labores en campo y de supervisión",579,NULL
+458,"Pasajes terrestres nacionales asociados a los programas de seguridad pública y nacional",37202,NULL,Superusuario,232,"37202 Pasajes terrestres nacionales asociados a los programas de seguridad pública y nacional",580,NULL
+459,"Pasajes terrestres nacionales asociados a desastres naturales",37203,NULL,Superusuario,232,"37203 Pasajes terrestres nacionales asociados a desastres naturales",581,NULL
+460,"Pasajes terrestres nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",37204,NULL,Superusuario,232,"37204 Pasajes terrestres nacionales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",582,NULL
+461,"Pasajes terrestres internacionales asociados a los programas de seguridad pública y nacional",37205,NULL,Superusuario,232,"37205 Pasajes terrestres internacionales asociados a los programas de seguridad pública y nacional",583,NULL
+462,"Pasajes terrestres internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",37206,NULL,Superusuario,232,"37206 Pasajes terrestres internacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",584,NULL
+463,"Pasajes terrestres nacionales por medio electrónico",37207,NULL,Superusuario,232,"37207 Pasajes terrestres nacionales por medio electrónico",585,NULL
+464,"Pasajes marítimos, lacustres y fluviales para labores en campo y de supervisión",37301,NULL,Superusuario,232,"37301 Pasajes marítimos, lacustres y fluviales para labores en campo y de supervisión",586,NULL
+465,"Pasajes marítimos, lacustres y fluviales asociados a los programas de seguridad pública y nacional 37303 Pasajes marítimos, lacustres y fluviales asociados a desastres naturales",37302,NULL,Superusuario,232,"37302 Pasajes marítimos, lacustres y fluviales asociados a los programas de seguridad pública y nacional 37303 Pasajes marítimos, lacustres y fluviales asociados a desastres naturales",587,NULL
+466,"Pasajes marítimos, lacustres y fluviales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",37304,NULL,Superusuario,232,"37304 Pasajes marítimos, lacustres y fluviales para servidores públicos de mando en el desempeño de comisiones y funciones oficiales",588,NULL
+467,"Viáticos nacionales para labores en campo y de supervisión",37501,NULL,Superusuario,232,"37501 Viáticos nacionales para labores en campo y de supervisión",589,NULL
+468,"Viáticos nacionales asociados a los programas de seguridad pública y nacional",37502,NULL,Superusuario,232,"37502 Viáticos nacionales asociados a los programas de seguridad pública y nacional",590,NULL
+469,"Viáticos nacionales asociados a desastres naturales",37503,NULL,Superusuario,232,"37503 Viáticos nacionales asociados a desastres naturales",591,NULL
+470,"Viáticos nacionales para servidores públicos en el desempeño de funciones oficiales",37504,NULL,Superusuario,232,"37504 Viáticos nacionales para servidores públicos en el desempeño de funciones oficiales",592,NULL
+471,"Viáticos en el extranjero asociados a los programas de seguridad pública y nacional",37601,NULL,Superusuario,232,"37601 Viáticos en el extranjero asociados a los programas de seguridad pública y nacional",593,NULL
+472,"Viáticos en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",37602,NULL,Superusuario,232,"37602 Viáticos en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",594,NULL
+473,"Instalación del personal federal",37701,NULL,Superusuario,232,"37701 Instalación del personal federal",595,NULL
+474,"Servicios integrales nacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",37801,NULL,Superusuario,232,"37801 Servicios integrales nacionales para servidores públicos en el desempeño de comisiones y funciones oficiales",596,NULL
+475,"Servicios integrales en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",37802,NULL,Superusuario,232,"37802 Servicios integrales en el extranjero para servidores públicos en el desempeño de comisiones y funciones oficiales",597,NULL
+476,"Gastos para operativos y trabajos de campo en áreas rurales",37901,NULL,Superusuario,232,"37901 Gastos para operativos y trabajos de campo en áreas rurales",598,NULL
+477,"Gastos de ceremonial del titular del Ejecutivo Federal",38101,NULL,Superusuario,232,"38101 Gastos de ceremonial del titular del Ejecutivo Federal",599,NULL
+478,"Gastos de ceremonial de los titulares de las dependencias y entidades",38102,NULL,Superusuario,232,"38102 Gastos de ceremonial de los titulares de las dependencias y entidades",600,NULL
+479,"Gastos inherentes a la investidura presidencial",38103,NULL,Superusuario,232,"38103 Gastos inherentes a la investidura presidencial",601,NULL
+480,"Gastos de orden social",38201,NULL,Superusuario,232,"38201 Gastos de orden social",602,NULL
+481,"Congresos y convenciones",38301,NULL,Superusuario,232,"38301 Congresos y convenciones",603,NULL
+482,Exposiciones,38401,NULL,Superusuario,232,"38401 Exposiciones",604,NULL
+483,"Gastos para alimentación de servidores públicos de mando",38501,NULL,Superusuario,232,"38501 Gastos para alimentación de servidores públicos de mando",605,NULL
+484,"Funerales y pagas de defunción",39101,NULL,Superusuario,232,"39101 Funerales y pagas de defunción",606,NULL
+485,"Impuestos y derechos de exportación",39201,NULL,Superusuario,232,"39201 Impuestos y derechos de exportación",607,NULL
+486,"Otros impuestos y derechos",39202,NULL,Superusuario,232,"39202 Otros impuestos y derechos",608,NULL
+487,"Impuestos y derechos de importación",39301,NULL,Superusuario,232,"39301 Impuestos y derechos de importación",609,NULL
+488,"Erogaciones por resoluciones por autoridad competente",39401,NULL,Superusuario,232,"39401 Erogaciones por resoluciones por autoridad competente",610,NULL
+489,"Indemnizaciones por expropiación de predios",39402,NULL,Superusuario,232,"39402 Indemnizaciones por expropiación de predios",611,NULL
+490,"Otras asignaciones derivadas de resoluciones de ley",39403,NULL,Superusuario,232,"39403 Otras asignaciones derivadas de resoluciones de ley",612,NULL
+491,"Penas, multas, accesorios y actualizaciones",39501,NULL,Superusuario,232,"39501 Penas, multas, accesorios y actualizaciones",613,NULL
+492,"Pérdidas del erario federal",39601,NULL,Superusuario,232,"39601 Pérdidas del erario federal",614,NULL
+493,"Otros gastos por responsabilidades",39602,NULL,Superusuario,232,"39602 Otros gastos por responsabilidades",615,NULL
+494,"Erogaciones por pago de utilidades",39701,NULL,Superusuario,232,"39701 Erogaciones por pago de utilidades",616,NULL
+495,"Impuesto sobre nóminas",39801,NULL,Superusuario,232,"39801 Impuesto sobre nóminas",617,NULL
+496,"Gastos de las Comisiones Internacionales de Límites y Aguas",39901,NULL,Superusuario,232,"39901 Gastos de las Comisiones Internacionales de Límites y Aguas",618,NULL
+497,"Gastos de las oficinas del Servicio Exterior Mexicano",39902,NULL,Superusuario,232,"39902 Gastos de las oficinas del Servicio Exterior Mexicano",619,NULL
+498,"Participaciones en Órganos de Gobierno",39904,NULL,Superusuario,232,"39904 Participaciones en Órganos de Gobierno",620,NULL
+499,"Actividades de Coordinación con el Presidente Electo",39905,NULL,Superusuario,232,"39905 Actividades de Coordinación con el Presidente Electo",621,NULL
+500,"Servicios Corporativos prestados por las Entidades Paraestatales a sus Organismos",39906,NULL,Superusuario,232,"39906 Servicios Corporativos prestados por las Entidades Paraestatales a sus Organismos",622,NULL
+501,"Servicios prestados entre Organismos de una Entidad Paraestatal",39907,NULL,Superusuario,232,"39907 Servicios prestados entre Organismos de una Entidad Paraestatal",623,NULL
+502,"Erogaciones por cuenta de terceros",39908,NULL,Superusuario,232,"39908 Erogaciones por cuenta de terceros",624,NULL
+503,"Erogaciones recuperables",39909,NULL,Superusuario,232,"39909 Erogaciones recuperables",625,NULL
+504,"Apertura de Fondo Rotatorio",39910,NULL,Superusuario,232,"39910 Apertura de Fondo Rotatorio",626,NULL
+505,"Transferencias para cubrir el déficit de operación y los gastos de administración asociados al otorgamiento de subsidios",41501,NULL,Superusuario,232,"41501 Transferencias para cubrir el déficit de operación y los gastos de administración asociados al otorgamiento de subsidios",627,NULL
+506,"Transferencias a entidades empresariales no financieras derivadas de la obtención de derechos",41601,NULL,Superusuario,232,"41601 Transferencias a entidades empresariales no financieras derivadas de la obtención de derechos",628,NULL
+507,"Subsidios a la producción",43101,NULL,Superusuario,232,"43101 Subsidios a la producción",629,NULL
+508,"Subsidios a la distribución",43201,NULL,Superusuario,232,"43201 Subsidios a la distribución",630,NULL
+509,"Subsidios para inversión",43301,NULL,Superusuario,232,"43301 Subsidios para inversión",631,NULL
+510,"Subsidios a la prestación de servicios públicos",43401,NULL,Superusuario,232,"43401 Subsidios a la prestación de servicios públicos",632,NULL
+511,"Subsidios para cubrir diferenciales de tasas de interés",43501,NULL,Superusuario,232,"43501 Subsidios para cubrir diferenciales de tasas de interés",633,NULL
+512,"Subsidios para la adquisición de vivienda de interés social",43601,NULL,Superusuario,232,"43601 Subsidios para la adquisición de vivienda de interés social",634,NULL
+513,"Subsidios al consumo",43701,NULL,Superusuario,232,"43701 Subsidios al consumo",635,NULL
+514,"Subsidios a Entidades Federativas y Municipios (Se modifica)",43801,NULL,Superusuario,232,"43801 Subsidios a Entidades Federativas y Municipios (Se modifica)",636,NULL
+515,"Subsidios para capacitación y becas",43901,NULL,Superusuario,232,"43901 Subsidios para capacitación y becas",637,NULL
+516,"Subsidios a fideicomisos privados y estatales",43902,NULL,Superusuario,232,"43902 Subsidios a fideicomisos privados y estatales",638,NULL
+517,"Gastos relacionados con actividades culturales, deportivas y de ayuda extraordinaria",44101,NULL,Superusuario,232,"44101 Gastos relacionados con actividades culturales, deportivas y de ayuda extraordinaria",639,NULL
+518,"Gastos por servicios de traslado de personas",44102,NULL,Superusuario,232,"44102 Gastos por servicios de traslado de personas",640,NULL
+519,"Premios, recompensas, pensiones de gracia y pensión recreativa estudiantil",44103,NULL,Superusuario,232,"44103 Premios, recompensas, pensiones de gracia y pensión recreativa estudiantil",641,NULL
+520,"Premios, estímulos, recompensas, becas y seguros a deportistas",44104,NULL,Superusuario,232,"44104 Premios, estímulos, recompensas, becas y seguros a deportistas",642,NULL
+521,"Apoyo a voluntarios que participan en diversos programas federales",44105,NULL,Superusuario,232,"44105 Apoyo a voluntarios que participan en diversos programas federales",643,NULL
+522,"Compensaciones por servicios de carácter social",44106,NULL,Superusuario,232,"44106 Compensaciones por servicios de carácter social",644,NULL
+523,"Apoyos a la investigación científica y tecnológica de instituciones académicas y sector público",44401,NULL,Superusuario,232,"44401 Apoyos a la investigación científica y tecnológica de instituciones académicas y sector público",645,NULL
+524,"Apoyos a la investigación científica y tecnológica en instituciones sin fines de lucro",44402,NULL,Superusuario,232,"44402 Apoyos a la investigación científica y tecnológica en instituciones sin fines de lucro",646,NULL
+525,"Mercancías para su distribución a la población",44801,NULL,Superusuario,232,"44801 Mercancías para su distribución a la población",647,NULL
+526,"Pago de pensiones y jubilaciones",45201,NULL,Superusuario,232,"45201 Pago de pensiones y jubilaciones",648,NULL
+527,"Pago de pensiones y jubilaciones contractuales",45202,NULL,Superusuario,232,"45202 Pago de pensiones y jubilaciones contractuales",649,NULL
+528,"Transferencias para el pago de pensiones y jubilaciones",45203,NULL,Superusuario,232,"45203 Transferencias para el pago de pensiones y jubilaciones",650,NULL
+529,"Pago de sumas aseguradas",45901,NULL,Superusuario,232,"45901 Pago de sumas aseguradas",651,NULL
+530,"Prestaciones económicas distintas de pensiones y jubilaciones",45902,NULL,Superusuario,232,"45902 Prestaciones económicas distintas de pensiones y jubilaciones",652,NULL
+531,"Aportaciones a fideicomisos públicos",46101,NULL,Superusuario,232,"46101 Aportaciones a fideicomisos públicos",653,NULL
+532,"Aportaciones a mandatos públicos",46102,NULL,Superusuario,232,"46102 Aportaciones a mandatos públicos",654,NULL
+533,"Trasferencias para cuotas y aportaciones de seguridad social para el IMSS, ISSSTE e ISSFAM por obligación del Estado",47101,NULL,Superusuario,232,"47101 Trasferencias para cuotas y aportaciones de seguridad social para el IMSS, ISSSTE e ISSFAM por obligación del Estado",655,NULL
+534,"Transferencias para cuotas y aportaciones a los seguros de retiro, cesantía en edad avanzada y vejez",47102,NULL,Superusuario,232,"47102 Transferencias para cuotas y aportaciones a los seguros de retiro, cesantía en edad avanzada y vejez",656,NULL
+535,"Donativos a instituciones sin fines de lucro",48101,NULL,Superusuario,232,"48101 Donativos a instituciones sin fines de lucro",657,NULL
+536,"Donativos a entidades federativas o municípios",48201,NULL,Superusuario,232,"48201 Donativos a entidades federativas o municípios",658,NULL
+537,"Donativos a fideicomisos privados",48301,NULL,Superusuario,232,"48301 Donativos a fideicomisos privados",659,NULL
+538,"Donativos a fideicomisos estatales",48401,NULL,Superusuario,232,"48401 Donativos a fideicomisos estatales",660,NULL
+539,"Donativos internacionales",48501,NULL,Superusuario,232,"48501 Donativos internacionales",661,NULL
+540,"Cuotas y aportaciones a organismos internacionales",49201,NULL,Superusuario,232,"49201 Cuotas y aportaciones a organismos internacionales",662,NULL
+541,"Otras aportaciones internacionales",49202,NULL,Superusuario,232,"49202 Otras aportaciones internacionales",663,NULL
+542,Mobiliario,51101,NULL,Superusuario,232,"51101 Mobiliario",664,NULL
+543,"Bienes artísticos y culturales",51301,NULL,Superusuario,232,"51301 Bienes artísticos y culturales",665,NULL
+544,"Bienes informáticos",51501,NULL,Superusuario,232,"51501 Bienes informáticos",666,NULL
+545,"Equipo de administración",51901,NULL,Superusuario,232,"51901 Equipo de administración",667,NULL
+546,"Adjudicaciones, expropiaciones e indemnizaciones de bienes muebles",51902,NULL,Superusuario,232,"51902 Adjudicaciones, expropiaciones e indemnizaciones de bienes muebles",668,NULL
+547,"Equipos y aparatos audiovisuales",52101,NULL,Superusuario,232,"52101 Equipos y aparatos audiovisuales",669,NULL
+548,"Aparatos deportivos",52201,NULL,Superusuario,232,"52201 Aparatos deportivos",670,NULL
+549,"Cámaras fotográficas y de video",52301,NULL,Superusuario,232,"52301 Cámaras fotográficas y de video",671,NULL
+550,"Otro mobiliario y equipo educacional y recreativo",52901,NULL,Superusuario,232,"52901 Otro mobiliario y equipo educacional y recreativo",672,NULL
+551,"Equipo médico y de laboratorio",53101,NULL,Superusuario,232,"53101 Equipo médico y de laboratorio",673,NULL
+552,"Instrumental médico y de laboratorio",53201,NULL,Superusuario,232,"53201 Instrumental médico y de laboratorio",674,NULL
+553,"Vehículos y equipo terrestres, para la ejecución de programas de seguridad pública y nacional",54101,NULL,Superusuario,232,"54101 Vehículos y equipo terrestres, para la ejecución de programas de seguridad pública y nacional",675,NULL
+554,"Vehículos y equipo terrestres, destinados exclusivamente para desastres naturales",54102,NULL,Superusuario,232,"54102 Vehículos y equipo terrestres, destinados exclusivamente para desastres naturales",676,NULL
+555,"Vehículos y equipo terrestres, destinados a servicios públicos y la operación de programas públicos",54103,NULL,Superusuario,232,"54103 Vehículos y equipo terrestres, destinados a servicios públicos y la operación de programas públicos",677,NULL
+556,"Vehículos y equipo terrestres, destinados a servicios administrativos",54104,NULL,Superusuario,232,"54104 Vehículos y equipo terrestres, destinados a servicios administrativos",678,NULL
+557,"Vehículos y equipo terrestres, destinados a servidores públicos",54105,NULL,Superusuario,232,"54105 Vehículos y equipo terrestres, destinados a servidores públicos",679,NULL
+558,"Carrocerías y remolques",54201,NULL,Superusuario,232,"54201 Carrocerías y remolques",680,NULL
+559,"Vehículos y equipo aéreos, para la ejecución de programas de seguridad pública y nacional",54301,NULL,Superusuario,232,"54301 Vehículos y equipo aéreos, para la ejecución de programas de seguridad pública y nacional",681,NULL
+560,"Vehículos y equipo aéreos, destinados exclusivamente para desastres naturales",54302,NULL,Superusuario,232,"54302 Vehículos y equipo aéreos, destinados exclusivamente para desastres naturales",682,NULL
+561,"Vehículos y equipo aéreos, destinados a servicios públicos y la operación de programas públicos",54303,NULL,Superusuario,232,"54303 Vehículos y equipo aéreos, destinados a servicios públicos y la operación de programas públicos",683,NULL
+562,"Equipo ferroviario",54401,NULL,Superusuario,232,"54401 Equipo ferroviario",684,NULL
+563,"Vehículos y equipo marítimo, para la ejecución de programas de seguridad pública y nacional",54501,NULL,Superusuario,232,"54501 Vehículos y equipo marítimo, para la ejecución de programas de seguridad pública y nacional",685,NULL
+564,"Vehículos y equipo marítimo, destinados a servicios públicos y la operación de programas públicos",54502,NULL,Superusuario,232,"54502 Vehículos y equipo marítimo, destinados a servicios públicos y la operación de programas públicos",686,NULL
+565,"Construcción de embarcaciones",54503,NULL,Superusuario,232,"54503 Construcción de embarcaciones",687,NULL
+566,"Otros equipos de transporte",54901,NULL,Superusuario,232,"54901 Otros equipos de transporte",688,NULL
+567,"Maquinaria y equipo de defensa y seguridad pública",55101,NULL,Superusuario,232,"55101 Maquinaria y equipo de defensa y seguridad pública",689,NULL
+568,"Equipo de seguridad pública y nacional",55102,NULL,Superusuario,232,"55102 Equipo de seguridad pública y nacional",690,NULL
+569,"Maquinaria y equipo agropecuario",56101,NULL,Superusuario,232,"56101 Maquinaria y equipo agropecuario",691,NULL
+570,"Maquinaria y equipo industrial",56201,NULL,Superusuario,232,"56201 Maquinaria y equipo industrial",692,NULL
+571,"Maquinaria y equipo de construcción",56301,NULL,Superusuario,232,"56301 Maquinaria y equipo de construcción",693,NULL
+572,"Equipos y aparatos de comunicaciones y telecomunicaciones",56501,NULL,Superusuario,232,"56501 Equipos y aparatos de comunicaciones y telecomunicaciones",694,NULL
+573,"Maquinaria y equipo eléctrico y electrónico",56601,NULL,Superusuario,232,"56601 Maquinaria y equipo eléctrico y electrónico",695,NULL
+574,"Herramientas y máquinas herramienta",56701,NULL,Superusuario,232,"56701 Herramientas y máquinas herramienta",696,NULL
+575,"Bienes muebles por arrendamiento financiero",56901,NULL,Superusuario,232,"56901 Bienes muebles por arrendamiento financiero",697,NULL
+576,"Otros bienes muebles",56902,NULL,Superusuario,232,"56902 Otros bienes muebles",698,NULL
+577,"Animales de reproducción",57101,NULL,Superusuario,232,"57101 Animales de reproducción",699,NULL
+578,"Animales de trabajo",57601,NULL,Superusuario,232,"57601 Animales de trabajo",700,NULL
+579,"Animales de custodia y vigilancia",57701,NULL,Superusuario,232,"57701 Animales de custodia y vigilancia",701,NULL
+580,Terrenos,58101,NULL,Superusuario,232,"58101 Terrenos",702,NULL
+581,"Edificios y locales",58301,NULL,Superusuario,232,"58301 Edificios y locales",703,NULL
+582,"Adjudicaciones, expropiaciones e indemnizaciones de inmuebles",58901,NULL,Superusuario,232,"58901 Adjudicaciones, expropiaciones e indemnizaciones de inmuebles",704,NULL
+583,"Bienes inmuebles en la modalidad de proyectos de infraestructura productiva de largo plazo",58902,NULL,Superusuario,232,"58902 Bienes inmuebles en la modalidad de proyectos de infraestructura productiva de largo plazo",705,NULL
+584,"Bienes inmuebles por arrendamiento financiero",58903,NULL,Superusuario,232,"58903 Bienes inmuebles por arrendamiento financiero",706,NULL
+585,"Otros bienes inmuebles",58904,NULL,Superusuario,232,"58904 Otros bienes inmuebles",707,NULL
+586,Software,59101,NULL,Superusuario,232,"59101 Software",708,NULL
+587,"Catalogo Macroprocesos",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+588,"Macroproceso 1",10,NULL,Superusuario,587,NULL,NULL,NULL
+589,"Macroproceso 2",20,NULL,Superusuario,587,NULL,NULL,NULL
+590,"Macroproceso 3",30,NULL,Superusuario,587,NULL,NULL,NULL
+591,"Macroproceso 4",40,NULL,Superusuario,587,NULL,NULL,NULL
+592,"Catalogo Objetivos Prioritario",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+593,"1.- Mejorar la coordinación entre las autoridades educativas estatales y federales y actores clave del Sistema Educativo Nacional para la mejora continua de la educación",10,NULL,Superusuario,592,NULL,NULL,NULL
+594,"2.- Mejorar la oferta de información relevante y las orientaciones técnico pedagógicas que contribuyan a mejorar el aprendizaje de los estudiantes de educación básica, media superior y de adultos para fortalecer la excelencia, la inclusión y la equidad..",20,NULL,Superusuario,592,NULL,NULL,NULL
+595,"3.- Fortalecer la oferta de información y orientaciones técnico pedagógicas que favorezcan la mejora continua de las escuelas de educación básica, media superior y para adultos y las constituyan como espacios formativos inclusivos, interculturales…",30,NULL,Superusuario,592,NULL,NULL,NULL
+596,"4.- Fortalecer el marco regulatorio y los programas para mejorar la formación continua y el desarrollo profesional de docentes de educación básica y media superior",40,NULL,Superusuario,592,NULL,NULL,NULL
+597,"5.- Fortalecer la oferta de información y el marco regulatorio para la toma de decisiones en las políticas de educación básica y media superior para avanzar en el cumplimiento del derecho a la educación",50,NULL,Superusuario,592,NULL,NULL,NULL
+598,"6.- Garantizar la generación de información sobre el SEN, así como de productos institucionales que apoyen la mejora continua de la educación básica y media superior",60,NULL,Superusuario,592,NULL,NULL,NULL
+599,"Catalogo Problemática Educativa 2",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+600,Aprendizajes,10,NULL,Superusuario,599,NULL,NULL,NULL
+601,"Organización Escolar",20,NULL,Superusuario,599,NULL,NULL,NULL
+602,"Formación docente",30,NULL,Superusuario,599,NULL,NULL,NULL
+603,"Gestión Educativa",40,NULL,Superusuario,599,NULL,NULL,NULL
+604,"Desarrollo Curricular",50,NULL,Superusuario,599,NULL,NULL,NULL
+605,"No aplica",60,NULL,Superusuario,599,NULL,NULL,NULL
+606,"Nombre del indicador del Parámetro (PI)",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+607,"Nivel de satisfacción de las autoridades educativas con la organización y funcionamiento del Sistema Nacional para la Mejora Continua de la Educación",1,NULL,Superusuario,606,NULL,1.1,NULL
+608,"Porcentaje de convenios de colaboración suscritos en materia de mejora continua de la educación en el año t",1,NULL,Superusuario,606,NULL,1.2,NULL
+609,"Porcentaje de recomendaciones del Consejo Técnico de Educación y del Consejo Ciudadano atendidas por la Comisión en el año t",1,NULL,Superusuario,606,NULL,1.3,NULL
+610,"Nivel de satisfacción de los actores clave con las herramientas, recursos y materiales educativos que genere la Comisión para la mejora continua de los aprendizajes de los estudiantes en educación básica y media superior",2,NULL,Superusuario,606,NULL,2.1,NULL
+611,"Porcentaje de lineamientos, programas y sugerencias emitidos por la Comisión para mejorar el aprendizaje de los estudiantes en el año t",2,NULL,Superusuario,606,NULL,2.2,NULL
+612,"Porcentaje de estudios e investigaciones especializadas y evaluaciones diagnósticas sobre temáticas de inclusión, equidad y excelencia educativa elaborados por la Comisión en el año t",2,NULL,Superusuario,606,NULL,2.3,NULL
+613,"Nivel de satisfacción de los actores clave con las herramientas, recursos y materiales educativos que genere la Comisión para la mejora de las escuelas de educación básica y media superior",3,NULL,Superusuario,606,NULL,3.1,NULL
+614,"Porcentaje de estudios e investigaciones especializadas y evaluaciones diagnósticas sobre procesos escolares elaborados por la Comisión en el año t",3,NULL,Superusuario,606,NULL,3.2,NULL
+615,"Porcentaje de lineamientos y orientaciones emitidos por la Comisión para la mejora de las escuelas de educación básica y media superior en el año t",3,NULL,Superusuario,606,NULL,3.3,NULL
+616,"Nivel de satisfacción de los actores clave con los lineamientos, criterios y programas que genere la Comisión para la mejora de la formación continua y desarrollo profesional de docentes de educación básica y media superior",4,NULL,Superusuario,606,NULL,4.1,NULL
+617,"Porcentaje de estudios e investigaciones especializadas y evaluaciones diagnósticas sobre prácticas docentes, directivas y de apoyo y de formación continua y desarrollo profesional de docente elaborados por la Comisión en el año t.",4,NULL,Superusuario,606,NULL,4.2,NULL
+618,"Porcentaje de criterios, lineamientos y programas emitidos por la Comisión para mejorar la formación continua y desarrollo profesional de docentes de educación básica y media superior en el año t",4,NULL,Superusuario,606,NULL,4.3,NULL
+619,"Nivel de satisfacción de las autoridades educativas con las herramientas y recursos que genere la Comisión para mejorar las políticas de educación básica y media superior",5,NULL,Superusuario,606,NULL,5.1,NULL
+620,"Porcentaje de estudios, investigaciones especializadas y evaluaciones diagnósticas sobre políticas educativas elaborados por la Comisión en el año t",5,NULL,Superusuario,606,NULL,5.2,NULL
+621,"Porcentaje de criterios y sugerencias emitidos por la Comisión para mejorar el desarrollo de políticas adecuadas a las necesidades de la población en el año t",5,NULL,Superusuario,606,NULL,5.3,NULL
+622,"Nivel de satisfacción de los actores clave con la información, acciones y productos que difunde la Comisión para apoyar los procesos de mejora continua de la educación y el seguimiento de sus resultados",6,NULL,Superusuario,606,NULL,6.1,NULL
+623,"Porcentaje de indicadores para monitorear los resultados de la mejora educativa publicados en el año t",6,NULL,Superusuario,606,NULL,6.2,NULL
+624,"Porcentaje de publicaciones y acciones de difusión realizadas en el año t",6,NULL,Superusuario,606,NULL,6.3,NULL
+625,"Nombre del indicador de la MIR",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+626,"Cambio en el porcentaje de personas entre 20 y 24 años de edad que cuentan con al menos la Educación Media Superior completa",Fin,NULL,Superusuario,625,NULL,NULL,NULL
+627,"Tasa de eficiencia terminal en primaria",Fin,NULL,Superusuario,625,NULL,NULL,NULL
+628,"Tasa de eficiencia terminal en secundaria",Fin,NULL,Superusuario,625,NULL,NULL,NULL
+629,"Las autoridades educativas (federal y locales) promueven de manera eficaz la mejora continua de la educación",Propósito,NULL,Superusuario,625,NULL,NULL,NULL
+630,"Porcentaje de la oferta de estudios, investigaciones especializadas y evaluaciones para la mejora de la educación fortalecida",C1,NULL,Superusuario,625,NULL,NULL,NULL
+631,"Porcentaje de indicadores para monitorear los resultados de la mejora educativa actualizados ",C2,NULL,Superusuario,625,NULL,NULL,NULL
+632,"Porcentaje de lineamientos, criterios, sugerencias, programas y materiales para la mejora continua de la educación emitidos",C3,NULL,Superusuario,625,NULL,NULL,NULL
+633,"Porcentaje de acuerdos dirigidos a la coordinación de las autoridades educativas para la mejora continua cumplidos",C4,NULL,Superusuario,625,NULL,NULL,NULL
+634,"Porcentaje de instrumentos de los estudios, investigaciones especializadas, y evaluaciones para la mejora educativa elaborados",A1.C1,NULL,Superusuario,625,NULL,NULL,NULL
+635,"Porcentaje de marcos conceptuales y metodológicos diseñados",A2.C1,NULL,Superusuario,625,NULL,NULL,NULL
+636,"Porcentaje de avance en el tratamiento de información para la actualización de indicadores",A1.C2,NULL,Superusuario,625,NULL,NULL,NULL
+637,"Porcentaje de avance en el seguimiento a lineamientos, criterios, sugerencias, programas y materiales para la mejora educativa ",A1.C3,NULL,Superusuario,625,NULL,NULL,NULL
+638,"Porcentaje de sesiones de los Órganos de gobierno y consulta de la MEJOREDU realizadas",A1.C4,NULL,Superusuario,625,NULL,NULL,NULL
+639,"No aplica",150,NULL,Superusuario,625,NULL,NULL,NULL
+640,"Acción Puntual PI",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+641,"1.1.1 Establecer las políticas y regulaciones para la organización y funcionamiento de la Comisión Nacional para la Mejora Continua de la Educación.",10,NULL,Superusuario,641,NULL,NULL,NULL
+642,"1.1.2 Formular los planes y programas de trabajo institucionales que permitan dar cumplimiento a las atribuciones y responsabilidades legales de la Comisión Nacional para la Mejora Continua de la Educación.",20,NULL,Superusuario,641,NULL,NULL,NULL
+643,"1.1.3 Determinar los mecanismos institucionales de articulación interna de los componentes y áreas administrativas de la Comisión Nacional para la Mejora Continua de la Educación.",30,NULL,Superusuario,641,NULL,NULL,NULL
+644,"1.2.1 Determinar las disposiciones y mecanismos para apoyar la organización, funcionamiento y formulación de políticas educativas del Sistema Nacional de Mejora Continua de la Educación.",40,NULL,Superusuario,641,NULL,NULL,NULL
+645,"1.2.2 Promover encuentros de autoridades educativas federales y locales para acordar acciones conjuntas que contribuyan a la mejora continua de la educación.",50,NULL,Superusuario,641,NULL,NULL,NULL
+646,"1.2.3 Promover actividades académicas con expertos y organismos internacionales para apoyar el desempeño de autoridades y actores educativos clave.",60,NULL,Superusuario,641,NULL,NULL,NULL
+647,"1.3.1 Suscribir convenios de colaboración en materia de mejora continua de la educación.",70,NULL,Superusuario,641,NULL,NULL,NULL
+648,"1.3.2 Brindar asistencia técnica a las autoridades de educación básica y media superior del país en materia de mejora continua de la educación.",80,NULL,Superusuario,641,NULL,NULL,NULL
+649,"1.4.1 Mejorar los procesos de planeación, programación, presupuestación, ejercicio, control, seguimiento, evaluación y organización que permitan el logro de los objetivos.",90,NULL,Superusuario,641,NULL,NULL,NULL
+650,"1.4.2 Implementar un modelo de administración que asegure la gestión eficiente y transparente de los recursos humanos, técnicos, financieros y materiales.",100,NULL,Superusuario,641,NULL,NULL,NULL
+651,"1.4.3 Implementar un programa de profesionalización de los servidores públicos para mejorar el rendimiento de las estructuras orgánicas.",110,NULL,Superusuario,641,NULL,NULL,NULL
+652,"1.4.4 Promover la gestión institucional conforme a la base normativa establecida.",120,NULL,Superusuario,641,NULL,NULL,NULL
+653,"1.4.5 Fortalecer el control interno de la Comisión Nacional para la Mejora Continua de la Educación para que contribuya a la efectividad y el desempeño.",130,NULL,Superusuario,641,NULL,NULL,NULL
+654,"1.5.1 Fortalecer los procesos relacionados al cumplimiento de las obligaciones de transparencia y acceso a la información pública.",140,NULL,Superusuario,641,NULL,NULL,NULL
+655,"1.5.2 Implementar acciones de transparencia proactiva para fortalecer la rendición de cuentas.",150,NULL,Superusuario,641,NULL,NULL,NULL
+656,"2.1.1 Llevar a cabo estudios e investigaciones especializadas sobre temáticas de inclusión y equidad en educación básica y media superior.",160,NULL,Superusuario,641,NULL,NULL,NULL
+657,"2.1.2 Desarrollar evaluaciones diagnósticas sobre el aprendizaje de los estudiantes en educación básica y media superior que apoyen el trabajo pedagógico.",170,NULL,Superusuario,641,NULL,NULL,NULL
+658,"2.2.1 Emitir lineamientos y recursos que orienten los procesos de mejora de los aprendizajes de los estudiantes en educación básica y media superior.",180,NULL,Superusuario,641,NULL,NULL,NULL
+659,"2.2.2 Desarrollar materiales prototipo que apoyen la mejora de los aprendizajes de los estudiantes en educación básica y media superior.",190,NULL,Superusuario,641,NULL,NULL,NULL
+660,"2.3.1 Establecer mecanismos de seguimiento y actualización de los lineamientos y materiales prototipo relacionados con la mejora continua de los aprendizajes.",200,NULL,Superusuario,641,NULL,NULL,NULL
+661,"2.3.2 Desarrollar evaluaciones diagnósticas de apoyo al trabajo del aula en diferentes asignaturas del currículum de educación básica y media superior.",210,NULL,Superusuario,641,NULL,NULL,NULL
+662,"2.3.3 Proponer estrategias de reforzamiento pedagógico a partir de los resultados de las evaluaciones diagnósticas, estudios e investigaciones especializados para apoyar el trabajo docente.",220,NULL,Superusuario,641,NULL,NULL,NULL
+663,"3.1.1 Llevar a cabo estudios e investigaciones especializadas sobre los procesos escolares en educación básica y media superior.",230,NULL,Superusuario,641,NULL,NULL,NULL
+664,"3.1.2 Desarrollar evaluaciones diagnósticas sobre la organización y funcionamiento de las escuelas de educación básica y media superior.",240,NULL,Superusuario,641,NULL,NULL,NULL
+665,"3.1.3 Desarrollar mecanismos de recopilación y análisis de información sobre las necesidades y experiencias de mejora en las escuelas de educación básica y media superior, como insumo para la toma de decisiones.",250,NULL,Superusuario,641,NULL,NULL,NULL
+666,"3.2.1 Emitir lineamientos, criterios, orientaciones y recursos que apoyen los procesos de mejora de las escuelas en educación básica y media superior.",260,NULL,Superusuario,641,NULL,NULL,NULL
+667," 3.2.2 Emitir lineamientos para la innovación de materiales y tecnologías educativas que apoyen la mejora continua de las escuelas en educación básica y media superior.",270,NULL,Superusuario,641,NULL,NULL,NULL
+668,"3.2.3 Desarrollar materiales prototipo que apoyen la mejora continua de las escuelas en educación básica y media superior.",280,NULL,Superusuario,641,NULL,NULL,NULL
+669,"3.2.4 Formular sugerencias de elementos que contribuyan a la mejora de los planes y programas de educación básica y media superior, y de los objetivos de la educación inicial, inclusiva y de adultos.",290,NULL,Superusuario,641,NULL,NULL,NULL
+670,"3.3.1 Fortalecer las capacidades institucionales de los equipos técnicos estatales para la implementación y uso de los lineamientos, criterios, sugerencias, recursos y materiales prototipo relacionados con la mejora continua de las escuelas.",300,NULL,Superusuario,641,NULL,NULL,NULL
+671,"3.3.2 Establecer mecanismos de seguimiento y actualización de los lineamientos, criterios, sugerencias y materiales prototipo relacionados con la mejora continua de las escuelas.",310,NULL,Superusuario,641,NULL,NULL,NULL
+672,"4.1.1 Llevar a cabo estudios e investigaciones especializadas sobre prácticas docentes, directiva y de apoyo, y de formación continua y desarrollo profesional docente en educación básica y media superior.",320,NULL,Superusuario,641,NULL,NULL,NULL
+673,"4.1.2 Desarrollar evaluaciones diagnósticas de las prácticas docentes, directiva y de apoyo en educación básica y media superior con carácter diagnóstico y formativo.",330,NULL,Superusuario,641,NULL,NULL,NULL
+674,"4.1.3 Sistematizar información sobre formación continua y desarrollo profesional de docentes de educación básica y media superior.",340,NULL,Superusuario,641,NULL,NULL,NULL
+675,"4.1.4 Procesar resultados de los procesos de selección para la admisión, promoción y reconocimiento.",350,NULL,Superusuario,641,NULL,NULL,NULL
+676,"4.1.5 Integrar información sobre la oferta de formación continua de docentes en educación básica y educación media superior de las autoridades educativas federal, de los estados, de la Ciudad de México y de los organismos descentralizados y sus características.",360,NULL,Superusuario,641,NULL,NULL,NULL
+677,"4.2.1 Favorecer la articulación de las acciones de formación continua y desarrollo profesional docente desarrolladas por las autoridades de educación básica y educación media superior del país, las instituciones de educación superior y las organizaciones de la sociedad civil.",370,NULL,Superusuario,641,NULL,NULL,NULL
+678,"4.2.2 Emitir lineamientos y criterios que regulen los procesos de evaluación, formación continua y desarrollo profesional docente a los que se sujetarán las autoridades educativas federal, de los estados, de la Ciudad de México y de los organismos descentralizados.",380,NULL,Superusuario,641,NULL,NULL,NULL
+679,"4.2.3 Formular programas de formación continua y desarrollo profesional docentes, técnico- docentes, directivos, personal de apoyo y equipos técnicos de educación básica y media superior para su implementación por parte de las autoridades educativas federal y locales y de los organismos descentralizados.",390,NULL,Superusuario,641,NULL,NULL,NULL
+680,"4.3.1 Desarrollar materiales y recursos educativos que fortalezcan las acciones para la formación continua de docentes en educación básica y educación media superior.",400,NULL,Superusuario,641,NULL,NULL,NULL
+681,"4.3.2 Establecer mecanismos de monitoreo y actualización de los lineamientos, criterios y programas de formación continua y desarrollo profesional docente que emita la Comisión Nacional para la Mejora Continua de la Educación.",410,NULL,Superusuario,641,NULL,NULL,NULL
+682,"5.1.1 Llevar a cabo estudios e investigaciones especializadas sobre los instrumentos de gestión pública e intervenciones educativas relevantes que orientan el desarrollo de las políticas de educación básica y media superior.",420,NULL,Superusuario,641,NULL,NULL,NULL
+683,"5.1.2 Desarrollar evaluaciones sobre el diseño, implementación y resultados de las políticas de educación básica y media superior.",430,NULL,Superusuario,641,NULL,NULL,NULL
+684,"5.2.1 Fortalecer el marco regulatorio para el desarrollo de evaluaciones, estudios e investigaciones especializadas que se desarrollen al interior del SEN.",440,NULL,Superusuario,641,NULL,NULL,NULL
+685,"5.2.2 Establecer criterios para orientar el trabajo de las instancias evaluadoras en educación básica y media superior.",450,NULL,Superusuario,641,NULL,NULL,NULL
+686,"5.2.3 Desarrollar un modelo institucional de investigación educativa que articule el abordaje de los problemas educativos con la toma de decisiones en distintos niveles de intervención dentro del SEN.",460,NULL,Superusuario,641,NULL,NULL,NULL
+687,"5.2.4 Impulsar el desarrollo de agendas institucionales de investigación y estudios especializados con centros de investigación e instituciones de educación superior para atender las necesidades del sistema educativo atendiendo a la diversidad de las necesidades locales. ",470,NULL,Superusuario,641,NULL,NULL,NULL
+688,"6.1.1 Procesar información sobre los actores, procesos y servicios de educación básica y media superior.",480,NULL,Superusuario,641,NULL,NULL,NULL
+689,"6.1.2 Desarrollar herramientas que permitan a los actores e instituciones educativas monitorear sus procesos de mejora continua de la educación.",490,NULL,Superusuario,641,NULL,NULL,NULL
+690,"6.2.1 Implementar una Política de Difusión que permita hacer llegar toda la información generada por MEJOREDU a actores educativos y a la sociedad en general.",500,NULL,Superusuario,641,NULL,NULL,NULL
+691,"6.2.2 Operar un Fondo Editorial pertinente y accesible, que apoye los esfuerzos de mejora continua de los actores e instituciones educativas que conforman el Sistema Educativo Nacional.",510,NULL,Superusuario,641,NULL,NULL,NULL
+692,"6.2.3 Poner al alcance de todos los actores educativos un acervo de recursos documentales actualizados y pertinentes, tanto de origen nacional e internacional, que apoyen la mejora continua de la educación.",520,NULL,Superusuario,641,NULL,NULL,NULL
+693,"Alineación al PND",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+694,"Política y Gobierno",1,NULL,Superusuario,694,NULL,NULL,NULL
+695,"Política Social",2,NULL,Superusuario,694,NULL,NULL,NULL
+696,Economía,3,NULL,Superusuario,694,NULL,NULL,NULL
+697,"Nivel de desagregación ",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+698,"Política y Gobierno",1,NULL,Superusuario,698,NULL,NULL,NULL
+699,"Política Social",2,NULL,Superusuario,698,NULL,NULL,NULL
+700,Economía,3,NULL,Superusuario,698,NULL,NULL,NULL
+701,"Periodicidad o frecuencia de medición",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+702,Mensual,1,NULL,Superusuario,702,NULL,NULL,NULL
+703,Bimestral,2,NULL,Superusuario,702,NULL,NULL,NULL
+704,Trimestral,3,NULL,Superusuario,702,NULL,NULL,NULL
+705,Cuatrimestral,4,NULL,Superusuario,702,NULL,NULL,NULL
+706,Semestral,5,NULL,Superusuario,702,NULL,NULL,NULL
+707,Anual,6,NULL,Superusuario,702,NULL,NULL,NULL
+708,Bienal,7,NULL,Superusuario,702,NULL,NULL,NULL
+709,Trianual,8,NULL,Superusuario,702,NULL,NULL,NULL
+710,Sexenal,9,NULL,Superusuario,702,NULL,NULL,NULL
+711,"Otro (especificar)",10,NULL,Superusuario,702,NULL,NULL,NULL
+712,Tipo,NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+713,Estratégico,1,NULL,Superusuario,712,NULL,NULL,NULL
+714,Gestión,2,NULL,Superusuario,712,NULL,NULL,NULL
+715," Acumulado o periódico",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+718,"Unidad de medida",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+719,Porcentaje,1,NULL,Superusuario,719,NULL,NULL,NULL
+720,"Tasa de variación",2,NULL,Superusuario,719,NULL,NULL,NULL
+721,Promedio,3,NULL,Superusuario,719,NULL,NULL,NULL
+722,"Números índice",4,NULL,Superusuario,719,NULL,NULL,NULL
+723,"Otro (especificar)",5,NULL,Superusuario,719,NULL,NULL,NULL
+724,"Periodo de recolección de datos",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+725,Enero-Diciembre,1,NULL,Superusuario,725,NULL,NULL,NULL
+726,"Otro (especificar)",2,NULL,Superusuario,725,NULL,NULL,NULL
+727,"Dimensión de los indicadores",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+728,Eficiencia,1,NULL,Superusuario,728,NULL,NULL,NULL
+729,Eficacia,2,NULL,Superusuario,728,NULL,NULL,NULL
+730,Calidad,3,NULL,Superusuario,728,NULL,NULL,NULL
+731,Economía,4,NULL,Superusuario,728,NULL,NULL,NULL
+732,"Disponibilidad de información",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+734,Febrero,2,NULL,Superusuario,734,NULL,NULL,NULL
+735,Marzo,3,NULL,Superusuario,734,NULL,NULL,NULL
+736,Abril,4,NULL,Superusuario,734,NULL,NULL,NULL
+737,Mayo,5,NULL,Superusuario,734,NULL,NULL,NULL
+738,Junio,6,NULL,Superusuario,734,NULL,NULL,NULL
+739,Julio,7,NULL,Superusuario,734,NULL,NULL,NULL
+740,Agosto,8,NULL,Superusuario,734,NULL,NULL,NULL
+741,Septiembre,9,NULL,Superusuario,734,NULL,NULL,NULL
+742,Octubre,10,NULL,Superusuario,734,NULL,NULL,NULL
+743,Noviembre,11,NULL,Superusuario,734,NULL,NULL,NULL
+744,Diciembre,12,NULL,Superusuario,734,NULL,NULL,NULL
+745,"Tendencia esperada",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+747,Descendente,2,NULL,Superusuario,747,NULL,NULL,NULL
+748,Constante,3,NULL,Superusuario,747,NULL,NULL,NULL
+749,"Unidad responsable de reportar el avance",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+751,Sector,NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+753,"Objetivos de Desarrollo Sustentable",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+755,"Hambre Cero",2,NULL,Superusuario,755,NULL,NULL,NULL
+756,"Salud y Bienestar",3,NULL,Superusuario,755,NULL,NULL,NULL
+757,"Educación y Calidad",4,NULL,Superusuario,755,NULL,NULL,NULL
+758,"Igualdad de Género",5,NULL,Superusuario,755,NULL,NULL,NULL
+759,"Agua Limpia y Saneamiento",6,NULL,Superusuario,755,NULL,NULL,NULL
+760,"Energía asequible y no Contaminante",7,NULL,Superusuario,755,NULL,NULL,NULL
+761,"Trabajo decente y crecimiento económico",8,NULL,Superusuario,755,NULL,NULL,NULL
+762,"Industria, innovación e infraestructura",9,NULL,Superusuario,755,NULL,NULL,NULL
+763,"Reducción de las desigualdades",10,NULL,Superusuario,755,NULL,NULL,NULL
+764,"Ciudades y comunidades sustentables",11,NULL,Superusuario,755,NULL,NULL,NULL
+765,"Producción y consumo responsable",12,NULL,Superusuario,755,NULL,NULL,NULL
+766,"Acción por el clima",13,NULL,Superusuario,755,NULL,NULL,NULL
+767,"Vida submarina",14,NULL,Superusuario,755,NULL,NULL,NULL
+768,"Vida de ecosistemas terrestres",15,NULL,Superusuario,755,NULL,NULL,NULL
+769,"Paz, justicia e instituciones sólidas",16,NULL,Superusuario,755,NULL,NULL,NULL
+770,"Alianza para lograr los objetivos",17,NULL,Superusuario,755,NULL,NULL,NULL
+771,"Estrategia prioritaria",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+773,"Promover el fortalecimiento del Sistema Nacional para la Mejora Continua de la Educación para lograr que autoridades y actores educativos contribuyan al ejercicio pleno del derecho a la educación",1,NULL,Superusuario,773,NULL,1.2,NULL
+774,"Impulsar la colaboración e intercambio con las autoridades federal, de los estados, de la Ciudad de México y otros actores clave nacionales e internacionales para contribuir a la mejora continua de la educación",1,NULL,Superusuario,773,NULL,1.3,NULL
+775,"Implementar una gestión basada en resultados para garantizar la racionalidad y eficiencia en el funcionamiento de la Comisión Nacional para la Mejora Continua de la Educación",1,NULL,Superusuario,773,NULL,1.4,NULL
+776,"Impulsar mecanismos de transparencia y rendición de cuentas para un gobierno abierto",1,NULL,Superusuario,773,NULL,1.5,NULL
+777,"Generar información y conocimiento que fundamente las decisiones relacionadas con la mejora de los resultados educativos de los estudiantes en escuelas de educación básica y media superior",2,NULL,Superusuario,773,NULL,2.1,NULL
+778,"Fortalecer los procesos de mejora de los aprendizajes de los estudiantes en educación básica y educación media superior a fin de buscar la excelencia, la inclusión y la equidad educativa",2,NULL,Superusuario,773,NULL,2.2,NULL
+779,"Apoyar la implementación y seguimiento de los productos desarrollados por la Comisión Nacional para la Mejora Continua de la Educación para la mejora de los aprendizajes en educación básica y media superior",2,NULL,Superusuario,773,NULL,2.3,NULL
+780,"Generar información y conocimiento sobre las escuelas de educación básica y media superior para fundamentar las decisiones sobre la mejora de la educación",3,NULL,Superusuario,773,NULL,3.1,NULL
+781,"Fortalecer los procesos de mejora continua de las escuelas en educación básica y media superior a fin de buscar la excelencia, la inclusión y la equidad educativa",3,NULL,Superusuario,773,NULL,3.2,NULL
+782,"Apoyar la implementación y seguimiento de los productos desarrollados por la Comisión Nacional para la Mejora Continua de la Educación para orientar la mejora continua de las escuelas de educación básica y media superior",3,NULL,Superusuario,773,NULL,3.3,NULL
+783,"Generar información y conocimiento relativos a las prácticas docente, directiva y de apoyo de educación básica y educación media superior para mejorar la formación continua y desarrollo profesional docente",4,NULL,Superusuario,773,NULL,4.1,NULL
+784,"Fortalecer los procesos de evaluación, formación continua y desarrollo profesional docente en educación básica y educación media superior para contribuir a la mejora continua de la educación",4,NULL,Superusuario,773,NULL,4.2,NULL
+785,"Desarrollar recursos e instrumentos que apoyen la implementación y seguimiento de los lineamientos, criterios y programas para la mejora de la formación continua y el desarrollo profesional docente",4,NULL,Superusuario,773,NULL,4.3,NULL
+786,"Generar información y conocimiento que fundamente las decisiones relacionadas con la mejora de las políticas educativas de educación básica y media superior",5,NULL,Superusuario,773,NULL,5.1,NULL
+787,"Reforzar el desarrollo de las políticas de educación básica y media superior con el apoyo de las instancias evaluadoras y centros de investigación dentro del SEN para contribuir al ejercicio pleno del derecho a la educación",5,NULL,Superusuario,773,NULL,5.2,NULL
+788,"Proveer información sobre el Sistema Educativo Nacional y determinar indicadores de resultados para dar seguimiento a los procesos de mejora continua de la educación",6,NULL,Superusuario,773,NULL,6.1,NULL
+789,"Fortalecer la difusión de información de productos desarrollados por la Comisión Nacional para la Mejora Continua de la Educación para contribuir a la mejora continua del Sistema Educativo Nacional",6,NULL,Superusuario,773,NULL,6.2,NULL
+790,"Comportamiento de medición",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+791,"Metas acumulativas
+",,NULL,Superusuario,790,NULL,NULL,NULL
+792,"Metas periódicas",,NULL,Superusuario,790,NULL,NULL,NULL
+793,"Tipo de valor de la meta",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+794,Absoluto,,NULL,Superusuario,793,NULL,NULL,NULL
+795,Relativo,,NULL,Superusuario,793,NULL,NULL,NULL
+796,"Programa presupuestario",NULL,NULL,Superusuario,793,NULL,NULL,NULL
+797,"Actividades de apoyo a la función pública y buen gobierno",O001,NULL,Superusuario,793,NULL,NULL,NULL
+798,"Planeación, diseño, ejecución y evaluación del Sistema Nacional de Mejora Continua de la Educación",P016,NULL,Superusuario,793,NULL,NULL,NULL
+799,"Actividades de apoyo administrativo",M001,NULL,Superusuario,793,NULL,NULL,NULL
+800,Objetivo,NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+801,"Fortalecer el Sistema de Control Interno, mediante la fiscalización y la colaboración intra-institucional, a fin de que las actividades de la Comisión se desarrollen con apego a la normativa vigente y contribuyan al cumplimiento de sus objetivos y metas.",O001,NULL,Superusuario,800,NULL,NULL,NULL
+802,"Coordinar el Sistema Nacional de Mejora Continua de la Educación mediante la implementación de lineamientos, criterios y recomendaciones por parte de los actores educativos.",P016,NULL,Superusuario,800,NULL,NULL,NULL
+803,"Desarrollar acciones relativas a la gestión de los recursos humanos, financieros, materiales y de TIC, así como para los procesos de planeación, programación, presupuestación, ejercicio, seguimiento, evaluación, y comunicación interna a efecto de fortalecer a la Comisión como organismo eficiente y eficaz en un marco de transparencia y rendición de cuentas.",M001,NULL,Superusuario,800,NULL,NULL,NULL
+804,Nivel,NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+805,Fin,Fin,NULL,Superusuario,804,P016,NULL,NULL
+806,Propósito,Propósito,NULL,Superusuario,804,P016,NULL,NULL
+807,Componente,C1,NULL,Superusuario,804,P016,NULL,NULL
+808,Componente,C2,NULL,Superusuario,804,P016,NULL,NULL
+809,Componente,C3,NULL,Superusuario,804,P016,NULL,NULL
+810,Componente,C4,NULL,Superusuario,804,P016,NULL,NULL
+811,Actividad,A1.C.1,NULL,Superusuario,804,P016,NULL,NULL
+812,Actividad,A2.C1,NULL,Superusuario,804,P016,NULL,NULL
+813,Actividad,A1.C2,NULL,Superusuario,804,P016,NULL,NULL
+814,Actividad,A1.C3,NULL,Superusuario,804,P016,NULL,NULL
+815,Actividad,A1.C4,NULL,Superusuario,804,P016,NULL,NULL
+816,"Clave y nombre de Unidad responsable",NULL,NULL,Superusuario,NULL,,NULL,NULL
+817,"Junta Directiva",P016,NULL,Superusuario,816,1100,NULL,NULL
+818,"Unidad de Evaluación Diagnóstica",P016,NULL,Superusuario,816,2100,NULL,NULL
+819,"Unidad de Apoyo y Seguimiento a la Mejora Continua e Innovación Educativa",P016,NULL,Superusuario,816,3100,NULL,NULL
+820,"Unidad de Vinculación e Integralidad del Aprendizaje",P016,NULL,Superusuario,816,4100,NULL,NULL
+821,"Unidad de Administración y Finanzas",M001,NULL,Superusuario,816,1210,NULL,NULL
+822,"Órgano Interno de Control",O001,NULL,Superusuario,816,5100,NULL,NULL
+823,"Contribución al PNCCIMGP",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+824,"Combatir frontalmente las causas y efectos de la corrupción","Objetivo prioritario 1.",NULL,Superusuario,823,NULL,NULL,NULL
+825,"Combatir los niveles de impunidad administrativa en el Gobierno Federal","Objetivo prioritario 2.",NULL,Superusuario,823,NULL,NULL,NULL
+826,"Promover la eficiencia y eficacia de la gestión pública","Objetivo prioritario 3.",NULL,Superusuario,823,NULL,NULL,NULL
+827,"Promover la profesionalización y la gestión eficiente de los recursos humanos de la Administración Pública Federal","Objetivo prioritario 4.",NULL,Superusuario,823,NULL,NULL,NULL
+828,"Promover el uso eficiente y responsable de los bienes del Estado Mexicano","Objetivo prioritario 5.",NULL,Superusuario,823,NULL,NULL,NULL
+829,Alcance,NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+830,Nacional,1,NULL,Superusuario,829,NULL,NULL,NULL
+831,Estatal,2,NULL,Superusuario,829,NULL,NULL,NULL
+832,Regional,3,NULL,Superusuario,829,NULL,NULL,NULL
+833,Municipal,4,NULL,Superusuario,829,NULL,NULL,NULL
+834,Intermunicipal,5,NULL,Superusuario,829,NULL,NULL,NULL
+835,"Reuniones a realizarse",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+836,Sí,1,NULL,Superusuario,835,NULL,NULL,NULL
+837,No,2,NULL,Superusuario,835,NULL,NULL,NULL
+838,Categoría,NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+839,"Final ",1,NULL,Superusuario,838,NULL,NULL,NULL
+840,Intermedio,2,NULL,Superusuario,838,NULL,NULL,NULL
+841,Periodico,3,NULL,Superusuario,838,NULL,NULL,NULL
+842,"Por publicar",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+843,Sí,1,NULL,Superusuario,842,NULL,NULL,NULL
+844,No,2,NULL,Superusuario,842,NULL,NULL,NULL
+845,"Año para publicar",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+846,2023,1,NULL,Superusuario,845,NULL,NULL,NULL
+847,2024,2,NULL,Superusuario,845,NULL,NULL,NULL
+848,2025,3,NULL,Superusuario,845,NULL,NULL,NULL
+849,(Incremental),-,NULL,Superusuario,845,NULL,NULL,NULL
+850,"Nivel educativo",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+851,"No aplica",0,NULL,Superusuario,850,NULL,NULL,NULL
+852,Básica,2,NULL,Superusuario,850,NULL,NULL,NULL
+853,"Media superior",4,NULL,Superusuario,850,NULL,NULL,NULL
+854,"Otros servicios educativos y actividades inherentes",6,NULL,Superusuario,850,NULL,NULL,NULL
+855,"Fuente de financiemiento",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+856,Propios,1,NULL,Superusuario,855,NULL,NULL,NULL
+857,"Venta de bienes y servicios",2,NULL,Superusuario,855,NULL,NULL,NULL
+858,"Tipo de producto",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+859,"Agenda estratégica",AE,NULL,Superusuario,858,NULL,NULL,NULL
+860,"Acta de Sesión",AS,NULL,Superusuario,858,NULL,NULL,NULL
+861,"Base de datos",BD,NULL,Superusuario,858,NULL,NULL,NULL
+862,Boletín,BL,NULL,Superusuario,858,NULL,NULL,NULL
+863,"Batería de reactivos",BR,NULL,Superusuario,858,NULL,NULL,NULL
+864,"Categorías de análisis",CA,NULL,Superusuario,858,NULL,NULL,NULL
+865,"Componente de desarrollo TIC",CD,NULL,Superusuario,858,NULL,NULL,NULL
+866,Convenio,CO,NULL,Superusuario,858,NULL,NULL,NULL
+867,"Cuaderno Estadístico",CE,NULL,Superusuario,858,NULL,NULL,NULL
+868,"Carpeta de materiales",CM,NULL,Superusuario,858,NULL,NULL,NULL
+869,Criterios,CR,NULL,Superusuario,858,NULL,NULL,NULL
+870,"Desarrollo TIC",DT,NULL,Superusuario,858,NULL,NULL,NULL
+871,"Estatuto Orgánico",EO,NULL,Superusuario,858,NULL,NULL,NULL
+872,Estudio,ES,NULL,Superusuario,858,NULL,NULL,NULL
+873,Evaluación,EV,NULL,Superusuario,858,NULL,NULL,NULL
+874,"Informe de Actividades",IA,NULL,Superusuario,858,NULL,NULL,NULL
+875,Indicadores,ID,NULL,Superusuario,858,NULL,NULL,NULL
+876,"Intervención formativa",IF,NULL,Superusuario,858,NULL,NULL,NULL
+877,Instrumentos,IM,NULL,Superusuario,858,NULL,NULL,NULL
+878," Investigación",IN,NULL,Superusuario,858,NULL,NULL,NULL
+879,"Informe de Resultados",IR,NULL,Superusuario,858,NULL,NULL,NULL
+880,"Informe de seguimiento",IS,NULL,Superusuario,858,NULL,NULL,NULL
+881,"Informe de trabajo",IT,NULL,Superusuario,858,NULL,NULL,NULL
+882,Lineamientos,LI,NULL,Superusuario,858,NULL,NULL,NULL
+883,Manual,MA,NULL,Superusuario,858,NULL,NULL,NULL
+884,"Marco conceptual y metodológico",MC,NULL,Superusuario,858,NULL,NULL,NULL
+885,"Mejoras a desarrollos TIC",MD,NULL,Superusuario,858,NULL,NULL,NULL
+886,"Minuta de reunión",MI,NULL,Superusuario,858,NULL,NULL,NULL
+887,Memoria,MM,NULL,Superusuario,858,NULL,NULL,NULL
+888,"Marco rector",MR,NULL,Superusuario,858,NULL,NULL,NULL
+889,"Mecanismo de seguimiento",MS,NULL,Superusuario,858,NULL,NULL,NULL
+890,"Material educativo",ME,NULL,Superusuario,858,NULL,NULL,NULL
+891,Nombramiento,NO,NULL,Superusuario,858,NULL,NULL,NULL
+892,"Nota Técnica",NT,NULL,Superusuario,858,NULL,NULL,NULL
+893,"Orientaciones didácticas (Devoluciones formativas 1)",OD,NULL,Superusuario,858,NULL,NULL,NULL
+894,"Programa de formación",PF,NULL,Superusuario,858,NULL,NULL,NULL
+895,"Procedimiento institucional",PI,NULL,Superusuario,858,NULL,NULL,NULL
+896,"Padrón Nacional",PN,NULL,Superusuario,858,NULL,NULL,NULL
+897,"Política institucional",PT,NULL,Superusuario,858,NULL,NULL,NULL
+898,"Programa de trabajo",PR,NULL,Superusuario,858,NULL,NULL,NULL
+899,"Informe de reuniones",RE,NULL,Superusuario,858,NULL,NULL,NULL
+900,"Reporte de Levantamiento",RL,NULL,Superusuario,858,NULL,NULL,NULL
+901,"Reporte de Muestreo",RM,NULL,Superusuario,858,NULL,NULL,NULL
+902,"Revista y Síntesis",RS,NULL,Superusuario,858,NULL,NULL,NULL
+903,"Reporte de Capacitación",RT,NULL,Superusuario,858,NULL,NULL,NULL
+904,"Seguimiento de Acuerdos",SA,NULL,Superusuario,858,NULL,NULL,NULL
+905,"Spots para radio",SR,NULL,Superusuario,858,NULL,NULL,NULL
+906,Sugerencias,SU,NULL,Superusuario,858,NULL,NULL,NULL
+907,"Continuidad de otros productos de años anteriores",NULL,NULL,Superusuario,NULL,NULL,NULL,NULL
+908,"Informe de la reunión nacional",2311-001-01-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+909,"Agenda estratégica para el desarrollo de visitas o encuentros en las entidades 2023 ",2311-001-02-2-AE,NULL,Superusuario,907,NULL,NULL,NULL
+910,"Minuta de acuerdos",2311-001-03-2-MS,NULL,Superusuario,907,NULL,NULL,NULL
+911,"Informe de reuniones institucionales",2311-002-04-3-RE,NULL,Superusuario,907,NULL,NULL,NULL
+912,"Memoria de los eventos",2311-002-05-3-MM,NULL,Superusuario,907,NULL,NULL,NULL
+913,"Informe de participación en actividades académicas",2311-002-06-3-RE,NULL,Superusuario,907,NULL,NULL,NULL
+914,"Informe de actividades",2311-003-07-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+915,"Documento con la definición de la campaña",2311-003-08-1-PT,NULL,Superusuario,907,NULL,NULL,NULL
+916,"Spots para radio",2311-003-09-3-SR,NULL,Superusuario,907,NULL,NULL,NULL
+917,"Programa Anual de Comunicación social de Mejoredu",2311-003-10-1-PR,NULL,Superusuario,907,NULL,NULL,NULL
+918,"Revista Interna y Síntesis Informativas",2311-003-11-3-RS,NULL,Superusuario,907,NULL,NULL,NULL
+919,"Actas de sesiones realizadas",2311-004-12-3-AS,NULL,Superusuario,907,NULL,NULL,NULL
+920,"Documento Aportaciones de los órganos colegiados a los proyectos de la Comisión",2311-004-13-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+921,"Seguimiento de los acuerdos de la JD  y del Comité del SNMCE",2311-004-14-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+922,"Informes de las recomendaciones en aspectos técnicos y metodológicos del CTE a productos de la Comisión",2311-004-15-3-IA,NULL,Superusuario,907,NULL,NULL,NULL
+923,"Informe de opiniones del Consejo Ciudadano a productos de la Comisión",2311-004-16-3-IA,NULL,Superusuario,907,NULL,NULL,NULL
+924,"Convocatoria y nombramiento de 3 Consejeros Ciudadanos",2311-004-17-1-NO,NULL,Superusuario,907,NULL,NULL,NULL
+925,"Informes sobre la difusión del PGVE asi como de algunos documentos o proyectos generados en la Comisiónen por sus diferentes áreas de adscripción",2311-004-18-3-IA,NULL,Superusuario,907,NULL,NULL,NULL
+926,"Análisis de resultados",2311-005-19-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+927,"Reporte de la implementación de la estrategia",2311-005-20-3-IA,NULL,Superusuario,907,NULL,NULL,NULL
+928,"Reporte de Actividades",2311-005-21-3-IA,NULL,Superusuario,907,NULL,NULL,NULL
+929,Constancias,2311-005-22-3-RT,NULL,Superusuario,907,NULL,NULL,NULL
+930,"Informe de Actividades",2311-006-23-3-IA,NULL,Superusuario,907,NULL,NULL,NULL
+931,"Nota Técnica",2311-080-24-1-NT,NULL,Superusuario,907,NULL,NULL,NULL
+932,"Instrumentos para la evaluación diagnóstica y formativa del aprendizaje de Expresión escrita en educación básica",2321-001-01-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+933,"Orientaciones didácticas para el uso formativo de la evaluación sobre Expresión escrita en educación básica",2321-001-02-1-OD,NULL,Superusuario,907,NULL,NULL,NULL
+934,"Marco conceptual y metodológico sobre la valoración del aprendizaje de los NNA en condición de vulnerabilidad",2321-001-03-2-MC,NULL,Superusuario,907,NULL,NULL,NULL
+935,"Instrumentos de entrevista y grupos focales para recopilar experiencias sobre la valoración del aprendizaje de los NNA en condición de vulnerabilidad",2321-001-04-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+936,"Informe de resultados de la sistematización de experiencias  sobre la valoración del aprendizaje de los NNA en condición de vulnerabilidad",2321-001-05-1-EV,NULL,Superusuario,907,NULL,NULL,NULL
+937,"Materiales y recursos de apoyo para la evaluación diagnóstica y formativa de la práctica docente en Educación Básica",2321-002-06-2-CM,NULL,Superusuario,907,NULL,NULL,NULL
+938,"Informe final del monitoreo de los materiales y recursos de apoyo para llevar a cabo la evaluación diagnóstica y formativa de la práctica docente en escuelas de Educación Básica",2321-002-07-1-EV,NULL,Superusuario,907,NULL,NULL,NULL
+939,"Instrumentos validados para el seguimiento, la apropiación y conocimiento del plan de estudios 2022 en la fase extensiva",2321-002-08-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+940,"Informe del seguimiento a la apropiación y conocimiento del plan de estudios 2022 en la fase extensiva",2321-002-09-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+941,"Paquete de materiales e instrumentos para la evaluación diagnóstica y formativa de condiciones y procesos escolares",2321-003-10-2-CM,NULL,Superusuario,907,NULL,NULL,NULL
+942,"Informe final del monitoreo de materiales e instrumentos de la evaluación diagnóstica y formativa de condiciones y procesos escolares",2321-003-11-1-EV,NULL,Superusuario,907,NULL,NULL,NULL
+943,"Instrumentos para la recolección de información ",2321-004-12-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+944,"Informe de trabajo de campo",2321-004-13-2-IT,NULL,Superusuario,907,NULL,NULL,NULL
+945,"Informe final de la actualización de indicadores y mecanismos del sistema de monitoreo",2321-004-14-1-EV,NULL,Superusuario,907,NULL,NULL,NULL
+946,"Lineamientos para el desarrollo de las evaluaciones diagnósticas y formativas actualizados",2321-005-15-1-LI,NULL,Superusuario,907,NULL,NULL,NULL
+947,"Criterios actualizados",2321-005-16-1-CR,NULL,Superusuario,907,NULL,NULL,NULL
+948,"Informe de experiencias y propuestas nacionales e internacionales sobre la evaluación de los aprendizajes, de docentes, de los centros escolares y de las políticas y programas educativos.",2321-006-17-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+949,"Marco conceptual y metodológico del estudio de coordinación interestatal en la atención educativa de niñez migrante",2321-007-18-2-MC,NULL,Superusuario,907,NULL,NULL,NULL
+950,"Instrumentos diseñados para el estudio de coordinación interestatal en la atención educativa de niñez migrante",2321-007-19-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+951,"Informe de resultados del estudio de coordinación interestatal en la atención educativa de niñez migrante",2321-007-20-1-ES,NULL,Superusuario,907,NULL,NULL,NULL
+952,"Reporte de retroalimentación con actores clave",2321-007-21-1-ES,NULL,Superusuario,907,NULL,NULL,NULL
+953,"Instrumentos diseñados para la investigación sobre el acoso entre estudiantes de educación media superior",2321-008-22-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+954,"Marco conceptual y metodológico de la investigación sobre el acoso entre estudiantes de educación media superior",2321-008-23-2-MC,NULL,Superusuario,907,NULL,NULL,NULL
+955,"Informe de resultados de la investigación sobre el acoso entre estudiantes de media superior",2321-008-24-1-IN,NULL,Superusuario,907,NULL,NULL,NULL
+956,"Marco conceptual y metodológico del estudio de seguimiento de los procesos educativos en el cambio curricular",2321-009-25-2-MC,NULL,Superusuario,907,NULL,NULL,NULL
+957,"Instrumentos diseñados para el estudio de seguimiento de los procesos educativos en el cambio curricular",2321-009-26-2-IM,NULL,Superusuario,907,NULL,NULL,NULL
+958,"Informe final del estudio de seguimiento de los procesos educativos en el cambio curricular",2321-009-27-1-ES,NULL,Superusuario,907,NULL,NULL,NULL
+959,"Muestra de las escuelas para observación",2321-010-28-2-RM,NULL,Superusuario,907,NULL,NULL,NULL
+960,"Muestras de las escuelas de control",2321-010-29-2-RM,NULL,Superusuario,907,NULL,NULL,NULL
+961,"Protocolo de seguimiento",2321-010-30-2-MS,NULL,Superusuario,907,NULL,NULL,NULL
+962,"Reporte de Monitoreo",2321-010-31-2-IS,NULL,Superusuario,907,NULL,NULL,NULL
+963,"Informe final",2321-010-32-1-ES,NULL,Superusuario,907,NULL,NULL,NULL
+964,"Informes de análisis",2321-011-33-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+965,"Informes de desarrollo",2321-011-34-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+966,"Informes de operación en campo",2321-011-35-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+967,"Marco conceptual y metodológico del estudio exploratorio sobre  la desafiliación escolar en Educación Media Superior",2321-012-36-2-MC,NULL,Superusuario,907,NULL,NULL,NULL
+968,"Informe de resultados sobre la desafiliación escolar en Educación Media Superior",2321-012-37-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+969,"Nota técnica",2321-080-38-3-NT,NULL,Superusuario,907,NULL,NULL,NULL
+970,"Nota técnica",2321-081-39-3-NT,NULL,Superusuario,907,NULL,NULL,NULL
+971,"Sugerencias para la concreción del plan y programas de estudio 2022 en EB.",2331-001-01-1-SU,NULL,Superusuario,907,NULL,NULL,NULL
+972,"Sugerencias para la concreción de componentes curriculares en educación media superior",2331-002-02-1-SU,NULL,Superusuario,907,NULL,NULL,NULL
+973,"Lineamientos para la mejora de las escuelas a través del fortalecimiento de prácticas escolares inclusivas e interculturales en  EB",2331-003-03-1-LI,NULL,Superusuario,907,NULL,NULL,NULL
+974,"Lineamientos para la mejora de las escuelas a través del fortalecimiento de prácticas escolares inclusivas e interculturales en EMS",2331-003-04-1-LI,NULL,Superusuario,907,NULL,NULL,NULL
+975,"Informes de actualización del Repositorio ",2331-004-05-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+976,"Materiales educativos para apoyar el trabajo de docentes y estudiantes",2331-005-06-1-ME,NULL,Superusuario,907,NULL,NULL,NULL
+977,"Informe de acompañamiento y seguimiento a Sugerencias",2331-006-07-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+978,"Informe de acompañamiento y seguimiento a Lineamientos",2331-006-08-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+979,"Informe de resultados",2331-007-09-2-IS,NULL,Superusuario,907,NULL,NULL,NULL
+980,"Reporte de instalación y operación de los seis grupos de especialistas en indicadores de mejora continua.",2332-001-01-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+981,"Indicadores Nacionales de la Mejora Continua de la Educación en México 2023  ",2332-002-02-1-ID,NULL,Superusuario,907,NULL,NULL,NULL
+982,"Informes de indicadores",2332-002-03-2-IT,NULL,Superusuario,907,NULL,NULL,NULL
+983,"Bases de datos estadísticos",2332-002-04-2-BD,NULL,Superusuario,907,NULL,NULL,NULL
+984,"Paquete de fichas de información para supervisiones escolares ",2332-002-05-1-ME,NULL,Superusuario,907,NULL,NULL,NULL
+985,"32 documentos con tablas, estadísticas y mapas por entidad federativa ",2332-002-06-1-ID,NULL,Superusuario,907,NULL,NULL,NULL
+986,"Cuaderno temático sobre la atención educativa a población indígena",2332-003-07-1-CE,NULL,Superusuario,907,NULL,NULL,NULL
+987,"Links de consulta de los nuevos módulos integrados en el Sistema de Información.",2332-004-08-2-CD,NULL,Superusuario,907,NULL,NULL,NULL
+988,"Reporte del monitoreo y mantenimiento de módulos integrados en el Sistema de Información.",2332-004-09-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+989,"Informe de resultados del proceso de adopción del proyecto de gobierno de datos en la UAS
+ ",2332-005-10-2-IT,NULL,Superusuario,907,NULL,NULL,NULL
+990,"Informe de resultados de visitas a entidades federativas ",2332-006-11-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+991,"Estrategia anual de difusión en plataformas digitales institucionales",2333-001-01-1-PT,NULL,Superusuario,907,NULL,NULL,NULL
+992,"Reporte trimestral de acciones de difusión ",2333-002-02-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+993,"Reporte trimestral de contenidos diseñados",2333-003-03-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+994,"Memorias del foro "Retos y perspectivas de la educación inclusiva: una mirada regional"""",2333-004-04-2-MM,NULL,Superusuario,907,NULL,NULL,NULL
+995,"Actas de sesión del Comité en PDF ",2333-005-05-3-AS,NULL,Superusuario,907,NULL,NULL,NULL
+996,"Obras editadas y publicadas en formato impreso y digital",2333-006-06-2-IT,NULL,Superusuario,907,NULL,NULL,NULL
+997,"Boletines "Educación en Movimiento"""",2333-007-07-3-BL,NULL,Superusuario,907,NULL,NULL,NULL
+998,"Reporte semestral del CEDOC",2333-008-08-3-IS,NULL,Superusuario,907,NULL,NULL,NULL
+999,"Documentos  para apoyar la investigación académica",2333-008-09-3-MD,NULL,Superusuario,907,NULL,NULL,NULL
+1000,"Capacitaciones de las bases de datos a los usuarios del CEDOC ",2333-008-10-3-RT,NULL,Superusuario,907,NULL,NULL,NULL
+1001,"Nota técnica",2333-080-11-1-NT,NULL,Superusuario,907,NULL,NULL,NULL
+1002,"Nota técnica",2333-081-12-1-NT,NULL,Superusuario,907,NULL,NULL,NULL
+1003,"Base de datos EB",2341-001-01-1-BD,NULL,Superusuario,907,NULL,NULL,NULL
+1004,"Informe de resultados de los procesos de selección en EB",2341-001-02-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+1005,"Base de datos EMS",2341-001-03-1-BD,NULL,Superusuario,907,NULL,NULL,NULL
+1006,"Informe de resultados de los procesos de selección en EMS",2341-001-04-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+1007,"Informe de monitoreo ",2341-002-05-1-IR,NULL,Superusuario,907,NULL,NULL,NULL
+1008,"Informe de monitoreo ",2341-003-06-1-IR,NULL,Superusuario,907,NULL,NULL,NULL

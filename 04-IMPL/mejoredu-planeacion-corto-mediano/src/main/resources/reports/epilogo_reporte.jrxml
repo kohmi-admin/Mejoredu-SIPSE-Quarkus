@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adecuacion_programatica" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="template.engine" value="tabular_template"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="productosOld" whenResourceMissingType="Empty" uuid="9755aaca-55c1-423a-bc5c-592815217ad9">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="producto" class="java.lang.String">
+			<fieldDescription><![CDATA[producto]]></fieldDescription>
+		</field>
+		<field name="E" class="java.lang.Integer">
+			<fieldDescription><![CDATA[enero]]></fieldDescription>
+		</field>
+		<field name="F" class="java.lang.Integer">
+			<fieldDescription><![CDATA[febrero]]></fieldDescription>
+		</field>
+		<field name="M" class="java.lang.Integer">
+			<fieldDescription><![CDATA[marzo]]></fieldDescription>
+		</field>
+		<field name="A" class="java.lang.Integer">
+			<fieldDescription><![CDATA[abril]]></fieldDescription>
+		</field>
+		<field name="Ma" class="java.lang.Integer">
+			<fieldDescription><![CDATA[mayo]]></fieldDescription>
+		</field>
+		<field name="J" class="java.lang.Integer">
+			<fieldDescription><![CDATA[junio]]></fieldDescription>
+		</field>
+		<field name="Ju" class="java.lang.Integer">
+			<fieldDescription><![CDATA[julio]]></fieldDescription>
+		</field>
+		<field name="Ag" class="java.lang.Integer">
+			<fieldDescription><![CDATA[agosto]]></fieldDescription>
+		</field>
+		<field name="S" class="java.lang.Integer">
+			<fieldDescription><![CDATA[septiembre]]></fieldDescription>
+		</field>
+		<field name="O" class="java.lang.Integer">
+			<fieldDescription><![CDATA[octubre]]></fieldDescription>
+		</field>
+		<field name="N" class="java.lang.Integer">
+			<fieldDescription><![CDATA[noviembre]]></fieldDescription>
+		</field>
+		<field name="D" class="java.lang.Integer">
+			<fieldDescription><![CDATA[diciembre]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="productosNew" whenResourceMissingType="Empty" uuid="45cc257d-a8b6-4f61-9b59-ce5620e70248">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="producto" class="java.lang.String">
+			<fieldDescription><![CDATA[producto]]></fieldDescription>
+		</field>
+		<field name="E" class="java.lang.Integer">
+			<fieldDescription><![CDATA[enero]]></fieldDescription>
+		</field>
+		<field name="F" class="java.lang.Integer">
+			<fieldDescription><![CDATA[febrero]]></fieldDescription>
+		</field>
+		<field name="M" class="java.lang.Integer">
+			<fieldDescription><![CDATA[marzo]]></fieldDescription>
+		</field>
+		<field name="A" class="java.lang.Integer">
+			<fieldDescription><![CDATA[abril]]></fieldDescription>
+		</field>
+		<field name="Ma" class="java.lang.Integer">
+			<fieldDescription><![CDATA[mayo]]></fieldDescription>
+		</field>
+		<field name="J" class="java.lang.Integer">
+			<fieldDescription><![CDATA[junio]]></fieldDescription>
+		</field>
+		<field name="Ju" class="java.lang.Integer">
+			<fieldDescription><![CDATA[julio]]></fieldDescription>
+		</field>
+		<field name="Ag" class="java.lang.Integer">
+			<fieldDescription><![CDATA[agosto]]></fieldDescription>
+		</field>
+		<field name="S" class="java.lang.Integer">
+			<fieldDescription><![CDATA[septiembre]]></fieldDescription>
+		</field>
+		<field name="O" class="java.lang.Integer">
+			<fieldDescription><![CDATA[octubre]]></fieldDescription>
+		</field>
+		<field name="N" class="java.lang.Integer">
+			<fieldDescription><![CDATA[noviembre]]></fieldDescription>
+		</field>
+		<field name="D" class="java.lang.Integer">
+			<fieldDescription><![CDATA[diciembre]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="presupuestos" whenResourceMissingType="Empty" uuid="21e96ebf-a4cd-41ea-96ad-9864533df6df">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="Partida" class="java.lang.String">
+			<fieldDescription><![CDATA[partida]]></fieldDescription>
+		</field>
+		<field name="Clave" class="java.lang.String">
+			<fieldDescription><![CDATA[clave]]></fieldDescription>
+		</field>
+		<field name="Importe" class="java.lang.Double">
+			<fieldDescription><![CDATA[importe]]></fieldDescription>
+		</field>
+		<field name="Mes" class="java.lang.String">
+			<fieldDescription><![CDATA[mes]]></fieldDescription>
+		</field>
+		<field name="Clave-A" class="java.lang.String">
+			<fieldDescription><![CDATA[claveAmpliacion]]></fieldDescription>
+		</field>
+		<field name="Importe-A" class="java.lang.Double">
+			<fieldDescription><![CDATA[importeAmpliacion]]></fieldDescription>
+		</field>
+		<field name="Mes-A" class="java.lang.String">
+			<fieldDescription><![CDATA[mesAmpliacion]]></fieldDescription>
+		</field>
+		<field name="Importe neto" class="java.lang.Double">
+			<fieldDescription><![CDATA[importeNeto]]></fieldDescription>
+		</field>
+		<variable name="sumImporteRed" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{Importe}]]></variableExpression>
+			<initialValueExpression><![CDATA[0]]></initialValueExpression>
+		</variable>
+		<variable name="sumImporteAmp" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{Importe-A}]]></variableExpression>
+			<initialValueExpression><![CDATA[0]]></initialValueExpression>
+		</variable>
+		<variable name="sumImporteNeto" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{Importe neto}]]></variableExpression>
+			<initialValueExpression><![CDATA[0]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<parameter name="nombrePrograma" class="java.lang.String"/>
+	<parameter name="analisis" class="java.lang.String"/>
+	<parameter name="programasPublicos" class="java.lang.String"/>
+	<parameter name="epilogo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="89" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-1" y="-3" width="560" height="92" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="17682764-df02-4019-b2d7-8e75ca15e0ac"/>
+				<image>
+					<reportElement x="467" y="7" width="91" height="69" forecolor="#FFFFFF" uuid="389816ce-d2d4-4651-a20c-451c48123bf7"/>
+					<imageExpression><![CDATA[this.getClass().getResourceAsStream("/reports/mejorEduLogo.png")]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="200" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="66" width="557" height="20" forecolor="#FFFFFF" backcolor="#23574A" uuid="2fa6593c-4a48-4e8a-bcb7-ef9354520972">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Análisis del Estado Actual]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="35" width="558" height="21" uuid="f762ada4-a111-442b-aa34-a2f4a171f629">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{nombrePrograma}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="86" width="556" height="40" uuid="82087d56-d2e2-4f46-b757-ba075e0a586a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{analisis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="260" height="19" uuid="163c8002-b2cb-45f9-bcce-146ca4a09c50">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I. Inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="16" width="558" height="20" forecolor="#FFFFFF" backcolor="#23574A" uuid="ae0bdc6f-1b06-4b4a-82a6-6c07a1d7dae0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Programa Institucional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="136" width="557" height="20" forecolor="#FFFFFF" backcolor="#23574A" uuid="aabc8572-7871-4e48-a34a-09511644f093">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Progrmas Públicos]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="156" width="556" height="40" uuid="b6e8e466-5b32-4ee1-ba9e-74ca5a70e254">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{programasPublicos}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="38">
+			<staticText>
+				<reportElement x="0" y="10" width="259" height="19" uuid="b833ca82-e049-4998-a4b5-62129fd27469">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[II. Objetivos, Estrategias y Acciones]]></text>
+			</staticText>
+		</band>
+		<band height="28">
+			<staticText>
+				<reportElement x="0" y="5" width="260" height="18" uuid="e9d7e83d-178c-4658-add0-c5c3bb84cdec">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[III. Metas para el bienestar]]></text>
+			</staticText>
+		</band>
+		<band height="40">
+			<staticText>
+				<reportElement x="0" y="10" width="260" height="18" uuid="75874cdf-d165-4b96-bfa5-c547fe661107">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IV. Parámetros]]></text>
+			</staticText>
+		</band>
+		<band height="74">
+			<staticText>
+				<reportElement x="0" y="0" width="259" height="19" uuid="6aa62bfe-8d63-4d3f-8d21-687c1f5ad36d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[V. Epílogo, Carga del PI y Actas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="20" width="558" height="20" forecolor="#FFFFFF" backcolor="#23574A" uuid="2029a94c-517a-4e56-a375-3270d18ff7af">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Epílogo: Visión a Largo Plazo]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="39" width="558" height="21" uuid="48c33ffd-6c5e-4afe-8aa1-8f2cbbc92f3f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{epilogo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50"/>
+	</pageFooter>
+</jasperReport>

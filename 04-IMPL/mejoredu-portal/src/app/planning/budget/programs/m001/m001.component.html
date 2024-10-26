@@ -1,0 +1,16 @@
+<section id="wrapper" class="can-validate">
+  <h1 class="title no-bottom">Programas Presupuestarios</h1>
+  <span class="sub-title bottom">Registro M001</span>
+  <nav mat-tab-nav-bar>
+    <a
+      mat-tab-link
+      routerLink="Fichas de Indicadores de Desempeño"
+      routerLinkActive="active-link"
+    >
+      Fichas de Indicadores de Desempeño&nbsp;
+      <mat-icon *ngIf="false" class="check">check_circle</mat-icon>
+      <mat-icon *ngIf="true" class="check low">pending</mat-icon>
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+</section>

@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>
+    {{ title }}
+  </h1>
+  <div mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      
+      <div class="field" *ngFor="let question of questions">
+        <app-dynamic-field
+          class="form-field full"
+          [question]="question"
+          [form]="form"
+        ></app-dynamic-field>
+      </div>
+  
+      <div class="btn-actions">
+        <button type="submit" mat-flat-button color="primary">Aplicar</button>
+      </div>
+  
+    </form>
+  </div>
+  

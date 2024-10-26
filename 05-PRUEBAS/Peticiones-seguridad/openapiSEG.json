@@ -1,0 +1,243 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "title" : "mejoredu-seguridad API",
+    "version" : "1.0.0-SNAPSHOT"
+  },
+  "paths" : {
+    "/api/public" : {
+      "get" : {
+        "tags" : [ "Public Resource" ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/seguridad/autenticarUsuario/{cveUsuario}/{contrasenhia}" : {
+      "get" : {
+        "tags" : [ "Gestor Seguridad Controller" ],
+        "parameters" : [ {
+          "name" : "contrasenhia",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "cveUsuario",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/RespuestaAutenticar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/seguridad/autenticarUsuarioLDAP" : {
+      "post" : {
+        "tags" : [ "User LDAP Resource" ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PeticionAutenticar"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/RespuestaAutenticar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/seguridad/consultarTipoUsuarioPorNombre/{nombre}" : {
+      "get" : {
+        "tags" : [ "Gestor Seguridad Controller" ],
+        "parameters" : [ {
+          "name" : "nombre",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/TipoUsuarioVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/greeting" : {
+      "get" : {
+        "tags" : [ "Greeting Controller" ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "EstatusEnum" : {
+        "enum" : [ "ACTIVO", "INACTIVO", "BLOQUEADO" ],
+        "type" : "string"
+      },
+      "LocalDate" : {
+        "format" : "date",
+        "type" : "string",
+        "example" : "2022-03-10"
+      },
+      "LocalDateTime" : {
+        "format" : "date-time",
+        "type" : "string",
+        "example" : "2022-03-10T12:15:50"
+      },
+      "PersonaVO" : {
+        "type" : "object",
+        "properties" : {
+          "idPersona" : {
+            "format" : "int32",
+            "type" : "integer"
+          },
+          "cxNombre" : {
+            "type" : "string"
+          },
+          "cxPrimerApellido" : {
+            "type" : "string"
+          },
+          "cxSegundoApellido" : {
+            "type" : "string"
+          },
+          "cxCorreo" : {
+            "type" : "string"
+          },
+          "dfNacimiento" : {
+            "$ref" : "#/components/schemas/LocalDate"
+          }
+        }
+      },
+      "PeticionAutenticar" : {
+        "type" : "object",
+        "properties" : {
+          "clave" : {
+            "type" : "string"
+          },
+          "contrasenha" : {
+            "type" : "string"
+          }
+        }
+      },
+      "RespuestaAutenticar" : {
+        "type" : "object",
+        "properties" : {
+          "codigo" : {
+            "type" : "string"
+          },
+          "mensaje" : {
+            "type" : "string"
+          },
+          "datosUsuario" : {
+            "$ref" : "#/components/schemas/UsuarioVO"
+          }
+        }
+      },
+      "TipoUsuarioEnum" : {
+        "enum" : [ "SUPERUSUARIO", "ADMINISTRADOR", "ENLACE", "SUPERVISOR", "PLANECION", "PRESUPUESTO" ],
+        "type" : "string"
+      },
+      "TipoUsuarioVO" : {
+        "type" : "object",
+        "properties" : {
+          "idTipoUsuario" : {
+            "format" : "int32",
+            "type" : "integer"
+          },
+          "cdtipoUsuario" : {
+            "type" : "string"
+          },
+          "csEstatus" : {
+            "type" : "string"
+          },
+          "idBitacora" : {
+            "format" : "int32",
+            "type" : "integer"
+          }
+        }
+      },
+      "UsuarioVO" : {
+        "type" : "object",
+        "properties" : {
+          "cveUsuario" : {
+            "type" : "string"
+          },
+          "csStatus" : {
+            "$ref" : "#/components/schemas/EstatusEnum"
+          },
+          "correoElectronico" : {
+            "type" : "string"
+          },
+          "df_baja" : {
+            "$ref" : "#/components/schemas/LocalDateTime"
+          },
+          "idTipoUsuario" : {
+            "$ref" : "#/components/schemas/TipoUsuarioEnum"
+          },
+          "persona" : {
+            "$ref" : "#/components/schemas/PersonaVO"
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "SecurityScheme" : {
+        "type" : "http",
+        "description" : "Authentication",
+        "scheme" : "basic"
+      }
+    }
+  }
+}

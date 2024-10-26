@@ -1,0 +1,62 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button mat-mini-fab color="primary" [matTooltip]="'Anterior'" [matTooltipPosition]="'left'" [routerLink]="'../MIR'">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" [matTooltip]="'Siguiente'" [matTooltipPosition]="'left'" [routerLink]="'../Vista general'">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div class="container">
+    <table class="sjs-table" cellspacing="0" cellpadding="0" #tbl>
+      <thead style="position: sticky; top: 0">
+        <tr>
+          <td>Clave Objetivo Prioritario</td>
+          <td>Clave Meta o Parámetro</td>
+          <td>Nombre del Indicador PI</td>
+          <td>Periodicidad</td>
+          <td>Unidad de Medida</td>
+          <td>Tendencia Esperada</td>
+          <td>Fuente Variable 1</td>
+          <td colspan="2">Meta 2024</td>
+          <td>Ficha Metas y <br> Parámetros</td>
+        </tr>
+      </thead>
+      <tbody *ngIf="!loading">
+        <tr *ngFor="let item of dataTableMetasParametros; let i = index" >
+          <td>{{item.cveObjetivoPrioritario}}</td>
+          <td>{{item.cveObjetivoPrioritario}}.{{i+1}}</td>
+          <td class="text-justify">
+            {{item.nombreDelIndicadorPI}}
+          </td>
+          <td>{{item.periodicidad ? item.periodicidad : item.periodicidadOtro }}</td>
+          <td>{{item.unidadDeMedida ? item.unidadDeMedida : item.unidadDeMedidaOtro}}</td>
+
+          <td>{{item.tendenciaEsperada ? item.tendenciaEsperada : item.tendenciaOtro}}</td>
+          <td>{{item.fuenteVariable1 ? item.fuenteVariable1 : item.fuenteOtro}}</td>
+
+          <td>{{item.entregables}}</td>
+          <td>100%</td>
+          <td [width]="80">
+            <button mat-icon-button matTooltip="Ver Ficha" (click)="openDialog()">
+              <mat-icon>
+                visibility
+              </mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+<app-mat-custom-table
+  *ngIf="!loading"
+  (action)="onTableAction($event)"
+  (update)="getAll()"
+  [actions]="actions"
+  [dataset]="dataMetasParametros"
+  [columns]="columns"
+  [maxWidthActions]="'150px'"
+>
+</app-mat-custom-table>

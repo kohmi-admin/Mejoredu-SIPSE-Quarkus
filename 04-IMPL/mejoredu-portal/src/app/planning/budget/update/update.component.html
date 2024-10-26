@@ -1,0 +1,13 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Actualización</h1>
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    [complementText]="'Programa Presupuestario'"
+    (action)="onTableAction($event)"
+    (update)="getAll()"
+    [showActionIf]="showActionIf"
+  >
+  </app-mat-custom-table>
+</section>

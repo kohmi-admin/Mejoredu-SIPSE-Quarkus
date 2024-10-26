@@ -1,0 +1,81 @@
+<h1 mat-dialog-title>Agrega Partida de Gasto</h1>
+<div mat-dialog-content>
+  <section class="tbl-space" style="overflow-x: auto;">
+    <table>
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Nombre de la Partida de Gasto</th>
+          <th>Importe</th>
+          <th>Mes</th>
+          <th>Clave Presupuestal</th>
+          <th>Reducción</th>
+          <th>Ampliación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="field">
+              <app-select-filter
+                class="form-field full blur"
+                [question]="questions[0]"
+                *ngIf="questions[0].filter"
+                [form]="form"
+              ></app-select-filter>
+            </div>
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [(ngModel)]="expensiveItem.importe"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <div class="field">
+              <app-select-filter
+                class="form-field full blur"
+                [question]="questions[1]"
+                *ngIf="questions[1].filter"
+                [form]="form"
+              ></app-select-filter>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <app-dynamic-field
+                class="form-field full blur"
+                [question]="questions[2]"
+                [form]="form"
+              ></app-dynamic-field>
+            </div>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="expensiveItem.reduccion"
+              [disabled]="expensiveItem.ampleacion"
+            ></mat-checkbox>
+          </td>
+          <td>
+            <mat-checkbox
+              [(ngModel)]="expensiveItem.ampleacion"
+              [disabled]="expensiveItem.reduccion"
+            ></mat-checkbox>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+<div class="actions">
+  <button mat-flat-button cdkFocusInitial color="primary" (click)="apply()">
+    Aplicar
+  </button>
+</div>

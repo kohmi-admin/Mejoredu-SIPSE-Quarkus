@@ -1,0 +1,179 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Actividades'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Presupuestos'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="alert-success">Calendarización del Producto</div>
+    <div class="container-table-month">
+      <table
+        class="sjs-table month-table"
+        cellspacing="0"
+        cellpadding="0"
+        #tblCalendarizacion
+        id="tblCalendarizacion"
+      >
+        <thead style="position: sticky; top: 0">
+          <!-- <tr style="position: sticky; top: 19px;"> -->
+          <tr>
+            <td>Enero</td>
+            <td>Febrero</td>
+            <td>Marzo</td>
+            <td>Abril</td>
+            <td>Mayo</td>
+            <td>Junio</td>
+            <td>Julio</td>
+            <td>Agosto</td>
+            <td>Septiembre</td>
+            <td>Octubre</td>
+            <td>Noviembre</td>
+            <td>Diciembre</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+            <td
+              [attr.contenteditable]="!disabledSubmiting"
+              placeholder="0"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      class="action-buttons"
+      style="margin-bottom: -10px; margin-top: 20px"
+      *ngIf="
+        !selectedValidateProyectoPAA &&
+        !selectedConsultaProyectoPAA &&
+        canEditProject
+      "
+    >
+      <button
+        *ngIf="isCleanForm"
+        type="button"
+        mat-flat-button
+        color="add"
+        (click)="newProduct()"
+      >
+        Limpiar formulario
+      </button>
+      <button
+        [disabled]="disabledSubmiting && !editable"
+        mat-flat-button
+        class="btn-left"
+        color="primary"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">Guardar</span>
+      </button>
+      <!-- <button mat-flat-button color="add">Agregar Producto</button> -->
+    </div>
+  </form>
+</section>
+
+<app-mat-custom-table
+  (action)="onTableAction($event)"
+  (update)="getAll()"
+  [actions]="actions"
+  [dataset]="data"
+  [maxWidthActions]="'150px'"
+  [columns]="columns"
+>
+</app-mat-custom-table>
+
+<app-validate
+  apartado="REVISION-CP-PRODUCTOS"
+  [textIdSaveEmpty]="
+    selectedValidateProyectoPAA
+      ? 'Selecciona un producto para realizar comentarios.'
+      : 'Selecciona un producto para ver los comentarios.'
+  "
+  [idSave]="idSaveValidar"
+  [disable]="disabledAppValidate"
+  [fromModule]="'cp'"
+  *ngIf="validation"
+  [questions]="getQuestions"
+  [selectedActividad]="activitySelected"
+  [selectedProducto]="selectedProducto"
+  [docAnalitico]="docAnalitico"
+></app-validate>

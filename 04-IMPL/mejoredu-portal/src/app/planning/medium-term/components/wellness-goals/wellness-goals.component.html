@@ -1,0 +1,37 @@
+<section id="wrapper" class="">
+  <!-- <h1 class="title">{{ title }}</h1> -->
+  <mat-tab-group animationDuration="0ms" class="large" [selectedIndex]="step" (selectedIndexChange)="step = $event">
+    <mat-tab>
+      <ng-template mat-tab-label
+        >Elementos de Meta para
+        <br> el Bienestar o Parámetro &nbsp;
+        <mat-icon class="check low">pending</mat-icon>
+      </ng-template>
+      <app-meta-elements (emmitStep)="changeStep($event)"></app-meta-elements>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label
+        >Aplicación del Método de Cálculo del Indicador
+        <br>
+        para la Obtención del Valor de la Línea Base &nbsp;
+        <mat-icon class="check low">pending</mat-icon>
+      </ng-template>
+      <app-calculation-method (emmitStep)="changeStep($event)"></app-calculation-method>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label
+        >Valor de Línea Base y Metas &nbsp;
+        <mat-icon class="check low">pending</mat-icon>
+      </ng-template>
+      <app-value (emmitStep)="changeStep($event)"></app-value>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label
+        >Serie Histórica de la Meta para
+        <br> el Bienestar o Parámetro &nbsp;
+        <mat-icon class="check low">pending</mat-icon>
+      </ng-template>
+      <app-historical-series (emmitStep)="changeStep($event)"></app-historical-series>
+    </mat-tab>
+  </mat-tab-group>
+</section>

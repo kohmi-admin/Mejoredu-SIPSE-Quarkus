@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Agregar Indicador</h1>
+<div mat-dialog-content>
+  <form id="form1" class="form fade" [formGroup]="form">
+    <section class="alert-success">Datos del Indicador</section>
+    <div
+      class="field blur"
+      *ngFor="let question of questions let i = index"
+    >
+      <app-dynamic-field class="form-field full" [question]="question" *ngIf="!question.filter"
+        [form]="form"></app-dynamic-field>
+      <app-select-filter class="form-field full" [question]="question" *ngIf="question.filter"
+        [form]="form"></app-select-filter>
+    </div>
+    <div class="field" style="margin: 0 0; border: solid 0;"></div>
+    <div class="action-buttons">
+      <button type="submit" mat-flat-button color="primary">Guardar</button>
+    </div>
+  </form>
+</div>

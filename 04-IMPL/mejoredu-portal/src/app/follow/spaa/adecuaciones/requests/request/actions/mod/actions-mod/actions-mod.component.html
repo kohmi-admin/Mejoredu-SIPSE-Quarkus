@@ -1,0 +1,47 @@
+<section id="wrapper">
+  <form class="form fade" [formGroup]="form">
+    <div
+      class="field"
+      [class.double]="true"
+      *ngFor="let question of questions | slice : 0 : 9"
+    >
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons" *ngIf="position === 'right' && canEdit">
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        [disabled]="!formLeftComplete"
+        (click)="submit()"
+      >
+        Guardar Avance
+      </button>
+    </div>
+  </form>
+  <div *ngIf="position === 'left'">
+    <section class="alert-success top" style="margin-top: 40px">
+      Acciones con Modificación
+    </section>
+    <app-mat-custom-table
+      (action)="onTableAction($event)"
+      (update)="getAcccionModiByIdAdecuacionSolicitud()"
+      [actions]="actions"
+      [dataset]="data"
+      [maxWidthActions]="'150px'"
+      [columns]="columns"
+    >
+    </app-mat-custom-table>
+  </div>
+</section>

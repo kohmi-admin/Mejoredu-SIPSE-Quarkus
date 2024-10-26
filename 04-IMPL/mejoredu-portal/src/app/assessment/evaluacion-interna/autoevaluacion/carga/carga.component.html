@@ -1,0 +1,167 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Informes'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Carga de Evidencia'"
+      disabled
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+  </form>
+</section>
+
+<div class="itbl-space">
+  <table>
+    <caption></caption>
+    <thead>
+      <tr>
+        <th colspan="2">Apartados del Informe</th>
+        <th>Carga de Evidencia</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataT of dataTable">
+        <td>
+          <span *ngFor="let itemColumn1 of dataT.column1">{{
+            itemColumn1
+          }}</span>
+        </td>
+        <td>
+          <span *ngFor="let itemColumn2 of dataT.column2"
+            >{{ itemColumn2 }}<br
+          /></span>
+        </td>
+        <td width="33.33333%">
+          <div style="margin-bottom: 10px" *ngIf="canEdit">
+            <file-upload
+              [id]="'files-' + dataT.idApartado"
+              [files]="dataT.filesToSave"
+              [multiple]="true"
+              accept=".pdf, .doc, .docx, .xlsx, .zip, .rar"
+            ></file-upload>
+          </div>
+
+          <table *ngIf="dataT.filesSaved.length">
+            <caption></caption>
+            <thead>
+              <tr>
+                <th>Unidad</th>
+                <th>Fecha y Hora</th>
+                <th>Usuario</th>
+                <th>Archivo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let file of dataT.filesSaved; index as iFiles">
+                <td>{{ file.unidad }}</td>
+                <td>{{ file.fecha }}</td>
+                <td>{{ file.cveUsuario }}</td>
+                <td>{{ file.cxNombre }}</td>
+                <td>
+                  <mat-icon
+                    style="cursor: pointer"
+                    color="primary"
+                    (click)="downloadFileAlf(file.cxUuid, file.cxNombre)"
+                    >download</mat-icon
+                  >
+                  <mat-icon
+                    style="cursor: pointer"
+                    color="warn"
+                    *ngIf="
+                      canEdit &&
+                      (file.cveUsuario === dataUser.cveUsuario ||
+                        dataUser.idTipoUsuario === 'ADMINISTRADOR')
+                    "
+                    (click)="deleteFile(iFiles, dataT)"
+                    >delete</mat-icon
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td style="width: 50px">
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <mat-icon
+              *ngIf="dataT.filesSaved.length"
+              style="cursor: pointer"
+              color="primary"
+              (click)="downloadFilesAlf(dataT)"
+              >download</mat-icon
+            >
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="action-buttons" *ngIf="canEdit">
+  <button
+    mat-flat-button
+    type="button"
+    color="primary"
+    class="btn-left"
+    (click)="submit()"
+  >
+    <mat-spinner
+      *ngIf="isSubmiting"
+      style="width: 25px"
+      color="warn"
+    ></mat-spinner>
+    <span *ngIf="!isSubmiting">
+      Guardar Registro
+    </span>
+  </button>
+</div>
+
+<!-- <div class="wrap">
+  <app-mat-custom-table
+    (action)="onTableAction($event)"
+    (update)="getEvidencias()"
+    [actions]="actions"
+    [dataset]="data"
+    [maxWidthActions]="'220px'"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+</div> -->

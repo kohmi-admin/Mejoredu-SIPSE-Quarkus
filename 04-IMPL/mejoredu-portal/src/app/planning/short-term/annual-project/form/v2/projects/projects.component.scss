@@ -1,0 +1,100 @@
+.add-btn {
+  top: 22px;
+  right: 70px;
+  position: absolute;
+}
+
+:host ::ng-deep mat-form-field {
+  width: 100% !important;
+}
+
+.field {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-bottom-width: 0;
+  border-top-width: 0;
+}
+
+.field:nth-child(1) {
+  width: calc(100% - 320px);
+  border-right-width: var(--border-slim);
+}
+
+.field:nth-child(2) {
+  width: 320px;
+  border-left-width: var(--border-middle);
+}
+
+.field:nth-child(7) {
+  width: 50%;
+  border-right-width: var(--border-slim);
+}
+
+.field:nth-child(8) {
+  width: 50%;
+  border-left-width: var(--border-middle);
+}
+
+.field:nth-child(10) {
+  width: 200px;
+  border-left-width: var(--border-middle);
+}
+
+form {
+  width: 100%;
+  text-align: left;
+}
+
+button[mat-stroked-button][color="blue"] {
+  width: 200px;
+}
+
+.file-zone {
+  width: 400px;
+  span {
+    display: block;
+    padding-bottom: 10px;
+  }
+}
+
+.action-buttons {
+  margin-top: -15px;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+  margin-top: -37px;
+  .btn-left {
+    margin-left: 20px;
+    color: var(--white) !important;
+    // background: var(--secundary);
+  }
+  .add {
+    color: var(--white) !important;
+    background-color: var(--golden-me);
+  }
+  button[mat-mini-fab] {
+    margin-left: 10px;
+    transform: translateY(-2px);
+    border: solid 1px var(--primary-color);
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .field {
+    width: 100% !important;
+  }
+}
+
+.actions {
+  left: 0;
+  bottom: 0;
+  position: sticky !important;
+  padding: var(--border-middle);
+  text-align: center;
+  button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

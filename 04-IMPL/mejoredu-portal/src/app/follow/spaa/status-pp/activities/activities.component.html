@@ -1,0 +1,69 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="false"
+      [matTooltip]="'Anterior'"
+      (click)="navigate.emit(0)"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      (click)="navigate.emit(2)"
+      [matTooltip]="'Siguiente'"
+      [disabled]="!activeActivity"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div class="trim-section">
+    <mat-button-toggle-group name="favoriteColor" (change)="getAll()" [(ngModel)]="currentQuarter">
+      <mat-button-toggle [value]="1"> Primer Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="2"> Segundo Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="3"> Tercer Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="4"> Cuarto Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="null"> General </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <form class="form fade" [formGroup]="form">
+    <section class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </section>
+  </form>
+
+  <div class="no-top">
+    <app-mat-custom-table
+      *ngIf="!loading"
+      (action)="onTableAction($event)"
+      (update)="getAll()"
+      [hasScroll]="false"
+      [propId]="'activityId'"
+      [activeId]="activeActivity"
+      [actionsInStart]="true"
+      [actions]="actions"
+      [dataset]="data"
+      [actionString]="'Ver'"
+      [maxWidthActions]="'60px'"
+      [minWidth]="1200"
+      [columns]="columns"
+    >
+    </app-mat-custom-table>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+.file-zone {
+  box-sizing: border-box;
+  border: solid 15px transparent;
+  border-top-width: 0;
+}
+
+.action-buttons {
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  &.right {
+      text-align: right;
+      justify-items: flex-end;
+  }
+}
+
+.delete {
+  color: var(--error-color);
+}

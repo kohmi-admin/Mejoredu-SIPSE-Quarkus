@@ -1,0 +1,17 @@
+# Organization mejoredu.org
+dn: dc=mejoredu,dc=org
+dc: mejoredu
+objectclass: dcObject
+objectclass: organizationalUnit
+ou: mejoredu.org
+o: MejorEdu
+
+# Users
+dn: ou=People,dc=mejoredu,dc=org
+objectClass: organizationalUnit
+ou: people
+
+# Groups
+dn: ou=Groups,dc=mejoredu,dc=org
+objectClass: organizationalUnit
+ou: groups

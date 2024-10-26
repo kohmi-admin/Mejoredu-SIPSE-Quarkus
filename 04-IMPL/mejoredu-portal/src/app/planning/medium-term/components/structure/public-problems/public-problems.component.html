@@ -1,0 +1,35 @@
+<form
+id="form2"
+class="form fade"
+[formGroup]="form"
+(ngSubmit)="submit()"
+>
+<div
+  class="field blur"
+  *ngFor="let question of questions; let i = index"
+>
+  <app-dynamic-field
+    class="form-field full"
+    [question]="question"
+    [form]="form"
+  ></app-dynamic-field>
+</div>
+
+<div class="actions" style="text-align: center; margin-bottom: 10px">
+  <button
+    type="submit"
+    mat-flat-button
+    color="add"
+    [disabled]="!editable"
+  >
+    Agregar
+  </button>
+</div>
+<app-mat-custom-table
+  [maxWidthActions]="'240px'"
+  [dataset]="data"
+  [columns]="columns"
+  [actions]="actions"
+>
+</app-mat-custom-table>
+</form>

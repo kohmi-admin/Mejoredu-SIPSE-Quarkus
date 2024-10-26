@@ -1,0 +1,31 @@
+<section id="wrapper">
+
+    <h1 class="title">Configuración</h1>
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+      <a mat-tab-link routerLink="Unidades" routerLinkActive="active-link">
+        Unidades&nbsp;
+      </a>
+      <a mat-tab-link routerLink="Direcciones" routerLinkActive="active-link">
+        Direcciones&nbsp;
+      </a>
+      <a mat-tab-link [routerLink]="'Roles'" routerLinkActive="active-link">
+        Roles&nbsp;
+      </a>
+      <a mat-tab-link [routerLink]="'Usuarios'" routerLinkActive="active-link">
+        Usuarios&nbsp;
+      </a>
+      <a mat-tab-link [routerLink]="'Catálogos'" routerLinkActive="active-link">
+        Catálogos&nbsp;
+      </a>
+      <a *ngIf="false" mat-tab-link [routerLink]="'Periódos de Habilitación'" routerLinkActive="active-link">
+        Periódos de Habilitación&nbsp;
+      </a>
+      <a mat-tab-link [routerLink]="'Notificaciones'" routerLinkActive="active-link">
+        Notificaciones&nbsp;
+      </a>
+    </nav>
+    <mat-tab-nav-panel #tabPanel>
+      <router-outlet></router-outlet>
+    </mat-tab-nav-panel>
+
+  </section>

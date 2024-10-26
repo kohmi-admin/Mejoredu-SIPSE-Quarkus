@@ -1,0 +1,24 @@
+:host ::ng-deep mat-form-field {
+    width: 100% !important;
+}
+
+.field {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid var(--border-middle) transparent;
+    border-bottom-width: 0;
+}
+
+:host ::ng-deep .mat-mdc-form-field .mdc-text-field__input {
+    height: calc(100vh - 220px) !important;
+}
+
+form {
+    width: 100%;
+    text-align: left;
+}
+
+button {
+    width: 100px;
+}

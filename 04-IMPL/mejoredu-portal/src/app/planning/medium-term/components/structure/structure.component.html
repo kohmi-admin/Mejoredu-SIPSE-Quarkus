@@ -1,0 +1,47 @@
+<section id="wrapper" class="can-validate">
+
+  <h1 class="title no-bottom">Planeación a Mediano Plazo</h1>
+  <span class="sub-title bottom">Estructura</span>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="Inicio" routerLinkActive="active-link">
+      Inicio&nbsp;
+      <mat-icon class="check low">pending</mat-icon>
+    </a>
+    <a mat-tab-link [routerLink]="'Objetivos'" routerLinkActive="active-link">
+      Objetivos&nbsp;
+      <mat-icon class="check low">pending</mat-icon>
+    </a>
+    <a mat-tab-link [routerLink]="'Estrategias y Acciones'" routerLinkActive="active-link">
+      Estrategias y Acciones&nbsp;
+      <mat-icon class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Metas Para el Bienestar'"
+      routerLinkActive="active-link"
+    >
+      Metas Para el Bienestar&nbsp;
+      <mat-icon class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Parámetros'"
+      routerLinkActive="active-link"
+    >
+      Parámetros&nbsp;
+      <mat-icon class="check low">pending</mat-icon>
+    </a>
+    <a
+      mat-tab-link
+      [routerLink]="'Epílogo, Carga del PI y Actas'"
+      routerLinkActive="active-link"
+    >
+      Epílogo, Carga del PI y Actas&nbsp;
+      <mat-icon class="check low">pending</mat-icon>
+    </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+
+</section>

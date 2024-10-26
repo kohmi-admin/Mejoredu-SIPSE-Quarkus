@@ -1,0 +1,2905 @@
+{
+	"info": {
+		"_postman_id": "7a244a77-9b2b-4e0c-8143-1f1a30b6b456",
+		"name": "03 Planeacion CP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13861996",
+		"_collection_link": "https://icceelectronica.postman.co/workspace/Team-Workspace~becd80b0-b322-4815-8166-0a74bb7718c1/collection/13861996-7a244a77-9b2b-4e0c-8143-1f1a30b6b456?action=share&source=collection_link&creator=13861996"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Proyecto",
+					"item": [
+						{
+							"name": "Consulta Proyectos por Año para Validar",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/consultaProyectosPorAnhioParaValidar/2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultaProyectosPorAnhioParaValidar",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta Proyectos por Año",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/consultaProyectosPorAnhio/2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultaProyectosPorAnhio",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta ProyectoID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/consultarProyectoPorID/363",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultarProyectoPorID",
+										"363"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar proyecto porID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/productos/consultarPorID/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"consultarPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar proyecto",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idAnhio\": 2023,\n    \"claveUnidad\": \"2\",\n    \"nombreUnidad\": \"nombreUnidad 4\",\n    \"cveProyecto\": 2323,\n    \"nombreProyecto\": \"nombreProyecto 4\",\n    \"objetivo\": \"Objetivo Bienestar 4\",\n    \"csEstatus\": \"I\",\n    \"objetivoPriori\": \"Objetivo Bienestar 4\",\n    \"fundamentacion\": \"fundame Bienestar 4\",\n    \"alcance\": \"alcan\",\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 3\n        }\n    ],\n    \"contribucionProgramaEspecial\": 1,\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 5\n        },\n        {\n            \"idCatalogo\": 6\n        }\n    ],\n    \"archivos\": [\n        {\n            \"idArchivo\": null,\n            \"uuid\": \"DFGHKFDS-IUEYHDFJS-23454-4\",\n            \"nombre\": \"Bienestar4.pdf\",\n            \"estatus\": \"A\",\n            \"usuario\": \"superusuario\"\n        }\n    ],\n    \"cveUsuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/registrarProyecto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"registrarProyecto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CargarArchivoExcel",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/DELL/Desktop/proyectos(Layout_4).xlsx"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/proyecto-anual/excelToMysql/superusuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"excelToMysql",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar Secuencia",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/proyecto-anual/secuencialProyectoAnual/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"secuencialProyectoAnual",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actividades",
+					"item": [
+						{
+							"name": "Consulta por proyecto",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/consultaPorProyecto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultaPorProyecto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta por proyecto y estatus",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/consultaPorProyecto/1/C",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultaPorProyecto",
+										"1",
+										"C"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idProyecto\": 1,\n  \"cveActividad\":\"004\",\n  \"nombreActividad\": \"nombreActividad\",\n  \"descripcion\": \"descripcion\",\n  \"estrategiaPrioritaria\": 2,\n  \"actionPuntual\": 2,\n  \"articulacionActividad\": \"articulacionActividad\",\n  \"actividadTransversal\": 2,\n  \"reuniones\": 2,\n  \"tema\": \"tema 1-2\",\n  \"alcance\": 0,\n  \"lugar\": \"lugar\",\n  \"actores\": \"actores\",\n  \"cveUsuario\": \"superusuario\",\n  \"fechaTentativa\": [\n    {\n      \"idCatalogoFecha\": 1\n    },{\n      \"idCatalogoFecha\": 3\n    }\n  ],\n    \"estrategia\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 1\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 2\n            }\n        }\n    ],\n    \"action\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 5\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 6\n            }\n        }\n    ],\n    \"objetivo\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 7\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 8\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/consultarPorID/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultarPorID",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cveActividad\": 5,\r\n    \"idProyecto\": 1,\r\n    \"nombreActividad\": \"Nombre de la actividad33\",\r\n    \"descripcion\": \" dassd as\",\r\n    \"estrategiaPrioritaria\": 0,\r\n    \"actionPuntual\": 0,\r\n    \"articulacionActividad\": \"as\",\r\n    \"actividadTransversal\": 1,\r\n    \"reuniones\": 0,\r\n    \"tema\": \"\",\r\n    \"alcance\": 0,\r\n    \"lugar\": \"\",\r\n    \"actores\": \"\",\r\n    \"estatus\": \"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"fechaTentativa\": [],\r\n    \"objetivo\": [\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 8\r\n            }\r\n        },\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 9\r\n            }\r\n        }\r\n    ],\r\n    \"estrategia\": [\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 1\r\n            }\r\n        },\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 2\r\n            }\r\n        }\r\n    ],\r\n    \"action\": [\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 5\r\n            }\r\n        },\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 6\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/modificar/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"modificar",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar Charly",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cveActividad\": 5,\r\n    \"idProyecto\": 1,\r\n    \"nombreActividad\": \"Actividad 121-005\",\r\n    \"descripcion\": \"Descripcion 121-005\",\r\n    \"estrategiaPrioritaria\": 0,\r\n    \"actionPuntual\": 0,\r\n    \"articulacionActividad\": \"Articulación 121-005\",\r\n    \"actividadTransversal\": 1,\r\n    \"reuniones\": 0,\r\n    \"tema\": \"Tema 121-005\",\r\n    \"alcance\": 831,\r\n    \"lugar\": \"Lugar 121-005\",\r\n    \"actores\": \"Actores 121-005\",\r\n    \"estatus\": \"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"fechaTentativa\": [\r\n        {\r\n            \"idCatalogoFecha\": 1\r\n        },\r\n        {\r\n            \"idCatalogoFecha\": 3\r\n        }\r\n    ],\r\n    \"estrategia\": [\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 1\r\n            }\r\n        },\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 2\r\n            }\r\n        }\r\n    ],\r\n    \"action\": [\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 5\r\n            }\r\n        },\r\n        {\r\n            \"masterCatalogo\": {\r\n                \"idCatalogo\": 6\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/modificar/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"modificar",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "consultar por Actividad",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/productos/consultaPorActividad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"consultaPorActividad",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "porID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/productos/consultarPorID/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"consultarPorID",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cveUsuario\": \"superusuario\",\n  \"idActividad\": 1,\n  \"cveProducto\": \"0002\",\n  \"nombre\": \"nombre producto\",\n  \"descripcion\": \"decripcionProd\",\n  \"idCategorizacion\": 1,\n  \"idTipo\": 1,\n  \"idIndicadorMIR\": 1,\n  \"idIndicadorPI\": 1,\n  \"idNivelEducativo\": 1,\n  \"vinculacion\": \"VincularOtr\",\n  \"idContinuidadOtros\": 1,\n  \"porPublicar\": \"S\",\n  \"idAnhoPublicacion\": 2,\n  \"cveNombreProyectoPOTIC\": \"nombreProd\",\n  \"calendarizacion\": [\n    {\n      \"mes\": 1,\n      \"activo\": 2000\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/productos/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar Yordy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Nombre del producto\",\n    \"cveProducto\": \"B10\",\n    \"estatus\":\"A\",\n    \"descripcion\": \"as\",\n    \"idCategorizacion\": 24,\n    \"idTipo\": 10,\n    \"idIndicadorMIR\": 5,\n    \"idIndicadorPI\": 5,\n    \"idNivelEducativo\": 5,\n    \"vinculacion\": \"as\",\n    \"idContinuidadOtros\": null,\n    \"porPublicar\": null,\n    \"idAnhoPublicacion\": 2022,\n    \"cveNombreProyectoPOTIC\": null,\n    \"cveUsuario\": \"superusuario\",\n    \"idActividad\": 1,\n    \"calendarizacion\": [\n        {\n            \"mes\": 1,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 2,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 3,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 4,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 5,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 6,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 7,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 8,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 9,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 10,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 11,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 12,\n            \"activo\": 0\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/productos/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Presupuestos",
+					"item": [
+						{
+							"name": "Consultar por Producto",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/presupuesto/consultarPorProducto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"presupuesto",
+										"consultarPorProducto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/presupuesto/consultarPorID/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"presupuesto",
+										"consultarPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "regitrar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idProducto\": 1,\n  \"cveAccion\": 0012,\n  \"nombreAccion\": \"Acción nombre\",\n  \"cveNivelEducativo\": 1,\n  \"presupuesto\": true,\n  \"idCentroCostos\": 1,\n  \"presupuestoAnual\": 0,\n  \"idFuenteFinanciamiento\": 2,\n  \"partidasPresupuestales\": [\n    {\n      \"idPartidaGasto\": 1,\n      \"calendarizacion\": [\n        {\n          \"mes\": 1,\n          \"activo\": 2\n        }\n      ]\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/presupuesto/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"presupuesto",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MetasBienestar",
+					"item": [
+						{
+							"name": "Consultar PI por año y usuario",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/cortoplazo/metasbienestar/consultarPorAnhio/2023/superusuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"cortoplazo",
+										"metasbienestar",
+										"consultarPorAnhio",
+										"2023",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Productos por año, PI y usuario",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/cortoplazo/metasbienestar/productos/consultarPorIdCatalogoIndicadorPI/2023/607/superusuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"cortoplazo",
+										"metasbienestar",
+										"productos",
+										"consultarPorIdCatalogoIndicadorPI",
+										"2023",
+										"607",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Nube",
+			"item": [
+				{
+					"name": "Proyectos Nodo1410",
+					"item": [
+						{
+							"name": "registrar proyecto",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idAnhio\": 2023,\n    \"claveUnidad\": \"39832\",\n    \"nombreUnidad\": \"Nombre Unidad {{idProyecto}}\",\n    \"cveProyecto\": \"232{{idProyecto}}\",\n    \"nombreProyecto\": \"nombreProyecto {{idProyecto}}\",\n    \"objetivo\": \"Objetivo Bienestar {{idProyecto}}\",\n    \"csEstatus\": \"I\",\n    \"objetivoPriori\": \"Objetivo Bienestar {{idProyecto}}\",\n    \"fundamentacion\": \"fundame Bienestar {{idProyecto}}\",\n    \"alcance\": \"alcan\",\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 3\n        }\n    ],\n    \"contribucionProgramaEspecial\": 1,\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 5\n        },\n        {\n            \"idCatalogo\": 6\n        }\n    ],\n    \"archivos\": [\n        {\n            \"idArchivo\": null,\n            \"uuid\": \"DFGHKFDS-IUEYHDFJS-23454-{{idProyecto}}\",\n            \"nombre\": \"Bienestar{{idProyecto}}.pdf\",\n            \"estatus\": \"I\",\n            \"usuario\": \"superusuario\"\n        }\n    ],\n    \"cveUsuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/formulario-analitico/registrarProyecto",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"registrarProyecto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar Archivo Excel",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/DELL/Desktop/proyectos(Layout_4).xlsx"
+									}
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/proyecto-anual/excelToMysql/superusuario",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"excelToMysql",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta ProyectoID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/formulario-analitico/consultarProyectoPorID/363",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultarProyectoPorID",
+										"363"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta Proyectos por Año",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/formulario-analitico/consultaProyectosPorAnhio/2023",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultaProyectosPorAnhio",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta Proyectos por Año para Validar",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/formulario-analitico/consultaProyectosPorAnhioParaValidar/2023",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultaProyectosPorAnhioParaValidar",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cveProyecto\": {{idProyecto}},\n    \"cxNombreProyecto\": \"NombreProy Bienestar 1 Mod-{{idProyecto}}\",\n    \"cxObjetivo\": \"Objetivo miod\",\n    \"cxObjetivoPrioritario\": \"obje pri mod-{{idProyecto}}\",\n    \"cveUsuario\": \"superusuario\",\n    \"idAnhio\": 2023,\n    \"csEstatus\": \"ACTIVO\",\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 3\n        }\n    ],\n    \"contribucionProgramaEspecial\": 1,\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 5\n        },\n        {\n            \"idCatalogo\": 6\n        }\n    ],\n    \"idArchivo\": 1,\n    \"cxNombreUnidad\": \"Unidad nombre clave mod-{{idProyecto}}\",\n    \"cveUnidad\": \"Unidad cve-{{idProyecto}}\",\n    \"cxAlcance\": \"Alcance mod-{{idProyecto}}\",\n    \"cxFundamentacion\": \"Fundamenta mod-{{idProyecto}}\"\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/proyecto-anual/modificarProyectosPorID/1",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"modificarProyectosPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/formulario-analitico/eliminarProyectosPorID",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"eliminarProyectosPorID"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar Secuencia",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/proyecto-anual/secuencialProyectoAnual/1100",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"secuencialProyectoAnual",
+										"1100"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actividades Nodo1410",
+					"item": [
+						{
+							"name": "Consultar Actividades",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/actividades/consultaPorProyecto/3",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultaPorProyecto",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta por ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/actividades/consultarPorID/1",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultarPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar actividades",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idProyecto\": 1,\n  \"cveActividad\":\"001\",\n  \"nombreActividad\": \"nombreActividad\",\n  \"descripcion\": \"descripcion\",\n  \"estrategiaPrioritaria\": 2,\n  \"actionPuntual\": 2,\n  \"articulacionActividad\": \"articulacionActividad\",\n  \"actividadTransversal\": 2,\n  \"reuniones\": 2,\n  \"tema\": \"tema 1-2\",\n  \"alcance\": 0,\n  \"lugar\": \"lugar\",\n  \"actores\": \"actores\",\n  \"cveUsuario\": \"superusuario\",\n  \"fechaTentativa\": [\n    {\n      \"idCatalogoFecha\": 1\n    },{\n      \"idCatalogoFecha\": 3\n    }\n  ],\n    \"estrategia\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 1\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 2\n            }\n        }\n    ],\n    \"action\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 5\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 6\n            }\n        }\n    ],\n    \"objetivo\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 7\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 8\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/actividades/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idActividad\": 1,\n  \"idProyecto\": 1,\n  \"nombreActividad\": \"Nombre de la activi\",\n  \"descripcion\": \"descrip\",\n  \"estrategiaPrioritaria\": 1,\n  \"actionPuntual\": 1,\n  \"articulacionActividad\": \"articulaciones\",\n  \"actividadTransversal\": 1,\n  \"reuniones\": 1,\n  \"tema\": \"tema d reunion\",\n  \"alcance\": 1,\n  \"lugar\": \"Lugar de reunión\",\n  \"actores\": \"actores, uno dos y tres\",\n  \"fechaTentativa\": \"2022-03-10\"\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/actividades/modificar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar Charly",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cveActividad\": 3,\n    \"idProyecto\": 1,\n    \"nombreActividad\": \"Actividad 121-003\",\n    \"descripcion\": \"Descripcion 121-003\",\n    \"estrategiaPrioritaria\": 0,\n    \"actionPuntual\": 0,\n    \"articulacionActividad\": \"Articulación 121-003\",\n    \"actividadTransversal\": 1,\n    \"reuniones\": 0,\n    \"tema\": \"Tema 121-003\",\n    \"alcance\": 831,\n    \"lugar\": \"Lugar 121-003\",\n    \"actores\": \"Actores 121-003\",\n    \"estatus\": \"I\",\n    \"cveUsuario\": \"superusuario\",\n    \"fechaTentativa\": [\n        {\n            \"idCatalogoFecha\": 1\n        },\n        {\n            \"idCatalogoFecha\": 3\n        }\n    ],\n    \"estrategia\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 1\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 2\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 3\n            }\n        }\n    ],\n    \"action\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 5\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 6\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/actividades/modificar/3",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"modificar",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/actividades/eliminar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Presupuestos",
+					"item": [
+						{
+							"name": "Consultar por Producto",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/presupuesto/consultarPorProducto/1",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"presupuesto",
+										"consultarPorProducto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/presupuesto/consultarPorID/1",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"presupuesto",
+										"consultarPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "regitrar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idProducto\": 2,\n  \"cveAccion\": 10,\n  \"nombreAccion\": \"Acción nombre\",\n  \"cveNivelEducativo\": 1,\n  \"presupuesto\": true,\n  \"idCentroCostos\": 1,\n  \"presupuestoAnual\": 1,\n  \"idFuenteFinanciamiento\": 2,\n  \"partidasPresupuestales\": [\n    {\n      \"idPartidaGasto\": 1,\n      \"calendarizacion\": [\n        {\n          \"mes\": 1,\n          \"activo\": 2\n        }\n      ]\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/presupuesto/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"presupuesto",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Producto",
+					"item": [
+						{
+							"name": "Consultar por idActividad",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/productos/consultaPorActividad/:idActividad",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"consultaPorActividad",
+										":idActividad"
+									],
+									"variable": [
+										{
+											"key": "idActividad",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta por ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/productos/consultarPorID/:idProducto",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"consultarPorID",
+										":idProducto"
+									],
+									"variable": [
+										{
+											"key": "idProducto",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cveUsuario\": \"superusuario\",\n  \"idActividad\": 1,\n  \"cveProducto\": \"0001\",\n  \"nombre\": \"nombre producto\",\n  \"descripcion\": \"decripcionProd\",\n  \"idCategorizacion\": 1,\n  \"idTipo\": 1,\n  \"idIndicadorMIR\": 1,\n  \"idIndicadorPI\": 1,\n  \"idNivelEducativo\": 1,\n  \"vinculacion\": \"VincularOtr\",\n  \"idContinuidadOtros\": 1,\n  \"porPublicar\": \"S\",\n  \"idAnhoPublicacion\": 2,\n  \"cveNombreProyectoPOTIC\": \"nombreProd\",\n  \"calendarizacion\": [\n    {\n      \"mes\": 1,\n      \"activo\": 2000\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/productos/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idActividad\": 1,\n    \"nombre\": \"asas\",\n    \"cveProducto\": \"027\",\n    \"descripcion\": \"as\",\n    \"idCategorizacion\": 24,\n    \"idTipo\": 859,\n    \"idIndicadorMIR\": 626,\n    \"idIndicadorPI\": 613,\n    \"idNivelEducativo\": 851,\n    \"vinculacion\": \"asas\",\n    \"idContinuidadOtros\": 137,\n    \"porPublicar\": \"S\",\n    \"idAnhoPublicacion\": 2023,\n    \"cveNombreProyectoPOTIC\": \"asasas\",\n    \"cveUsuario\": \"superusuario\",\n    \"calendarizacion\": [\n        {\n            \"mes\": 1,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 2,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 3,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 4,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 5,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 6,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 7,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 8,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 9,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 10,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 11,\n            \"activo\": 0\n        },\n        {\n            \"mes\": 12,\n            \"activo\": 0\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/productos/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idProducto\": 1,\n    \"idActividad\": 1,\n    \"cveProducto\": \"CVEPRO-01\",\n    \"noProducto\": \"909\",\n    \"nombre\": \"Nombre de la actividad\",\n    \"descripcion\": \"Paseo por campo libre\",\n    \"categorizacion\": 1,\n    \"tipo\": 1,\n    \"indicadorMIR\": 1,\n    \"vinculacion\": \"Vincula con otros\",\n    \"continuidadOtros\": 1,\n    \"porPublicar\": 1,\n    \"anhioPublicar\": 2026,\n    \"cveNombreProyectoPOTIC\": \"proyecto POTIC\",\n    \"calendarizacion\": [\n        {\n            \"mes\": 1,\n            \"activo\": 1\n        },\n        {\n            \"mes\": 2,\n            \"activo\": 1\n        },\n        {\n            \"mes\": 5,\n            \"activo\": 1\n        },\n        {\n            \"mes\": 11,\n            \"activo\": 1\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/productos/modificar",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/productos/eliminar",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://140.84.182.147:9002/api/productos/eliminar",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"182",
+										"147"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"productos",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MetasBienestar",
+					"item": [
+						{
+							"name": "Consultar PI por año y usuario",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/cortoplazo/metasbienestar/consultarPorAnhio/2023/superusuario",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"cortoplazo",
+										"metasbienestar",
+										"consultarPorAnhio",
+										"2023",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta Productos por año, IdCatalogoPI y usuario",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://159.54.132.148:9002/api/cortoplazo/metasbienestar/productos/consultarPorIdCatalogoIndicadorPI/2023/607/superusuario",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"132",
+										"148"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"cortoplazo",
+										"metasbienestar",
+										"productos",
+										"consultarPorIdCatalogoIndicadorPI",
+										"2023",
+										"607",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Presupuestos",
+			"item": [
+				{
+					"name": "Consultar por Producto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/presupuesto/consultarPorProducto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"presupuesto",
+								"consultarPorProducto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/presupuesto/consultarPorID/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"presupuesto",
+								"consultarPorID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "regitrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idProducto\": 1,\n  \"cveAccion\": 0012,\n  \"nombreAccion\": \"Acción nombre\",\n  \"cveNivelEducativo\": 1,\n  \"presupuesto\": true,\n  \"idCentroCostos\": 1,\n  \"presupuestoAnual\": 0,\n  \"idFuenteFinanciamiento\": 2,\n  \"partidasPresupuestales\": [\n    {\n      \"idPartidaGasto\": 1,\n      \"calendarizacion\": [\n        {\n          \"mes\": 1,\n          \"activo\": 2\n        }\n      ]\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/presupuesto/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"presupuesto",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Otros ejemplos",
+			"item": [
+				{
+					"name": "Proyectos",
+					"item": [
+						{
+							"name": "registrar proyecto",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idAnhio\": 2023,\n  \"claveNombreUnidad\": \"NombreProy Bienestar 1\",\n  \"cveProyecto\": 4,\n  \"nombreProyecto\": \"nombreProyecto 1\",\n  \"objetivo\": \"Objetivo Bienestar 1\",\n  \"csEstatus\":\"A\",\n  \"objetivoPriori\": \"Objetivo Bienestar 1\",\n  \"fundamentacion\": \"fundame Bienestar 1\",\n  \"alcance\": \"alcan\",\n  \"contribucionObjetivoPrioritarioPI\": 1,\n  \"contribucionProgramaEspecial\": 1,\n  \"contribucionPNCCIMGP\": 1,\n  \"archivos\": [\n    {\n      \"idArchivo\": 1,\n      \"uuid\": \"DFGHKFDS-IUEYHDFJS-23454\",\n      \"nombre\": \"Bienestar1.pdf\",\n      \"estatus\": \"A\",\n      \"usuario\": \"superusuario\"\n    }\n  ],\n  \"cveUsuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/formulario-analitico/registrarProyecto",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"registrarProyecto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta ProyectoID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/formulario-analitico/consultarProyectoPorID/1",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultarProyectoPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta Proyectos por Año",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/formulario-analitico/consultaProyectosPorAnhio/2023",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultaProyectosPorAnhio",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cveProyecto\": 1,\n  \"cxNombreProyecto\": \"NombreProy Bienestar 1 Mod\",\n  \"cxObjetivo\": \"Objetivo miod\",\n  \"cxObjetivoPrioritario\": \"obje pri mod\",\n  \"cveUsuario\": \"superusuario\",\n  \"idAnhio\": 2023,\n  \"csEstatus\": \"ACTIVO\",\n  \"idContribucionObjetivoPrioritario\": 1,\n  \"idContribucionProgramaEspecial\": 1,\n  \"idContribucionPNCCIMGP\": 1,\n  \"idArchivo\": 1,\n  \"cxNombreUnidad\": \"Unidad nombre clave\",\n  \"cxAlcance\": \"Alcance mod\",\n  \"cxFundamentacion\": \"Fundamenta mod\"\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/proyecto-anual/modificarProyectosPorID/1",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"modificarProyectosPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/formulario-analitico/eliminarProyectosPorID",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"eliminarProyectosPorID"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Proyectos Local",
+					"item": [
+						{
+							"name": "registrar proyecto",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idAnhio\": 2023,\n    \"claveUnidad\": \"P016\",\n    \"nombreUnidad\": \"Nombre Unidad {{idProyecto}}\",\n    \"cveProyecto\": \"232{{idProyecto}}\",\n    \"nombreProyecto\": \"nombreProyecto {{idProyecto}}\",\n    \"objetivo\": \"Objetivo Bienestar {{idProyecto}}\",\n    \"csEstatus\": \"I\",\n    \"objetivoPriori\": \"Objetivo Bienestar {{idProyecto}}\",\n    \"fundamentacion\": \"fundame Bienestar {{idProyecto}}\",\n    \"alcance\": \"alcan\",\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 3\n        }\n    ],\n    \"contribucionProgramaEspecial\": 1,\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 5\n        },\n        {\n            \"idCatalogo\": 6\n        }\n    ],\n    \"archivos\": [\n        {\n            \"idArchivo\": null,\n            \"uuid\": \"DFGHKFDS-IUEYHDFJS-23454-{{idProyecto}}\",\n            \"nombre\": \"Bienestar{{idProyecto}}.pdf\",\n            \"estatus\": \"I\",\n            \"usuario\": \"superusuario\"\n        }\n    ],\n    \"cveUsuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/registrarProyecto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"registrarProyecto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta ProyectoID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/consultarProyectoPorID/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultarProyectoPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta Proyectos por Año",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/consultaProyectosPorAnhio/2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"consultaProyectosPorAnhio",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cveProyecto\": {{idProyecto}},\n    \"cxNombreProyecto\": \"NombreProy Bienestar 1 Mod-{{idProyecto}}\",\n    \"cxObjetivo\": \"Objetivo miod\",\n    \"cxObjetivoPrioritario\": \"obje pri mod-{{idProyecto}}\",\n    \"cveUsuario\": \"superusuario\",\n    \"idAnhio\": 2023,\n    \"csEstatus\": \"INACTIVO\",\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 3\n        }\n    ],\n    \"contribucionProgramaEspecial\": 1,\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 5\n        },\n        {\n            \"idCatalogo\": 6\n        }\n    ],\n    \"archivo\": {\n        \"uuid\": \"23443-234-2343-mod-{{idProyecto}}\",\n        \"nombre\": \"nombremod-{{idProyecto}}.pdf\"\n    },\n    \"cxNombreUnidad\": \"Unidad nombre clave mod-{{idProyecto}}\",\n    \"cveUnidad\": \"Unidad cve-{{idProyecto}}\",\n    \"cxAlcance\": \"Alcance mod-{{idProyecto}}\",\n    \"cxFundamentacion\": \"Fundamenta mod-{{idProyecto}}\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/proyecto-anual/modificarProyectosPorID/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"modificarProyectosPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar Copy",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idAnhio\": 2023,\n    \"cveProyecto\": \"2339\",\n    \"cxNombreProyecto\": \"test\",\n    \"cxObjetivo\": \"test\",\n    \"cxObjetivoPrioritario\": \"test\",\n    \"cveUsuario\": \"superusuario\",\n    \"csEstatus\": \"COMPLETO\",\n    \"contribucionProgramaEspecial\": 2,\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 2\n        }\n    ],\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 3\n        },\n        {\n            \"idCatalogo\": 4\n        },\n        {\n            \"idCatalogo\": 5\n        }\n    ],\n    \"archivo\": null,\n    \"cxNombreUnidad\": \"Junta Directiva\",\n    \"cveUnidad\": \"P016\",\n    \"cxAlcance\": \"test\",\n    \"cxFundamentacion\": \"test\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/proyecto-anual/modificarProyectosPorID/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"modificarProyectosPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/eliminarProyectosPorID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"eliminarProyectosPorID"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actividades",
+					"item": [
+						{
+							"name": "Consultar Actividades",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/actividades/consultaPorProyecto/1",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultaPorProyecto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta por ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/actividades/consultarPorID/1",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultarPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar actividades",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idProyecto\": 1,\n    \"nombreActividad\": \"Nombre de la activi\",\n    \"descripcion\": \"descrip\",\n    \"estrategiaPrioritaria\": 1,\n    \"actionPuntual\": 1,\n    \"articulacionActividad\": \"articulaciones\",\n    \"actividadTransversal\": 1,\n    \"reuniones\": 1,\n    \"tema\": \"tema d reunion\",\n    \"alcance\": 1,\n    \"lugar\": \"Lugar de reunión\",\n    \"actores\": \"actores, uno dos y tres\",\n    \"fechaTentativa\": [\n        {\n            \"idCatalogoMes\": 1\n        },\n        {\n            \"idCatalogoMes\": 2\n        }\n    ],\n    \"estrategia\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 1\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 2\n            }\n        }\n    ],\n    \"action\": [\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 5\n            }\n        },\n        {\n            \"masterCatalogo\": {\n                \"idCatalogo\": 6\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/actividades/registrar",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idActividad\": 1,\n  \"idProyecto\": 1,\n  \"nombreActividad\": \"Nombre de la activi\",\n  \"descripcion\": \"descrip\",\n  \"estrategiaPrioritaria\": 1,\n  \"actionPuntual\": 1,\n  \"articulacionActividad\": \"articulaciones\",\n  \"actividadTransversal\": 1,\n  \"reuniones\": 1,\n  \"tema\": \"tema d reunion\",\n  \"alcance\": 1,\n  \"lugar\": \"Lugar de reunión\",\n  \"actores\": \"actores, uno dos y tres\",\n  \"fechaTentativa\": \"2022-03-10\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/modificar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://140.84.188.179:9002/api/actividades/eliminar",
+									"protocol": "http",
+									"host": [
+										"140",
+										"84",
+										"188",
+										"179"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actividades Local",
+					"item": [
+						{
+							"name": "Consultar Actividades",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/consultaPorProyecto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultaPorProyecto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta por ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "0"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/consultarPorID/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"consultarPorID",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar actividades",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idProyecto\": 1,\n    \"nombreActividad\": \"Nombre de la activi\",\n    \"descripcion\": \"descrip\",\n    \"estrategiaPrioritaria\": 1,\n    \"actionPuntual\": 1,\n    \"articulacionActividad\": \"articulaciones\",\n    \"actividadTransversal\": 1,\n    \"reuniones\": 1,\n    \"tema\": \"tema d reunion\",\n    \"alcance\": 1,\n    \"lugar\": \"Lugar de reunión\",\n    \"actores\": \"actores, uno dos y tres\",\n    \"fechaTentativa\": null\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar actividades Evelyn",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cveActividad\": \"01\",\n    \"idProyecto\": 1,\n    \"nombreActividad\": \"Este proyecto tiene como objetivo principal proporcionar a la \",\n    \"descripcion\": \"Este proyecto tiene como objetivo principal proporcionar a la \",\n    \"estrategiaPrioritaria\": 1,\n    \"actionPuntual\": 1,\n    \"articulacionActividad\": \"Este proyecto tiene como objetivo principal proporcionar a la \",\n    \"actividadTransversal\": 0,\n    \"reuniones\": 1,\n    \"tema\": \"ejmplo7\",\n    \"alcance\": 832,\n    \"lugar\": \"siete\",\n    \"actores\": \"gobierno\",\n    \"cveUsuario\": \"superusuario\",\n    \"fechaTentativa\": [\n        {\n            \"idCatalogoFecha\": 1\n        },\n        {\n            \"idCatalogoFecha\": 2\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar actividades Evelyn fechaNull",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cveActividad\": \"03\",\n    \"idProyecto\": 1,\n    \"nombreActividad\": \"Este proyecto tiene como objetivo principal proporcionar a la3\",\n    \"descripcion\": \"Este proyecto tiene como objetivo principal proporcionar a la3\",\n    \"estrategiaPrioritaria\": 1,\n    \"actionPuntual\": 1,\n    \"articulacionActividad\": \"Este proyecto tiene como objetivo principal proporcionar a la3\",\n    \"actividadTransversal\": 0,\n    \"reuniones\": 1,\n    \"tema\": \"ejmplo73\",\n    \"alcance\": 832,\n    \"lugar\": \"siete3\",\n    \"actores\": \"gobierno3\",\n    \"cveUsuario\": \"superusuario\",\n    \"fechaTentativa\": []\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idActividad\": 1,\n  \"idProyecto\": 1,\n  \"nombreActividad\": \"Nombre de la activi\",\n  \"descripcion\": \"descrip\",\n  \"estrategiaPrioritaria\": 1,\n  \"actionPuntual\": 1,\n  \"articulacionActividad\": \"articulaciones\",\n  \"actividadTransversal\": 1,\n  \"reuniones\": 1,\n  \"tema\": \"tema d reunion\",\n  \"alcance\": 1,\n  \"lugar\": \"Lugar de reunión\",\n  \"actores\": \"actores, uno dos y tres\",\n  \"fechaTentativa\": \"2022-03-10\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/modificar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"usuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/actividades/eliminar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"actividades",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TestYordy",
+					"item": [
+						{
+							"name": "modificar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idAnhio\": 2023,\r\n    \"cveProyecto\": \"23214\",\r\n    \"cxNombreProyecto\": \"nuevo\",\r\n    \"cxObjetivo\": \"nuevo\",\r\n    \"cxObjetivoPrioritario\": \"nuevo\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"csEstatus\": \"COMPLETO\",\r\n    \"contribucionProgramaEspecial\": 2005,\r\n    \"contribucionObjetivo\": [\r\n        {\r\n            \"idCatalogo\": 593\r\n        }\r\n    ],\r\n    \"contribucionPNCCIMGP\": [\r\n        {\r\n            \"idCatalogo\": 825\r\n        }\r\n    ],\r\n    \"archivo\": \r\n        {\r\n            \"idArchivo\": null,\r\n            \"estatus\": \"A\",\r\n            \"nombre\": \"Test-18.docx\",\r\n            \"usuario\": \"superusuario\",\r\n            \"uuid\": \"e8a94d91-04da-4103-b370-6bb9bc88c6de\"\r\n        }\r\n    ,\r\n    \"cxNombreUnidad\": \"Unidad de Evaluación Diagnóstica\",\r\n    \"cveUnidad\": \"2100\",\r\n    \"cxAlcance\": \"nuevo\",\r\n    \"cxFundamentacion\": \"nuevo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/proyecto-anual/modificarProyectosPorID/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"proyecto-anual",
+										"modificarProyectosPorID",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar proyecto Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idAnhio\": 2023,\n    \"claveNombreUnidad\": \"claveNombreUnidad 4\",\n    \"cveProyecto\": 23214,\n    \"nombreProyecto\": \"nombreProyecto 4\",\n    \"objetivo\": \"Objetivo Bienestar 4\",\n    \"csEstatus\": \"I\",\n    \"objetivoPriori\": \"Objetivo Bienestar 4\",\n    \"fundamentacion\": \"fundame Bienestar 4\",\n    \"alcance\": \"alcan\",\n    \"contribucionObjetivo\": [\n        {\n            \"idCatalogo\": 1\n        },\n        {\n            \"idCatalogo\": 3\n        }\n    ],\n    \"contribucionProgramaEspecial\": 1,\n    \"contribucionPNCCIMGP\": [\n        {\n            \"idCatalogo\": 5\n        },\n        {\n            \"idCatalogo\": 6\n        }\n    ],\n    \"archivos\": [\n        {\n            \"idArchivo\": null,\n            \"estatus\": \"A\",\n            \"nombre\": \"Test-18.docx\",\n            \"usuario\": \"superusuario\",\n            \"uuid\": \"e8a94d91-04da-4103-b370-6bb9bc88c6d2\"\n        }\n    ],\n    \"cveUsuario\": \"superusuario\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/formulario-analitico/registrarProyecto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"formulario-analitico",
+										"registrarProyecto"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Consultar Actividades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "0"
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/actividades/consultaPorProyecto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"actividades",
+								"consultaPorProyecto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Actividad por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "0"
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/actividades/consultarPorID/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"actividades",
+								"consultarPorID",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Productos por Año",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "0"
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/productos/consultaPorAnhio/2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"productos",
+								"consultaPorAnhio",
+								"2023"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,72 @@
+<section id="wrapper">
+  <form
+    [id]="'form-products' + position"
+    class="form fade"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+  >
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons" style="margin-bottom: -10px">
+      <button
+        mat-flat-button
+        color="add"
+        *ngIf="!modify && canEdit && !position"
+        (click)="newActivity()"
+        type="button"
+      >
+        Limpiar formulario
+      </button>
+      <button
+        *ngIf="showBtnSave"
+        mat-flat-button
+        class="btn-left"
+        color="primary"
+        [disabled]="disabledSubmiting"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">Guardar Avance</span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<div class="wrap" *ngIf="!modify">
+  <app-mat-custom-table
+    (action)="onTableAction($event)"
+    [actions]="actions"
+    [dataset]="data"
+    [maxWidthActions]="'150px'"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+</div>
+
+<div class="wrap" *ngIf="position === 'left'">
+  <div class="alert-success">Actividades con Modificación</div>
+  <app-mat-custom-table
+    (action)="onTableModificacionesAction($event)"
+    (update)="getConsultarActividadByIdAdecuacion()"
+    [actions]="actions"
+    [dataset]="dataModificacionTable"
+    [maxWidthActions]="'220px'"
+    [columns]="columnsModificationTable"
+  >
+  </app-mat-custom-table>
+</div>

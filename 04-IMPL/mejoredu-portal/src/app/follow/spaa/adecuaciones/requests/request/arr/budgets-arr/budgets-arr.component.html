@@ -1,0 +1,168 @@
+<section id="wrapper">
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+  </form>
+
+  <div class="alert-success">Calendarización del Presupuesto</div>
+
+  <table style="margin-bottom: var(--border-middle)">
+    <thead>
+      <tr>
+        <th colspan="14">Clave y Nombre de la Actividad</th>
+      </tr>
+      <tr>
+        <th>Estatus</th>
+        <th>Total</th>
+        <th>Enero</th>
+        <th>Febrero</th>
+        <th>Marzo</th>
+        <th>Abril</th>
+        <th>Mayo</th>
+        <th>Junio</th>
+        <th>Julio</th>
+        <th>Agosto</th>
+        <th>Septiembre</th>
+        <th>Octubre</th>
+        <th>Noviembre</th>
+        <th>Diciembre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of budgetCalendar">
+        <td>
+          {{ item.status }}
+        </td>
+        <td>
+          {{ item.total | currency }}
+        </td>
+        <td>
+          {{ item.january | currency }}
+        </td>
+        <td>
+          {{ item.february | currency }}
+        </td>
+        <td>
+          {{ item.march | currency }}
+        </td>
+        <td>
+          {{ item.april | currency }}
+        </td>
+        <td>
+          {{ item.may | currency }}
+        </td>
+        <td>
+          {{ item.june | currency }}
+        </td>
+        <td>
+          {{ item.july | currency }}
+        </td>
+        <td>
+          {{ item.august | currency }}
+        </td>
+        <td>
+          {{ item.september | currency }}
+        </td>
+        <td>
+          {{ item.october | currency }}
+        </td>
+        <td>
+          {{ item.november | currency }}
+        </td>
+        <td>
+          {{ item.december | currency }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="action-buttons">
+    <button
+      mat-flat-button
+      class="btn-left"
+      color="add"
+      (click)="addExpenseItem()"
+    >
+      Agregar Partida de Gasto
+    </button>
+    <button mat-flat-button color="primary">Guardar Avance</button>
+  </div>
+
+  <div class="tbl-space">
+    <table>
+      <caption></caption>
+      <tbody>
+        <tr class="head">
+          <th class="center" rowspan="2">Partida</th>
+          <th class="center" colspan="3">Reducción</th>
+          <th class="center" colspan="3">Ampliación</th>
+          <th class="center">Importe Neto</th>
+        </tr>
+        <tr class="sub-header">
+          <td [width]="120">Clave</td>
+          <td>Importe</td>
+          <td>Mes</td>
+          <td [width]="120">Clave</td>
+          <td>Importe</td>
+          <td>Mes</td>
+          <td></td>
+        </tr>
+
+        <tr *ngFor="let item of expensiveResumes">
+          <td>
+            {{ item.partida }}
+          </td>
+          <td>
+            {{ item.claveReduccion }}
+          </td>
+          <td>
+            {{ item.importeReduccion | currency }}
+          </td>
+          <td>
+            {{ item.mesReduccion }}
+          </td>
+          <td>
+            {{ item.claveAmpleacion }}
+          </td>
+          <td>
+            {{ item.importeAmpleacion | currency }}
+          </td>
+          <td>
+            {{ item.mesAmpleacion }}
+          </td>
+          <td>
+            {{ item.importeNeto | currency }}
+          </td>
+        </tr>
+        <tr class="enfassis">
+          <td class="enfasis"></td>
+          <td></td>
+          <td class="enfasis">
+            {{ getSumImporteReduccion() | currency }}
+          </td>
+          <td></td>
+          <td></td>
+          <td class="enfasis">
+            {{ getSumImporteAmpleacion() | currency }}
+          </td>
+          <td></td>
+          <td class="enfasis">
+            {{ getSumImporteNeto() | currency }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

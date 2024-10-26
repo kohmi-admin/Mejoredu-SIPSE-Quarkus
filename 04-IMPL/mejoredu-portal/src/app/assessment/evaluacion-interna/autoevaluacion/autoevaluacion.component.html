@@ -1,0 +1,15 @@
+<section id="wrapper" class="can-validate">
+  <h1 class="title no-bottom">Evaluación y Mejora Continua</h1>
+  <span class="sub-title bottom">Informe de Autoevaluación</span>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="Informes" routerLinkActive="active-link">
+      Informes
+    </a>
+    <a mat-tab-link [routerLink]="'Carga de Evidencia'" routerLinkActive="active-link">
+      Carga de Evidencia
+    </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+</section>

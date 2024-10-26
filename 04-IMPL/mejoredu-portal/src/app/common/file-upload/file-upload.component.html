@@ -1,0 +1,42 @@
+<div
+  *ngIf="!disableInput"
+  class="file-drop-area blur"
+  [ngClass]="{ 'file-drop-area-small': dragCompact }"
+  [class.drag-over]="isDragOver"
+  (click)="openFileSelector()"
+  (drop)="onDrop($event)"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)"
+>
+  <p [ngClass]="{ 'text-drop-area-small': dragCompact }">
+    Haz Clic Aquí para Seleccionar Archivos o Arrástralos Aquí
+  </p>
+  <input
+    class="hide"
+    #fileInput
+    [id]="id || 'fileInput'"
+    type="file"
+    (change)="onFileSelected($event)"
+    [multiple]="multiple"
+    [accept]="accept || '.doc, .docx'"
+  />
+</div>
+<div class="files" *ngIf="showUploadedFiles">
+  <div class="w-file" *ngFor="let file of files; let i = index">
+    <div class="file">
+      <div class="text">
+        <span [title]="file.name" (click)="downloadFile()">
+          {{ file.name }}
+        </span>
+      </div>
+      <div
+        *ngIf="!disableInput"
+        class="delete"
+        matTooltip="Eliminar"
+        (click)="remove(i)"
+      >
+        <mat-icon> delete </mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

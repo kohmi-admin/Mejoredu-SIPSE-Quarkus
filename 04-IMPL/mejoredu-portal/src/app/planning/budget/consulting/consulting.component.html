@@ -1,0 +1,13 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Consulta</h1>
+  <app-mat-custom-table
+    [dataset]="data"
+    [columns]="columns"
+    [actions]="actions"
+    maxWidthActions="'180px'"
+    (action)="onTableAction($event)"
+    (update)="getAll()"
+    [complementText]="'Programa Presupuestario'"
+  >
+  </app-mat-custom-table>
+</section>

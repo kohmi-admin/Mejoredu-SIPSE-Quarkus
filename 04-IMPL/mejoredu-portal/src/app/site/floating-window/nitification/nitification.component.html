@@ -1,0 +1,16 @@
+<div
+  class="n-item noselect"
+  (click)="openNotification()"
+  [class.alert]="notification.notificationType === 2"
+  matRipple
+  matRippleColor="rgba(144, 144, 144, 0.1)"
+>
+  <div class="ni-title">
+    {{ typeString }}
+  </div>
+  <div class="ni-indicator" [class.seen]="notification.seen" (click)="toggleSeen();$event.preventDefault();$event.stopPropagation()"></div>
+  <span class="ni-content" [innerHTML]="notification.text"></span>
+  <span class="time">
+    {{ getTimeString() }}
+  </span>
+</div>

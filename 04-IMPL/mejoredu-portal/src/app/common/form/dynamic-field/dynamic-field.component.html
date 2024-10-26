@@ -1,0 +1,75 @@
+<div [formGroup]="form" class="i-space">
+  <div [ngSwitch]="question.controlType">
+    <mat-form-field
+      *ngIf="question.controlType !== 'checkbox'"
+      [class]="class"
+      [appearance]="'outline'"
+      [class.readonly]="question.readonly"
+    >
+      <!-- <span style="margin: 0 !important; padding: 0 !important; margin-left: 10px; background-color: red; width: 100% !important;" matPrefix>23-JDI-001-</span> -->
+      <mat-label>{{ question.label }}</mat-label>
+      <input
+        [readonly]="question.readonly"
+        *ngSwitchCase="'textbox'"
+        matInput
+        [formControlName]="question.nane"
+        [type]="question.type"
+        autofocus
+        ngxMask
+      />
+
+      <mat-select
+        *ngSwitchCase="'dropdown'"
+        [formControlName]="question.nane"
+        [multiple]="question.multiple"
+        autofocus
+      >
+        <mat-option *ngFor="let opt of question.optionsArray" [value]="opt.id">
+          {{ opt.value }}
+        </mat-option>
+      </mat-select>
+
+      <textarea
+        [readonly]="question.readonly"
+        matInput
+        *ngSwitchCase="'textarea'"
+        [formControlName]="question.nane"
+        cdkTextareaAutosize
+        [cdkAutosizeMinRows]="question.rows || 5"
+      ></textarea>
+
+      <input *ngSwitchCase="'number'" matInput type="number" [formControlName]="question.nane">
+
+      <input
+        [readonly]="true"
+        *ngSwitchCase="'date'"
+        matInput
+        [matDatepicker]="picker2"
+        [formControlName]="question.nane"
+      />
+      <mat-datepicker-toggle
+        *ngSwitchCase="'date'"
+        matIconSuffix
+        [for]="picker2"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker2 color="primary"></mat-datepicker>
+
+      <mat-icon
+        *ngIf="question.icon"
+        [matTooltip]="question.message"
+        [matTooltipPosition]="'above'"
+        [class.low]="question.message !== ''"
+        matSuffix
+        >{{ question.icon }}</mat-icon
+      >
+      <mat-error *ngIf="!isValid">{{ errorMessage }}</mat-error>
+    </mat-form-field>
+
+    <mat-checkbox
+      *ngSwitchCase="'checkbox'"
+      [formControlName]="question.nane"
+      [class.readonly]="question.readonly"
+      >{{ question.label }}</mat-checkbox
+    >
+  </div>
+</div>

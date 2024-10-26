@@ -1,0 +1,77 @@
+mat-vertical-stepper {
+  .check {
+    right: 16px;
+    position: absolute;
+    color: var(--primary-color);
+    transform: translate(10px, -3px);
+    &.low {
+      opacity: 0.2;
+    }
+  }
+  .mat-step-header:has(.ready) {
+    background: rgb(251, 251, 251) !important;
+    &::after {
+      top: 0;
+      left: 0;
+      content: "";
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      background-image: linear-gradient(
+        to right,
+        rgba(61, 92, 80, 0.2),
+        rgba(61, 92, 80, 0)
+      );
+    }
+    * {
+        z-index: 1;
+    }
+  }
+  .mat-step-header {
+    border-radius: 4px 4px;
+    padding: 15px !important;
+    transition: all linear 0.2s;
+    overflow: initial !important;
+    &::before {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 8px;
+      height: 100%;
+      content: "";
+      position: absolute;
+      border-radius: 4px 4px;
+      transition: all linear 0.1s;
+      background: var(--primary-color);
+      box-shadow: 4px 0px 20px var(--primary-color);
+    }
+    &[ng-reflect-selected="true"],
+    &:hover {
+      background: rgb(251, 251, 251) !important;
+      padding-left: 30px !important;
+      &::before {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      .mat-step-icon {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .mat-vertical-content {
+    padding: 0 !important;
+    padding-bottom: 10px !important;
+  }
+
+  .mat-vertical-content-container {
+    margin-left: 0px !important;
+  }
+}
+
+mat-vertical-stepper {
+  background-color: initial !important;
+}

@@ -1,0 +1,25 @@
+# Builder stage
+FROM node:21-alpine3.18 AS deps
+WORKDIR /app
+COPY package.json package-lock.json ./
+#RUN npm ci --frozen-lockfile
+RUN npm i
+
+FROM node:21-alpine3.18 AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npm run build:dev
+
+# Production stage
+FROM nginx:1.21.0-alpine as production
+ENV NODE_ENV dev
+COPY --from=builder /app/dist/MejorEdu /usr/share/nginx/html
+COPY --from=builder /app/.docker/.config/nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+RUN echo "mainFileName=\"\$(ls /usr/share/nginx/html/main*.js)\" && \
+          envsubst '\$AUTH_API \$CORTO_PLAZO_API \$MEDIANO_PLAZO_API \$PRESUPUESTARIOS_API \$SEGUIMIENTO_ANUAL_API \$SEGUIMIENTO_AVANCES_API \$NUMERALIA_API \$CATALOGOS_API \$SEGUIMIENTO_AVANCES_API \$EVALUACION_API \$NOTIFICADOR_API ' < \${mainFileName} > main.tmp && \
+          mv main.tmp  \${mainFileName} && \
+          nginx -g 'daemon off;'" > run.sh
+ENTRYPOINT ["sh", "run.sh"]
+

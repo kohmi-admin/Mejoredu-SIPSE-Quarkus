@@ -1,0 +1,15 @@
+<section id="wrapper">
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field blur" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        [form]="form"
+      ></app-dynamic-field>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" mat-flat-button color="accent">Guardar</button>
+    </div>
+  </form>
+</section>

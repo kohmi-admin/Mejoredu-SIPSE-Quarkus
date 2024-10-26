@@ -1,0 +1,133 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button mat-flat-button color="view" [disabled]="!activeProject" class="btn-left" (click)="getExcelByProyectId()">
+      Descargar PAA <br />
+      con Adecuaciones
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="true"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      (click)="navigate.emit(1)"
+      [disabled]="!activeProject"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div class="trim-section">
+    <mat-button-toggle-group name="favoriteColor" [(ngModel)]="currentQuarter" (change)="submit()">
+      <mat-button-toggle [value]="1"> Primer Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="2"> Segundo Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="3"> Tercer Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="4"> Cuarto Trimestre </mat-button-toggle>
+      <mat-button-toggle [value]="5"> General </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </section>
+    <div class="actions">
+      <div *ngIf="isSubmitingFile">
+        <mat-spinner
+          style="width: 30px; height: 30px"
+          color="warn"
+        ></mat-spinner>
+      </div>
+      <file-upload
+        *ngIf="showUploadFile && !isSubmitingFile"
+        accept=".txt"
+        [showUploadedFiles]="false"
+        [dragCompact]="true"
+        (onOutputFile)="onOutputFile($event)"
+      ></file-upload>
+      <button
+        *ngIf="showUploadFile"
+        type="button"
+        mat-flat-button
+        color="primary"
+        (click)="btnHelp()"
+        style="margin-right: 5px"
+      >
+        Ayuda
+      </button>
+      <button
+        mat-flat-button
+        *ngIf="showUploadFile"
+        color="accent"
+        type="button"
+        (click)="cancelEditUrl()"
+        [disabled]="isSubmitingFile"
+      >
+        Cancelar
+      </button>
+      <button
+        mat-flat-button
+        *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR' && !showUploadFile"
+        color="primary"
+        type="button"
+        (click)="editUrl()"
+      >
+        Editar Url para Consultar Movimientos Presupuestales del SIF
+      </button>
+      <button
+        mat-flat-button
+        *ngIf="urlToDrive"
+        color="primary"
+        type="button"
+        (click)="redirectToSIF()"
+      >
+        Consultar Movimientos Presupuestales del SIF en Tiempo Real
+      </button>
+      <button mat-flat-button color="send" type="reset">Limpiar Filtros</button>
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Buscar
+      </button>
+    </div>
+  </form>
+
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="onTableAction($event)"
+    (update)="getAll()"
+    [hasScroll]="false"
+    [propId]="'idProyecto'"
+    [activeId]="activeProject"
+    [actionsInStart]="true"
+    [actions]="actions"
+    [dataset]="data"
+    [actionString]="'Ver'"
+    [maxWidthActions]="'60px'"
+    [minWidth]="1200"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+</section>

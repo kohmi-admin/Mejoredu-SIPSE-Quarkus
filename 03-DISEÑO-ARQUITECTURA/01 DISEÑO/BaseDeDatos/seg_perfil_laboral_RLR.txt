@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS `mejoreduDB`.`seg_perfil_laboral` (
+  `id_perfil_laboral` INT NOT NULL AUTO_INCREMENT COMMENT 'Identificador numerico autoincrementable del perfil del usuario, podrá manejar perfil historico.',
+  `ci_numero_empleado` INT NULL COMMENT 'Numero de empleado valor numerico.',
+  `cx_puesto` VARCHAR(120) NULL COMMENT 'Descripción del puesto al que pertenece el usuario',
+  `cx_telefono_oficina` VARCHAR(45) NULL COMMENT 'Cadena que permite registrar el número de teléfono del usuario',
+  `cx_extension` VARCHAR(45) NULL COMMENT 'Cadena que permite registrar el número de la extensión telefónica del usuario',
+  `cx_dg_administacion` VARCHAR(45) NULL COMMENT 'Descripción de la dirección general a la que pertenece el usuario',
+  `cve_usuario` VARCHAR(45) NOT NULL COMMENT 'Clave del usuario que será asociado a la información del laboral del usuario',
+  `id_catalogo_area` INT NOT NULL COMMENT 'Identificador del catálogo de área (Unidad responsable), relacionada con la tabla cat_master_catalogo',
+  `cs_status` VARCHAR(1) NULL COMMENT 'Estatus del registro de la información laboral, A activo B Baja',
+  PRIMARY KEY (`id_perfil_laboral`),
+  INDEX `fk_seg_perfil_laboral_seg_usuario1_idx` (`cve_usuario` ASC) VISIBLE,
+  INDEX `fk_seg_perfil_laboral_cat_master_catalogo1_idx` (`id_catalogo_area` ASC) VISIBLE,
+  CONSTRAINT `fk_seg_perfil_laboral_seg_usuario1`
+    FOREIGN KEY (`cve_usuario`)
+    REFERENCES `mejoreduDB`.`seg_usuario` (`cve_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_seg_perfil_laboral_cat_master_catalogo1`
+    FOREIGN KEY (`id_catalogo_area`)
+    REFERENCES `mejoreduDB`.`cat_master_catalogo` (`id_catalogo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB

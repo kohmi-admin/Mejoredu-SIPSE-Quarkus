@@ -1,0 +1,83 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Proyectos'"
+      disabled
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Carga de Evidencia'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <section *ngIf="canEdit">
+      <div class="file-zone">
+        <span>Documento ZIP (Evidencias)</span>
+        <file-upload
+          [files]="arrayFilesZip"
+          [id]="'inpFileZip'"
+          accept=".zip, .rar, .tar"
+        ></file-upload>
+      </div>
+    </section>
+    <div class="action-buttons" *ngIf="canEdit">
+      <button
+        type="button"
+        mat-flat-button
+        color="warn"
+        class="btn-left"
+        (click)="newRegister()"
+      >
+        Nuevo Registro
+      </button>
+      <button mat-flat-button color="primary" class="btn-left">
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">
+          {{ dataAction ? "Actualizar" : "Cargar" }} Registro
+        </span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<div class="wrap">
+  <app-mat-custom-table
+    (action)="onTableAction($event)"
+    (update)="getInformes()"
+    [actions]="actions"
+    [dataset]="data"
+    [maxWidthActions]="'220px'"
+    [columns]="columns"
+    [showActionIf]="showActionIf"
+  >
+  </app-mat-custom-table>
+</div>

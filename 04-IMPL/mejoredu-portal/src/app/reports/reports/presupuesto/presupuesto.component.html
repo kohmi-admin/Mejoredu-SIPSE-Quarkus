@@ -1,0 +1,125 @@
+<div class="btn-navigation report">
+  <button mat-flat-button color="view" (click)="exportTOExcel()">
+    Descargar Excel
+  </button>
+  <button mat-flat-button color="view" (click)="descargar()">
+    Descargar PDF
+  </button>
+</div>
+<form class="form fade" [formGroup]="form">
+  <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+    <app-dynamic-field
+      class="form-field full blur"
+      [question]="question"
+      *ngIf="!question.filter"
+      [form]="form"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full blur"
+      [question]="question"
+      *ngIf="question.filter"
+      [form]="form"
+    ></app-select-filter>
+  </div>
+  <div class="action-buttons filter">
+    <button mat-flat-button color="primary" class="btn-left">
+      Aplicar Filtro
+    </button>
+  </div>
+</form>
+
+<section id="report-space" [class.to-report]="makingReport">
+  <app-resume [items]="resumes"></app-resume>
+
+  <section>
+    <div>
+      <div class="chart" [class]="item.class" *ngFor="let item of charts">
+        <div class="chart-item">
+          <div class="c-title">
+            {{ item.title }}
+          </div>
+          <div class="c-content">
+            <app-chart [chart]="item.chart"></app-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="chart tbl full table">
+    <div class="chart-item">
+      <!-- <div class="c-title"></div> -->
+      <div class="c-content">
+        <table #TABLE>
+          <thead>
+            <tr>
+              <th style="min-width: 280px">Actividad PAA</th>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Julio</th>
+              <th>Agosto</th>
+              <th>Septiembre</th>
+              <th>Octubre</th>
+              <th>Noviembre</th>
+              <th>Diciembre</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let item of activities"
+              [class.total]="item.activity === 'Total'"
+            >
+              <td class="left">
+                {{ item.activity }}
+              </td>
+              <td>
+                {{ item.january | currency }}
+              </td>
+              <td>
+                {{ item.february | currency }}
+              </td>
+              <td>
+                {{ item.march | currency }}
+              </td>
+              <td>
+                {{ item.april | currency }}
+              </td>
+              <td>
+                {{ item.may | currency }}
+              </td>
+              <td>
+                {{ item.june | currency }}
+              </td>
+              <td>
+                {{ item.july | currency }}
+              </td>
+              <td>
+                {{ item.august | currency }}
+              </td>
+              <td>
+                {{ item.september | currency }}
+              </td>
+              <td>
+                {{ item.october | currency }}
+              </td>
+              <td>
+                {{ item.november | currency }}
+              </td>
+              <td>
+                {{ item.december | currency }}
+              </td>
+              <td>
+                {{ item.total | currency }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

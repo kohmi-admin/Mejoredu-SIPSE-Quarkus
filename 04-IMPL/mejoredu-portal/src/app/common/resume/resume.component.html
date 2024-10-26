@@ -1,0 +1,13 @@
+<div class="resume-w">
+  <div class="resume">
+
+    <div class="r-item" *ngFor="let item of items">
+      <div class="r-title">{{ item.name }}</div>
+      <div class="r-description">
+        <span [style.color]="item.color">{{ item.value }}</span>
+        <span [style.color]="item.color" *ngIf="item.isPercentage">%</span>
+      </div>
+    </div>
+
+  </div>
+</div>

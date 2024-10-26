@@ -1,0 +1,35 @@
+<section id="wrapper" class="no-bottom" style="margin-bottom: -15px">
+  <div class="btn-navigation">
+    <button mat-flat-button color="add" class="btn-left">
+      <mat-icon>add</mat-icon>
+      Agregar Gráfica
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Reportes'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      disabled
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Gráficas'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+
+<ngx-masonry [options]="{ gutter: 0 }">
+  <app-card
+    *ngFor="let item of charts"
+    [item]="item"
+    (deleteItem)="deleteOne($event)"
+  ></app-card>
+</ngx-masonry>

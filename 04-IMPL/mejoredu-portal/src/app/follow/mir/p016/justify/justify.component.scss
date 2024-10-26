@@ -1,0 +1,41 @@
+form {
+    border-top: solid 15px transparent;
+}
+
+.group-form {
+    .title {
+        text-align: center;
+    }
+}
+
+.file-zone {
+    box-sizing: border-box;
+    border: solid 15px transparent;
+    border-top-width: 0;
+}
+
+.alert-success {
+    margin-top: 20px;
+} 
+
+.field {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 0 transparent;
+    border-right-width: 15px;
+    border-left-width: 15px;
+}
+
+.action-buttons {
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    &.right {
+        text-align: right;
+        justify-items: flex-end;
+    }
+}

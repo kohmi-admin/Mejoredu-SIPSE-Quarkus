@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <header>
+    <div class="content">
+      <div class="logo">
+        <!-- <app-logo class="svg"></app-logo> -->
+        <img src="../../assets/img/logoOficialGreen.svg" alt="" srcset="">
+      </div>
+      <div class="title"></div>
+      <div class="actions">
+        <button mat-icon-button matTooltip="Solicitar Ayuda" (click)="toggleAboutModal()">
+          <mat-icon>support_agent</mat-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <app-floating-window [title]="'Solicitar Ayuda'" *ngIf="showAboutModal">
+    <form class="aboutForm" [formGroup]="aboutForm" (ngSubmit)="submitHelp()">
+
+      <div *ngFor="let question of aboutQuestions">
+        <app-dynamic-field class="form-field full" style="width: 100px !important;" [question]="question" [form]="aboutForm"></app-dynamic-field>
+      </div>
+
+      <div class="action">
+        <button type="submit" mat-flat-button color="accent">Enviar</button>
+      </div>
+
+
+    </form>
+  </app-floating-window>
+
+  <div class="login">
+    <div class="col">
+
+      <!-- <app-logo id="logo" class="svg"></app-logo> -->
+
+      <h1>Bienvenido</h1>
+      <h3>Iniciar Sesión</h3>
+
+      <form class="form fade" [formGroup]="loginForm" (ngSubmit)="submit()">
+
+        <div *ngFor="let question of questions">
+          <app-dynamic-field class="form-field full" style="width: 100px !important;" [question]="question" [form]="loginForm"></app-dynamic-field>
+        </div>
+
+        <button type="submit" mat-flat-button color="accent" [disabled]="loading">
+          <div style="display: flex; justify-content: center;">
+            <mat-spinner *ngIf="loading" style="width: 25px; height: 25px;" color="primary"></mat-spinner>
+          </div>
+          <span *ngIf="!loading">
+            Ingresar
+          </span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>

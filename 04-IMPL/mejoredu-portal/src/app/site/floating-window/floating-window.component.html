@@ -1,0 +1,36 @@
+<div
+  class="content-section"
+  [class.notifications]="title === 'Notificaciones'"
+  [class.normativity]="title === 'Normatividad'"
+  [class.documents]="title === 'Documentos de Apoyo'"
+  [class.help]="title === 'Ayuda'"
+>
+  <div class="item">
+    <div class="header">
+      <span>
+        {{ title }}
+      </span>
+      <span
+        class="mark"
+        *ngIf="title === 'Notificaciones'"
+        (click)="markAllAsSeen()"
+      >
+        Marcar como Leídas
+      </span>
+    </div>
+
+    <app-documents
+      *ngIf="title === 'Normatividad' || title === 'Documentos de Apoyo'"
+      [type]="title === 'Normatividad' ? 'normatividad' : 'apoyo'"
+    ></app-documents>
+
+    <div class="container notifications" *ngIf="title === 'Notificaciones'">
+      <app-nitification
+        *ngFor="let notification of notificationsService.notifications"
+        [notification]="notification"
+      ></app-nitification>
+    </div>
+
+    <app-help *ngIf="title === 'Ayuda'"></app-help>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+::ng-deep {
+  .btn-navigation.report {
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    height: 45px !important;
+    justify-content: flex-end;
+    padding-left: 10px;
+    padding-right: 10px;
+    button {
+      margin-bottom: -10px;
+    }
+  }
+}

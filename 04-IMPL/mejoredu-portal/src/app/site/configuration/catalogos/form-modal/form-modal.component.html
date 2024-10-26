@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>
+  {{ title }}
+</h1>
+<div mat-dialog-content>
+  <form id="form1" class="form fade" [formGroup]="form">
+    <div class="field blur" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="primary" *ngIf="!data?.onlyView" (click)="submit()">
+    {{ action }}
+  </button>
+</div>

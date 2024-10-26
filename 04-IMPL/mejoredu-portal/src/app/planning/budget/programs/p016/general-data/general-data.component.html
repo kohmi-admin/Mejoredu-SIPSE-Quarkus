@@ -1,0 +1,124 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation" *ngIf="canNavigate">
+    <button
+      disabled
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Diagnóstico'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Diagnóstico'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <section
+    *ngIf="editable && form.enabled && filesArchivos.length < 2"
+    class="alert-success no-top"
+  >
+    Carga de Archivos
+  </section>
+  <file-upload
+    *ngIf="editable && form.enabled && filesArchivos.length < 2"
+    [files]="arrayFiles"
+    [id]="'inpFilePi'"
+    accept=".pdf"
+  ></file-upload>
+  <div class="action-buttons" style="margin-bottom: -10px">
+    <button
+      *ngIf="editable && form.enabled && filesArchivos.length < 2"
+      [disabled]="!arrayFiles.length"
+      (click)="handleAddFile()"
+      type="button"
+      mat-flat-button
+      color="add"
+      style="margin-top: 0px; margin-left: 20px"
+    >
+      <span>Agregar Archivo</span>
+    </button>
+  </div>
+  <br />
+
+  <app-mat-custom-table
+    (action)="onTableActionArchivos($event)"
+    [dataset]="filesArchivos"
+    [columns]="columns"
+    [actions]="actions"
+    [noPadding]="true"
+    [customBtn]="'download'"
+    [actionString]="'Descargar'"
+  >
+  </app-mat-custom-table>
+
+  <section class="alert-success top">Datos Generales</section>
+  <form id="form1" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field blur" *ngFor="let question of questions; let i = index">
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons" style="margin-bottom: 18px; margin-top: -20px">
+      <button
+        mat-flat-button
+        color="view"
+        class="btn-left"
+        type="button"
+        (click)="download()"
+      >
+        Descargar
+      </button>
+      <button
+        *ngIf="editable && canEdit"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        type="button"
+        (click)="update()"
+        [disabled]="disabledBtnEdit"
+      >
+        Editar
+      </button>
+      <button
+        *ngIf="editable && canEdit"
+        [disabled]="form.disabled"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        type="submit"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting"> Guardar </span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<app-validate
+  *ngIf="validation"
+  apartado="VALIDACION-PRESUPUESTO-DATOS-GENERALES"
+  [idSave]="idSaveValidar"
+  [fromModule]="'pp'"
+  [questions]="questions"
+  [disable]="!!selectedAjustesPP"
+></app-validate>

@@ -1,0 +1,22 @@
+#actionSpace {
+    button {
+        width: 100%;
+    }
+}
+
+mat-dialog-content {
+    text-align: center;
+}
+
+#confirmButton {
+    font-weight: 500;
+    color: var(--primary-color) !important;
+    border-top-color: rgba(1, 1, 1, 0.04) !important;
+    &:focus,
+    &:hover {
+        background: rgb( 1, 1, 1, 0.02) !important;
+        &::before {
+            opacity: 1;
+        }
+    }
+}

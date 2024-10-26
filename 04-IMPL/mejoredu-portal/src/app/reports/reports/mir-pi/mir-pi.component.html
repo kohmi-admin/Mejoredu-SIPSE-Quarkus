@@ -1,0 +1,68 @@
+<div class="btn-navigation report">
+  <button mat-flat-button color="view" (click)="descargar()">Descargar PDF</button>
+</div>
+<section>
+  <form class="form fade" [formGroup]="form">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons filter">
+      <button mat-flat-button color="primary" class="btn-left">
+        Aplicar Filtro
+      </button>
+    </div>
+  </form>
+  <section id="report-space">
+    <app-resume [items]="resumes"></app-resume>
+  
+    <div>
+      <div class="chart mid">
+        <div class="chart-item">
+          <div class="c-title">{{ charts[0].title }}</div>
+          <div class="c-content">
+            <app-chart [chart]="charts[0].chart"></app-chart>
+          </div>
+        </div>
+      </div>
+  
+      <div class="chart mid">
+        <div class="chart-item">
+          <div class="c-title">{{ charts[1].title }}</div>
+          <div class="c-content">
+            <app-chart [chart]="charts[1].chart"></app-chart>
+          </div>
+        </div>
+      </div>
+  
+      <div class="chart">
+        <div class="chart-item">
+          <div class="c-title">{{ charts[2].title }}</div>
+          <div class="c-content">
+            <app-chart [chart]="charts[2].chart"></app-chart>
+          </div>
+        </div>
+      </div>
+  
+      <div class="chart tbl">
+        <div class="chart-item">
+          <div class="c-title">{{ charts[3].title }}</div>
+          <div class="c-content">
+            <app-chart [chart]="charts[3].chart"></app-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>

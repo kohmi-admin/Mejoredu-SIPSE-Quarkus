@@ -1,0 +1,168 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 4">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <section class="group-forms">
+      <!-- <div class="group-form" *ngFor="let item of mounths">
+        <div class="title">
+          {{ item.name }}
+        </div>
+        <div class="container">
+          <div class="item">
+            <div class="title">
+              
+              <select name="nesP" [disabled]="!isProductSelected" (change)="setMonthMonto()" [(ngModel)]="selectedMonth" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let mes of item.options"  style="color: rgb(57, 57, 57);"
+                   [value]="mes.value" >{{ mes.text }}</option>
+              </select>
+
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                [disabled]="item.disabled"
+                [value]="item.value"
+              />
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="group-form">
+        <div class="title">
+          {{ mounths[0].name }}
+        </div>
+        <div class="container">
+          <div class="item">
+            <div class="title">
+              
+              <select name="nesP" [disabled]="!isProductSelected" (change)="setMonthMonto()" [(ngModel)]="selectedMonth" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let mes of mounths[0].options"  style="color: rgb(57, 57, 57);"
+                   [value]="mes.value" >{{ mes.text }}</option>
+              </select>
+
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                [disabled]="mounths[0].disabled"
+                [value]="mounths[0].value"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group-form">
+        <div class="title">
+          {{ mounths[1].name }}
+        </div>
+        <div class="container">
+          <div class="item">
+            <div class="title">
+              
+              <select name="nesP" [disabled]="!isProductSelected" [(ngModel)]="selectedMonthDelivered" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let mes of mounths[1].options"  style="color: rgb(57, 57, 57);"
+                   [value]="mes.value" >{{ mes.text }}</option>
+              </select>
+
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                [disabled]="mounths[1].disabled"
+                (change)="updateMontoEntregado($event.target)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alert-success">Evidencia</section>
+
+    <div class="field" *ngFor="let question of questions | slice : 4 : 7">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <section style="margin-top: 0px">
+      <file-upload
+        *ngIf="form.enabled && filesArchivos.length < 2"
+        [files]="arrayFiles"
+        [id]="'inpFilePi'"
+        accept=".pdf"
+      ></file-upload>
+    </section>
+
+    <div class="action-buttons right">
+      <button
+        *ngIf="form.enabled && filesArchivos.length < 2"
+        [disabled]="!arrayFiles.length"
+        (click)="handleAddFile()"
+        type="button"
+        mat-flat-button
+        color="add"
+        style="margin-top: 0px; margin-left: 20px"
+      >
+        <span>Agregar Archivo</span>
+      </button>
+    </div>
+
+    <section style="margin-bottom: 15px; margin-top: 18px;">
+      <app-mat-custom-table
+        (action)="onTableAction($event)"
+        [dataset]="filesArchivos"
+        [columns]="columns"
+        [actions]="actions"
+        [noPadding]="true"
+        [customBtn]="'download'"
+        [actionString]="'Descargar'"
+      >
+      </app-mat-custom-table>
+    </section>
+
+    <section class="alert-success">Evidencia Complementaria</section>
+
+    <div class="field" *ngFor="let question of questions | slice : 7 : 20">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <div class="action-buttons right">
+      <button mat-flat-button color="primary">Guardar</button>
+    </div>
+  </form>
+</div>

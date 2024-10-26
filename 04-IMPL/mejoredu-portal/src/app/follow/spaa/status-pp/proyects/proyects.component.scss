@@ -1,0 +1,52 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+section.field {
+  width: 25%;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  &:nth-of-type(1),
+  &:nth-of-type(2),
+  &:nth-of-type(3),
+  &:nth-of-type(5) {
+    border-right-width: 10px;
+  }
+  &:nth-of-type(2),
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    border-left-width: 10px;
+  }
+}
+
+.trim-section {
+  top: 17px;
+  left: 15px;
+  width: 100px;
+  position: absolute;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  margin-top: -4px;
+  justify-content: flex-end;
+  gap: var(--border-middle);
+}
+
+::ng-deep {
+  .tbl-wrapper {
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+  }
+  .no-top {
+    .tbl-wrapper {
+      border-top-width: 0 !important;
+    }
+  }
+}

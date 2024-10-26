@@ -1,0 +1,39 @@
+<h1 *ngIf="data?.title" mat-dialog-title>{{ data.title }}</h1>
+<div *ngIf="data?.text" mat-dialog-content class="color-primary">
+  {{ data?.text }}
+</div>
+<div *ngIf="data?.listText" mat-dialog-content class="color-primary">
+  <div *ngFor="let text of data.listText" style="padding-bottom: 10px">
+    {{ text }}
+  </div>
+</div>
+<div *ngIf="data?.link" mat-dialog-content class="color-primary">
+  <span *ngIf="data?.link?.text">{{ data?.link?.text }}</span>
+  <a
+    *ngIf="data?.link?.linkText"
+    href="#"
+    onclick="return false"
+    (click)="downloadFile()"
+    >{{ data?.link?.linkText }}</a
+  >
+</div>
+<div mat-dialog-actions class="footer-button">
+  <button
+    *ngIf="data?.labelBtnSecondary"
+    type="button"
+    mat-flat-button
+    color="secundary"
+    [mat-dialog-close]="'cancel'"
+  >
+    {{ data?.labelBtnSecondary }}
+  </button>
+  <button
+    *ngIf="data?.labelBtnPrimary"
+    type="button"
+    mat-flat-button
+    color="accent"
+    (click)="onSubmit()"
+  >
+    {{ data?.labelBtnPrimary }}
+  </button>
+</div>

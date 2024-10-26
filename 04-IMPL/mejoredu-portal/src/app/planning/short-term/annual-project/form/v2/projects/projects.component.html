@@ -1,0 +1,103 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Proyectos'"
+      disabled
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Actividades'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="file-zone">
+      <span> Documento Analítico </span>
+      <file-upload
+        [multiple]="false"
+        [id]="'file-documento-analitico'"
+        (onOutputFile)="responseFileUpload($event)"
+        [files]="filesToUploadComponents"
+        [disableInput]="disabledSubmiting || !canEdit"
+        ></file-upload>
+    </div>
+    <div
+      class="action-buttons"
+      style="margin-bottom: -10px"
+      *ngIf="
+        !selectedValidateProyectoPAA && !selectedConsultaProyectoPAA && canEdit
+      "
+    >
+      <button
+        *ngIf="isCleanForm && !disabledAppValidate"
+        type="button"
+        mat-flat-button
+        color="add"
+        (click)="newProyect()"
+      >
+        Limpiar formulario
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        [disabled]="!editable || disabledSubmiting"
+        *ngIf="showBtnSave"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting">Guardar</span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<div class="wrap" *ngIf="!selectedValidateProyectoPAA">
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="onTableAction($event)"
+    (update)="getProjectsSwitch()"
+    [actions]="actions"
+    [dataset]="data"
+    [maxWidthActions]="'220px'"
+    [columns]="columns"
+    [showActionIf]="showActionIf"
+  >
+  </app-mat-custom-table>
+</div>
+
+<app-validate
+  apartado="REVISION-CP-PROYECTOS"
+  [idSave]="idSaveValidar"
+  [disable]="disabledAppValidate"
+  [fromModule]="'cp'"
+  *ngIf="validation"
+  [questions]="getQuestions"
+></app-validate>

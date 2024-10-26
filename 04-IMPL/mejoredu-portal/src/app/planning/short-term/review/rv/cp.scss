@@ -1,0 +1,154 @@
+.container-table-month {
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0px 5px 20px rgba(4, 65, 56, 0.08);
+}
+
+.month-width {
+  width: 60px !important;
+  max-width: 60px !important
+}
+
+.month-table {
+  width: 100%;
+  div[contenteditable] {
+    z-index: 2;
+    outline: none;
+    padding: 10px;
+    min-width: 52px;
+    max-width: 321px;
+    position: relative;
+    width: max-content;
+    word-break: keep-all;
+  }
+  thead {
+    * {
+      text-align: center !important;
+    }
+    z-index: 300;
+    position: relative;
+    // box-shadow: 0px 4px 8px rgba( 1, 1, 1, 0.08);
+    td {
+      font-size: 14px;
+      color: white !important;
+      background: rgb(0, 102, 102) !important;
+    }
+    &::before {
+      left: 0;
+      bottom: 0;
+      height: 1;
+      width: 100%;
+      content: "";
+      z-index: 100;
+      position: absolute;
+      background: rgba(1, 1, 1, 0.08);
+    }
+  }
+  td {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left !important;
+    position: relative;
+    margin: 20px;
+    border: 2px solid white;
+  }
+
+  tbody {
+    .text-justify {
+      text-align: justify !important;
+    }
+    td {
+      text-align: center !important;
+      padding: 15px;
+      &.editable {
+        &:focus-within {
+          &::after {
+            top: 2px;
+            left: 2px;
+            content: "";
+            z-index: 1;
+            position: absolute;
+            outline-style: dotted;
+            width: calc(100% - 3px);
+            height: calc(100% - 3px);
+            outline: 2px dotted rgba(1, 1, 1, 0.4);
+          }
+          &::before {
+            background: rgba(1, 1, 1, 0.04) !important;
+          }
+        }
+        &:hover {
+          cursor: text;
+          &::before {
+            background: rgba(1, 1, 1, 0.04) !important;
+          }
+        }
+      }
+    }
+  }
+
+  tr {
+    td:nth-child(1) {
+      width: 20%;
+    }
+    text-align: center !important;
+    background: rgb(232, 234, 233);
+  }
+}
+
+.lightblue {
+  color: white;
+  background: rgb(142, 181, 222);
+  * {
+    color: white;
+  }
+}
+
+.total {
+  td {
+    color: white;
+    background: rgb(55, 110, 162);
+  }
+}
+
+.container-table-month.tbl2 {
+  td {
+    font-size: 11px;
+    position: relative;
+    &.anual {
+      min-width: 150px;
+      max-width: 150px;
+    }
+    &.month {
+      width: 50px !important;
+    }
+    input {
+      width: 90px;
+      height: 40px;
+      width: max-content;
+      background: transparent;
+      text-align: center !important;
+      border: solid 0 transparent;
+      &:focus {
+        outline: dotted 2px rgba(1, 1, 1, 0.4);
+      }
+    }
+  }
+}
+
+[conteneditable] {
+  &:empty::before {
+    content: 0;
+    color: var(--gray);
+  }
+}
+
+[placeholder]:empty {
+  &::before {
+    content: attr(placeholder);
+    color: #555;
+  }
+  &:focus:before {
+    content: "";
+  }
+}

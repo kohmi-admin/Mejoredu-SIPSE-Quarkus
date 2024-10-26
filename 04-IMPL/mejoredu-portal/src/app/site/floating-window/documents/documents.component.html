@@ -1,0 +1,77 @@
+<div class="finder">
+  <form id="form6" class="form fade" [formGroup]="form">
+    <div class="field" *ngFor="let question of questions; let i = index">
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        [form]="form"
+      ></app-dynamic-field>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <span *ngIf="filterDocuments().length == 0">
+    Sin Información por Mostrar
+  </span>
+
+  <section *ngIf="this.documents && filterDocuments().length > 0">
+    <div
+      class="document-wrapper"
+      *ngFor="let item of filterDocuments()"
+      [class.word]="item.type === 'docx'"
+      [class.pdf]="item.type === 'pdf'"
+      [class.excel]="item.type === 'xlsx'"
+      [class.powerpoint]="item.type === 'pptx'"
+    >
+      <div class="document-item" (click)="click(item)" matRipple>
+        <div class="icon">
+          <img
+            [src]="'../../../assets/img/icons/' + getIcon(item.type) + '.png'"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="name">
+          <span>
+            {{ item.name }}
+          </span>
+          <mat-icon
+            *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+            class="delete"
+            (click)="deleteFile($event, item)"
+            >delete</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="file-zone" *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'">
+    <hr />
+    <file-upload
+      [multiple]="true"
+      [files]="arrayFiles"
+      [id]="'inpNormatividad'"
+      accept=".xlsx, .pdf, .doc, .docx"
+    ></file-upload>
+  </section>
+  <section
+    class="action-buttons right"
+    *ngIf="dataUser.idTipoUsuario === 'ADMINISTRADOR'"
+  >
+    <button
+      type="button"
+      mat-flat-button
+      color="add"
+      [disabled]="!arrayFiles.length"
+      (click)="handleAddFile()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingFiles"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingFiles"> Cargar Archivos </span>
+    </button>
+  </section>
+</div>

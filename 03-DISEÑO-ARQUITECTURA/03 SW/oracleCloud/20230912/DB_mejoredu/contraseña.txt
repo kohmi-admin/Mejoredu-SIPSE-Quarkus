@@ -1,0 +1,5 @@
+Passphrase: RB&(n`UaENZVfC-,<7J!
+
+Listener: mejoredu_pdb1.sub09111642121.vcnmejoredu.oraclevcn.com
+
+Ip privada: 10.1.1.50

@@ -1,0 +1,57 @@
+<section id="wrapper">
+  <app-mat-custom-table
+    *ngIf="!loading"
+    (action)="onTableAction($event)"
+    (update)="getAll()"
+    [actions]="actions"
+    [dataset]="data"
+    [columns]="columns"
+  >
+  </app-mat-custom-table>
+
+  <h1>
+    Proyecto Visualizado: <span>Proyecto 1</span>
+  </h1>
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Información del Proyecto
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Resúmen de la información</p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Actividades del Proyecto
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Resúmen de la información</p>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Productos
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Resúmen de la información</p>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Presupuestos
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Resúmen de la información</p>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</section>

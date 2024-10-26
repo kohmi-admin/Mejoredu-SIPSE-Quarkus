@@ -1,0 +1,44 @@
+<div class="btn-navigation report">
+  <button mat-flat-button color="view" (click)="descargar()">Descargar</button>
+</div>
+<section id="report-space">
+  <div class="img-mejoredu" *ngIf="makingReport">
+    <div class="left">
+      <img src="assets/full-icon.png" alt="" />
+    </div>
+    <div class="right">
+      <span>SISTEMA DE PLANEACIÓN, SEGUIMIENTO Y EVALUACIÓN (SIPSE)</span>
+    </div>
+  </div>
+
+  <app-resume [items]="resumes"></app-resume>
+  <div>
+    <div class="chart" [class]="item.class" *ngFor="let item of charts">
+      <div class="chart-item">
+        <div class="c-title">
+          {{ item.title }}
+        </div>
+        <div class="c-content">
+          <app-chart *ngIf="item.show" [chart]="item.chart"></app-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <app-resume [items]="resumes2"></app-resume>
+
+<section>
+  <div>
+    <div class="chart" [class]="item.class" *ngFor="let item of charts2">
+      <div class="chart-item">
+        <div class="c-title">
+          {{ item.title }}
+        </div>
+        <div class="c-content">
+          <app-chart [chart]="item.chart"></app-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

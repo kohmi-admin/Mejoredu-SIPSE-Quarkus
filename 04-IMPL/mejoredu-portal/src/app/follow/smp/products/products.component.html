@@ -1,0 +1,147 @@
+<section id="wrapper" class="smp">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      (click)="navigate.emit(1)"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      disabled="true"
+      (click)="navigate.emit(2)"
+      [matTooltip]="'Siguiente'"
+      [disabled]="!activeIndicator"
+      [matTooltipPosition]="'left'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div class="tbl-space t1">
+    <table>
+      <caption></caption>
+      <thead>
+        <tr>
+          <th scope="col" colspan="20">Avance de las Metas para el Bienestar y Parámetros</th>
+        </tr>
+        <tr>
+          <th scope="col" class="grey" colspan="20">
+            {{ avance }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ metaParametros }}</td>
+          <td>
+            Indicador: {{ indicador }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-space">
+    <table>
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Clave y Nombre del Producto</th>
+          <th>Enero</th>
+          <th>Febrero</th>
+          <th>Marzo</th>
+          <th>Abril</th>
+          <th>Mayo</th>
+          <th>Junio</th>
+          <th>Julio</th>
+          <th>Agosto</th>
+          <th>Septiembre</th>
+          <th>Octubre</th>
+          <th>Noviembre</th>
+          <th>Diciembre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+            <td class="left">{{ item.product }}</td>
+            <td>{{ item.enero }}</td>
+            <td>{{ item.febrero }}</td>
+            <td>{{ item.marzo }}</td>
+            <td>{{ item.abril }}</td>
+            <td>{{ item.mayo }}</td>
+            <td>{{ item.junio }}</td>
+            <td>{{ item.julio }}</td>
+            <td>{{ item.agosto }}</td>
+            <td>{{ item.septiembre }}</td>
+            <td>{{ item.octubre }}</td>
+            <td>{{ item.noviembre }}</td>
+            <td>{{ item.diciembre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="field" *ngFor="let question of questions | slice : 0 : 1">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </section>
+
+    <div class="alert-success">
+      Justificación
+    </div>
+
+    <section class="field" *ngFor="let question of questions | slice : 1 : 5">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </section>
+    <div class="actions">
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Guardar Justificación
+      </button>
+    </div>
+  </form>
+
+  <div style="margin-top: 15px;">
+    <app-mat-custom-table
+      (action)="onTableAction($event)"
+      (update)="getAll()"
+      [hasScroll]="false"
+      [actions]="actions"
+      [dataset]="dataTable"
+      [maxWidthActions]="'140px'"
+      [columns]="columns"
+    >
+    </app-mat-custom-table>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+.mdc-snackbar {
+  margin-top: 100px !important;
+}
+
+/* Estilo personalizado para el Snackbar */
+.custom-snackbar {
+  overflow: hidden;
+  font-size: 14px; /* Tamaño de fuente */
+  text-align: left; /* Alineación de texto */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: var(--primary-shadow); /* Sombra */
+  background-color: var(--primary-dark-color) !important; /* Color de fondo */
+  border: solid 2px rgba(255, 255, 255, 0.1) !important;
+  button {
+    color: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 8px; /* Bordes redondeados */
+  }
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background: var(--primary-dark-color) !important;
+}
+
+.mat-mdc-snack-bar-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+}

@@ -1,0 +1,14 @@
+svg {
+  width: 135px;
+  margin: auto auto;
+}
+
+.white {
+  fill: var(--white);
+}
+
+.watermark {
+  width: 100%;
+  max-width: 800px;
+  fill: var(--golden);
+}

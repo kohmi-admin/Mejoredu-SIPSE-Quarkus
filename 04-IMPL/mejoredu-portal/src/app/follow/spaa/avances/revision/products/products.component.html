@@ -1,0 +1,105 @@
+<section id="wrapper">
+ <div class="header">
+   
+ 
+   <div class="trim-section">
+     <mat-button-toggle-group name="favoriteColor" [(ngModel)]="currentQuarter" (change)="submit()">
+       <mat-button-toggle [value]="1"> Primer Trimestre </mat-button-toggle>
+       <mat-button-toggle [value]="2"> Segundo Trimestre </mat-button-toggle>
+       <mat-button-toggle [value]="3"> Tercer Trimestre </mat-button-toggle>
+       <mat-button-toggle [value]="4"> Cuarto Trimestre </mat-button-toggle>
+       <mat-button-toggle [value]=null> General </mat-button-toggle>
+     </mat-button-toggle-group>
+   </div>
+   <div class="hide-br">
+     <br>
+     <br>
+     <br>
+   </div>
+   <div class="btn-navigation">
+    <button mat-mini-fab color="primary" [disabled]="false" [matTooltip]="'Anterior'" (click)="navigate.emit(1)"
+      [matTooltipPosition]="'left'">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button disabled mat-mini-fab color="primary" (click)="navigate.emit(3)" [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+ </div>
+
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="field" *ngFor="let question of questions">
+      <app-dynamic-field class="form-field full blur" [question]="question" *ngIf="!question.filter"
+        [form]="form"></app-dynamic-field>
+      <app-select-filter class="form-field full blur" [question]="question" *ngIf="question.filter"
+        [form]="form"></app-select-filter>
+    </section>
+  </form>
+
+  <div class="no-top">
+    <app-mat-custom-table *ngIf="!loading" (action)="onTableAction($event)" (update)="getAll()" [hasScroll]="false"
+      [propId]="'productId'" [activeId]="activeProduct" [actionsInStart]="true" [actions]="actions" [dataset]="data"
+      [actionString]="'Ver'" [maxWidthActions]="'60px'" [columns]="columns">
+    </app-mat-custom-table>
+  </div>
+  <!-- <div class="no-top">
+    <table *ngIf="!loading" class="custom-table">
+      <tr *ngFor="let product of data">
+        <td>{{product.product}}</td>
+      </tr>
+      <td>{{data[0].estatus}}</td>
+
+    </table>
+  </div> -->
+
+  <section *ngIf="activeProduct">
+    <div class="alert-success" style="margin-top: 0">
+      Calendarización del Producto
+    </div>
+
+    <div class="group-forms" *ngFor="let mounths of calendars">
+      <div class="group-form" *ngFor="let item of mounths">
+        <div class="title">
+          {{ item.name }}
+        </div>
+        <div class="container">
+          <div class="item" *ngFor="let month of item.items">
+            <div class="title">
+              {{ month.name }}
+            </div>
+            <div class="field">
+              <input type="text" [(ngModel)]="month.value" [ngModelOptions]="{standalone: true}" disabled="true" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+<!-- <div class="validate-wrapper">
+  <div class="header">
+    <span>Observaciones</span>
+  </div>
+  <Textarea [ngModel]="observaciones" class="text">
+
+  </Textarea>
+
+  <button type="submit" mat-flat-button color="primary">
+    Guardar Avance
+  </button>
+</div> -->
+<app-validate 
+  [questions]="validateQuestions" 
+  [canFinish]="true"
+  [title]="'Revisión'"
+  [idActividad]="activeActivityId"
+  [trimestre]="currentQuarter"
+  [canSave]="canEdit"
+  [idSave]="activeActivityId"
+  *ngIf="true"
+  apartado="REVISION-TRIMESTRAL-AVANCES-PROGRAMATICOS"
+  fromModule="ap"
+  >
+</app-validate>

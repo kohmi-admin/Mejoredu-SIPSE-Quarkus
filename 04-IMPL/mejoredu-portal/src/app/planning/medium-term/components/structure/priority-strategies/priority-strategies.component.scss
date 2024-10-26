@@ -1,0 +1,9 @@
+.field:nth-of-type(2n - 1) {
+  width: 180px;
+  border-right-width: var(--border-slim);
+  border-left-width: var(--border-middle);
+}
+.field:nth-of-type(2n) {
+  width: calc(100% - 180px);
+  border-left-width: var(--border-middle);
+}

@@ -1,0 +1,39 @@
+.action-buttons {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+  .btn-left {
+    margin-left: 18px;
+    color: var(--white) !important;
+  }
+  .add {
+    color: var(--white) !important;
+    background-color: var(--golden-me);
+  }
+  button[mat-mini-fab] {
+    margin-left: 10px;
+    transform: translateY(-2px);
+    border: solid 1px var(--primary-color);
+  }
+}
+
+.form {
+  width: 100%;
+  text-align: left;
+}
+
+.field {
+  width: 50%;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  border-left: solid 0 transparent;
+  border-right: solid 0 transparent;
+  &:nth-child(2n - 1) {
+    border-right-width: var(--border-slim);
+  }
+  &:nth-child(2n) {
+    border-left-width: var(--border-middle);
+  }
+}

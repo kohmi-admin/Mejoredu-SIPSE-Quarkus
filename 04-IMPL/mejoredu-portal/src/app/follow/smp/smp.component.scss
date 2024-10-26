@@ -1,0 +1,15 @@
+::ng-deep {
+  .trim-section {
+    top: 17px;
+    left: 15px;
+    width: 100px;
+    position: absolute;
+  }
+  .smp {
+    .tbl-wrapper {
+        border-top-width: 0 !important;
+        border-left-width: 0 !important;
+        border-right-width: 0 !important;
+    }
+  }
+}

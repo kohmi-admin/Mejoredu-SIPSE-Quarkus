@@ -1,0 +1,22 @@
+<div class="card-wrapper" [class.disable]="!enable">
+  <div class="card" [class.finish]="finish" [class.horizontal]="horizontal">
+    <div class="card-icon" matRipple>
+      <mat-icon style="color: {{color}}" *ngIf="!imgIcon">{{ icon }}</mat-icon>
+      <img src="../../../assets/img/icons/{{ imgIcon }}.png" *ngIf="imgIcon">
+    </div>
+    <div class="card-info">
+      <div class="title" matRipple>
+        {{ title }}
+      </div>
+      <div *ngIf="description" class="description" [innerHTML]="description"></div>
+    </div>
+    <div class="download" *ngIf="canDownload"
+      matTooltip="Descargar"
+      [matTooltipPosition]="'before'" (click)="emmitDownload($event)">
+      <mat-icon>cloud_download</mat-icon>
+    </div>
+    <div class="finish" *ngIf="finish">
+      <mat-icon>check_circle</mat-icon>
+    </div>
+  </div>
+</div>

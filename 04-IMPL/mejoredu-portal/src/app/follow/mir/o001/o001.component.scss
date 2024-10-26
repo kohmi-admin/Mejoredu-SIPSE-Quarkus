@@ -1,0 +1,54 @@
+.sub-title {
+    width: 100%;
+    margin-top: -8px;
+    padding-left: 10px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.action-buttons {
+    display: flex;
+    padding-right: 10px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+.field {
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 10px transparent;
+  border-bottom-width: 0;
+  border-top-width: 0;
+}
+
+.form1 {
+  .field {
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      width: 50%;
+    }
+  }
+}
+
+.form2 {
+  .field {
+    width: 50%;
+  }
+}
+
+.form3,
+.form5 {
+    text-align: left;
+  .field {
+    width: 33.333%;
+  }
+}
+
+.form4 {
+    text-align: left;
+  .field {
+    width: 25%;
+  }
+}

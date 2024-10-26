@@ -1,0 +1,111 @@
+<section id="wrapper">
+  <h1 class="title">Seguimiento</h1>
+  <span class="sub-title bottom">Seguimiento a la MIR</span>
+
+  <section id="space">
+    <div class="btn-navigation">
+      <button
+        mat-flat-button
+        color="view"
+        [disabled]=downloadDisable
+        matTooltip="Validación"
+      >
+        Descargar MIR
+      </button>
+    </div>
+
+    <div class="trim-section">
+      <mat-button-toggle-group
+        name="favoriteColor"
+        [(ngModel)]="currentQuarter"
+      >
+        <mat-button-toggle [value]="1"> Primer Trimestre </mat-button-toggle>
+        <mat-button-toggle [value]="2"> Segundo Trimestre </mat-button-toggle>
+        <mat-button-toggle [value]="3"> Tercer Trimestre </mat-button-toggle>
+        <mat-button-toggle [value]="4"> Cuarto Trimestre </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <div class="tbl-space">
+      <table>
+        <caption></caption>
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th
+              scope="col"
+              [class.grey]="item !== currentQuarter"
+              colspan="5"
+              *ngFor="let item of [1, 2, 3, 4]"
+            >
+              {{ item }} Trimestre
+            </th>
+            <th scope="col" class="l-green" colspan="2">Avance Anual</th>
+            <th scope="col" class="l-green" rowspan="2">Estatus</th>
+            <th scope="col" class="l-green" rowspan="2">Justificar</th>
+          </tr>
+          <tr>
+            <th scope="col">Nivel<br />MIR</th>
+            <th scope="col">Indicador</th>
+            <th
+              scope="col"
+              class="vertical"
+              [class.grey]="isCurrentColumns(i)"
+              *ngFor="let item of trimsData; let i = index"
+              [innerHTML]="item"
+            ></th>
+
+            <th scope="col" class="l-green vertical">
+              Alcanzado<br />Acumulado
+            </th>
+            <th scope="col" class="l-green vertical">
+              Porcentaje<br />Acumulado
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of data">
+            <td class="grey">{{ item.mir }}</td>
+            <td class="grey">{{ item.indicador }}</td>
+            <td
+              [class.grey]="isCurrentColumns(i)"
+              *ngFor="let itemD of trimsData; let i = index"
+            >
+              {{ getTrimValue(item, itemD, i + 1) }}
+            </td>
+            <td class="grey">
+              {{ item.alcanzadoAcumulado }}
+            </td>
+            <td class="grey">
+              {{ item.porcentajeAcumulado }}
+            </td>
+            <td class="grey">
+              {{ item.estatus }}
+            </td>
+            <td class="grey">
+              <button
+                mat-icon-button
+                color="primary"
+                (click)="openJustify(item)"
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <section style="margin-top: 25px; width: 100%;">
+      <app-mat-custom-table
+        (action)="onTableAction($event)"
+        [dataset]="data2"
+        [columns]="columns"
+        [actions]="actions"
+        [hasScroll]="false"
+      >
+      </app-mat-custom-table>
+    </section>
+  </section>
+</section>

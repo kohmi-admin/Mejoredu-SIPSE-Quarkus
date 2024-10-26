@@ -1,0 +1,86 @@
+<h1 mat-dialog-title>Producto</h1>
+<div mat-dialog-content>
+<form class="form fade" [formGroup]="form">
+  <div class="field" *ngFor="let question of questions">
+    <app-dynamic-field
+      class="form-field full blur"
+      [question]="question"
+      *ngIf="!question.filter"
+      [form]="form"
+    ></app-dynamic-field>
+    <app-select-filter
+      class="form-field full blur"
+      [question]="question"
+      *ngIf="question.filter"
+      [form]="form"
+    ></app-select-filter>
+  </div>
+  <div class="alert-success">Calendarización del Producto</div>
+  <div class="container-table-month">
+    <table
+      class="sjs-table month-table"
+      cellspacing="0"
+      cellpadding="0"
+      #tblCalendarizacion
+      id="tblCalendarizacion"
+    >
+      <thead style="position: sticky; top: 0">
+        <tr>
+          <td>Enero</td>
+          <td>Febrero</td>
+          <td>Marzo</td>
+          <td>Abril</td>
+          <td>Mayo</td>
+          <td>Junio</td>
+          <td>Julio</td>
+          <td>Agosto</td>
+          <td>Septiembre</td>
+          <td>Octubre</td>
+          <td>Noviembre</td>
+          <td>Diciembre</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+          <td
+            placeholder="0"
+          ></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+</div>

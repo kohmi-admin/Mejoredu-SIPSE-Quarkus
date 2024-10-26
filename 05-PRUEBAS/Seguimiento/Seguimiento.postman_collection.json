@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "67d9e56b-77c3-4809-93a0-577250acd033",
+		"name": "Seguimiento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7791541"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anhioId\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSIF\": \"001-SIF\",\r\n    \"fechaSolicitud\": \"2023-12-14\",\r\n    \"unidadId\": 1,\r\n    \"direccionId\": 1,\r\n    \"adecuacionId\": 1,\r\n    \"modificacionId\": 1,\r\n    \"estatusId\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"fechaAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 5.5,\r\n    \"usuario\": \"superusuario\",\r\n    \"adecuaciones\": [\r\n        {\r\n            \"idTipoApartado\" : 2217,\r\n            \"tiposModificaciones\": [\r\n                {\r\n                    \"idTipoModificacion\" : 2209\r\n                },\r\n                {\r\n                    \"idTipoModificacion\" : 2210\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"idTipoApartado\" : 2221,\r\n            \"tiposModificaciones\": [\r\n                {\r\n                    \"idTipoModificacion\" : 2209\r\n                },\r\n                {\r\n                    \"idTipoModificacion\" : 2210\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud-seguimiento/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizById",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anhioId\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSIF\": \"001-SIF\",\r\n    \"fechaSolicitud\": \"2023-12-14\",\r\n    \"unidadId\": 1,\r\n    \"direccionId\": 1,\r\n    \"adecuacionId\": 1,\r\n    \"modificacionId\": 1,\r\n    \"estatusId\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"fechaAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 1.1,\r\n    \"usuario\": \"superusuario\",\r\n    \"adecuaciones\": [\r\n        {\r\n            \"idTipoApartado\" : 2221,\r\n            \"tiposModificaciones\": [\r\n                {\r\n                    \"idTipoModificacion\" : 2209\r\n                },\r\n                {\r\n                    \"idTipoModificacion\" : 2210\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud-seguimiento/actualiza-por-id/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"actualiza-por-id",
+								"8"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAnhio\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSif\": \"001-SIF\",\r\n    \"dfSolicitud\": \"2023-12-14\",\r\n    \"idUnidad\": 1,\r\n    \"idDireccion\": 1,\r\n    \"idAdecuacion\": 1,\r\n    \"idModificacion\": 1,\r\n    \"idEstatus\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"dfAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 20.20,\r\n    \"cveUsuario\": \"superusuario\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud-seguimiento/consulta-por-id/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"consulta-por-id",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "secuenciaByUnidad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAnhio\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSif\": \"001-SIF\",\r\n    \"dfSolicitud\": \"2023-12-14\",\r\n    \"idUnidad\": 1,\r\n    \"idDireccion\": 1,\r\n    \"idAdecuacion\": 1,\r\n    \"idModificacion\": 1,\r\n    \"idEstatus\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"dfAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 20.20,\r\n    \"cveUsuario\": \"superusuario\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud-seguimiento/secuencialByUnidad/2062",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"secuencialByUnidad",
+								"2062"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaByParams",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaSolicitud\": \"2023-12-13\",\r\n    \"fechaAutorizacion\": \"2023-12-12\",\r\n    \"idCatalogoUnidad\": 1,\r\n    \"idCatalogoAdecuacion\": 1,\r\n    \"idCatalogoModificacion\": 1,\r\n    \"idCatalogoEstatus\": 1,\r\n    \"idCatalogoAnhio\": 2023\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud-seguimiento/consulta-por-usuario/superusuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"consulta-por-usuario",
+								"superusuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/solicitud-seguimiento/eliminar/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"eliminar",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nube",
+			"item": [
+				{
+					"name": "registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anhioId\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSIF\": \"001-SIF\",\r\n    \"fechaSolicitud\": \"2023-12-14\",\r\n    \"unidadId\": 1,\r\n    \"direccionId\": 1,\r\n    \"adecuacionId\": 1,\r\n    \"modificacionId\": 1,\r\n    \"estatusId\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"fechaAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 1.1,\r\n    \"usuario\": \"superusuario\",\r\n    \"adecuaciones\": [\r\n        {\r\n            \"idTipoApartado\" : 2217,\r\n            \"tiposModificaciones\": [\r\n                {\r\n                    \"idTipoModificacion\" : 2209\r\n                },\r\n                {\r\n                    \"idTipoModificacion\" : 2210\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"idTipoApartado\" : 2221,\r\n            \"tiposModificaciones\": [\r\n                {\r\n                    \"idTipoModificacion\" : 2209\r\n                },\r\n                {\r\n                    \"idTipoModificacion\" : 2210\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://159.54.132.16:9005/api/solicitud-seguimiento/registrar",
+							"protocol": "http",
+							"host": [
+								"159",
+								"54",
+								"132",
+								"16"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizById",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anhioId\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSIF\": \"001-SIF\",\r\n    \"fechaSolicitud\": \"2023-12-14\",\r\n    \"unidadId\": 1,\r\n    \"direccionId\": 1,\r\n    \"adecuacionId\": 1,\r\n    \"modificacionId\": 1,\r\n    \"estatusId\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"fechaAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 1.1,\r\n    \"usuario\": \"superusuario\",\r\n    \"adecuaciones\": [\r\n        {\r\n            \"idTipoApartado\" : 2221,\r\n            \"tiposModificaciones\": [\r\n                {\r\n                    \"idTipoModificacion\" : 2209\r\n                },\r\n                {\r\n                    \"idTipoModificacion\" : 2210\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://159.54.132.16:9005/api/solicitud-seguimiento/actualiza-por-id/8",
+							"protocol": "http",
+							"host": [
+								"159",
+								"54",
+								"132",
+								"16"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"actualiza-por-id",
+								"8"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAnhio\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSif\": \"001-SIF\",\r\n    \"dfSolicitud\": \"2023-12-14\",\r\n    \"idUnidad\": 1,\r\n    \"idDireccion\": 1,\r\n    \"idAdecuacion\": 1,\r\n    \"idModificacion\": 1,\r\n    \"idEstatus\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"dfAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 20.20,\r\n    \"cveUsuario\": \"superusuario\"\r\n}"
+						},
+						"url": {
+							"raw": "http://159.54.132.16:9005/api/solicitud-seguimiento/consulta-por-id/8",
+							"protocol": "http",
+							"host": [
+								"159",
+								"54",
+								"132",
+								"16"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"consulta-por-id",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaByParams",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaSolicitud\": \"2023-12-13\",\r\n    \"fechaAutorizacion\": \"2023-12-12\",\r\n    \"idCatalogoUnidad\": 1,\r\n    \"idCatalogoAdecuacion\": 1,\r\n    \"idCatalogoModificacion\": 1,\r\n    \"idCatalogoEstatus\": 1,\r\n    \"idCatalogoAnhio\": 2023\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://159.54.132.16:9005/api/solicitud-seguimiento/consulta-por-usuario/superusuario",
+							"protocol": "http",
+							"host": [
+								"159",
+								"54",
+								"132",
+								"16"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"consulta-por-usuario",
+								"superusuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://159.54.132.16:9005/api/solicitud-seguimiento/eliminar/7",
+							"protocol": "http",
+							"host": [
+								"159",
+								"54",
+								"132",
+								"16"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"eliminar",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "secuenciaByUnidad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAnhio\": 2023,\r\n    \"folioSolicitud\": \"001-XYZ\",\r\n    \"folioSif\": \"001-SIF\",\r\n    \"dfSolicitud\": \"2023-12-14\",\r\n    \"idUnidad\": 1,\r\n    \"idDireccion\": 1,\r\n    \"idAdecuacion\": 1,\r\n    \"idModificacion\": 1,\r\n    \"idEstatus\": 1,\r\n    \"justificacion\": \"Justificacion\",\r\n    \"objetivo\": \"objetivo\",\r\n    \"dfAutorizacion\": \"2023-12-13\",\r\n    \"montoAplicacion\": 20.20,\r\n    \"cveUsuario\": \"superusuario\"\r\n}"
+						},
+						"url": {
+							"raw": "http://159.54.132.16:9005/api/solicitud-seguimiento/consulta-por-id/2062",
+							"protocol": "http",
+							"host": [
+								"159",
+								"54",
+								"132",
+								"16"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"solicitud-seguimiento",
+								"consulta-por-id",
+								"2062"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Planeación a Mediano Plazo</h1>
+  <span class="sub-title bottom">Consulta</span>
+  <app-upload-pi
+    [consultation]="true"
+    [editable]="false"
+    [filesActas]="filesActas"
+    [filesArchivosPi]="filesArchivosPi"
+    (onTableActionArchivosPi)="onTableActionArchivosPi($event)"
+    (onTableActionActas)="onTableActionActas($event)"
+  ></app-upload-pi>
+</section>

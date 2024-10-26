@@ -1,0 +1,32 @@
+svg {
+  width: 80%;
+  max-width: 500px;
+  fill: var(--primary-color-alpha);
+}
+
+app-module-btn {
+  display: initial !important;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 160px);
+  .box {
+    width: 100%;
+    display: inline-block;
+  }
+  .center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > div {
+      width: 45%;
+    }
+    &:first-child {
+      margin-bottom: 12vh;
+    }
+  }
+}

@@ -1,0 +1,2594 @@
+{
+	"info": {
+		"_postman_id": "139ef55f-41ca-4429-91cb-1ac5a494626b",
+		"name": "04 Planeacion MP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13861996",
+		"_collection_link": "https://icceelectronica.postman.co/workspace/Team-Workspace~becd80b0-b322-4815-8166-0a74bb7718c1/collection/13861996-139ef55f-41ca-4429-91cb-1ac5a494626b?action=share&source=collection_link&creator=13861996"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "E-Inicio",
+					"item": [
+						{
+							"name": "consultarTodos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/consultarTodosInicio",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"consultarTodosInicio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Inicio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/consultarInicioPorID/:idInicio",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"consultarInicioPorID",
+										":idInicio"
+									],
+									"variable": [
+										{
+											"key": "idInicio",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar Estructura Inicio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nombre del programa 2\",\r\n  \"alineacion\": 1,\r\n  \"analisis\": \"Analisis actual 2\",\r\n  \"problemas\": \"Problemas asociados 2\",\r\n  \"usuario\":\"superusuario\",\r\n  \"estatus\":\"C\",\r\n  \"anhioPlaneacion\":2023\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nombre del programa 1 mod\",\r\n  \"alineacion\": 1,\r\n  \"analisis\": \"Analisis actual 1 mod\",\r\n  \"problemas\": \"Problemas asociados 1 mod\",\r\n  \"usuario\":\"superusuario\",\r\n  \"estatus\":\"C\",\r\n  \"anhioPlaneacion\":2023\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/modificar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"modificar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimnar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"usuario\":\"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/eliminar/1/superusuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"eliminar",
+										"1",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar por Año",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/consultarInicioPorAnhio/2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"consultarInicioPorAnhio",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Objetivos",
+					"item": [
+						{
+							"name": "Registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ixObjetivo\": 4,\r\n  \"cdObjetivo\": \"Objetivo 4\",\r\n  \"relevancia\": \"relevancia 4\",\r\n  \"usuario\":\"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/objetivo/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idObjetivo\": 31,\r\n  \"ixObjetivo\": 3,\r\n  \"cdObjetivo\": \"Objetivo mod3\",\r\n  \"relevancia\": \"relevancia mod3\",\r\n  \"usuario\":\"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/objetivo/modificar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/objetivo/eliminar/593/superusuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"eliminar",
+										"593",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConsultarTodos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/objetivo/consultarActivos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"consultarActivos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Estrategia",
+					"item": [
+						{
+							"name": "consultarEstrategias de Cveobjetivo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/estrategia/consultarActivos/:cveObjetivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"consultarActivos",
+										":cveObjetivo"
+									],
+									"variable": [
+										{
+											"key": "cveObjetivo",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultarPorID de Estrategia",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/estrategia/consultarPorID/:idEstrategia",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"consultarPorID",
+										":idEstrategia"
+									],
+									"variable": [
+										{
+											"key": "idEstrategia",
+											"value": "789"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cveObjetivo\": \"4\",\r\n    \"cveEstrategia\": \"4.6\",\r\n    \"cdEstrategia\": \"Objetivo 6\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/estrategia/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idEstrategia\": 2011,\r\n    \"cdEstrategia\": \"Objetivo 4 mod\",\r\n    \"cveObjetivo\": \"4\",\r\n    \"cveEstrategia\": \"4.6\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/estrategia/modificar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idEstrategia\": 2011,\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/estrategia/eliminar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Acciones",
+					"item": [
+						{
+							"name": "Consultar por idEstrategia",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/accion/consultarActivosPorEstrategia/:cveEstrategia",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"consultarActivosPorEstrategia",
+										":cveEstrategia"
+									],
+									"variable": [
+										{
+											"key": "cveEstrategia",
+											"value": "11.2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar porID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/accion/consultarPorID/:idAccion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"consultarPorID",
+										":idAccion"
+									],
+									"variable": [
+										{
+											"key": "idAccion",
+											"value": "2016"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cveAccion\": \"6.6.1\",\r\n    \"cveEstrategia\": \"6.1\",\r\n    \"cdAccion\": \"Otra más 6.6.1\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/accion/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idAccion\": \"2016\",\r\n    \"cveAccion\": \"12\",\r\n    \"cveEstrategia\": \"12.1\",\r\n    \"cdAccion\": \"Otra más 12.1\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/accion/modificar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idAccion\": \"2014\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/accion/eliminar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Validaciones",
+					"item": [
+						{
+							"name": "guardar-Inicio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":5,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"diego.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 8\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Objetivos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"OBJETIVOS\",\r\n    \"id\":593,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"miguelangel.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 5,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 6,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para este objetivo 4\"\r\n        },\r\n        {\r\n            \"idElemento\": 7,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Estrategias-Acciones",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"ESTRATEGIAS-ACCIONES\",\r\n    \"id\":772,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"diego.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 8,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 9,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para estrategia 5\"\r\n        },\r\n        {\r\n            \"idElemento\": 10,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-MetasParaElBienestar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"METAS-PARA-EL-BIENESTAR\",\r\n    \"id\":2,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"tania.aguilar\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 11,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 12,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para esta Meta\"\r\n        },\r\n        {\r\n            \"idElemento\": 13,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 14,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n         {\r\n            \"idElemento\": 15,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 16,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario a\"\r\n        },\r\n        {\r\n            \"idElemento\": 17,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 18,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n        {\r\n            \"idElemento\": 19,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 20,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario b\"\r\n        },\r\n        {\r\n            \"idElemento\": 21,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 22,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 23,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 24,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 25,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 26,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema Z\"\r\n        },\r\n         {\r\n            \"idElemento\": 27,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 28,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 29,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 30,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 31,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 32,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 33,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema B\"\r\n        },\r\n        {\r\n            \"idElemento\": 34,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 35,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 36,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 37,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 38,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 39,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 40,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 41,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 42,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema C\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Parametros",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"PARAMETROS\",\r\n    \"id\":1,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"miguelangel.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 43,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 44,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para esta parametro\"\r\n        },\r\n        {\r\n            \"idElemento\": 45,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 46,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n         {\r\n            \"idElemento\": 47,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 48,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario a\"\r\n        },\r\n        {\r\n            \"idElemento\": 49,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 50,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n        {\r\n            \"idElemento\": 51,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 52,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario b\"\r\n        },\r\n        {\r\n            \"idElemento\": 53,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 54,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 55,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 56,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 57,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 58,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema Z\"\r\n        },\r\n         {\r\n            \"idElemento\": 59,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 60,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 61,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 62,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 63,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 64,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 65,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema B\"\r\n        },\r\n        {\r\n            \"idElemento\": 66,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 67,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n         {\r\n            \"idElemento\": 68,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 69,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario D\"\r\n        },\r\n        {\r\n            \"idElemento\": 70,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 71,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema c\"\r\n        },\r\n        {\r\n            \"idElemento\": 72,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 73,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema v\"\r\n        },\r\n        {\r\n            \"idElemento\": 74,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Epilogo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\":\"EPILOGO-PI-ACTAS\",\r\n    \"id\":10,\r\n    \"estatus\":\"A\",\r\n    \"cveUsuario\": \"diego.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 76,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 77,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para este epilogo 4\"\r\n        },\r\n        {\r\n            \"idElemento\": 75,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ],\r\n    \"archivos\": [\r\n        {\r\n            \"cxUuid\": \"DFGHKFDS-IUEYHDFJS-234545-44321778ABCD\",\r\n            \"cxNombre\": \"3.pdf\",\r\n            \"cveUsuario\": \"superusuario\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar INICIO por Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":123,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/consultarRevision/INICIO/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"INICIO",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar Objetivos por Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":123,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/consultarRevision/OBJETIVOS/593",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"OBJETIVOS",
+										"593"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar ESTRATEGIAS-ACCIONES por Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":123,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/consultarRevision/ESTRATEGIAS-ACCIONES/772",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"ESTRATEGIAS-ACCIONES",
+										"772"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar METAS-PARA-EL-BIENESTAR por Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":123,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/consultarRevision/METAS-PARA-EL-BIENESTAR/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"METAS-PARA-EL-BIENESTAR",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar PARAMETROS  por Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":123,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/consultarRevision/PARAMETROS/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"PARAMETROS",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar EPILOGO-PI-ACTAS  por Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":123,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/validacion/consultarRevision/EPILOGO-PI-ACTAS/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"EPILOGO-PI-ACTAS",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Metas",
+					"item": [
+						{
+							"name": "consultar PorID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/metasbienestar/consultarPorEstrucura/:idEstructura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"consultarPorEstrucura",
+										":idEstructura"
+									],
+									"variable": [
+										{
+											"key": "idEstructura",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConsultaporID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/metasbienestar/consultarPorEstrucura/:idEstructura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"consultarPorEstrucura",
+										":idEstructura"
+									],
+									"variable": [
+										{
+											"key": "idEstructura",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registro",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idEstructura\": 1,\n  \"cveUsuario\": \"superusuario\",\n  \"estatus\": \"I\",\n  \"ixTipo\": 1,\n  \"elemento\": [\n    {\n      \"idObjetivo\": 593,\n      \"nombre\": \"nombre del elemento\",\n      \"descripcion\": \"descripcion del elemento\",\n      \"nivelDegradacion\": 1,\n      \"periodicidad\": 1,\n      \"especificarPeriodicidad\": \"especificarPeriodicidad\",\n      \"tipo\": 1,\n      \"acumulado\": 1,\n      \"unidadMedida\": 1,\n      \"especificarUnidadMedida\": \"string\",\n      \"periodo\": 1,\n      \"especificarPeriodo\": \"especificarPeriodo\",\n      \"dimensiones\": 1,\n      \"disponibilidad\": 1,\n      \"tendencia\": 1,\n      \"UnidadResponsable\": 1,\n      \"metodoCalculo\": \"metodoCalculo\",\n      \"observaciones\": \"observaciones\",\n      \"unidadResponsable\": 1\n    }\n  ],\n  \"aplicacionMetodo\": [\n    {\n      \"nombreVariable\": \"nombreVariable\",\n      \"valorVariableUno\": \"valorVariableUno\",\n      \"fuenteInformacion\": \"fuenteInformacion\",\n      \"nombreVariableDos\": \"nombreVariableDos\",\n      \"valorVariableDos\": \"valorVariableDos\",\n      \"fuenteInformacionDos\": \"fuenteInformacionDos\",\n      \"sustitucion\": \"sustitucion\"\n    }\n  ],\n  \"valorLineaBase\": [\n    {\n      \"valor\": \"valor\",\n      \"anhio\": 2022,\n      \"notas\": \"notas\",\n      \"meta\": \"meta\",\n      \"idMeta\": 2023\n    }\n  ],\n  \"serieHistorica\": [\n    {\n\n      \"tipo\": \"tipo\",\n      \"anhio\": 2023,\n      \"descripcion\": \"descripcion\"\n    }\n  ],\n  \"metasIntermedias\": [\n    {\n      \"tipo\": \"tipo\",\n      \"anhio\": 2023,\n      \"descripcion\": \"descripcion\"\n    },\n    {\n      \"tipo\": \"tipo2\",\n      \"anhio\": 2023,\n      \"descripcion\": \"descripcion2\"\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/medianoplazo/metasbienestar/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Nube",
+			"item": [
+				{
+					"name": "E-Inicio",
+					"item": [
+						{
+							"name": "consultarTodos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/consultarTodosInicio",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"consultarTodosInicio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultarPorAnhio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/consultarInicioPorAnhio/2023",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"consultarInicioPorAnhio",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Inicio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/consultarInicioPorID/:idInicio",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"consultarInicioPorID",
+										":idInicio"
+									],
+									"variable": [
+										{
+											"key": "idInicio",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar Estructura Inicio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nombre del programa 2\",\r\n  \"alineacion\": 1,\r\n  \"analisis\": \"Analisis actual 2\",\r\n  \"problemas\": \"Problemas asociados 2\",\r\n  \"usuario\":\"superusuario\",\r\n  \"estatus\":\"I\",\r\n  \"anhioPlaneacion\":2023\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nombre del programa mod\",\r\n  \"alineacion\": 1,\r\n  \"analisis\": \"Analisis actual mod\",\r\n  \"problemas\": \"Problemas asociados mod\",\r\n  \"usuario\":\"superusuario\",\r\n  \"estatus\":\"C\",\r\n  \"anhioPlaneacion\":2023\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/modificar/1",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"modificar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimnar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"usuario\":\"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/eliminar/1/superusuario",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"eliminar",
+										"1",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Objetivos",
+					"item": [
+						{
+							"name": "Registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ixObjetivo\": 4,\r\n  \"cdObjetivo\": \"Objetivo 4\",\r\n  \"relevancia\": \"relevancia 4\",\r\n  \"usuario\":\"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/objetivo/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idObjetivo\": 593,\r\n  \"ixObjetivo\": 1,\r\n  \"cdObjetivo\": \"Mejorar la coordinación entre las autoridades educativas estatales y federales y actores clave del Sistema Educativo Nacional para la mejora continua de la educación.\",\r\n  \"relevancia\": \"relevancia mod3\",\r\n  \"usuario\":\"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/objetivo/modificar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/objetivo/eliminar/593/superusuario",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"eliminar",
+										"593",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConsultarTodos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/objetivo/consultarActivos",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"objetivo",
+										"consultarActivos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Estrategia",
+					"item": [
+						{
+							"name": "consultarEstrategias de Cveobjetivo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/estrategia/consultarActivos/:cveObjetivo",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"consultarActivos",
+										":cveObjetivo"
+									],
+									"variable": [
+										{
+											"key": "cveObjetivo",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultarPorID de Estrategia",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/estrategia/consultarPorID/:idEstrategia",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"consultarPorID",
+										":idEstrategia"
+									],
+									"variable": [
+										{
+											"key": "idEstrategia",
+											"value": "789"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cveObjetivo\": \"4\",\r\n    \"cveEstrategia\": \"4.5\",\r\n    \"cdEstrategia\": \"Objetivo 5\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/estrategia/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idEstrategia\": 2019,\r\n    \"cdEstrategia\": \"Objetivo 5 mod\",\r\n    \"cveObjetivo\": \"4\",\r\n    \"cveEstrategia\": \"4.5\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/estrategia/modificar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idEstrategia\": 2019,\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/estrategia/eliminar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"estrategia",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Acciones Copy",
+					"item": [
+						{
+							"name": "Consultar por idEstrategia",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/accion/consultarActivosPorEstrategia/:cveEstrategia",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"consultarActivosPorEstrategia",
+										":cveEstrategia"
+									],
+									"variable": [
+										{
+											"key": "cveEstrategia",
+											"value": "7.1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar porID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/accion/consultarPorID/:idAccion",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"consultarPorID",
+										":idAccion"
+									],
+									"variable": [
+										{
+											"key": "idAccion",
+											"value": "2070"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cveAccion\": \"6.6.1\",\r\n    \"cveEstrategia\": \"6.1\",\r\n    \"cdAccion\": \"Otra más 6.6.1\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/accion/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idAccion\": \"2027\",\r\n    \"cveAccion\": \"11\",\r\n    \"cveEstrategia\": \"11.2\",\r\n    \"cdAccion\": \"Otra más 11.2 mod\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/accion/modificar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idAccion\": \"2026\",\r\n    \"usuario\": \"superusuario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/accion/eliminar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"accion",
+										"eliminar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "E-Validaciones",
+					"item": [
+						{
+							"name": "guardar-Inicio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":5,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"diego.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 8\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Objetivos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"OBJETIVOS\",\r\n    \"id\":593,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"miguelangel.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 5,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 6,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para este objetivo 5\"\r\n        },\r\n        {\r\n            \"idElemento\": 7,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Estrategias-Acciones",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"ESTRATEGIAS-ACCIONES\",\r\n    \"id\":772,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"diego.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 8,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 9,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para estrategia 5\"\r\n        },\r\n        {\r\n            \"idElemento\": 10,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-MetasParaElBienestar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"METAS-PARA-EL-BIENESTAR\",\r\n    \"id\":2,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"tania.aguilar\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 11,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 12,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para esta Meta\"\r\n        },\r\n        {\r\n            \"idElemento\": 13,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 14,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n         {\r\n            \"idElemento\": 15,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 16,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario a\"\r\n        },\r\n        {\r\n            \"idElemento\": 17,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 18,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n        {\r\n            \"idElemento\": 19,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 20,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario b\"\r\n        },\r\n        {\r\n            \"idElemento\": 21,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 22,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 23,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 24,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 25,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 26,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema Z\"\r\n        },\r\n         {\r\n            \"idElemento\": 27,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 28,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 29,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 30,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 31,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 32,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 33,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema B\"\r\n        },\r\n        {\r\n            \"idElemento\": 34,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 35,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 36,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 37,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 38,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 39,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 40,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 41,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 42,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema C\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Parametros",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"PARAMETROS\",\r\n    \"id\":1,\r\n    \"estatus\":\"E\",\r\n    \"cveUsuario\": \"miguelangel.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 43,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 44,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para esta parametro\"\r\n        },\r\n        {\r\n            \"idElemento\": 45,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 46,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n         {\r\n            \"idElemento\": 47,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 48,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario a\"\r\n        },\r\n        {\r\n            \"idElemento\": 49,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 50,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        },\r\n        {\r\n            \"idElemento\": 51,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 52,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario b\"\r\n        },\r\n        {\r\n            \"idElemento\": 53,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 54,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 55,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 56,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 57,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 58,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema Z\"\r\n        },\r\n         {\r\n            \"idElemento\": 59,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema \"\r\n        },\r\n         {\r\n            \"idElemento\": 60,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 61,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario c\"\r\n        },\r\n        {\r\n            \"idElemento\": 62,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 63,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n        {\r\n            \"idElemento\": 64,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 65,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema B\"\r\n        },\r\n        {\r\n            \"idElemento\": 66,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 67,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema A\"\r\n        },\r\n         {\r\n            \"idElemento\": 68,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 69,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario D\"\r\n        },\r\n        {\r\n            \"idElemento\": 70,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 71,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema c\"\r\n        },\r\n        {\r\n            \"idElemento\": 72,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 73,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema Z\"\r\n        },\r\n        {\r\n            \"idElemento\": 74,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar-Epilogo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\":\"EPILOGO-PI-ACTAS\",\r\n    \"id\":10,\r\n    \"estatus\":\"A\",\r\n    \"cveUsuario\": \"diego.lopez\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 76,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 77,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No hay presupuesto para este epilogo 4\"\r\n        },\r\n        {\r\n            \"idElemento\": 75,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        }\r\n    ],\r\n    \"archivos\": [\r\n        {\r\n            \"cxUuid\": \"DFGHKFDS-IUEYHDFJS-234545-44321778ABCZ\",\r\n            \"cxNombre\": \"33.pdf\",\r\n            \"cveUsuario\": \"superusuario\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/guardar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar-Inicio por IdEstructura",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":4,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 7\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/consultarRevision/INICIO/4",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"INICIO",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar-Objetivo por IdObjetivo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":4,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 7\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/consultarRevision/OBJETIVOS/593",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"OBJETIVOS",
+										"593"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar-Estrategia-Accion por IdEstrategia",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":4,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 7\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/consultarRevision/ESTRATEGIAS-ACCIONES/772",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"ESTRATEGIAS-ACCIONES",
+										"772"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar-Metas-para-el-bienestar por IdMetas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":4,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 7\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/consultarRevision/METAS-PARA-EL-BIENESTAR/2",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"METAS-PARA-EL-BIENESTAR",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar-Parametros por IdParametro",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":4,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 7\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/consultarRevision/PARAMETROS/1",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"PARAMETROS",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar-Epilogo por IdEpilogo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apartado\": \"INICIO\",\r\n    \"id\":4,\r\n    \"estatus\":\"I\",\r\n    \"cveUsuario\": \"superusuario\",\r\n    \"revision\": [\r\n        {\r\n            \"idElemento\": 1,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Prueba 7\"\r\n        },\r\n        {\r\n            \"idElemento\": 2,\r\n            \"check\": 0,\r\n            \"comentarios\": \"Comentario Alineación: No se permiten presupuesto para este inicio\"\r\n        },\r\n        {\r\n            \"idElemento\": 3,\r\n            \"check\": 1,\r\n            \"comentarios\": null\r\n        },\r\n        {\r\n            \"idElemento\": 4,\r\n            \"check\": 0,\r\n            \"comentarios\": \"comentarios del problema publico\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/validacion/consultarRevision/EPILOGO-PI-ACTAS/10",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"validacion",
+										"consultarRevision",
+										"EPILOGO-PI-ACTAS",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Metas",
+					"item": [
+						{
+							"name": "consultar PorEstructura",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/metasbienestar/consultarPorEstrucura/:idEstructura",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"consultarPorEstrucura",
+										":idEstructura"
+									],
+									"variable": [
+										{
+											"key": "idEstructura",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConsultaporID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/metasbienestar/consultarPorID/:idMeta",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"consultarPorID",
+										":idMeta"
+									],
+									"variable": [
+										{
+											"key": "idMeta",
+											"value": "62"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registro",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \"idEstructura\": 1,\r\n            \"cveUsuario\": \"superusuario\",\r\n            \"estatus\": \"A\",\r\n            \"elemento\": [\r\n                {\r\n                    \"idObjetivo\": 1,\r\n                    \"nombre\": \"Nombre modificado\",\r\n                    \"descripcion\": \"Def\",\r\n                    \"nivelDesagregacion\": \"\",\r\n                    \"periodicidad\": \"\",\r\n                    \"especificarPeriodicidad\": \"Quince\",\r\n                    \"unidadMedida\": 1,\r\n                    \"especificarUnidadMedida\": \"kg\",\r\n                    \"tipo\": 3,\r\n                    \"acumulado\": 1,\r\n                    \"periodoRecoleccion\": 1,\r\n                    \"especificarPeriodo\": \"Periodo de recoleccion mod\",\r\n                    \"dimensiones\": 11,\r\n                    \"disponibilidad\": 1,\r\n                    \"tendencia\": 1,\r\n                    \"metodoCalculo\": \"Metodo de calculo\",\r\n                    \"observaciones\": \"Caso en que se tiene un  listado de elementos\",\r\n                    \"unidadResponsable\": 1\r\n                }\r\n            ],\r\n            \"aplicacionMetodo\": [\r\n                {\r\n                    \"nombreVariable\": \"nombre stream\",\r\n                    \"valorVariableUno\": \"valor\",\r\n                    \"fuenteInformacion\": \"fuente\",\r\n                    \"nombreVariableDos\": \"v2\",\r\n                    \"valorVariableDos\": \"valor2\",\r\n                    \"fuenteInformacionDos\": \"fte2\",\r\n                    \"sustitucion\": \"sust\"\r\n                }\r\n            ],\r\n            \"valorLineaBase\": [\r\n                {\r\n                    \r\n                    \"valor\": \"valor once\",\r\n                    \"anhio\": 2022,\r\n                    \"notas\": \"notas linea\",\r\n                    \"notaSobreMeta\": \"Notas sobre la  nueva\",\r\n                    \"meta\": \"meta\"\r\n                }\r\n            ],\r\n            \"serieHistorica\": [\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie uno\"\r\n                },\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie dos\"\r\n                },\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie tres\"\r\n                },\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie cuatro\"\r\n                },\r\n                 {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2022,\r\n                    \"descripcion\": \"Serie cinco\"\r\n                },\r\n                 {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie seis\"\r\n                },\r\n                 {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2022,\r\n                    \"descripcion\": \"Serie siete\"\r\n                }\r\n            ],\r\n            \"metasIntermedias\": [\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias uno\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias dos\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias tres\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias cuatro\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias cinco\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias seis\"\r\n                }\r\n            ]\r\n        }"
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/metasbienestar/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"idMetas\": 65,\n        \"idEstructura\": 1,\n        \"cveUsuario\": \"superusuario\",\n        \"estatus\": \"I\",\n        \"ixTipo\": 2,\n        \"elemento\": [\n            {\n                \"idElemento\": 79,\n                \"idObjetivo\": 1,\n                \"nombre\": \"Nombre modificado hoy\",\n                \"descripcion\": \"Def\",\n                \"nivelDesagregacion\": \"\",\n                \"periodicidad\": \"\",\n                \"especificarPeriodicidad\": \"Quincenalmente\",\n                \"unidadMedida\": 1,\n                \"especificarUnidadMedida\": \"Lb\",\n                \"tipo\": 6,\n                \"acumulado\": 1,\n                \"periodoRecoleccion\": 1,\n                \"especificarPeriodo\": \"Periodo de recoleccion especifico\",\n                \"dimensiones\": 11,\n                \"disponibilidad\": 1,\n                \"tendencia\": 1,\n                \"metodoCalculo\": \"Metodo de calculo\",\n                \"observaciones\": \"Caso en que se tiene un  listado de elementos\",\n                \"unidadResponsable\": 1\n            }\n        ],\n        \"aplicacionMetodo\": [\n            {\n                \"idAplicacion\": 51,\n                \"nombreVariable\": \"Prueba\",\n                \"valorVariableUno\": \"Prueba\",\n                \"fuenteInformacion\": \"Prueba\",\n                \"nombreVariableDos\": \"Prueba 2\",\n                \"valorVariableDos\": \"Prueba 2\",\n                \"fuenteInformacionDos\": \"Prueba 2\",\n                \"sustitucion\": \"Prueba 2\"\n            }\n        ],\n        \"valorLineaBase\": [\n            {\n                \"idLinea\": 116,\n                \"valor\": \"Prueba\",\n                \"anhio\": 2023,\n                \"notas\": \"Prueba\",\n                \"notaSobreMeta\": \"Notas sobre la meta mod\",\n                \"meta\": \"Prueba\",\n                \"idMeta\": 53\n            }\n        ],\n        \"serieHistorica\": [\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 659,\n                \"tipo\": \"1\",\n                \"anhio\": 2012,\n                \"descripcion\": \"1\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 660,\n                \"tipo\": \"1\",\n                \"anhio\": 2013,\n                \"descripcion\": \"2\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 661,\n                \"tipo\": \"1\",\n                \"anhio\": 2014,\n                \"descripcion\": \"3\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 662,\n                \"tipo\": \"1\",\n                \"anhio\": 2015,\n                \"descripcion\": \"4\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 663,\n                \"tipo\": \"1\",\n                \"anhio\": 2016,\n                \"descripcion\": \"5\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 664,\n                \"tipo\": \"1\",\n                \"anhio\": 2017,\n                \"descripcion\": \"6\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 665,\n                \"tipo\": \"1\",\n                \"anhio\": 2012,\n                \"descripcion\": \"7\"\n            }\n        ],\n        \"metasIntermedias\": [\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 666,\n                \"tipo\": \"2\",\n                \"anhio\": 2018,\n                \"descripcion\": \"1\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 667,\n                \"tipo\": \"2\",\n                \"anhio\": 2020,\n                \"descripcion\": \"2\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 668,\n                \"tipo\": \"2\",\n                \"anhio\": 2021,\n                \"descripcion\": \"3\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 669,\n                \"tipo\": \"2\",\n                \"anhio\": 2022,\n                \"descripcion\": \"4\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 670,\n                \"tipo\": \"2\",\n                \"anhio\": 2023,\n                \"descripcion\": \"5\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 671,\n                \"tipo\": \"2\",\n                \"anhio\": 2018,\n                \"descripcion\": \"6\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 672,\n                \"tipo\": \"2\",\n                \"anhio\": 2020,\n                \"descripcion\": \"7\"\n            }\n        ]\n    }"
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/metasbienestar/modificar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/medianoplazo/metasbienestar/eliminar/51/superusuario",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"medianoplazo",
+										"metasbienestar",
+										"eliminar",
+										"51",
+										"superusuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Parametros",
+					"item": [
+						{
+							"name": "consultar PorEstructura",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/mp/parametro/consultarPorEstrucura/:idEstructura",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"mp",
+										"parametro",
+										"consultarPorEstrucura",
+										":idEstructura"
+									],
+									"variable": [
+										{
+											"key": "idEstructura",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConsultaporID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/mp/parametro/consultarPorID/:idMeta",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"mp",
+										"parametro",
+										"consultarPorID",
+										":idMeta"
+									],
+									"variable": [
+										{
+											"key": "idMeta",
+											"value": "63"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registro",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"idEstructura\": 1,\r\n            \"cveUsuario\": \"superusuario\",\r\n            \"estatus\": \"A\",\r\n            \"elemento\": [\r\n                {\r\n                    \"idObjetivo\": 1,\r\n                    \"nombre\": \"Nombre modificado\",\r\n                    \"descripcion\": \"Def\",\r\n                    \"nivelDesagregacion\": \"\",\r\n                    \"periodicidad\": \"\",\r\n                    \"especificarPeriodicidad\": \"Quince\",\r\n                    \"unidadMedida\": 1,\r\n                    \"especificarUnidadMedida\": \"kg\",\r\n                    \"tipo\": 3,\r\n                    \"acumulado\": 1,\r\n                    \"periodoRecoleccion\": 1,\r\n                    \"especificarPeriodo\": \"Periodo de recoleccion mod\",\r\n                    \"dimensiones\": 11,\r\n                    \"disponibilidad\": 1,\r\n                    \"tendencia\": 1,\r\n                    \"metodoCalculo\": \"Metodo de calculo\",\r\n                    \"observaciones\": \"Caso en que se tiene un  listado de elementos\",\r\n                    \"unidadResponsable\": 1\r\n                }\r\n            ],\r\n            \"aplicacionMetodo\": [\r\n                {\r\n                    \"nombreVariable\": \"nombre stream\",\r\n                    \"valorVariableUno\": \"valor\",\r\n                    \"fuenteInformacion\": \"fuente\",\r\n                    \"nombreVariableDos\": \"v2\",\r\n                    \"valorVariableDos\": \"valor2\",\r\n                    \"fuenteInformacionDos\": \"fte2\",\r\n                    \"sustitucion\": \"sust\"\r\n                }\r\n            ],\r\n            \"valorLineaBase\": [\r\n                {\r\n                    \r\n                    \"valor\": \"valor once\",\r\n                    \"anhio\": 2022,\r\n                    \"notas\": \"notas linea\",\r\n                    \"notaSobreMeta\": \"Notas sobre la  nueva\",\r\n                    \"meta\": \"meta\"\r\n                }\r\n            ],\r\n            \"serieHistorica\": [\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie uno\"\r\n                },\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie dos\"\r\n                },\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie tres\"\r\n                },\r\n                {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie cuatro\"\r\n                },\r\n                 {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2022,\r\n                    \"descripcion\": \"Serie cinco\"\r\n                },\r\n                 {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Serie seis\"\r\n                },\r\n                 {\r\n                    \"tipo\": \"1\",\r\n                    \"anhio\": 2022,\r\n                    \"descripcion\": \"Serie siete\"\r\n                }\r\n            ],\r\n            \"metasIntermedias\": [\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias uno\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias dos\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias tres\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias cuatro\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias cinco\"\r\n                },\r\n                {\r\n                    \"tipo\": \"2\",\r\n                    \"anhio\": 2023,\r\n                    \"descripcion\": \"Intermedias seis\"\r\n                }\r\n            ]\r\n        }"
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/mp/parametro/registrar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"mp",
+										"parametro",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modificar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"idMetas\": 65,\n        \"idEstructura\": 1,\n        \"cveUsuario\": \"superusuario\",\n        \"estatus\": \"I\",\n        \"ixTipo\": 2,\n        \"elemento\": [\n            {\n                \"idElemento\": 79,\n                \"idObjetivo\": 1,\n                \"nombre\": \"Nombre modificado hoy\",\n                \"descripcion\": \"Def\",\n                \"nivelDesagregacion\": \"\",\n                \"periodicidad\": \"\",\n                \"especificarPeriodicidad\": \"Quincenalmente\",\n                \"unidadMedida\": 1,\n                \"especificarUnidadMedida\": \"Lb\",\n                \"tipo\": 6,\n                \"acumulado\": 1,\n                \"periodoRecoleccion\": 1,\n                \"especificarPeriodo\": \"Periodo de recoleccion especifico\",\n                \"dimensiones\": 11,\n                \"disponibilidad\": 1,\n                \"tendencia\": 1,\n                \"metodoCalculo\": \"Metodo de calculo\",\n                \"observaciones\": \"Caso en que se tiene un  listado de elementos\",\n                \"unidadResponsable\": 1\n            }\n        ],\n        \"aplicacionMetodo\": [\n            {\n                \"idAplicacion\": 51,\n                \"nombreVariable\": \"Prueba\",\n                \"valorVariableUno\": \"Prueba\",\n                \"fuenteInformacion\": \"Prueba\",\n                \"nombreVariableDos\": \"Prueba 2\",\n                \"valorVariableDos\": \"Prueba 2\",\n                \"fuenteInformacionDos\": \"Prueba 2\",\n                \"sustitucion\": \"Prueba 2\"\n            }\n        ],\n        \"valorLineaBase\": [\n            {\n                \"idLinea\": 116,\n                \"valor\": \"Prueba\",\n                \"anhio\": 2023,\n                \"notas\": \"Prueba\",\n                \"notaSobreMeta\": \"Notas sobre la meta mod\",\n                \"meta\": \"Prueba\",\n                \"idMeta\": 53\n            }\n        ],\n        \"serieHistorica\": [\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 659,\n                \"tipo\": \"1\",\n                \"anhio\": 2012,\n                \"descripcion\": \"1\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 660,\n                \"tipo\": \"1\",\n                \"anhio\": 2013,\n                \"descripcion\": \"2\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 661,\n                \"tipo\": \"1\",\n                \"anhio\": 2014,\n                \"descripcion\": \"3\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 662,\n                \"tipo\": \"1\",\n                \"anhio\": 2015,\n                \"descripcion\": \"4\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 663,\n                \"tipo\": \"1\",\n                \"anhio\": 2016,\n                \"descripcion\": \"5\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 664,\n                \"tipo\": \"1\",\n                \"anhio\": 2017,\n                \"descripcion\": \"6\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 665,\n                \"tipo\": \"1\",\n                \"anhio\": 2012,\n                \"descripcion\": \"7\"\n            }\n        ],\n        \"metasIntermedias\": [\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 666,\n                \"tipo\": \"2\",\n                \"anhio\": 2018,\n                \"descripcion\": \"1\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 667,\n                \"tipo\": \"2\",\n                \"anhio\": 2020,\n                \"descripcion\": \"2\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 668,\n                \"tipo\": \"2\",\n                \"anhio\": 2021,\n                \"descripcion\": \"3\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 669,\n                \"tipo\": \"2\",\n                \"anhio\": 2022,\n                \"descripcion\": \"4\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 670,\n                \"tipo\": \"2\",\n                \"anhio\": 2023,\n                \"descripcion\": \"5\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 671,\n                \"tipo\": \"2\",\n                \"anhio\": 2018,\n                \"descripcion\": \"6\"\n            },\n            {\n                \"idMeta\": 53,\n                \"idSerie\": 672,\n                \"tipo\": \"2\",\n                \"anhio\": 2020,\n                \"descripcion\": \"7\"\n            }\n        ]\n    }"
+								},
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/mp/parametro/modificar",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"mp",
+										"parametro",
+										"modificar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://159.54.131.161:9003/api/mp/parametro/eliminar/51/alberto.serrano",
+									"protocol": "http",
+									"host": [
+										"159",
+										"54",
+										"131",
+										"161"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"mp",
+										"parametro",
+										"eliminar",
+										"51",
+										"alberto.serrano"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

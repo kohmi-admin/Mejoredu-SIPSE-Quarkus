@@ -1,0 +1,109 @@
+<section id="wrapper">
+  <h1 class="title no-bottom">Reportes y Numeralia</h1>
+  <span class="sub-title bottom">Extractor de Datos</span>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions | slice : 0 : 9">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons">
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        type="button"
+        (click)="resetVars()"
+      >
+        Limpiar Selección
+      </button>
+      <button mat-flat-button color="add" class="btn-left">Agregar</button>
+    </div>
+  </form>
+
+  <section *ngIf="variables.length" class="order-tbl">
+    <table>
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Variables</th>
+          <th width="120px">Opciones</th>
+        </tr>
+      </thead>
+      <tbody cdkDropList (cdkDropListDropped)="drop($event)">
+        <ng-container *ngFor="let variable of variables; let i = index">
+          <tr *ngIf="variable.id !== 'ALL'">
+            <td cdkDrag style="cursor: move">{{ variable.value }}</td>
+            <td class="text-align: center !import;">
+              <button [disabled]="!canDownVariable(i)" (click)="downVariable(i)">
+                <mat-icon>arrow_downward</mat-icon>
+              </button>
+              <button [disabled]="!canUpVariable(i)" (click)="upVariable(i)">
+                <mat-icon>arrow_upward</mat-icon>
+              </button>
+              <button color="warn" (click)="deleteVariable(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+
+    <div class="action-buttons" style="margin-top: 15px">
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        type="button"
+        (click)="generatePreview()"
+      >
+        <!-- <mat-spinner
+        *ngIf="isSubmiting"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmiting">Previsualizar</span> -->
+        Previsualizar
+      </button>
+    </div>
+  </section>
+
+  <div class="wrap" *ngIf="ready">
+    <table #tbl>
+      <thead>
+        <tr>
+          <th *ngFor="let item of getHeaders()">{{ item }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data; let i = index">
+          <td *ngFor="let column of columns">
+            {{ item[column.columnDef] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="action-buttons" style="margin-top: 15px" *ngIf="ready">
+    <button
+      mat-flat-button
+      color="primary"
+      class="btn-left"
+      type="button"
+      (click)="downloadData()"
+    >
+      Descargar
+    </button>
+  </div>
+</section>

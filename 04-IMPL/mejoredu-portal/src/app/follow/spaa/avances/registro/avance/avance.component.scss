@@ -1,0 +1,66 @@
+.group-form {
+    .title {
+        text-align: center;
+    }
+}
+
+.alert-success {
+    margin-top: 20px;
+} 
+
+section,
+.action-buttons {
+    box-sizing: border-box;
+    border: solid 15px transparent;
+    border-bottom-width: 0;
+    border-top-width: 0;
+}
+
+.group-forms {
+    border: solid 0 transparent;
+}
+
+.field {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 15px transparent;
+    border-bottom-width: 0;
+    border-top-width: 0;
+}
+
+.s1 {
+    .field {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            width: 50%;
+        }
+    }
+}
+
+.et {
+    .field {
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8),
+        &:nth-of-type(9),
+        &:nth-of-type(10),
+        &:nth-of-type(11) {
+            width: 50%;
+        }
+    }
+}
+
+.action-buttons {
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    &.right {
+        text-align: right;
+        justify-items: flex-end;
+    }
+}

@@ -1,0 +1,393 @@
+<section id="wrapper">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Productos'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../MIR'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field" *ngFor="let question of questions">
+      <app-dynamic-field
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full blur"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div
+      class="action-buttons"
+      style="margin-bottom: 20px; margin-top: 0px"
+      *ngIf="
+        !selectedValidateProyectoPAA &&
+        !selectedConsultaProyectoPAA &&
+        canEditProject
+      "
+    >
+      <button
+        *ngIf="!isCleanForm"
+        mat-flat-button
+        color="add"
+        class="btn-left"
+        type="submit"
+        [disabled]="validation"
+      >
+        Agregar Acción
+      </button>
+    </div>
+  </form>
+
+  <div class="alert-success" *ngIf="isPartidaGasto">
+    Calendarización del Gasto ($)
+  </div>
+  <div class="container-table-month" *ngIf="isPartidaGasto">
+    <table
+      class="sjs-table month-table"
+      cellspacing="0"
+      cellpadding="0"
+      #tblCalendarizacionBudget
+      id="tblCalendarizacionBudget"
+    >
+      <thead style="position: sticky; top: 0">
+        <!-- <tr style="position: sticky; top: 19px;"> -->
+        <tr>
+          <td>Nombre de la Acción</td>
+          <td>Nombre del Producto</td>
+          <td>Partida de Gastos</td>
+          <td class="anual">Anual</td>
+          <td class="month">Enero</td>
+          <td class="month">Febrero</td>
+          <td class="month">Marzo</td>
+          <td class="month">Abril</td>
+          <td class="month">Mayo</td>
+          <td class="month">Junio</td>
+          <td class="month">Julio</td>
+          <td class="month">Agosto</td>
+          <td class="month">Septiembre</td>
+          <td class="month">Octubre</td>
+          <td class="month">Noviembre</td>
+          <td class="month">Diciembre</td>
+          <td>Eliminar</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="total">
+          <td colspan="3">Presupuesto Total ($)</td>
+          <td>
+            <span>
+              {{ getParseMoneyFormat(getTotalAmount()) }}
+            </span>
+          </td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.january) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.february) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.march) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.april) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.may) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.june) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.july) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.august) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.september) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.october) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.november) }}</td>
+          <td>{{ getParseMoneyFormat(mountsAmounts.december) }}</td>
+          <td></td>
+        </tr>
+
+        <tr *ngFor="let item of table">
+          <td>
+            <span>
+              {{ form.get("nombreAccion")?.value }}
+            </span>
+          </td>
+          <td>
+            <span>
+              {{ item.productName }}
+            </span>
+          </td>
+          <td>{{ item.partial }}</td>
+          <td
+            class="lightblue"
+            [class.red]="
+              String(sumByRow(item)) != String(item.anualBudget) ||
+              item.anualBudget === 0
+            "
+            [class.green]="
+              String(sumByRow(item)) == String(item.anualBudget) &&
+              item.anualBudget !== 0
+            "
+          >
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.anualBudget"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.january"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.february"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.march"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.april"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.may"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.june"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.july"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.august"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.september"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.october"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.november"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <input
+              currencyMask
+              placeholder="$0.00"
+              [disabled]="validation || viewForm"
+              [(ngModel)]="item.december"
+              [options]="{
+                prefix: '$ ',
+                thousands: ',',
+                decimal: '.',
+                precision: 2
+              }"
+            />
+          </td>
+          <td>
+            <button
+              mat-icon-button
+              color="accent"
+              [disabled]="validation || viewForm"
+              (click)="delete(item.partial)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div
+    class="action-buttons"
+    style="margin-bottom: -10px; margin-top: 20px"
+    *ngIf="
+      !selectedValidateProyectoPAA &&
+      !selectedConsultaProyectoPAA &&
+      canEditProject
+    "
+  >
+    <button
+      *ngIf="updateForm"
+      mat-flat-button
+      class="btn-left"
+      color="primary"
+      [disabled]="validation"
+      (click)="updateBudget()"
+    >
+      Actualizar
+    </button>
+    <button
+      *ngIf="isCleanForm"
+      mat-flat-button
+      color="add"
+      class="btn-left"
+      type="button"
+      [disabled]="validation"
+      (click)="newBudget()"
+    >
+      Limpiar campos
+    </button>
+  </div>
+</section>
+
+<app-mat-custom-table
+  (action)="onTableAction($event)"
+  (update)="getAll()"
+  [actions]="actions"
+  [dataset]="data"
+  [maxWidthActions]="'150px'"
+  [columns]="columns"
+>
+</app-mat-custom-table>
+
+<app-validate
+  apartado="REVISION-CP-PRESUPUESTOS"
+  [textIdSaveEmpty]="
+    selectedValidateProyectoPAA
+      ? 'Selecciona un presupuesto para realizar comentarios.'
+      : 'Selecciona un presupuesto para ver los comentarios.'
+  "
+  [customSaveStr]="'Guardar Comentarios'"
+  [idSave]="idSaveValidar"
+  [disable]="disabledAppValidate"
+  [fromModule]="'cp'"
+  whenFinishGoTo="/Planeación/Planeación a Corto Plazo/Revisión y Validación"
+  [statusToFinish]="statusToFinish"
+  *ngIf="validation"
+  [questions]="getQuestions"
+  [canSign]="!disabledAppValidate"
+></app-validate>

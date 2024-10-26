@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>
+    <span>
+        Descargar PDF
+    </span>
+    <button mat-flat-button color="primary" class="btn-left" (click)="descargar()">Descargar</button></h2>
+<mat-dialog-content>
+  <section id="report-space">
+    <div class="title">
+      <img src="../../../assets/full-icon.png" alt="" srcset="" />
+    </div>
+    <div class="cont">
+        <section *ngFor="let question of data.questions" class="item">
+            <h2>
+                {{ question.label }}
+            </h2>
+            <p>
+                {{ getValue(question) }}
+            </p>
+        </section>
+    </div>
+  </section>
+  <!-- <div class="action-buttons">
+    <button mat-flat-button color="primary" class="btn-left" (click)="descargar()">Descargar</button>
+  </div> -->
+</mat-dialog-content>

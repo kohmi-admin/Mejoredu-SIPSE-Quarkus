@@ -1,0 +1,81 @@
+h4 {
+  margin: auto 0;
+  margin-bottom: 10px;
+  opacity: 0.4;
+}
+
+section.dbl {
+  width: 50%;
+  min-height: 200px;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  &:nth-of-type(1) {
+    width: 70%;
+  }
+  &:nth-of-type(2) {
+    width: 30%;
+    border-radius: 4px 4px;
+    max-height: calc(100vh - 350px);
+    background: rgba(1, 1, 1, 0.08);
+  }
+}
+
+.doc-content {
+  padding: 15px;
+  height: 800px;
+  embed {
+    width: 100%;
+    height: 97%;
+    margin-bottom: -4px;
+  }
+}
+
+.tbl-tittle {
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.wrap {
+  position: relative;
+  button {
+    top: 22px;
+    right: 70px;
+    position: absolute;
+  }
+}
+
+.actions {
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: var(--border-middle);
+  button {
+    margin-left: var(--border-middle);
+  }
+}
+
+.footer-button-small {
+  background-color: rgba(0, 0, 0, 0.678);
+  height: 30px !important;
+  padding-left: 10px;
+}
+
+.icon-download {
+  height: 100%;
+  cursor: pointer;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.file-zone {
+  width: 400px;
+  margin-top: -18px;
+  margin-bottom: 15px;
+  span {
+    display: block;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,156 @@
+<h1 mat-dialog-title>Ficha de Indicadores</h1>
+<div mat-dialog-content>
+  <form
+    id="form1"
+    class="form fade"
+    [formGroup]="form"
+    (ngSubmit)="registrarFicha()"
+  >
+    <section class="alert-success">Datos Generales del Indicador</section>
+    <div
+      class="field blur"
+      *ngFor="let question of questions | slice : 0 : 12; let i = index"
+    >
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="field" style="margin: 0 0; border: solid 0"></div>
+    <section class="ndm" style="margin-top: -15px">
+      <div
+        class="field blur"
+        *ngFor="let question of questions | slice : 12 : 15; let i = index"
+      >
+        <app-dynamic-field
+          class="form-field full"
+          [question]="question"
+          *ngIf="!question.filter"
+          [form]="form"
+        ></app-dynamic-field>
+        <app-select-filter
+          class="form-field full"
+          [question]="question"
+          *ngIf="question.filter"
+          [form]="form"
+        ></app-select-filter>
+      </div>
+    </section>
+    <section class="alert-success">Línea Base</section>
+    <div
+      class="field blur"
+      *ngFor="let question of questions | slice : 15 : 18; let i = index"
+    >
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <section class="alert-success">Meta Anual</section>
+    <div
+      class="field blur"
+      *ngFor="let question of questions | slice : 18 : 21; let i = index"
+    >
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div
+      class="field blur"
+      *ngFor="let question of questions | slice : 21 : 22; let i = index"
+    >
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+
+    <section class="alert-success">
+      Características de las Variables del Indicador
+    </section>
+    <div
+      class="field blur"
+      *ngFor="let question of questions | slice : 22 : 34; let i = index"
+    >
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        *ngIf="!question.filter"
+        [form]="form"
+      ></app-dynamic-field>
+      <app-select-filter
+        class="form-field full"
+        [question]="question"
+        *ngIf="question.filter"
+        [form]="form"
+      ></app-select-filter>
+    </div>
+    <div class="action-buttons">
+      <button
+        type="button"
+        *ngIf="canEdit"
+        mat-flat-button
+        color="primary"
+        [disabled]="form.enabled"
+        (click)="form.enable()"
+      >
+        Editar
+      </button>
+      <button
+        type="submit"
+        *ngIf="canEdit"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        [disabled]="form.disabled"
+      >
+        Guardar
+      </button>
+      <button
+        type="button"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        (click)="download()"
+      >
+        Descargar
+      </button>
+      <!-- <button type="button" mat-flat-button color="primary" color="add" class="btn-left">
+        Agregar Variables
+      </button> -->
+    </div>
+  </form>
+</div>

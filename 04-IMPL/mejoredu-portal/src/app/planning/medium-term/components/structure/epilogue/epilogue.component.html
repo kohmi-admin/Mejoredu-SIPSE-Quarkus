@@ -1,0 +1,105 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Parámetros'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      disabled="true"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Carga del PI y Actas'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</section>
+<section class="alert-success no-top">Epílogo: Visión a Largo Plazo</section>
+<form id="form6" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="field blur" *ngFor="let question of questions; let i = index">
+    <app-dynamic-field
+      class="form-field full"
+      [question]="question"
+      [form]="form"
+    ></app-dynamic-field>
+  </div>
+</form>
+
+<app-upload-pi
+  [editable]="editable"
+  [filesActas]="filesActas"
+  [filesArchivosPi]="filesArchivosPi"
+  [consultation]="!editable"
+  (onOutputFile)="onOutputFile($event)"
+  (onTableActionArchivosPi)="onTableActionArchivosPi($event)"
+  (onTableActionActas)="onTableActionActas($event)"
+></app-upload-pi>
+
+<section>
+  <div
+    class="actions"
+    style="margin-top: -20px; margin-bottom: -25px; margin-right: 7px"
+  >
+    <button type="button" mat-flat-button color="report" (click)="download()">
+      Generar Reporte
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      [disabled]="!editable"
+      *ngIf="editable"
+      (click)="submit()"
+    >
+      <mat-spinner
+        *ngIf="isSubmiting"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmiting">Guardar</span>
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="primary"
+      [disabled]="disableBtnFinalize()"
+      *ngIf="editable || gestorSelected?.estatus === 'T'"
+      (click)="finiish()"
+    >
+      <mat-spinner
+        *ngIf="isSubmitingFinalize"
+        style="width: 25px"
+        color="warn"
+      ></mat-spinner>
+      <span *ngIf="!isSubmitingFinalize">Finalizar Registro</span>
+    </button>
+    <button
+      type="button"
+      mat-flat-button
+      color="send"
+      [disabled]="disableBtnSend()"
+      *ngIf="editable || gestorSelected?.estatus === 'T'"
+      (click)="send()"
+    >
+      Enviar a Revisión
+    </button>
+  </div>
+</section>
+
+<app-validate
+  apartado="EPILOGO-CARGA-DEL-PI-Y-ACTAS"
+  [idSave]="idSaveValidar"
+  [fromModule]="'mp'"
+  whenFinishGoTo="/Planeación/Planeación de Mediano Plazo/Validación"
+  [disable]="!!selectedAjustesPI"
+  *ngIf="validation"
+  [questions]="questionsToValidate()"
+  [canSign]="true"
+></app-validate>

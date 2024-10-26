@@ -1,0 +1,77 @@
+<section id="wrapper" class="no-bottom">
+  <div class="btn-navigation">
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Anterior'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Datos Generales'"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      [matTooltip]="'Siguiente'"
+      [matTooltipPosition]="'left'"
+      [routerLink]="'../Árbol del Problema'"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <form id="form1" class="form fade" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field blur" *ngFor="let question of questions; let i = index">
+      <app-dynamic-field
+        class="form-field full"
+        [question]="question"
+        [form]="form"
+      ></app-dynamic-field>
+    </div>
+    <div class="action-buttons" style="margin-bottom: 18px; margin-top: -00px">
+      <button
+        mat-flat-button
+        color="view"
+        class="btn-left"
+        type="button"
+        (click)="download()"
+      >
+        Descargar
+      </button>
+      <button
+        *ngIf="editable && canEdit"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        type="button"
+        (click)="update()"
+        [disabled]="disabledBtnEdit"
+      >
+        Editar
+      </button>
+      <button
+        *ngIf="editable && canEdit"
+        [disabled]="form.disabled"
+        mat-flat-button
+        color="primary"
+        class="btn-left"
+        type="submit"
+      >
+        <mat-spinner
+          *ngIf="isSubmiting"
+          style="width: 25px"
+          color="warn"
+        ></mat-spinner>
+        <span *ngIf="!isSubmiting"> Guardar </span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<app-validate
+  *ngIf="validation"
+  apartado="VALIDADCION-PRESUPUESTO-DIAGNOSTICO"
+  [idSave]="idSaveValidar"
+  [fromModule]="'pp'"
+  [questions]="questions"
+  [disable]="!!selectedAjustesPP"
+></app-validate>
